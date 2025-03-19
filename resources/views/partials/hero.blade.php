@@ -30,19 +30,22 @@
          data-aos-duration="3000"
          data-aos-anchor-placement="top-bottom"
          class="relative mx-auto max-w-3xl pt-[7rem] text-center">
-        <h1 class="bg-gradient-to-br from-white to-zinc-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]"
-            style="opacity: 1; transform: none;">Streamline Your Documentation Workflow with <span
-                  class="text-sky-500">Converge</span></h1>
 
-        <p class="mt-6 text-lg font-medium text-zinc-400 md:text-xl"
-           style="opacity: 1; transform: none;">Converge is the open-source framework that empowers anyone to build
+        {{-- Intro Title --}}
+        <h1
+            class="from-base-content/40 to-base-content/60 bg-gradient-to-br bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]">
+            Streamline Your Documentation Workflow with <span class="text-primary">Converge</span></h1>
+
+        {{-- Intro Description --}}
+        <p class="text-base-content/80 text-md mt-6 font-medium md:text-xl">Converge is the open-source framework that
+            empowers anyone to build
             high-quality, dynamic docs from Markdown. Developer-friendly. Intuitive. And designed for teams who care
             about clarity
         </p>
 
         <div class="mt-10 flex flex-col items-center justify-center gap-y-8">
             <div style="opacity: 1; transform: none;">
-                <button class="hover:shadow-glow group relative rounded-full p-px text-sm/6 text-zinc-400 duration-300 hover:text-zinc-100"
+                <button class="hover:shadow-glow hover:text-base-content/80 text-base-content group relative rounded-full p-px text-sm/6 duration-300"
                         type="button"
                         aria-haspopup="dialog"
                         aria-expanded="false"

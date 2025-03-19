@@ -1,5 +1,16 @@
 @import 'tailwindcss';
 @import '../../vendor/livewire/flux/dist/flux.css';
+@plugin "daisyui" {
+    themes: light --default, black --prefersdark ;
+}
+
+@plugin "daisyui/theme" {
+    name: "black";
+    default: true;
+    --color-primary: #00E6F5;
+    --color-base-200: black;
+    --color-secondary: teal;
+  }
 
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';

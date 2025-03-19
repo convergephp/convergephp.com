@@ -2,7 +2,7 @@
 
 <a href="{{ $href }}"
    @class([
-       'px-2 py-2 text-white font-medium hover:text-gray-200 transition duration-150 ease-in-out',
+       'transition-colors hover:text-primary/80 text-base-content px-4 sm:flex space-x-1',
        'text-blue-500' => $active,
    ])>
     {{ $slot }}

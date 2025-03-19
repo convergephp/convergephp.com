@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-      class="dark">
+      data-theme="black">
 
     <head>
         <meta charset="utf-8">
@@ -16,7 +16,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 
-    <body class="bg-white font-sans antialiased dark:bg-black dark:text-white/50">
+    <body class="bg-base-200 text-base-content font-sans antialiased">
         {{-- NAVBARE HEADER --}}
         @include('partials.navbar')
 
