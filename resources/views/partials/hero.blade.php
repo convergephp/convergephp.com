@@ -11,7 +11,7 @@
 
     {{-- BAKGROUND GRID --}}
     <x-grid-svg data-aos="fade-down"
-                data-aos-duration="3000"
+                data-aos-duration="2000"
                 class="absolute inset-0 -z-0 h-full w-full !text-red-500 [mask-image:linear-gradient(to_top,transparent,white)]"
                 gridSize="40"
                 lineColor="gray"
@@ -27,7 +27,7 @@
     {{-- SECTION CONTENT --}}
 
     <div data-aos="fade-up"
-         data-aos-duration="3000"
+         data-aos-duration="1500"
          data-aos-anchor-placement="top-bottom"
          class="relative mx-auto max-w-3xl pt-[7rem] text-center">
 
@@ -111,7 +111,9 @@
             <div class="rounded-md bg-zinc-950 ring-1 ring-white/10 lg:rounded-2xl">
                 <div class=""
                      style="opacity: 1;">
-                    <img alt="App screenshot"
+                    <img data-aos="fade-up"
+                         data-aos-duration="1500"
+                         alt="App screenshot"
                          fetchpriority="high"
                          width="4200"
                          height="2490"
