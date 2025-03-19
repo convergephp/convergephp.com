@@ -1,9 +1,21 @@
 <section class="mx-auto max-w-7xl px-6 lg:px-8">
+    {{-- ANIMATED LINE --}}
+    <x-animated-line-svg height="68"
+                         direction="ltr"
+                         duration="3"
+                         strokeWidth="2"
+                         colorStart="#2EB9DF"
+                         background="transparent"
+                         colorEnd="#9E00FF"
+                         class="transfor absolute left-0 top-[120px] hidden md:left-20 md:block lg:left-52" />
+
     {{-- BAKGROUND GRID --}}
-    <x-grid-svg class="absolute inset-0 -z-0 h-full w-full !text-red-500 [mask-image:linear-gradient(to_top,transparent,white)]"
+    <x-grid-svg data-aos="fade-down"
+                data-aos-duration="3000"
+                class="absolute inset-0 -z-0 h-full w-full !text-red-500 [mask-image:linear-gradient(to_top,transparent,white)]"
                 gridSize="40"
                 lineColor="gray"
-                lineOpacity="0.15"
+                lineOpacity="0.2"
                 backgroundColor="transparent"
                 :highlightedRow="7"
                 animationDirection="rtl"
@@ -14,7 +26,10 @@
 
     {{-- SECTION CONTENT --}}
 
-    <div class="relative mx-auto max-w-3xl pt-[7rem] text-center">
+    <div data-aos="fade-up"
+         data-aos-duration="3000"
+         data-aos-anchor-placement="top-bottom"
+         class="relative mx-auto max-w-3xl pt-[7rem] text-center">
         <h1 class="bg-gradient-to-br from-white to-zinc-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]"
             style="opacity: 1; transform: none;">Streamline Your Documentation Workflow with <span
                   class="text-sky-500">Converge</span></h1>
