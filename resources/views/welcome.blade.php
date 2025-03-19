@@ -1,37 +1,32 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="dark">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
+      data-theme="black">
+
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+              rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+                defer></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans antialiased dark:bg-black bg-white dark:text-white/50">
-        {{-- ANIMATED LINE --}}
-        <x-animated-line-svg height="68"
-                             direction="ltr"
-                             duration="2"
-                             strokeWidth="2"
-                             colorStart="#2EB9DF"
-                             background="transparent"
-                             colorEnd="#9E00FF"
-                             class="transfor fixed left-0 top-[120px] hidden md:left-20 md:block lg:left-52" />
 
-        <x-animated-line-svg height="68"
-                             direction="ltr"
-                             duration="2"
-                             strokeWidth="2"
-                             colorStart="#2EB9DF"
-                             background="transparent"
-                             colorEnd="#9E00FF"
-                             class="transfor fixed right-10 top-[320px] hidden md:block" />
-
+    <body class="bg-base-200 text-base-content font-sans antialiased">
         {{-- NAVBARE HEADER --}}
         @include('partials.navbar')
 
         {{-- HERO SECTION --}}
         @include('partials.hero')
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
+
 </html>
