@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name'); // component toolkit, themes toolkit... 
             $table->string('slug')->unique();
+            $table->paddle('paddle_price_id');
             $table->mediumText('description');
             $table->string('price');
             $table->timestamps();
