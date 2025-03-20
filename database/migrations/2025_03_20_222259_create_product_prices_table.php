@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('product_prices', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')
+                ->constrained()
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+            $table->json('features')->nullable();
+            $table->paddle('paddle_price_id');
             $table->timestamps();
         });
     }
