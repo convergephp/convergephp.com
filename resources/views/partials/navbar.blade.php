@@ -18,14 +18,16 @@
 
                     <x-navbar.link href="/in-person">Documentation</x-navbar.link>
 
+                    <x-navbar.link href="{{ route('pricing') }}">Pricing</x-navbar.link>
+
                     <x-navbar.dropdown-menu label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link title="Documentation"
+                            <x-navbar.card-link title="Components"
                                                 description="Visite our beautiful blade components">
                             </x-navbar.card-link>
 
-                            <x-navbar.card-link title="Blog Generator"
-                                                description="Create a powerfull blog just in minutes">
+                            <x-navbar.card-link title="Layouts"
+                                                description="Create a powerfull layouts">
                             </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
@@ -36,7 +38,7 @@
                                                 description="Visite our beautiful blade components">
                             </x-navbar.card-link>
 
-                            <x-navbar.card-link title="Blog Generator"
+                            <x-navbar.card-link title="Blogging"
                                                 description="Create a powerfull blog just in minutes">
                             </x-navbar.card-link>
                         </div>
