@@ -1,9 +1,4 @@
-@props([
-    'label',
-    'active' => false,
-    'groupName' => 'Group name ',
-    'groupDescription' => 'this is optional description',
-])
+@props(['label', 'active' => false, 'groupName' => null, 'groupDescription' => null])
 
 <div x-data="{ open: false }"
      x-on:mouseover="open = true"
@@ -11,7 +6,7 @@
      class="relative">
     <button {{ $attributes }}
             @class([
-                'px-2 py-2 min-h-[5rem] text-white font-medium hover:text-primary/80 transition duration-150 ease-in-out flex items-center',
+                'px-2 py-2 min-h-[5rem] font-medium text-base-content hover:text-primary/80 transition duration-150 ease-in-out flex items-center',
                 'text-primary' => $active,
             ])>
         {{ $label }}
