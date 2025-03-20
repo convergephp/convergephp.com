@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name'); // component toolkit, themes toolkit... 
             $table->string('slug')->unique();
             $table->mediumText('description');
-            $table->string('price');
             $table->timestamps();
         });
     }

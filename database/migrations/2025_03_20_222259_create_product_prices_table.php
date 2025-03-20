@@ -18,7 +18,7 @@ return new class extends Migration
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
             $table->json('features')->nullable();
-            $table->paddle('paddle_price_id');
+            $table->string('paddle_price_id');
             $table->timestamps();
         });
     }

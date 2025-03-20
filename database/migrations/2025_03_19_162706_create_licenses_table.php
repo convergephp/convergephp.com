@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('licenses', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class, 'id');
-            $table->foreignIdFor(Product::class, 'id');
+            $table->foreignId('user_id')
+                ->constrained()
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
+            $table->foreignId('product_id')
+                ->constrained()
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
             $table->string('key')->unique();
             $table->unsignedBigInteger('activation_limit')->default(0);
             $table->string('type'); // single_project, unlimited_project
