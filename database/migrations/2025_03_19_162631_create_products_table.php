@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name'); // component toolkit, themes toolkit... 
             $table->string('slug')->unique();
-            $table->string('thmubnail');
+            $table->string('thmubnail')->nullable();
             $table->mediumText('description');
             $table->timestamps();
         });

@@ -29,7 +29,8 @@ Route::get('pricing', function () {
 })->name('pricing');
 
 Route::prefix('toolkits')->group(function(){
-    Route::get('/',ProductController::class);
+    Route::get('/',ProductController::class)->name('products.index');
+    Route::get('/{slug}',[ProductController::class, 'show'])->name('products.show');
 });
 
 

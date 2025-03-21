@@ -19,6 +19,7 @@ return new class extends Migration
                 ->restrictOnDelete();
             $table->json('features')->nullable();
             $table->string('paddle_price_id');
+            $table->integer('price');
             $table->timestamps();
         });
     }

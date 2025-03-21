@@ -44,6 +44,7 @@ class DatabaseSeeder extends Seeder
             'id' => 1,
             'product_id' => 1,
             'paddle_price_id' => 'pri_01jptqhwz2f7b34edy7574dahb', // 29$
+            'price' => 29,
             'features' => [
                 'one production licence',
                 '3 licence keys',
@@ -55,6 +56,7 @@ class DatabaseSeeder extends Seeder
             'id' => 2,
             'product_id' => 1,
             'paddle_price_id' => 'pri_01jptqkj6r55xba71ff7mm0vwz', // 99$
+            'price' => 99,
             'features' => [
                 'Unlimited dev, staging, and production projects',
                 'Unlimited license keys',
@@ -67,7 +69,8 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 3,
             'product_id' => 2,
-            'paddle_price_id' => 'pri_01jptqhwz2f7b34edy7574dahb', // 29$
+            'paddle_price_id' => 'pri_01jpw52t5m31was20nv508vby9', // 19$
+            'price' => 19,
             'features' => [
                 'one production licence',
                 '3 licence keys',
@@ -78,7 +81,8 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 4,
             'product_id' => 2,
-            'paddle_price_id' => 'pri_01jptqkj6r55xba71ff7mm0vwz', // 99$
+            'paddle_price_id' => 'pri_01jpw5476s8j0mhxsy1ve4a1hy', // 45$
+            'price' => 45,
             'features' => [
                 'Unlimited dev, staging, and production projects',
                 'Unlimited license keys',
