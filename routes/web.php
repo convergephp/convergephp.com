@@ -30,7 +30,7 @@ Route::get('pricing', function () {
 
 Route::prefix('toolkits')->group(function(){
     Route::get('/',ProductController::class)->name('products.index');
-    Route::get('/{slug}',[ProductController::class, 'show'])->name('products.show');
+    Route::get('/{product:slug}',[ProductController::class, 'show'])->name('products.show');
 });
 
 

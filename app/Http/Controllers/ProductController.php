@@ -18,18 +18,10 @@ class ProductController extends Controller
         ]);
     }
 
-    public function show(Product $product, Request $request)
+    public function show(Product $product)
     {
 
-        $prices = $product->prices()->get()->map(function (ProductPrice $price) use ($request) {
-            $price->append([
-                'checkout' => $request->user()->checkout($price->paddle_price_id)
-                    ->returnTo(route('dashboard'))
-            ]);
-        });
-
-        dd($prices);
-
+      
         return view('products.show', [
             'product' => $product,
         ]);

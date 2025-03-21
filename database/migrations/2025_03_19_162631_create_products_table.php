@@ -13,22 +13,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // component toolkit, themes toolkit... 
+            $table->string('name');
             $table->string('slug')->unique();
-            $table->string('thmubnail')->nullable();
+            $table->string('thumbnail')->nullable();
             $table->mediumText('description');
             $table->timestamps();
         });
     }
 
-    // component 
-        // 29
-        // 99
-    
-    // layouts 50 
-        // 50
-        // 150
-    
     /**
      * Reverse the migrations.
      */

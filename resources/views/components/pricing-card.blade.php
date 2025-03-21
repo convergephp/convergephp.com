@@ -16,7 +16,7 @@
 
     <!-- Features -->
     <ul class="mb-8 space-y-4 text-left" role="list">
-        @foreach ($$price->features as $feature)
+        @foreach ($price->features as $feature)
             <li class="flex items-center space-x-3">
                 <!-- Icon -->
                 <svg class="{{ $default ? 'text-white' : 'text-primary' }} mr-2 h-5 w-5 flex-shrink-0"

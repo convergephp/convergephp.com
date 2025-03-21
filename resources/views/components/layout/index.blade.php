@@ -14,6 +14,7 @@
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
                 defer></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @paddleJS
     </head>
 
     <body class="bg-base-200 text-base-content font-sans antialiased">

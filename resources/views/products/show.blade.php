@@ -102,25 +102,9 @@
         </div>
 
         <div class="flex flex-wrap justify-center space-y-8 sm:gap-2">
-
             @foreach ($product->prices as $price)
                 <x-pricing-card :price="$price" />
             @endforeach
-            <!-- Solo Developer Plan -->
-            <x-pricing-card title="Starter Pack" description="Perfect for solo developers" price="29"
-                :checkout="$price->checkout" period="/lifetime licence" :features="['One production licence', '5 licence key', 'Forever updates']" />
-
-            <!-- Agency Plan -->
-            <x-pricing-card title="Agency" description="Ideal for teams and multiple client projects" price="99"
-                period="/lifetime licence" :features="[
-                    'Unlimited dev, staging, and production projects',
-                    'No setup, or hidden fees',
-                    'Team size: <span class=\'font-semibold\'>unlimited</span>',
-                    'Unlimited license keys',
-                    'Unlimited production domains',
-                    'Email support',
-                    'Forever updates',
-                ]" />
         </div>
     </div>
 </x-layout>

@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Auth;
 
 class ProductPrice extends Model
 {
@@ -22,17 +24,34 @@ class ProductPrice extends Model
 
      */
 
-     protected function casts(): array
+    protected function casts(): array
 
-     {
- 
-         return [
- 
-             'features' => 'json',
- 
-         ];
- 
-     }
+    {
+
+        return [
+
+            'features' => 'json',
+
+        ];
+    }
+
+
+    protected function checkout(): Attribute
+
+    {
+
+        /** @var App\Models\User */
+        $user = Auth::user();
+
+        $checkout = $user->checkout($this->paddle_price_id)
+            ->returnTo(route('dashboard'));
+            
+        return Attribute::make(
+            get: fn() => $checkout,
+        );
+    }
+
+
     /**
      * Get the product that owns the ProductPrice
      *

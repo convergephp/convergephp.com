@@ -20,12 +20,13 @@
 
                     <x-navbar.dropdown-menu label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link :url="route('components')"
-                                                title="Blade Components"
-                                                description="Visite our beautiful blade components">
+                            <x-navbar.card-link
+                                :url="route('products.show',['product'=>'components'])"
+                                title="Blade Components"
+                                description="Visite our beautiful blade components">
                             </x-navbar.card-link>
 
-                            <x-navbar.card-link :url="route('layouts')"
+                            <x-navbar.card-link :url="route('products.show',['product'=>'layouts-themes'])"
                                                 title="Layouts"
                                                 description="Create a powerfull layouts">
                             </x-navbar.card-link>
