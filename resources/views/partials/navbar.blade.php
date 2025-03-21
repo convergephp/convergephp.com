@@ -19,47 +19,32 @@
                     <x-navbar.link href="/in-person">Documentation</x-navbar.link>
 
                     <x-navbar.dropdown-menu label="ToolKit">
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h3 class="text-base-content mb-3 text-sm font-medium">GET STARTED</h3>
-                                <x-navbar.dropdown-menu-item href="/prebuilt">Prebuilt
-                                    checkout</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/libraries">Libraries and
-                                    SDKs</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/integrations">App
-                                    integrations</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/samples">Code samples</x-navbar.dropdown-menu-item>
-                            </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <x-navbar.card-link :url="route('components')"
+                                                title="Blade Components"
+                                                description="Visite our beautiful blade components">
+                            </x-navbar.card-link>
+
+                            <x-navbar.card-link :url="route('layouts')"
+                                                title="Layouts"
+                                                description="Create a powerfull layouts">
+                            </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
 
                     <x-navbar.dropdown-menu label="Solutions">
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h3 class="text-base-content mb-3 text-sm font-medium">GET STARTED</h3>
-                                <x-navbar.dropdown-menu-item href="/prebuilt">Prebuilt
-                                    checkout</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/libraries">Libraries and
-                                    SDKs</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/integrations">App
-                                    integrations</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/samples">Code samples</x-navbar.dropdown-menu-item>
-                            </div>
-                            <div>
-                                <h3 class="text-base-content mb-3 text-sm font-medium">GUIDES</h3>
-                                <x-navbar.dropdown-menu-item href="/payments">Accept online
-                                    payments</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/subscriptions">Manage
-                                    subscriptions</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/send-payments">Send
-                                    payments</x-navbar.dropdown-menu-item>
-                                <x-navbar.dropdown-menu-item href="/in-person">Set up in-person
-                                    payments</x-navbar.dropdown-menu-item>
-                            </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <x-navbar.card-link title="Documentation"
+                                                description="Visite our beautiful blade components">
+                            </x-navbar.card-link>
+
+                            <x-navbar.card-link title="Blogging"
+                                                description="Create a powerfull blog just in minutes">
+                            </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
 
-                    <button class="btn btn-sm btn-success ml-2">
+                    <button class="btn btn-sm btn-primary ml-2">
                         Sponsor converge
                     </button>
                 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
@@ -23,6 +24,22 @@ Route::get('/buy', function (Request $request) {
     return view('buy', ['checkout' => $checkout]);
 })->name('checkout');
 
+Route::get('pricing', function () {
+    return view('pages.pricing');
+})->name('pricing');
+
+Route::prefix('toolkits')->group(function(){
+    Route::get('/',ProductController::class);
+});
+
+
+Route::get('toolkits/blade-components', function () {
+    return view("pages.components");
+})->name('components');
+
+Route::get('toolkits/layouts', function () {
+    return view("pages.layouts");
+})->name('layouts');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
