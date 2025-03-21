@@ -15,11 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('name'); // component toolkit, themes toolkit... 
             $table->string('slug')->unique();
+            $table->string('thmubnail');
             $table->mediumText('description');
             $table->timestamps();
         });
     }
 
+    // component 
+        // 29
+        // 99
+    
+    // layouts 50 
+        // 50
+        // 150
+    
     /**
      * Reverse the migrations.
      */

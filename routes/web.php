@@ -12,12 +12,15 @@ Route::get('/', function () {
 
 Route::get('/buy', function (Request $request) {
 
-    $checkout = $request->user()->checkout('pri_01jptqkj6r55xba71ff7mm0vwz')
+    $checkout = null;
+    if (auth()->check()) {
+        $checkout = $request->user()->checkout('pri_01jptqkj6r55xba71ff7mm0vwz')
 
-        ->returnTo(route('dashboard'));
+            ->returnTo(route('dashboard'));
+    }
+
 
     return view('buy', ['checkout' => $checkout]);
-
 })->name('checkout');
 
 
@@ -33,4 +36,4 @@ Route::middleware(['auth'])->group(function () {
     Route::get('settings/appearance', Appearance::class)->name('settings.appearance');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
