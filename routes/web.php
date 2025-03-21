@@ -9,6 +9,21 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('pricing', function ()
+{
+    return view('pages.pricing');
+})->name('pricing');
+
+Route::get('toolkits/blade-components', function ()
+{
+    return view("pages.components") ;
+})->name('components');
+
+Route::get('toolkits/layouts', function ()
+{
+    return view("pages.layouts") ;
+})->name('layouts');
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
