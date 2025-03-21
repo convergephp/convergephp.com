@@ -40,12 +40,16 @@ class ProductPrice extends Model
 
     {
 
-        /** @var App\Models\User */
-        $user = Auth::user();
 
-        $checkout = $user->checkout($this->paddle_price_id)
-            ->returnTo(route('dashboard'));
-            
+        $checkout = null;
+
+        if (Auth::check()) {
+            /** @var App\Models\User */
+            $user = Auth::user();
+            $checkout = $user->checkout($this->paddle_price_id)
+                ->returnTo(route('products.index'));
+        }
+
         return Attribute::make(
             get: fn() => $checkout,
         );

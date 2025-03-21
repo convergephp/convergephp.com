@@ -1,9 +1,6 @@
 <!-- resources/views/components/pricing-card.blade.php -->
-@props([
-    'price' => false,
-    'default' => false
-])
-
+@props(['price', 'default' => false])
+@dd($price  )
 <div
     class="{{ $default ? 'border-base-300 bg-blue-700' : '' }} border-base-300 bg-base-100 text-base-content m-0 flex !min-h-full w-[450px] max-w-lg flex-col rounded-lg border p-6 text-center shadow xl:p-8">
     <h3 class="text-base-content mb-4 text-2xl font-semibold">{{ $price->title }}</h3>
@@ -31,9 +28,5 @@
         @endforeach
     </ul>
 
-    <div class="btn btn-accent mt-auto">
-        <x-paddle-button class="px-8 py-4" :checkout="$price->checkout">
-            Buy
-        </x-paddle-button>
-    </div>
+    <x-pricing.buy :checkout="$price->checkout" />
 </div>
