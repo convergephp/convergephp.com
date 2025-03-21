@@ -11,8 +11,7 @@
 
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
               rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-                defer></script>
+       
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @paddleJS
     </head>
@@ -29,6 +28,7 @@
         <script>
             AOS.init();
         </script>
+        @livewireScriptConfig 
     </body>
 
 </html>
