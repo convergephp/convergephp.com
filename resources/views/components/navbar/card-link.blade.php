@@ -1,6 +1,6 @@
-@props(['title', 'description', 'imageSrc'])
+@props(['title', 'description', 'imageSrc', 'url' => '#'])
 
-<a href="/blog"
+<a href="{{ $url }}"
    class="bg-base-300/40 hover:bg-base-300/80 hover:border-primary/20 group block rounded-lg border border-transparent p-4 transition-colors duration-200"
    tabindex="0">
     <div class="w-full">

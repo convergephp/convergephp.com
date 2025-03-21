@@ -18,15 +18,15 @@
 
                     <x-navbar.link href="/in-person">Documentation</x-navbar.link>
 
-                    <x-navbar.link href="{{ route('pricing') }}">Pricing</x-navbar.link>
-
                     <x-navbar.dropdown-menu label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link title="Components"
+                            <x-navbar.card-link :url="route('components')"
+                                                title="Blade Components"
                                                 description="Visite our beautiful blade components">
                             </x-navbar.card-link>
 
-                            <x-navbar.card-link title="Layouts"
+                            <x-navbar.card-link :url="route('layouts')"
+                                                title="Layouts"
                                                 description="Create a powerfull layouts">
                             </x-navbar.card-link>
                         </div>
