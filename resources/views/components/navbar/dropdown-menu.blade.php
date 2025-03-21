@@ -33,7 +33,7 @@
          x-transition:leave="transition ease-in duration-0"
          x-transition:leave-start="opacity-100 transform translate-y-0"
          x-transition:leave-end="opacity-0 transform -translate-y-2"
-         class="min-w-xl md:min-w-2xl border-base-300 bg-base-100 text-base-content group z-10 mt-0 transform rounded-md border shadow-lg"
+         class="min-w-xl md:min-w-2xl border-base-300 bg-base-100 text-base-content rounded-box group z-10 mt-0 transform border shadow-lg"
          style="display: none;">
         <!-- Triangle pointer -->
         <div x-anchor.bottom="$refs.item"
