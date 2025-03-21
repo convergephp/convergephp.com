@@ -70,110 +70,111 @@
         $atts = $trigger->attributes->has('isButton') ? 'type="button"' : '';
     @endphp
 
-    <{{ $tag }} 
+    <div 
         x-on:click="open()"
         {{ $atts }}
          {{ $trigger->attributes->except('isButton') }}
         >
             {{ $trigger }}
-    </{{ $tag }}>
+    </div>
 
     <!-- The Modal -->
 
-    <div
-        x-show="isOpen"
-        x-trap="isOpen"
-        style="display: none"
-        x-on:keydown.escape.window.prevent.stop="close()"
-        role="dialog"
-        aria-modal="true"
-        x-id="['modal-header']"
-        :aria-labelledby="$id('modal-header')"
-        class="fixed inset-x-0 inset-y-0 z-50 overflow-y-auto"
-    >
-        <!-- Overlay -->
-        <div 
-            x-show="isOpen"
-            x-transition.opacity
-            class="fixed inset-0 dark:bg-black  bg-opacity-60 backdrop-blur-lg"
-        ></div>
-
-        <!-- Panel -->
+    <template x-teleport="body">
         <div
-            x-show="isOpen" 
-            x-transition
-            x-ref="panel"
-            x-on:click="close()"
-            @class([
-                'relative flex min-h-screen items-center justify-center p-2 z-30',
-                'overflow-hidden' => $scrollable,
-                'overflow-auto' => !$scrollable,
-            ])
-            {{-- class="relative flex min-h-screen   items-center justify-center p-2 z-30" --}}
+            x-show="isOpen"
+            x-trap="isOpen"
+            style="display: none"
+            x-on:keydown.escape.window.prevent.stop="close()"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-header']"
+            :aria-labelledby="$id('modal-header')"
+            class="fixed inset-x-0 inset-y-0 z-50 overflow-y-auto"
         >
-            <div style="height: {{ $height }}vh" class="w-full">
-                <div
-                    x-on:click.stop
-                    x-trap.noscroll.inert="isOpen"
-                    @class([
-                    "relative max-w-2xl mx-auto border dark:border-white/5 border-gray-800/15 overflow-y-auto rounded-xl bg-zinc-950 text-gray-800 dark:text-gray-300 px-4 ",
-                    'pb-4'=>blank($footer),
-                    'pb-2'=>filled($footer),
-                    'pt-4'=>blank($header),
-                    'pt-2'=>filled($header)
-                    ])
-                >
-                {{-- close button --}}
-                    <div class="absolute top-2 right-2 dark:bg-white/5 dark:hover:bg-white/10 bg-gray-800/5 hover:bg-gray-800/10 transition-all duration-300  rounded-lg ">
-                        <button
-                            type="button"
-                            class="p-1"
-                            x-on:click.stop="close()"
-                        >
-                            <svg class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                            viewBox="0 0 20 20">
-                                <path
-                                    d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
-                                    stroke="currentColor" fill="none" fill-rule="evenodd"
-                                    stroke-linecap="round" stroke-linejoin="round">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                {{-- swapabble --}}
+            <!-- Overlay -->
+            <div
+                x-show="isOpen"
+                x-transition.opacity
+                class="fixed inset-0 dark:bg-black  bg-opacity-60 backdrop-blur-lg"
+            ></div>
+            <!-- Panel -->
+            <div
+                x-show="isOpen"
+                x-transition
+                x-ref="panel"
+                x-on:click="close()"
+                @class([
+                    'relative flex min-h-screen items-center justify-center p-2 z-30',
+                    'overflow-hidden' => $scrollable,
+                    'overflow-auto' => !$scrollable,
+                ])
+                {{-- class="relative flex min-h-screen   items-center justify-center p-2 z-30" --}}
+            >
+                <div style="height: {{ $height }}vh" class="w-full">
                     <div
-                        x-on:touchstart="handleMovingStart($event)"
-                        x-on:touchmove="handleWhileMoving($event)"
-                        x-on:touchend="handleMovingEnd()"
-                        class="absolute sm:hidden top-[-10px] left-0 right-0 h-[50px]">
-                        <div class="flex justify-center pt-[12px]">
-                            <div class="bg-gray-400 rounded-full w-[10%] h-[5px]"></div>
-                        </div>
-                    </div>
-                    {{-- contents container --}}
-                    @if(filled($header))
-                    <div
-                        {{ $header->attributes->merge(['class' => 'modal-header']) }} 
-                        {{-- behave as sticky --}}
-                        x-bind:id="$id('modal-header')"
+                        x-on:click.stop
+                        x-trap.noscroll.inert="isOpen"
+                        @class([
+                        "relative max-w-2xl mx-auto border dark:border-white/5 border-gray-800/15 overflow-y-auto rounded-xl bg-zinc-950 text-gray-800 dark:text-gray-300 px-4 ",
+                        'pb-4'=>blank($footer),
+                        'pb-2'=>filled($footer),
+                        'pt-4'=>blank($header),
+                        'pt-2'=>filled($header)
+                        ])
                     >
-                            {{ $header }}
-                    </div>
-                    @endif
-                    <div class="h-full overflow-y-auto w-full " style="max-height: {{ $scrollable ? $maxHeight . 'vh' : 'none' }}">
-                        {{ $slot }}
-                    </div>
-                    @if (filled($footer))
-                        <footer
-                            @class([
-                                "z-30 hidden sm:flex  w-full select-none items-center px-2 pt-2 text-center dark:border-gray-700",
-                                'relative',
-                                ])
+                    {{-- close button --}}
+                        <div class="absolute top-2 right-2 dark:bg-white/5 dark:hover:bg-white/10 bg-gray-800/5 hover:bg-gray-800/10 transition-all duration-300  rounded-lg ">
+                            <button
+                                type="button"
+                                class="p-1"
+                                x-on:click.stop="close()"
                             >
-                            {{ $footer }}
-                        </footer>
-                    @endif
+                                <svg class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                                viewBox="0 0 20 20">
+                                    <path
+                                        d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z"
+                                        stroke="currentColor" fill="none" fill-rule="evenodd"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    {{-- swapabble --}}
+                        <div
+                            x-on:touchstart="handleMovingStart($event)"
+                            x-on:touchmove="handleWhileMoving($event)"
+                            x-on:touchend="handleMovingEnd()"
+                            class="absolute sm:hidden top-[-10px] left-0 right-0 h-[50px]">
+                            <div class="flex justify-center pt-[12px]">
+                                <div class="bg-gray-400 rounded-full w-[10%] h-[5px]"></div>
+                            </div>
+                        </div>
+                        {{-- contents container --}}
+                        @if(filled($header))
+                        <div
+                            {{ $header->attributes->merge(['class' => 'modal-header']) }}
+                            {{-- behave as sticky --}}
+                            x-bind:id="$id('modal-header')"
+                        >
+                                {{ $header }}
+                        </div>
+                        @endif
+                        <div class="h-full overflow-y-auto w-full " style="max-height: {{ $scrollable ? $maxHeight . 'vh' : 'none' }}">
+                            {{ $slot }}
+                        </div>
+                        @if (filled($footer))
+                            <footer
+                                @class([
+                                    "z-30 hidden sm:flex  w-full select-none items-center px-2 pt-2 text-center dark:border-gray-700",
+                                    'relative',
+                                    ])
+                                >
+                                {{ $footer }}
+                            </footer>
+                        @endif
+                    </div>
                 </div>
             </div>
-        </div>
+    </template>
 </div>

@@ -11,7 +11,8 @@
         <x-slot:trigger>
             <button
                 class="btn btn-accent"
-                type="button" x-on:click="sessionStorage.setItem('selectedPlan', @js($price->name. '-'. $price->product->name));">
+                type="button"
+                x-on:click="sessionStorage.setItem('selectedPlan', @js($price->name. '-'. $price->product->name));">
                 Select Plan
             </button>
         </x-slot>
