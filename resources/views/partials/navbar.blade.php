@@ -48,6 +48,12 @@
                     <button class="btn btn-sm btn-primary ml-2">
                         Sponsor converge
                     </button>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="w-full rounded-md btn btn-sm px-2 py-1 bg-white/10">
+                            {{ __('Log Out') }}
+                        </button>
+                    </form>
                 </div>
 
             </nav>
