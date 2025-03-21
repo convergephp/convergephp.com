@@ -43,8 +43,10 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 1,
             'product_id' => 1,
+            'title'=>'starter pack',
             'paddle_price_id' => 'pri_01jptqhwz2f7b34edy7574dahb', // 29$
-            'price' => 29,
+            'description' => 'Perfect for solo developers',
+            'amount' => 29,
             'features' => [
                 'one production licence',
                 '3 licence keys',
@@ -55,8 +57,10 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 2,
             'product_id' => 1,
+            'title'=>'agency',
             'paddle_price_id' => 'pri_01jptqkj6r55xba71ff7mm0vwz', // 99$
-            'price' => 99,
+            'description' => 'Ideal for teams and multiple client projects',
+            'amount' => 99,
             'features' => [
                 'Unlimited dev, staging, and production projects',
                 'Unlimited license keys',
@@ -69,8 +73,10 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 3,
             'product_id' => 2,
+            'title'=>'starter pack',
+            'description' => 'Perfect for solo developers',
             'paddle_price_id' => 'pri_01jpw52t5m31was20nv508vby9', // 19$
-            'price' => 19,
+            'amount' => 19,
             'features' => [
                 'one production licence',
                 '3 licence keys',
@@ -81,8 +87,10 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 4,
             'product_id' => 2,
+            'title'=>'agency',
             'paddle_price_id' => 'pri_01jpw5476s8j0mhxsy1ve4a1hy', // 45$
-            'price' => 45,
+            'amount' => 45,
+            'description' => 'Ideal for teams and multiple client projects',
             'features' => [
                 'Unlimited dev, staging, and production projects',
                 'Unlimited license keys',

@@ -17,9 +17,11 @@ return new class extends Migration
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
+            $table->string('title');
+            $table->mediumText('description');
             $table->json('features')->nullable();
             $table->string('paddle_price_id');
-            $table->integer('price');
+            $table->integer('amount');
             $table->timestamps();
         });
     }
