@@ -80,22 +80,22 @@
 
     <!-- The Modal -->
 
-    @teleport($teleportTo)
     <div
         x-show="isOpen"
+        x-trap="isOpen"
         style="display: none"
-        x-on:keydown.escape.prevent.stop="close()"
+        x-on:keydown.escape.window.prevent.stop="close()"
         role="dialog"
         aria-modal="true"
         x-id="['modal-header']"
         :aria-labelledby="$id('modal-header')"
-        class="fixed inset-x-0 inset-y-0 z-10 overflow-y-auto"
+        class="fixed inset-x-0 inset-y-0 z-50 overflow-y-auto"
     >
         <!-- Overlay -->
         <div 
             x-show="isOpen"
             x-transition.opacity
-            class="fixed inset-0 dark:bg-black bg-white bg-opacity-60 backdrop-blur-lg"
+            class="fixed inset-0 dark:bg-black  bg-opacity-60 backdrop-blur-lg"
         ></div>
 
         <!-- Panel -->
@@ -116,7 +116,7 @@
                     x-on:click.stop
                     x-trap.noscroll.inert="isOpen"
                     @class([
-                    "relative max-w-2xl mx-auto border dark:border-white/5 border-gray-800/15 overflow-y-auto rounded-xl dark:bg-zinc-950 bg-white text-gray-800 dark:text-gray-300 px-4 ",
+                    "relative max-w-2xl mx-auto border dark:border-white/5 border-gray-800/15 overflow-y-auto rounded-xl bg-zinc-950 text-gray-800 dark:text-gray-300 px-4 ",
                     'pb-4'=>blank($footer),
                     'pb-2'=>filled($footer),
                     'pt-4'=>blank($header),
@@ -176,5 +176,4 @@
                 </div>
             </div>
         </div>
-    @endteleport
 </div>

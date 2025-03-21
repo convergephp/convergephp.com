@@ -1,4 +1,4 @@
-<header class="border-base-300 bg-base-200 fixed inset-x-0 top-0 z-50 border-b">
+<header class="border-base-300 bg-base-200 fixed inset-x-0 top-0 z-30 border-b">
     <div class="relative flex justify-center">
         <div class="supports-backdrop-blur:bg-black/10 relative mx-4 w-full max-w-7xl rounded-full">
             <nav class="flex min-h-[5rem] items-center justify-between px-4"

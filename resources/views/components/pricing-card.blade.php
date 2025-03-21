@@ -1,6 +1,5 @@
 <!-- resources/views/components/pricing-card.blade.php -->
 @props(['price', 'default' => false])
-@dd($price  )
 <div
     class="{{ $default ? 'border-base-300 bg-blue-700' : '' }} border-base-300 bg-base-100 text-base-content m-0 flex !min-h-full w-[450px] max-w-lg flex-col rounded-lg border p-6 text-center shadow xl:p-8">
     <h3 class="text-base-content mb-4 text-2xl font-semibold">{{ $price->title }}</h3>
@@ -28,5 +27,5 @@
         @endforeach
     </ul>
 
-    <x-pricing.buy :checkout="$price->checkout" />
+    <x-pricing.buy :price="$price" />
 </div>
