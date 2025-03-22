@@ -6,9 +6,8 @@
 
                 {{-- LOGO --}}
                 <div class="flex lg:flex-1">
-                    <a href="/"
-                       class="text-primary text-2xl font-black">
-                        Converge
+                    <a href="/">
+                        <x-app-logo-2 class="h-[1.7rem] !stroke-cyan-900"></x-app-logo-2>
                     </a>
                 </div>
 
@@ -43,12 +42,7 @@
                             </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
-
-                    <button class="btn btn-sm btn-primary ml-2">
-                        Sponsor converge
-                    </button>
                 </div>
-
             </nav>
         </div>
     </div>

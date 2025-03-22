@@ -1,13 +1,13 @@
 <section class="mx-auto max-w-7xl px-6 lg:px-8">
     {{-- ANIMATED LINE --}}
-    <x-animated-line-svg height="68"
+    {{-- <x-animated-line-svg height="68"
                          direction="ltr"
                          duration="3"
                          strokeWidth="2"
                          colorStart="#2EB9DF"
                          background="transparent"
                          colorEnd="#9E00FF"
-                         class="transfor absolute left-0 top-[120px] hidden md:left-20 md:block lg:left-52" />
+                         class="transfor absolute left-0 top-[120px] hidden md:left-20 md:block lg:left-52" /> --}}
 
     {{-- BAKGROUND GRID --}}
     <x-grid-svg data-aos="fade-down"
@@ -27,13 +27,14 @@
     {{-- SECTION CONTENT --}}
 
     <div data-aos="fade-up"
-         data-aos-duration="1500"
+         data-aos-duration="1000"
          data-aos-anchor-placement="top-bottom"
          class="relative mx-auto max-w-3xl pt-[7rem] text-center">
 
         <h1
-            class="from-base-content/80 to-base-content bg-gradient-to-br bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]">
-            Streamline Your Documentation Workflow with <span class="text-primary">Converge</span>
+            class="from-base-content to-base-300 bg-gradient-to-br bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]">
+            Streamline Your Documentation Workflow with <span
+                  class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
         </h1>
 
         <p class="text-base-content/80 text-md mt-6 font-medium md:text-xl">Converge is the open-source framework that
@@ -69,7 +70,10 @@
 
     <div
          class="border-base-300 bg-base-100 min relative mt-20 overflow-hidden rounded-[24px] border p-2 lg:rounded-[32px] lg:p-4">
-        <div class="bg-base-300/50 border-base-300 rounded-[24px] border"><img alt="Ecme homepage"
+        <div class="bg-base-300/50 border-base-300 rounded-[24px] border">
+            <img data-aos="fade-up"
+                 data-aos-duration="1000"
+                 alt="Ecme homepage"
                  loading="lazy"
                  width="1920"
                  height="1040"
@@ -77,7 +81,8 @@
                  data-nimg="1"
                  class="rounded-2xl lg:rounded-[24px]"
                  style="color: transparent;"
-                 src="{{ asset('exemple-2.png') }}"></div>
+                 src="{{ asset('exemple-4.png') }}">
+        </div>
     </div>
 
     </div>
