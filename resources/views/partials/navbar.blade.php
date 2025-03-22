@@ -6,9 +6,8 @@
 
                 {{-- LOGO --}}
                 <div class="flex lg:flex-1">
-                    <a href="/"
-                       class="text-primary text-2xl font-black">
-                        Converge
+                    <a href="/">
+                        <x-app-logo-2 class="h-[1.1rem] !stroke-cyan-900 md:h-[1.4rem] lg:h-[1.6rem]"></x-app-logo-2>
                     </a>
                 </div>
 
@@ -20,13 +19,12 @@
 
                     <x-navbar.dropdown-menu label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link
-                                :url="route('products.show',['product'=>'components'])"
-                                title="Blade Components"
-                                description="Visite our beautiful blade components">
+                            <x-navbar.card-link :url="route('products.show', ['product' => 'components'])"
+                                                title="Blade Components"
+                                                description="Visite our beautiful blade components">
                             </x-navbar.card-link>
 
-                            <x-navbar.card-link :url="route('products.show',['product'=>'layouts-themes'])"
+                            <x-navbar.card-link :url="route('products.show', ['product' => 'layouts-themes'])"
                                                 title="Layouts"
                                                 description="Create a powerfull layouts">
                             </x-navbar.card-link>
@@ -56,6 +54,8 @@
                     </form>
                 </div>
 
+                {{-- Theme switcher --}}
+                <x-theme-switcher />
             </nav>
         </div>
     </div>

@@ -1,4 +1,7 @@
-<x-layouts.marketing>
+<x-layout>
     {{-- HERO SECTION --}}
     @include('partials.hero')
-</x-layouts.marketing>
+
+    {{-- FEATURES SECTION --}}
+    @include('partials.features')
+</x-layout>
