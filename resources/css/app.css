@@ -11,6 +11,7 @@
     --color-primary: #00E6F5;
     --color-base-200: black;
     --color-secondary: teal;
+    --color-accent: oklch(0.586 0.253 17.585);
   }
 
   @plugin "daisyui/theme" {

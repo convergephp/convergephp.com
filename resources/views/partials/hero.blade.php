@@ -1,4 +1,4 @@
-<section class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="mx-auto mb-10 max-w-7xl px-6 lg:px-8">
     {{-- ANIMATED LINE --}}
     {{-- <x-animated-line-svg height="68"
                          direction="ltr"
