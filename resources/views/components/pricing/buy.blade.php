@@ -16,7 +16,7 @@
                 Select Plan
             </button>
         </x-slot>
-        <div class="text-md font-tinybold pb-2 pr-4 text-gray-400">
+        <div class="text-md font-tinybold pb-2 px-3 text-gray-400">
             You need to log in or register to proceed with selecting this package. Once authenticated, you will be
             redirected to complete your purshase.
         </div>
