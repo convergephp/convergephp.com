@@ -1,7 +1,9 @@
 <section class="mx-auto max-w-7xl p-6 py-16 md:py-24 lg:px-8">
 
     {{-- TITLES --}}
-    <div class="grid max-w-xl items-start justify-between gap-5">
+    <div data-aos="fade-up"
+         data-aos-duration="2000"
+         class="grid max-w-xl items-start justify-between gap-5">
         <div class="text-4xl/[1.07] font-bold tracking-tight md:text-5xl/[1.07]">
             <span class="from-base-content to-base-300 bg-gradient-to-br bg-clip-text text-transparent">
                 Discover the Power of converge
@@ -17,7 +19,8 @@
     <div class="mt-16 grid grid-cols-6 gap-4 lg:grid-cols-12 lg:gap-6 xl:gap-8">
 
         {{-- THEMES --}}
-        <div
+        <div data-aos="fade-up"
+             data-aos-duration="2000"
              class="bg-base-100 ring-base-300 group order-1 col-span-full flex h-[480px] flex-col overflow-hidden rounded-2xl ring-1 md:col-span-3 lg:col-span-5 xl:col-span-4">
             <div class="mb-4 h-full w-full overflow-hidden [mask:linear-gradient(transparent,red,transparent)]">
                 <img class="h-full w-full transform duration-200 group-hover:scale-105"
@@ -36,7 +39,8 @@
         </div>
 
         {{-- DOCS  --}}
-        <div
+        <div data-aos="fade-up"
+             data-aos-duration="2000"
              class="bg-base-100 ring-base-300 group order-1 col-span-full flex h-[480px] flex-col overflow-hidden rounded-2xl ring-1 md:col-span-3 lg:col-span-5 xl:col-span-4">
             <div class="mb-4 h-full w-full overflow-hidden [mask:linear-gradient(transparent,red,transparent)]">
                 <img class="h-full w-full transform duration-200 group-hover:scale-105"
@@ -55,7 +59,8 @@
         </div>
 
         {{-- LAYOUTS --}}
-        <div
+        <div data-aos="fade-up"
+             data-aos-duration="2000"
              class="bg-base-100 ring-base-300 group order-3 col-span-full flex h-[480px] flex-col overflow-hidden rounded-2xl ring-1 md:order-4 md:col-span-3 lg:col-span-5 xl:order-3 xl:col-span-4">
             <div
                  class="mb-4 h-full w-full scale-125 transform overflow-hidden [mask:linear-gradient(transparent,black,transparent)]">
@@ -74,7 +79,8 @@
         </div>
 
         {{-- BLADE COMPONENTS --}}
-        <div
+        <div data-aos="fade-up"
+             data-aos-duration="2000"
              class="bg-base-100 ring-base-300 group order-4 col-span-full flex h-[480px] flex-col overflow-hidden rounded-2xl ring-1 md:order-5 xl:order-4 xl:col-span-7">
             <div class="mb-4 h-full w-full overflow-hidden [mask:linear-gradient(transparent,black,transparent)]">
                 <img class="h-full w-full transform duration-200 group-hover:scale-105"
@@ -93,7 +99,8 @@
         </div>
 
         {{-- OTHER --}}
-        <div
+        <div data-aos="fade-up"
+             data-aos-duration="2000"
              class="bg-base-100 ring-base-300 group order-5 col-span-full flex h-[480px] flex-col overflow-hidden rounded-2xl ring-1 md:order-3 md:col-span-3 lg:col-span-7 xl:order-5 xl:col-span-5">
             <div class="mb-4 h-full w-full overflow-hidden [mask:linear-gradient(transparent,black,transparent)]">
                 <img class="h-full w-full transform duration-200 group-hover:scale-105"
