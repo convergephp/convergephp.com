@@ -29,7 +29,7 @@
     <div data-aos="fade-up"
          data-aos-duration="1000"
          data-aos-anchor-placement="top-bottom"
-         class="relative mx-auto max-w-3xl pt-[7rem] text-center">
+         class="relative mx-auto max-w-3xl pt-[1rem] text-center md:pt-[3rem] lg:pt-[6rem]">
 
         <h1
             class="from-base-content to-base-300 bg-gradient-to-br bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]">
@@ -71,8 +71,7 @@
     <div
          class="border-base-300 bg-base-100 min relative mt-20 overflow-hidden rounded-[24px] border p-2 lg:rounded-[32px] lg:p-4">
         <div class="bg-base-300/50 border-base-300 rounded-[24px] border">
-            <img data-aos="fade-up"
-                 data-aos-duration="1000"
+            <img data-aos="zoom-in"
                  alt="Ecme homepage"
                  loading="lazy"
                  width="1920"

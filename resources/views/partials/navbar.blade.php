@@ -7,7 +7,7 @@
                 {{-- LOGO --}}
                 <div class="flex lg:flex-1">
                     <a href="/">
-                        <x-app-logo-2 class="h-[1.7rem] !stroke-cyan-900"></x-app-logo-2>
+                        <x-app-logo-2 class="h-[1.1rem] !stroke-cyan-900 md:h-[1.4rem] lg:h-[1.6rem]"></x-app-logo-2>
                     </a>
                 </div>
 
@@ -43,6 +43,9 @@
                         </div>
                     </x-navbar.dropdown-menu>
                 </div>
+
+                {{-- Theme switcher --}}
+                <x-theme-switcher />
             </nav>
         </div>
     </div>

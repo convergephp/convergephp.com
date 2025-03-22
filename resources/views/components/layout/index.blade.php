@@ -14,6 +14,16 @@
                 src="https://cdn.jsdelivr.net/npm/@alpinejs/anchor@3.x.x/dist/cdn.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
                 defer></script>
+
+        {{-- THEME --}}
+        <script>
+            const savedThemeIndex = localStorage.getItem('theme-index');
+            const themes = ['light', 'black'];
+
+            if (savedThemeIndex !== null) {
+                document.documentElement.setAttribute('data-theme', themes[parseInt(savedThemeIndex)]);
+            }
+        </script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @paddleJS
     </head>

@@ -4,4 +4,6 @@
 
     {{-- FEATURES SECTION --}}
     @include('partials.features')
+
+    @include('partials.test')
 </x-layout>
