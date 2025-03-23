@@ -2,7 +2,7 @@
 @import '../../vendor/livewire/flux/dist/flux.css';
 
 @plugin "daisyui" {
-    themes: light --default , black --prefersdark;
+    themes: black --default, light;
 }
 
 @plugin "daisyui/theme" {
@@ -18,6 +18,7 @@
     name: "light";
     default: true;
     --color-primary: #00E6F5;
+    --color-accent: oklch(0.586 0.253 17.585);
   }
 
 @source "../views";
