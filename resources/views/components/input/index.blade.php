@@ -9,7 +9,7 @@
 <input type={{ $type }}
        {{ $attributes->filter(fn(string $value, string $key) => $key === 'wire:model') }}
        {{ $attributes->class([
-           'input block w-full border border-gray-400/20 rounded-field outline-none py-1.5 text-base transition bg-transparent duration-75 placeholder:text-base-content/50 focus:ring-0 focus-within:ring-0 disabled:text-base-content/40 focus:border-transparent focus-within:ring-transparent disabled:[-webkit-text-fill-color:theme(colors.gray.500)] disabled:placeholder:[-webkit-text-fill-color:theme(colors.gray.400)] text-base-content',
+           'input block w-full rounded-field outline-none py-1.5 text-base transition bg-transparent duration-75 placeholder:text-base-content/50 focus:ring-0 focus-within:ring-0 disabled:text-base-content/40 border-none ring-none focus:border-transparent focus-within:ring-transparent disabled:[-webkit-text-fill-color:theme(colors.gray.500)] disabled:placeholder:[-webkit-text-fill-color:theme(colors.gray.400)] text-base-content',
            'ps-0' => $inlinePrefix,
            'ps-3' => !$inlinePrefix,
            'pe-0' => $inlineSuffix,
