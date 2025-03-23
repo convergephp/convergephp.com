@@ -21,6 +21,7 @@
                 document.documentElement.setAttribute('data-theme', themes[parseInt(savedThemeIndex)]);
             }
         </script>
+        
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @paddleJS
     </head>

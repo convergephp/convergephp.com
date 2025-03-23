@@ -2,15 +2,14 @@
 
 @php
     // used in session storage for activate the checkout
-    //overlay after the direct redirect  
+    // overlay for the direct redirect  
     // after authentication
-
     $id = Str::slug($price->title. '-'. $price->product->name)  
 @endphp
 
 @if (($checkout = $price->checkout) instanceof Laravel\Paddle\Checkout)
-    <div id="{{ $id }}" class="btn btn-accent mt-auto">
-        <x-paddle-button class="px-8 py-4" :checkout="$checkout">
+    <div  class="btn btn-accent mt-auto">
+        <x-paddle-button id="{{ $id }}" class="px-8 py-4" :checkout="$checkout">
             Buy
         </x-paddle-button>
     </div>

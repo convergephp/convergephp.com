@@ -121,7 +121,7 @@
                          setTimeout(() => {
                              const button = document.querySelector(`#${selectedPlan}`);
                              if (button) {
-                                 button.click();
+                                button.click();
                              }
                              sessionStorage.removeItem('selectedPlan');
                          }, 300);

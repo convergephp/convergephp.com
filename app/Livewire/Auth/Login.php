@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Auth;
 
+use App\Constants;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\RateLimiter;
@@ -41,9 +42,12 @@ class Login extends Component
         }
 
         RateLimiter::clear($this->throttleKey());
+
         Session::regenerate();
 
-        $this->redirectIntended(default: route('dashboard', absolute: false), navigate: true);
+        $redirectUrl = Session::pull(Constants::AFTER_LOGIN_REDIRECT_URL) ?? route('products.index');
+
+        $this->redirectIntended(default: $redirectUrl);
     }
 
     /**
