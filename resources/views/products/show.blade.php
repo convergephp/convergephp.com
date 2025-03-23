@@ -114,7 +114,6 @@
             init (){
                  const selectedPlan = sessionStorage.getItem('selectedPlan');
                  
-                 
                  this.$nextTick(() => { 
                     if (selectedPlan) {
                          setTimeout(() => {
