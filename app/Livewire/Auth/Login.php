@@ -13,7 +13,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
-#[Layout('components.layouts.auth')]
+#[Layout('components.layout.auth')]
 class Login extends Component
 {
     #[Validate('required|string|email')]
@@ -21,6 +21,8 @@ class Login extends Component
 
     #[Validate('required|string')]
     public string $password = '';
+
+    public $canSwitchAuthPages = true ;
 
     public bool $remember = false;
 

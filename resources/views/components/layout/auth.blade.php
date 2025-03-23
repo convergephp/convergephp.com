@@ -25,12 +25,14 @@
         @paddleJS
     </head>
 
-    <body class="bg-base-200 text-base-content !font-sans antialiased">
+    <body class="bg-base-200 text-base-content h-screen !font-sans antialiased">
         {{-- NAVBARE HEADER --}}
         @include('partials.navbar')
 
-        <section class="bg-base-200 pt-[6rem]">
-            {{ $slot }}
+        <section class="px-4 pt-[10rem]">
+            <div class="m-auto max-w-2xl">
+                {{ $slot }}
+            </div>
         </section>
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
