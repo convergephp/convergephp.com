@@ -14,6 +14,9 @@
     --color-base-200: black;
     --color-secondary: teal;
     --color-accent: oklch(0.586 0.253 17.585);
+    --radius-selector: 1rem;
+    --radius-field: 0.25rem;
+     --radius-box: 0.5rem;
   }
 
   @plugin "daisyui/theme" {
@@ -21,6 +24,10 @@
     default: true;
     --color-primary: #00E6F5;
     --color-accent: oklch(0.586 0.253 17.585);
+  }
+
+  @utility input {
+    @apply !outline-none;
   }
 
 @source "../views";
