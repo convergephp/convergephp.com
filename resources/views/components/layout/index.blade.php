@@ -11,7 +11,6 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
               rel="stylesheet">
 
-
         {{-- THEME --}}
         <script>
             const savedThemeIndex = localStorage.getItem('theme-index');
@@ -21,12 +20,12 @@
                 document.documentElement.setAttribute('data-theme', themes[parseInt(savedThemeIndex)]);
             }
         </script>
-        
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @paddleJS
     </head>
 
-    <body class="bg-base-200 text-base-content font-sans antialiased">
+    <body class="bg-base-200 text-base-content !font-sans antialiased">
         {{-- NAVBARE HEADER --}}
         @include('partials.navbar')
 
@@ -38,7 +37,7 @@
         <script>
             AOS.init();
         </script>
-        @livewireScriptConfig 
+        @livewireScriptConfig
     </body>
 
 </html>

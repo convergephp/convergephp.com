@@ -5,7 +5,7 @@
             <nav class="flex min-h-[5rem] items-center justify-between"
                  aria-label="Global">
                 {{-- LOGO --}}
-                <div class="flex lg:flex-1">
+                <div class="flex">
                     <a href="/">
                         <x-app-logo-2 class="h-[1.1rem] !stroke-cyan-900 md:h-[1.4rem] lg:h-[1.6rem]"></x-app-logo-2>
                     </a>
@@ -13,7 +13,7 @@
 
                 {{-- NAVBAR ITEMS - DESKTOP --}}
                 <div
-                     class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-end text-sm font-medium transition md:flex">
+                     class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 grow items-center justify-start px-4 text-sm font-medium transition md:flex">
                     <x-navbar.link href="/in-person">Documentation</x-navbar.link>
                     <x-navbar.dropdown-menu label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
@@ -44,12 +44,29 @@
                     <x-theme-switcher class="md:order-5" />
 
                     {{-- Actions buttons --}}
-                    <form method="POST"
-                          action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit"
-                                class="btn md:btn-sm btn-square md:btn-block bg-base-300 rounded-sm md:px-2">
-                            <span class="hidden md:block">{{ __('Logout') }}</span>
+                    @auth
+                        <form method="POST"
+                              action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit"
+                                    class="btn md:btn-sm btn-square md:btn-block bg-base-300 rounded-sm md:px-2">
+                                <span class="hidden md:block">{{ __('Logout') }}</span>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     fill="none"
+                                     viewBox="0 0 24 24"
+                                     stroke-width="1.5"
+                                     stroke="currentColor"
+                                     class="block size-5 md:hidden">
+                                    <path stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                </svg>
+                            </button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}"
+                           class="btn md:btn-sm btn-link bg-base-300 btn-ghost rounded-sm px-2 no-underline md:px-4">
+                            <span class="hidden md:inline">{{ __('Login') }}</span>
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  fill="none"
                                  viewBox="0 0 24 24"
@@ -58,10 +75,10 @@
                                  class="block size-5 md:hidden">
                                 <path stroke-linecap="round"
                                       stroke-linejoin="round"
-                                      d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                                      d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
                             </svg>
-                        </button>
-                    </form>
+                        </a>
+                    @endauth
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">

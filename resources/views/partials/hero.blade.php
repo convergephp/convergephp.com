@@ -29,18 +29,20 @@
     <div data-aos="fade-up"
          data-aos-duration="1000"
          data-aos-anchor-placement="top-bottom"
-         class="relative mx-auto max-w-3xl pt-[1rem] text-center md:pt-[3rem] lg:pt-[6rem]">
+         class="relative mx-auto max-w-4xl pt-[1rem] text-center md:pt-[3rem] lg:pt-[6rem]">
 
         <h1
-            class="from-base-content to-base-300 bg-gradient-to-br bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-tight text-transparent md:text-5xl/[1.07]">
+            class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-widest text-transparent md:text-5xl/[1.07]">
             Streamline Your Documentation Workflow with <span
                   class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
         </h1>
 
-        <p class="text-base-content/80 text-md mt-6 font-medium md:text-xl">Converge is the open-source framework that
-            empowers anyone to build
-            high-quality, dynamic docs from Markdown. Developer-friendly. Intuitive. And designed for teams who care
-            about clarity
+        <p class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
+            Converge is the open-source framework that empowers anyone to build high-quality, dynamic
+            <span class="relative mx-1 inline-block px-1">
+                <span class="relative z-10 text-white">documentation from Markdown</span>
+                <span class="bg-accent/90 -rotate-0.5 absolute inset-0 -skew-y-3 transform"></span>
+            </span>. Developer-friendly. Intuitive. And designed for teams who care about clarity
         </p>
 
         <div class="mt-10 flex flex-col items-center justify-center gap-y-8">
