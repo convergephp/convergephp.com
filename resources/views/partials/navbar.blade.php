@@ -37,27 +37,36 @@
                             </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
-
-                    <button class="btn btn-sm btn-primary ml-2">
-                        Sponsor converge
-                    </button>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="w-full rounded-md btn btn-sm px-2 py-1 bg-white/10">
-                            {{ __('Log Out') }}
-                        </button>
-                    </form>
                 </div>
 
-                <div class="flex items-center gap-1">
-
+                <div class="flex items-center gap-2">
                     {{-- THEME SWITCHER --}}
-                    <x-theme-switcher />
+                    <x-theme-switcher class="md:order-5" />
+
+                    {{-- Actions buttons --}}
+                    <form method="POST"
+                          action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit"
+                                class="btn md:btn-sm btn-square md:btn-block bg-base-300 rounded-sm md:px-2">
+                            <span class="hidden md:block">{{ __('Logout') }}</span>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke-width="1.5"
+                                 stroke="currentColor"
+                                 class="block size-5 md:hidden">
+                                <path stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                            </svg>
+                        </button>
+                    </form>
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
                         <button x-on:click="mobileMenuOpen = !mobileMenuOpen"
-                                class="text-base-content hover:text-base-content/80 focus:ring-primary mr-2 inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-inset"
+                                class="btn btn-square bg-base-300 rounded-sm"
                                 aria-expanded="false"
                                 :aria-expanded="mobileMenuOpen.toString()">
                             <span class="sr-only">Ouvrir le menu principal</span>
@@ -150,7 +159,7 @@
 
                     {{-- Solutions Dropdown --}}
                     <div class="border-base-200 border-b">
-                        <button @click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
+                        <button xon:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
                                 class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium focus:outline-none">
                             <span>Solutions</span>
                             <svg :class="solutionsOpen ? 'transform rotate-180' : ''"
