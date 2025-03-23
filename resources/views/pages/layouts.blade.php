@@ -2,7 +2,7 @@
     <div class="relative z-20 py-10">
 
         <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
-            <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-tight">
+            <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
                 Our Layouts
             </h2>
             <p class="text-base-content mb-5 font-light sm:text-xl">

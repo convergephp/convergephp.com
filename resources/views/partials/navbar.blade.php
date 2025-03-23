@@ -64,7 +64,7 @@
                             </button>
                         </form>
                     @endif
-                    @if (!Auth::check() && !Request()->routeIs('login'))
+                    @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            class="btn md:btn-sm btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-2 no-underline md:px-4">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
@@ -129,7 +129,7 @@
                  x-transition:leave-end="opacity-0 transform -translate-y-2"
                  class="bg-base-100 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
                  style="display: none;">
-                <div class="space-y-1 px-3 pb-3 pt-2">
+                <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
                     <a href="/in-person"
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
@@ -176,9 +176,9 @@
                     </div>
 
                     {{-- Solutions Dropdown --}}
-                    <div class="border-base-200 border-b">
-                        <button xon:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
-                                class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium focus:outline-none">
+                    <div>
+                        <button x-on:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
+                                class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between px-4 py-3 text-base font-medium focus:outline-none">
                             <span>Solutions</span>
                             <svg :class="solutionsOpen ? 'transform rotate-180' : ''"
                                  class="h-5 w-5 transition-transform duration-200"

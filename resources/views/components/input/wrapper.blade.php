@@ -3,7 +3,7 @@
 ])
 
 <div
-     class="input-wrapper bg-base-300/10 ring-base-300/20 focus-within:ring-primary/60 rounded-field flex shadow-sm ring-1 transition duration-75 focus-within:ring-1">
+     class="input-wrapper bg-base-300/50 focus-within:ring-primary/60 rounded-field focus-within:border-primary/30 flex border border-gray-400/30 transition duration-75">
     <div class="min-w-0 flex-1">
         {{ $slot }}
     </div>
