@@ -22,7 +22,7 @@
         {{-- THEMES --}}
         <div data-aos="fade-up"
              data-aos-duration="1000"
-             class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
+             class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
             <div
                  class="group-hover:border-accent/10 group-hover:bg-accent/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                 <div>
@@ -40,7 +40,7 @@
                  class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                 <div class="container relative flex size-full items-center justify-center">
                     <div
-                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
+                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
                         <img class="h-full w-full transform hover:scale-105"
                              src="{{ asset('exemple-4.png') }}"
                              alt="">
@@ -49,7 +49,7 @@
             </div>
         </div>
 
-        {{-- DARK MODE --}}
+        {{-- DOCS CARD --}}
         <div data-aos="fade-up"
              data-aos-duration="1000"
              class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
@@ -69,7 +69,7 @@
                  class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                 <div class="container relative flex size-full items-center justify-center">
                     <div
-                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
+                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
                         <img class="h-full w-full transform hover:scale-105"
                              src="{{ asset('exemple-4.png') }}"
                              alt="">
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        {{--  --}}
+        {{-- LAYOUTS CARD --}}
         <div data-aos="fade-up"
              data-aos-duration="1000"
              class="bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline md:col-span-12">
@@ -97,7 +97,7 @@
                  class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                 <div class="container relative flex size-full items-center justify-center">
                     <div
-                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
+                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
                         <img class="h-full w-full transform hover:scale-105"
                              src="{{ asset('exemple-4.png') }}"
                              alt="">
@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        {{--  --}}
+        {{-- BLADE COMPONENTS CARD --}}
         <div data-aos="fade-up"
              data-aos-duration="1000"
              class="md:col-span-18 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
@@ -126,7 +126,7 @@
                  class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                 <div class="container relative flex size-full items-center justify-center">
                     <div
-                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
+                         class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
                         <img class="h-full w-full transform hover:scale-105"
                              src="{{ asset('exemple-4.png') }}"
                              alt="">

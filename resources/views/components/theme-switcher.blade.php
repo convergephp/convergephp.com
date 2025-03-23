@@ -1,32 +1,33 @@
-<div x-data="{
-    themes: ['light', 'black'],
-    currentThemeIndex: localStorage.getItem('theme-index') ? parseInt(localStorage.getItem('theme-index')) : 0,
-
-    init() {
-        this.setTheme(this.currentThemeIndex);
-
-        this.$watch('currentThemeIndex', val => {
-            this.setTheme(val);
-            localStorage.setItem('theme-index', val);
-        })
-    },
-
-    setTheme(index) {
-        document.documentElement.setAttribute('data-theme', this.themes[index]);
-    },
-
-    toggleTheme() {
-        this.currentThemeIndex = (this.currentThemeIndex + 1) % this.themes.length;
-    },
-
-    get currentTheme() {
-        return this.themes[this.currentThemeIndex];
-    },
-
-    get isDark() {
-        return this.currentTheme === 'black';
-    }
-}"
+<div {{ $attributes }}
+     x-data="{
+         themes: ['light', 'black'],
+         currentThemeIndex: localStorage.getItem('theme-index') ? parseInt(localStorage.getItem('theme-index')) : 0,
+     
+         init() {
+             this.setTheme(this.currentThemeIndex);
+     
+             this.$watch('currentThemeIndex', val => {
+                 this.setTheme(val);
+                 localStorage.setItem('theme-index', val);
+             })
+         },
+     
+         setTheme(index) {
+             document.documentElement.setAttribute('data-theme', this.themes[index]);
+         },
+     
+         toggleTheme() {
+             this.currentThemeIndex = (this.currentThemeIndex + 1) % this.themes.length;
+         },
+     
+         get currentTheme() {
+             return this.themes[this.currentThemeIndex];
+         },
+     
+         get isDark() {
+             return this.currentTheme === 'black';
+         }
+     }"
      class="relative ml-2 inline-flex items-center">
 
     <button type="button"

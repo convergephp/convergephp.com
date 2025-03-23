@@ -25,7 +25,7 @@
             <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
     </button>
-    <div x-anchor.bottom-end="$refs.item"
+    <div x-anchor.bottom-center="$refs.item"
          x-show="open"
          x-transition:enter="transition ease-out duration-600"
          x-transition:enter-start="opacity-100"

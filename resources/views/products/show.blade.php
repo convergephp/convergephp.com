@@ -112,21 +112,21 @@
 
         <div x-data="{
             init (){
-                 const selectedPlan = sessionStorage.getItem('selectedPlan');
-                 
-                 this.$nextTick(() => { 
-                    if (selectedPlan) {
-                         setTimeout(() => {
-                             const button = document.querySelector(`#${selectedPlan}`);
-                             if (button) {
-                                button.click();
-                             }
-                             sessionStorage.removeItem('selectedPlan');
-                         }, 300);
-                     }
-                 });
-             }
-             }" class="flex  justify-center space-y-8 sm:gap-2">
+                const selectedPlan = sessionStorage.getItem('selectedPlan');
+                this.$nextTick(() => { 
+                if (selectedPlan) {
+                    setTimeout(() => {
+                        const button = document.querySelector(`#${selectedPlan}`);
+                        if (button) {
+                            button.click();
+                        }
+                        sessionStorage.removeItem('selectedPlan');
+                    }, 300);
+                    }
+                });
+            }
+        }"
+             class="flex flex-wrap justify-center gap-4">
             @foreach ($product->prices as $price)
                 <x-pricing-card :price="$price" />
             @endforeach
