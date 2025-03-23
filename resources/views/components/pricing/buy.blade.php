@@ -1,7 +1,15 @@
 @props(['price'])
+
+@php
+    // used in session storage for activate the checkout
+    // overlay for the direct redirect  
+    // after authentication
+    $id = Str::slug($price->title. '-'. $price->product->name)  
+@endphp
+
 @if (($checkout = $price->checkout) instanceof Laravel\Paddle\Checkout)
-    <div class="btn btn-accent mt-auto">
-        <x-paddle-button class="px-8 py-4" :checkout="$checkout">
+    <div  class="btn btn-accent mt-auto">
+        <x-paddle-button id="{{ $id }}" class="px-8 py-4" :checkout="$checkout">
             Buy
         </x-paddle-button>
     </div>
@@ -12,11 +20,11 @@
             <button
                 class="btn btn-accent"
                 type="button"
-                x-on:click="sessionStorage.setItem('selectedPlan', @js($price->name. '-'. $price->product->name));">
+                x-on:click="sessionStorage.setItem('selectedPlan', @js($id));">
                 Select Plan
             </button>
         </x-slot>
-        <div class="text-md font-tinybold pb-2 pr-4 text-gray-400">
+        <div class="text-md font-tinybold pb-2 px-3 text-gray-400">
             You need to log in or register to proceed with selecting this package. Once authenticated, you will be
             redirected to complete your purshase.
         </div>
