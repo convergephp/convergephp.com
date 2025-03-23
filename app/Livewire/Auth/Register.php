@@ -2,10 +2,12 @@
 
 namespace App\Livewire\Auth;
 
+use App\Constants;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rules;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
@@ -38,6 +40,8 @@ class Register extends Component
 
         Auth::login($user);
 
-        $this->redirect(route('dashboard', absolute: false), navigate: true);
+        $redirectUrl = Session::pull(Constants::AFTER_LOGIN_REDIRECT_URL) ?? route('products.index');
+
+        $this->redirectIntended(default: $redirectUrl);
     }
 }
