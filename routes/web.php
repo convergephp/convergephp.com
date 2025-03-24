@@ -1,15 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Livewire\Home\Index;
 use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', Index::class)->name('home');
 
 Route::get('/buy', function (Request $request) {
 

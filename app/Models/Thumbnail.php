@@ -14,6 +14,7 @@ class Thumbnail extends Model implements HasMedia
     use HasFactory;
     use InteractsWithMedia;
 
+    
     protected $fillable = [
         'name', 'title', 'description', 'product_id',
     ];

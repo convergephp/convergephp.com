@@ -12,19 +12,21 @@
 @plugin "daisyui/theme" {
     name: "black";
     default: true;
-    --color-primary: oklch(0.432 0.232 292.759);
+    --color-primary: #00BCFF;
     --color-base-200: black;
+    --color-base-300: #060703;
+    --color-base-100: #090A08;
     --color-secondary: teal;
     --color-accent: oklch(0.586 0.253 17.585);
     --radius-selector: 1rem;
-    --radius-field: 0.25rem;
+    --radius-field: 3rem;
      --radius-box: 0.5rem;
   }
 
   @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    --color-primary: oklch(0.432 0.232 292.759);
+    --color-primary: #00BCFF;
     --color-accent: oklch(0.586 0.253 17.585);
   }
 

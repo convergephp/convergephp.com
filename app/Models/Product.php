@@ -29,6 +29,6 @@ class Product extends Model
      */
     public function thumbnails() : HasMany
     {
-        return $this->hasMany(Thumbnail::class);
+        return $this->hasMany(Thumbnail::class)->chaperone();
     }
 }

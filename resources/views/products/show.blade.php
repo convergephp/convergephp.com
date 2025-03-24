@@ -10,15 +10,15 @@
         </div>
 
         {{-- Tabs: Display thumbnails --}}
-        <div class="mx-auto max-w-7xl px-4">
+        <div class="mx-auto max-w-7xl px-2">
             <div class="flex flex-col"
                  x-data="{ activeTab: '{{ $product->thumbnails->first()->name ?? 'default' }}' }">
                 <div class="mb-4 w-full overflow-x-auto">
-                    <div class="border-base-300 flex gap-2 border-b">
+                    <div class="flex gap-2">
                         @foreach ($product->thumbnails as $thumbnail)
                             <button class="btn btn-ghost btn-sm md:bg-md mb-1"
                                     :class="activeTab === '{{ $thumbnail->name }}' ? 'bg-primary/5 border border-gray-400/20' :
-                                        'text-base-content  hover:border hover:border-gray-400/20'"
+                                        'text-base-content hover:bg-primary/5  hover:border hover:border-gray-400/20'"
                                     x-on:click="activeTab = '{{ $thumbnail->name }}'">
                                 {{ $thumbnail->name }}
                             </button>
@@ -29,18 +29,18 @@
                 {{-- Tabs Content --}}
                 <div class="w-full">
                     @foreach ($product->thumbnails as $thumbnail)
-                        <div class="grid grid-cols-1 gap-4"
+                        <div class="rounded-box border-base-300 group grid grid-cols-1 gap-4 border bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:8px_8px] bg-fixed [--pattern-fg:var(--color-base-300)]"
                              x-show="activeTab === '{{ $thumbnail->name }}'"
                              x-transition:enter="transition ease-out duration-300"
                              x-transition:enter-start="opacity-0 transform translate-y-4"
                              x-transition:enter-end="opacity-100 transform translate-y-0">
                             <a class="border-base-300 bg-base-100 h-max rounded-2xl border p-4 transition-all duration-300 hover:shadow-md"
-                               href="#">
+                               href="#{{ $thumbnail->name }}">
 
                                 <div
                                      class="flex h-[500px] w-full items-center justify-center overflow-hidden rounded-xl">
                                     @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                        <img class="h-full w-full object-cover"
+                                        <img class="h-full w-full transform object-cover"
                                              src="{{ $thumbnail->getMedia('thumbnails')->first()->getUrl() }}"
                                              alt="{{ $thumbnail->name }}"
                                              loading="lazy">
@@ -53,7 +53,7 @@
 
                                 <div class="mt-4">
                                     <h3 class="text-base-content text-lg font-bold">{{ $thumbnail->title }}</h3>
-                                    <p class="text-base-content mt-2 text-sm font-light">{{ $thumbnail->description }}
+                                    <p class="text-base-content mt-2 text-sm font-light">{!! Str::markdown($thumbnail->description) !!}
                                     </p>
                                 </div>
                             </a>
