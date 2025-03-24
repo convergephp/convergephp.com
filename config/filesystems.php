@@ -47,14 +47,6 @@ return [
             'report' => false,
         ],
 
-        'thumbnails' => [
-            'driver' => 'local',
-            'root'   => public_path('app/thumbnails'),
-            'url'    => env('APP_URL').'/thumbnails',
-            'visibility' => 'public',
-            'throw' => false,
-        ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

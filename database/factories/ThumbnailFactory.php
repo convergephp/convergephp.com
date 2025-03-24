@@ -17,7 +17,10 @@ class ThumbnailFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name(),
+            'title' => fake()->title(),
+            'description' => fake('description') ,
+            'product_id' => fake()->randomElement([1,2])
         ];
     }
 }
