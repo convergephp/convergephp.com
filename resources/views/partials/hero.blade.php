@@ -1,14 +1,4 @@
 <section class="mx-auto max-w-7xl px-2">
-    {{-- ANIMATED LINE --}}
-    {{-- <x-animated-line-svg height="68"
-                         direction="ltr"
-                         duration="3"
-                         strokeWidth="2"
-                         colorStart="#2EB9DF"
-                         background="transparent"
-                         colorEnd="#9E00FF"
-                         class="transfor absolute left-0 top-[120px] hidden md:left-20 md:block lg:left-52" /> --}}
-
     {{-- BAKGROUND GRID --}}
     <x-grid-svg data-aos="fade-down"
                 data-aos-duration="2000"

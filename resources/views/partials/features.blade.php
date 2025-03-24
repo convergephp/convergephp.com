@@ -2,10 +2,6 @@
      data-aos="fade-up"
      data-aos-duration="1000">
 
-    {{-- <p
-       class="top-0 origin-bottom-right text-left font-mono text-sm font-semibold uppercase tracking-widest text-sky-500 max-2xl:mb-4 max-2xl:px-2 max-sm:px-4 sm:text-xs 2xl:absolute 2xl:-rotate-90 2xl:text-right">
-        Converge Features</p> --}}
-
     <div class="bg-base-300 mx-auto w-full max-w-7xl space-y-2 overflow-hidden p-2">
 
         {{-- TITLES --}}

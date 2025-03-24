@@ -12,7 +12,7 @@
 @plugin "daisyui/theme" {
     name: "black";
     default: true;
-    --color-primary: #00E6F5;
+    --color-primary: oklch(0.432 0.232 292.759);
     --color-base-200: black;
     --color-secondary: teal;
     --color-accent: oklch(0.586 0.253 17.585);
@@ -24,7 +24,7 @@
   @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    --color-primary: #00E6F5;
+    --color-primary: oklch(0.432 0.232 292.759);
     --color-accent: oklch(0.586 0.253 17.585);
   }
 
