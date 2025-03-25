@@ -2,10 +2,9 @@
 
 namespace App\Listeners;
 
-use App\Events\ProductPurchased;
-use App\Models\User;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use App\Models\License;
+use Illuminate\Support\Str;
+use Laravel\Paddle\Events\TransactionCompleted;
 
 class GrantProductAccess
 {
@@ -20,12 +19,24 @@ class GrantProductAccess
     /**
      * Handle the event.
      */
-    public function handle(ProductPurchased $event): void
+    public function handle(TransactionCompleted $event): void
     {
-        $productId = $event->payload['data']['custom_data']['product_id'] ?? null;
+        $user = $event->billable->id;
 
-        $product = User::query()->atta();
+        $data = $event->payload['data'];
 
-     
+        $productId = $data['custom_data']['product_id'] ?? null;
+
+        $productPriceId = $data['custom_data']['product_price_id'] ?? null;
+
+        $item = $data['items'][0];
+        
+        $paddleProductId = $item['price']['product_id'];
+        $paddleProductPriceId = $item['price']['id'];
+        
+        $user->licenses()->create([
+            
+        ])
+        info(json_encode($data));
     }
 }

@@ -52,7 +52,7 @@ class User extends Authenticatable
 
     public function licenses()
     {
-        return $this->belongsToMany(License::class);
+        return $this->hasMany(License::class);
     }
     /**
      * Get the user's initials
