@@ -19,17 +19,25 @@ return new class extends Migration
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
-            $table->foreignId('product_id')
+            
+                $table->foreignId('product_id')
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
+
             $table->foreignId('product_price_id')
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
-            $table->string('key')->unique();
+            
+            $table->uuid('key')->unique();
+
+            $table->string('paddle_product_id');
+
+            $table->string('paddle_product_price_id');
+
             $table->unsignedBigInteger('activation_limit')->default(0);
-            $table->string('type');
+            
             $table->timestamps();
         });
     }
