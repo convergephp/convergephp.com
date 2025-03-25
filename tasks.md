@@ -2,9 +2,9 @@
 ## Handle Payment for products
 
 - display products dynamically and associate thier prices to paddle.[DONE]
-- handle guest options with the correct redirects option.[IN_PROGRESS]
-- handle webhooks to check wich product the authenticated user has been bought.
-- filament billing setup.
+- handle guest options with the correct redirects option.[DONE].
+- handle webhooks to check wich product the authenticated user has been bought.[IN_PROGRESS].
+- filament billing setup. [IN_PROGRESS]
 - build the billing portal.
 - handle licensing keys.
 - setup statis to handle private packages.
