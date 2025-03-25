@@ -14,14 +14,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('licenses', function (Blueprint $table) {
-            
+
             $table->id();
-          
+
             $table->foreignId('user_id')
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
-            
+
             $table->foreignId('product_id')
                 ->constrained()
                 ->restrictOnUpdate()
@@ -31,15 +31,19 @@ return new class extends Migration
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
-            
+
             $table->uuid('key')->unique();
 
-            $table->string('paddle_product_id');
+            $table->string('paddle_product_id')->nullable();
 
-            $table->string('paddle_product_price_id');
+            $table->string('paddle_product_price_id')->nullable();
+            
+            $table->integer('satis_authentication_count')->default(0); // current activations
+
+            $table->integer('quantity')->default(1);
 
             $table->unsignedBigInteger('activation_limit')->default(0);
-            
+
             $table->timestamps();
         });
     }

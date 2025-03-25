@@ -21,7 +21,7 @@ class GrantProductAccess
      */
     public function handle(TransactionCompleted $event): void
     {
-        $user = $event->billable->id;
+        $user = $event->billable;
 
         $data = $event->payload['data'];
 
@@ -29,14 +29,15 @@ class GrantProductAccess
 
         $productPriceId = $data['custom_data']['product_price_id'] ?? null;
 
-        $item = $data['items'][0];
-        
-        $paddleProductId = $item['price']['product_id'];
-        $paddleProductPriceId = $item['price']['id'];
-        
-        $user->licenses()->create([
-            
-        ])
-        info(json_encode($data));
+        foreach ($data['items'] as $item) { // in our case there is only one item in items data but weed to ensure 
+            $user->licenses()->create([     // that we don't loose any data. 
+                'key' => Str::random(64),
+                'product_id' => $productId,
+                'product_price_id' => $productPriceId,
+                'paddle_product_id' => $item['price']['product_id'],
+                'paddle_product_price_id' => $item['price']['id'],
+                'quantity' => $item['quantity'] ?? 1
+            ]);
+        }
     }
 }
