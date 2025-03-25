@@ -22,7 +22,7 @@
         @paddleJS
     </head>
 
-    <body class="bg-base-200 text-base-content min-h-screen !font-sans antialiased">
+    <body class="bg-base-200 scrollbar-hidden text-base-content min-h-screen !font-sans antialiased">
 
         {{ $slot }}
 

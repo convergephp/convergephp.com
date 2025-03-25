@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="relative z-20 py-10">
+    <div class="z-20 px-2 py-10">
         <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
             <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
                 {{ $product->name }}
@@ -10,13 +10,13 @@
         </div>
 
         {{-- Tabs: Display thumbnails --}}
-        <div class="mx-auto max-w-7xl px-2">
+        <div class="mx-auto max-w-7xl">
             <div class="flex flex-col"
                  x-data="{ activeTab: '{{ $product->thumbnails->first()->name ?? 'default' }}' }">
-                <div class="mb-4 w-full overflow-x-auto">
+                <div class="scrollbar-hidden mb-4 w-full overflow-x-auto">
                     <div class="flex gap-2">
                         @foreach ($product->thumbnails as $thumbnail)
-                            <button class="btn btn-ghost btn-sm md:bg-md mb-1"
+                            <button class="btn btn-ghost btn-sm lg:btn-md mb-1"
                                     :class="activeTab === '{{ $thumbnail->name }}' ? 'bg-primary/5 border border-gray-400/20' :
                                         'text-base-content hover:bg-primary/5  hover:border hover:border-gray-400/20'"
                                     x-on:click="activeTab = '{{ $thumbnail->name }}'">
@@ -40,10 +40,12 @@
                                 <div
                                      class="flex h-[500px] w-full items-center justify-center overflow-hidden rounded-xl">
                                     @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                        <img class="h-full w-full transform object-cover"
+                                        {{-- <img class="h-full w-full transform object-cover"
                                              src="{{ $thumbnail->getMedia('thumbnails')->first()->getUrl() }}"
                                              alt="{{ $thumbnail->name }}"
-                                             loading="lazy">
+                                             loading="lazy"> --}}
+                                        <x-image loading="lazy"
+                                                 :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"></x-image>
                                     @else
                                         <div class="flex h-full w-full items-center justify-center rounded-xl">
                                             <p class="text-base-content">No image available</p>
@@ -65,7 +67,7 @@
     </div>
 
     {{-- Pricing --}}
-    <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-20">
+    <div class="mx-auto max-w-7xl overflow-x-hidden px-2 py-8 lg:py-20">
         {{-- Title --}}
         <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
             <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">

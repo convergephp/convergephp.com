@@ -49,6 +49,7 @@
     <div data-aos="zoom-in"
          data-aos-duration="500"
          class="mockup-browser bg-base-200 !mx-0 mt-10 w-full border border-gray-400/20">
+        test
         <div class="mockup-browser-toolbar h-full">
             <div class="input">https://convergephp.com/docs/5.x</div>
         </div>

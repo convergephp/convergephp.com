@@ -129,7 +129,7 @@
                  x-transition:leave="transition ease-in duration-150"
                  x-transition:leave-start="opacity-100 transform translate-y-0"
                  x-transition:leave-end="opacity-0 transform -translate-y-2"
-                 class="bg-base-100 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
+                 class="bg-base-200 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}

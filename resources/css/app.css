@@ -78,6 +78,20 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
+
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For Firefox */
+    .scrollbar-hidden {
+        scrollbar-width: none;
+    }
+
+    /* For Internet Explorer and Edge */
+    .scrollbar-hidden {
+        -ms-overflow-style: none;
+    }
 }
 
 [data-flux-field] {
