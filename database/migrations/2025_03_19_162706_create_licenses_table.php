@@ -23,9 +23,13 @@ return new class extends Migration
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
+            $table->foreignId('product_price_id')
+                ->constrained()
+                ->restrictOnUpdate()
+                ->restrictOnDelete();
             $table->string('key')->unique();
             $table->unsignedBigInteger('activation_limit')->default(0);
-            $table->string('type'); // single_project, unlimited_project
+            $table->string('type');
             $table->timestamps();
         });
     }
