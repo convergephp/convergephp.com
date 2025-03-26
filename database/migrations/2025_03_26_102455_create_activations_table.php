@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique(); // Unique activation ID
             $table->foreignId('license_id')->constrained()->cascadeOnDelete();
-
             $table->json('signed_activation')->nullable(); // Signed verification data
             $table->string('current_version')->nullable();
             $table->string('arch')->nullable(); // System architecture (x86, x64, ARM)

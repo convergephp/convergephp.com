@@ -11,6 +11,9 @@
 - handle when user want to upgrade from single license to unlimited.
 - delivering the plugins.
 
+# Notes:
+- set progress color based on the primary color.
+
 # Ayoub's tasks
 ## *
 

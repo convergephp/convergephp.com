@@ -1,20 +1,25 @@
-<div class="flex items-start max-md:flex-col">
-    <div class="mr-10 w-full pb-4 md:w-[220px]">
-        <flux:navlist>
-            <flux:navlist.item :href="route('settings.profile')" wire:navigate>{{ __('Profile') }}</flux:navlist.item>
-            <flux:navlist.item :href="route('settings.password')" wire:navigate>{{ __('Password') }}</flux:navlist.item>
-            <flux:navlist.item :href="route('settings.appearance')" wire:navigate>{{ __('Appearance') }}</flux:navlist.item>
-        </flux:navlist>
-    </div>
-
-    <flux:separator class="md:hidden" />
-
-    <div class="flex-1 self-stretch max-md:pt-6">
-        <flux:heading>{{ $heading ?? '' }}</flux:heading>
-        <flux:subheading>{{ $subheading ?? '' }}</flux:subheading>
-
-        <div class="mt-5 w-full max-w-lg">
-            {{ $slot }}
+<x-layout.index>
+    <div>
+        <header class="col-span-12 mx-auto h-full text-center">
+            <h3 class="text-3xl font-medium text-gray-700 text-white">{{ $title ?? '' }}</h3>
+            <p class="text-lg font-medium text-gray-600">{{ $subTitle ?? '' }}</p>
+        </header>
+        <div
+            class="container relative mx-auto grid max-w-4xl grid-cols-12 items-start rounded-xl px-6 py-10 transition-colors duration-300 md:gap-x-10 md:px-12 2xl:gap-x-12">
+            <div class="z-10 justify-self-center sm:pt-8 md:col-span-4 md:block">
+                <aside class="menu">
+                    <ul class="mt-8 flex flex-col gap-y-2">
+                        <x-settings.link href="{{ route('settings.profile') }}" label="Account" wire:navigate.hover
+                            :active="request()->RouteIs('settings.profile')" />
+                        <x-settings.link href="{{ route('settings.password') }}" label="Profile Account" wire:navigate.hover
+                            :active="request()->RouteIs('settings.password')" />
+                    </ul>
+                </aside>
+            </div>
+    
+            <div class="col-span-12 text-gray-700 md:col-span-8 dark:text-white">
+                {{ $slot }}
+            </div>
         </div>
     </div>
-</div>
+</x-layout.index>
