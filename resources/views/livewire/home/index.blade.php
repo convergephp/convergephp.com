@@ -5,5 +5,9 @@
 
     <x-partials.features />
 
-    <x-pattern-separator title="Team Section -comming soon-" />
+    <x-pattern-separator title="Sponsors" />
+
+    <x-partials.sponsors />
+
+    <x-partials.footer />
 </div>
