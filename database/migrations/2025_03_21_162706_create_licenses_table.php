@@ -34,9 +34,18 @@ return new class extends Migration
 
             $table->string('key', 64)->unique(); 
 
-            $table->string('paddle_product_id')->nullable();
+            // we don't actually need those paddle ids in these license table but maybe the product id and price id are nullable
+            // (while this not possible) but we don't have controle over paddle APIs so we can excepect anything and
+            // we must do our fallback, and at least setting the paddle level ids
 
-            $table->string('paddle_product_price_id')->nullable();
+            /** FALL_BACK_STARTS */
+            
+            $table->string('paddle_product_id')->nullable(); 
+
+            $table->string('paddle_product_price_id')->nullable(); 
+            
+            /** FALL_BACK_ENDS */
+
             
             $table->integer('satis_authentication_count')->default(0); // current activations
 

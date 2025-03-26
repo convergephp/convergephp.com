@@ -30,6 +30,7 @@ class LicenseResource extends Resource
                     ->relationship('product', 'name')
                     ->required(),
                 Forms\Components\TextInput::make('product_price_id')
+                    ->relationship('price', 'name')
                     ->required()
                     ->numeric(),
                 Forms\Components\TextInput::make('key')

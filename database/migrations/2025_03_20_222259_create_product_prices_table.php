@@ -17,15 +17,15 @@ return new class extends Migration
                 ->constrained()
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
-            $table->string('title');
+            $table->string('name');
             $table->mediumText('description');
+            $table->foreignId('caractersituqea');
             $table->json('features')->nullable();
             $table->string('paddle_price_id');
             $table->integer('amount');
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */

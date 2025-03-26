@@ -21,6 +21,11 @@ class License extends Model
     {
         return $this->belongsTo(Product::class);
     }
+    
+    public function price(): BelongsTo
+    {
+        return $this->belongsTo(ProductPrice::class);
+    }
 
     public function user(): BelongsTo
     {
