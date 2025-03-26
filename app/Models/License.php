@@ -27,6 +27,10 @@ class License extends Model
         return $this->belongsTo(ProductPrice::class);
     }
 
+    public function maximumActivationCount(){
+        return $this->price()->privilege()->prod_activation_limit;
+    }
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
