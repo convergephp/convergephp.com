@@ -23,7 +23,7 @@
         </div>
 
         {{-- CARDS --}}
-        <div class="grid-cols-30 bg-base-300 grid w-full grid-flow-dense gap-2">
+        <div class="grid-cols-30 grid w-full grid-flow-dense gap-2">
             {{-- THEMES --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
