@@ -6,6 +6,7 @@ use App\Livewire\Settings\Profile;
 use App\Livewire\Settings\Password;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use Laravel\Paddle\Transaction;
 
 Route::get('/', function () {
     return view('welcome');
@@ -64,5 +65,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('billing-portal', Board\Billing::class)->name('boards.billing-portal');
     });
 });
+
+Route::get('/download-invoice/{transaction}', function (Request $request, Transaction $transaction) {
+    return $transaction->redirectToInvoicePdf();
+})->name('download-invoice');
 
 require __DIR__ . '/auth.php';
