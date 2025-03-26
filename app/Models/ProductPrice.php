@@ -14,6 +14,7 @@ class ProductPrice extends Model
     /** @use HasFactory<\Database\Factories\ProductPriceFactory> */
     use HasFactory;
 
+    protected $guarded = ['id'];
     /**
 
      * Get the attributes that should be cast.

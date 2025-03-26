@@ -29,16 +29,28 @@ class LicenseResource extends Resource
                 Forms\Components\Select::make('product_id')
                     ->relationship('product', 'name')
                     ->required(),
+                Forms\Components\TextInput::make('product_price_id')
+                    ->required()
+                    ->numeric(),
                 Forms\Components\TextInput::make('key')
                     ->required()
+                    ->maxLength(36),
+                Forms\Components\TextInput::make('paddle_product_id')
                     ->maxLength(255),
+                Forms\Components\TextInput::make('paddle_product_price_id')
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('satis_authentication_count')
+                    ->required()
+                    ->numeric()
+                    ->default(0),
+                Forms\Components\TextInput::make('quantity')
+                    ->required()
+                    ->numeric()
+                    ->default(1),
                 Forms\Components\TextInput::make('activation_limit')
                     ->required()
                     ->numeric()
                     ->default(0),
-                Forms\Components\TextInput::make('type')
-                    ->required()
-                    ->maxLength(255),
             ]);
     }
 
@@ -52,13 +64,24 @@ class LicenseResource extends Resource
                 Tables\Columns\TextColumn::make('product.name')
                     ->numeric()
                     ->sortable(),
+                Tables\Columns\TextColumn::make('product_price_id')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('key')
                     ->searchable(),
+                Tables\Columns\TextColumn::make('paddle_product_id')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('paddle_product_price_id')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('satis_authentication_count')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('quantity')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('activation_limit')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

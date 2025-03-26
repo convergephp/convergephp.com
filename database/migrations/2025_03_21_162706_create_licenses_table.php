@@ -32,7 +32,7 @@ return new class extends Migration
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
 
-            $table->uuid('key')->unique();
+            $table->string('key', 64)->unique(); 
 
             $table->string('paddle_product_id')->nullable();
 
