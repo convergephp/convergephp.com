@@ -58,10 +58,10 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::prefix('board')->group(function () {
-        Route::get('licenses', Password::class)->name('boards.password');
-        Route::get('activations', Password::class)->name('boards.password');
-        Route::get('transactions', Password::class)->name('boards.password');
-        Route::get('billings', Password::class)->name('boards.password');
+        Route::get('licenses', Password::class)->name('boards.licenses');
+        Route::get('activations', Password::class)->name('boards.activations');
+        Route::get('transactions', Password::class)->name('boards.transactions');
+        Route::get('billing-portal', Password::class)->name('boards.billing-portal');
     });
 });
 
