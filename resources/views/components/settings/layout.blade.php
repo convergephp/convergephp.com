@@ -9,22 +9,22 @@
             <div class="z-10 justify-self-center sm:pt-8 md:col-span-4 md:block">
                 <aside class="menu">
                     <ul>
-                        <li class="">
-                            <div>Settings</div>
+                        <li>
+                            <div>licensing Managment</div>
                             <ul class="mt-8 ml-3 flex flex-col gap-y-2">
-                                <x-settings.link href="{{ route('settings.profile') }}" label="Account" wire:navigate.hover
-                                :active="request()->RouteIs('settings.profile')" />
-                                <x-settings.link href="{{ route('settings.password') }}" label="Profile Account" wire:navigate.hover
-                                :active="request()->RouteIs('settings.password')" />
+                                <x-settings.link href="{{ route('boards.transactions') }}" label="Account" wire:navigate.hover
+                                :active="request()->RouteIs('boards.transactions')" />
+                                <x-settings.link href="{{ route('boards.transactions') }}" label="Profile Account" wire:navigate.hover
+                                :active="request()->RouteIs('boards.transactions')" />
                             </ul>
                         </li>
                         <li class="">
-                            <div>Settings</div>
+                            <div>Account Settings</div>
                             <ul class="mt-8 ml-3 flex flex-col gap-y-2">
-                                <x-settings.link href="{{ route('board.transactions') }}" label="Account" wire:navigate.hover
-                                :active="request()->RouteIs('board.transactions')" />
-                                <x-settings.link href="{{ route('settings.password') }}" label="Profile Account" wire:navigate.hover
-                                :active="request()->RouteIs('board.transactions')" />
+                                <x-settings.link href="{{ route('settings.profile') }}" label="Profile Account" wire:navigate.hover
+                                :active="request()->RouteIs('settings.profile')" />
+                                <x-settings.link href="{{ route('settings.password') }}" label="Password" wire:navigate.hover
+                                :active="request()->RouteIs('settings.password')" />
                             </ul>
                         </li>
                     </ul>

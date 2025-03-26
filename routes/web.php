@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProductController;
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
 use Illuminate\Http\Request;
+use App\Livewire\Board;
+use App\Livewire\Settings\Profile;
+use App\Livewire\Settings\Password;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -48,9 +48,9 @@ Route::view('dashboard', 'dashboard')
 
 Route::middleware(['auth'])->group(function () {
 
-    
+
     Route::redirect('/profile', 'settings/profile');
-    
+
     Route::prefix('settings')->group(function () {
         Route::redirect('/', 'settings/profile');
         Route::get('profile', Profile::class)->name('settings.profile');
@@ -58,10 +58,10 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::prefix('board')->group(function () {
-        Route::get('licenses', Password::class)->name('boards.licenses');
-        Route::get('activations', Password::class)->name('boards.activations');
-        Route::get('transactions', Password::class)->name('boards.transactions');
-        Route::get('billing-portal', Password::class)->name('boards.billing-portal');
+        Route::get('licenses', Board\Licenses::class)->name('boards.licenses');
+        Route::get('activations', Board\Activations::class)->name('boards.activations');
+        Route::get('transactions', Board\Transactions::class)->name('boards.transactions');
+        Route::get('billing-portal', Board\Billing::class)->name('boards.billing-portal');
     });
 });
 
