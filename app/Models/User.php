@@ -12,7 +12,7 @@ use Laravel\Paddle\Billable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable,Billable;
+    use HasFactory, Notifiable, Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -24,6 +24,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -47,12 +48,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    
+
 
 
     public function licenses()
     {
-        return $this->belongsToMany(License::class);
+        return $this->hasMany(License::class, foreignKey: 'user_id');
     }
     /**
      * Get the user's initials

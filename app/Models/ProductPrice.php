@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Support\Facades\Auth;
 
 class ProductPrice extends Model
@@ -14,6 +16,7 @@ class ProductPrice extends Model
     /** @use HasFactory<\Database\Factories\ProductPriceFactory> */
     use HasFactory;
 
+    protected $guarded = ['id'];
     /**
 
      * Get the attributes that should be cast.
@@ -44,10 +47,16 @@ class ProductPrice extends Model
         $checkout = null;
 
         if (Auth::check()) {
+
             /** @var App\Models\User */
             $user = Auth::user();
+
             $checkout = $user->checkout($this->paddle_price_id)
-                ->returnTo(route('products.index'));
+                ->returnTo(route('products.index'))
+                ->customData([
+                    'product_id' => $this->product_id,
+                    'product_price_id' => $this->id,
+                ]);
         }
 
         return Attribute::make(
@@ -64,5 +73,21 @@ class ProductPrice extends Model
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
+    }
+
+
+    public function licenses()
+    {
+        return $this->hasMany(License::class);
+    }
+
+    /**
+     * Get the privilege associated with the ProductPrice
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function privilege(): HasOne
+    {
+        return $this->hasOne(ProductPricePrivilege::class);
     }
 }
