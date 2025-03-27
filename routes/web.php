@@ -56,7 +56,7 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('settings')->group(function () {
         Route::redirect('/', 'settings/profile');
         Route::get('profile', Profile::class)->name('settings.profile');
-        Route::get('settings/password', Password::class)->name('settings.password');
+        Route::get('password', Password::class)->name('settings.password');
     });
 
     Route::prefix('board')->group(function () {
