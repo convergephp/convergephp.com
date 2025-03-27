@@ -76,6 +76,11 @@ class ProductPrice extends Model
     }
 
 
+    public function licenses()
+    {
+        return $this->hasMany(License::class);
+    }
+
     /**
      * Get the privilege associated with the ProductPrice
      *

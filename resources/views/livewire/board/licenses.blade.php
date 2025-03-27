@@ -30,8 +30,8 @@
                 <tr class="border-b bg-base-300 border-base-100"> 
                     <td class="px-6 py-4">{{ $license->product->name }}</td>
                     <td class="px-6 py-4">{{ $license->price->name }}</td>
+                    <td class="px-6 py-4">{{ $license->price->amount }}</td>
                     <td class="px-6 py-4">{{ $license->key }}</td>
-                    <td class="px-6 py-4">{{ $license->currency() }}</td>
                 </tr>
             @endforeach
         </tbody>

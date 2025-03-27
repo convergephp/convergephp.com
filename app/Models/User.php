@@ -12,7 +12,7 @@ use Laravel\Paddle\Billable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable,Billable;
+    use HasFactory, Notifiable, Billable;
 
     /**
      * The attributes that are mass assignable.
@@ -48,12 +48,12 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-    
+
 
 
     public function licenses()
     {
-        return $this->hasMany(License::class);
+        return $this->hasMany(License::class, foreignKey: 'user_id');
     }
     /**
      * Get the user's initials

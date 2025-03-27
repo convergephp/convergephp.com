@@ -16,11 +16,8 @@ class Licenses extends Component
 
     public function mount(#[CurrentUser] User $user)
     {
-        dd(License::first()->price);
-
-        dd($user->licenses());
-
-        $user->licenses->load('price');
+        $user->with(['licenses','licenses.prices']);
+     
         $this->licenses = $user->licenses;
     }
 
