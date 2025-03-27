@@ -46,10 +46,10 @@
 
             <div class="flex items-center gap-4">
                 <div class="flex items-center justify-end">
-                    <button class="w-full" type="submit">{{ __('Save') }}</button>
+                    <button class="w-full btn btn-md btn-primary" type="submit">{{ __('Save') }}</button>
                 </div>
 
-                <x-action-message class="me-3" on="profile-updated">
+                <x-action-message class="me-3 " on="profile-updated">
                     {{ __('Saved.') }}
                 </x-action-message>
             </div>
