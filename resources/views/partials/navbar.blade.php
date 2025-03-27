@@ -63,6 +63,12 @@
                                 </svg>
                             </button>
                         </form>
+                        <a  href="{{ route('boards.licenses') }}"
+                                    class="btn md:btn-sm btn-square md:btn-block max-w-fit bg-base-300 rounded-sm border border-gray-400/20 md:px-2">
+                                <span class="hidden md:block">Board</span>
+                               
+                            </a>
+
                     @endif
                     @if (!Auth::check() && !Request()->routeIs('login'))
                         <a href="{{ route('login') }}"
@@ -86,7 +92,7 @@
                         <button x-on:click="mobileMenuOpen = !mobileMenuOpen"
                                 class="btn btn-square bg-base-300 rounded-sm"
                                 aria-expanded="false"
-                                :aria-expanded="mobileMenuOpen.toString()">
+                                x-bind:aria-expanded="mobileMenuOpen.toString()">
                             <span class="sr-only">Ouvrir le menu principal</span>
                             {{-- Icon when menu is closed --}}
                             <svg x-show="!mobileMenuOpen"

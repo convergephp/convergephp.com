@@ -10,7 +10,7 @@ class Product extends Model
 {
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
-    
+
     protected $guarded = ['id'];
 
     /**
@@ -21,5 +21,9 @@ class Product extends Model
     public function prices(): HasMany
     {
         return $this->hasMany(ProductPrice::class);
+    }
+
+    public function licenses(){
+        return $this->hasMany(License::class);
     }
 }

@@ -22,6 +22,10 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 
+        $hasLicenses = $product->licenses->isNotEmpty();
+
+        // dd($product->licenses,$hasLicenses);
+
         Session::put(Constants::AFTER_LOGIN_REDIRECT_URL, url()->current());
 
         return view('products.show', [
