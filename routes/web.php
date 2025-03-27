@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BillingPortalController;
 use Illuminate\Http\Request;
 use App\Livewire\Board;
 use App\Livewire\Settings\Profile;
@@ -62,7 +63,8 @@ Route::middleware(['auth'])->group(function () {
         Route::get('licenses', Board\Licenses::class)->name('boards.licenses');
         Route::get('activations', Board\Activations::class)->name('boards.activations');
         Route::get('transactions', Board\Transactions::class)->name('boards.transactions');
-        Route::get('billing-portal', Board\Billing::class)->name('boards.billing-portal');
+        Route::get('billing', Board\Billing::class)->name('boards.billing');
+        Route::get('billing-portal', BillingPortalController::class)->name('boards.billing-portal');
     });
 });
 
