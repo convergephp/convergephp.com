@@ -6,4 +6,5 @@ import {
 import AOS from "aos";
 
 AOS.init();
+
 Livewire.start();

@@ -99,15 +99,18 @@
         </div>
     </div>
 
-    @if($product->licenses->isNotEmpty())
-        <div class="mx-auto max-w-6xl px-4 py-8 lg:px-6 lg:py-20">
-            <h2 class="font-bold text-2xl text-center text-primary">Licenses associated with this product:</h2>
-            <h4 class="text-md text-center">use the key above during installation process, please this secret key don't share it with any one </h4>
-            <div class="relative overflow-x-auto mt-8">
-                <x-licenses.table :licenses="$product->licenses"/>
+    @auth
+        @if($licenses->isNotEmpty())
+            <div class="mx-auto max-w-6xl px-4 py-8 lg:px-6 lg:py-20">
+                <h2 class="font-bold text-2xl text-center text-primary">Licenses associated with this product:</h2>
+                <h4 class="text-md text-center">use the key above during installation process, please this secret key don't share it with any one </h4>
+                <div class="relative overflow-x-auto mt-8">
+                    <x-licenses.table :licenses="$licenses"/>
+                </div>
             </div>
-        </div>
-    @else
+        @endif
+    @endauth
+    @if(!Auth::check() || $licenses->isEmpty())
         <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-20">
             {{-- Title --}}
             <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
@@ -120,32 +123,27 @@
             </div>
 
             <div
-                @if($product->licenses->isEmpty())
-                    x-data="{
-                        init (){
-                            const selectedPlan = sessionStorage.getItem('selectedPlan');
-                            this.$nextTick(() => { 
-                            if (selectedPlan) {
-                                setTimeout(() => {
-                                    const button = document.querySelector(`#${selectedPlan}`);
-                                    if (button) {
-                                        button.click();
-                                    }
-                                    sessionStorage.removeItem('selectedPlan');
-                                }, 300);
+                x-data="{
+                    init (){
+                        const selectedPlan = sessionStorage.getItem('selectedPlan');
+                        this.$nextTick(() => { 
+                        if (selectedPlan) {
+                            setTimeout(() => {
+                                const button = document.querySelector(`#${selectedPlan}`);
+                                if (button) {
+                                    button.click();
                                 }
-                            });
-                        }
-                    }"
-                @endif
-
+                                sessionStorage.removeItem('selectedPlan');
+                            }, 300);
+                            }
+                        });
+                    }
+                }"
                 class="flex flex-wrap justify-center gap-4"
                 >
-                @if( $product->licenses->isEmpty())
                     @foreach ($product->prices as $price)
                         <x-pricing-card :price="$price" />
                     @endforeach
-                @endif
             </div>
         </div>
     @endif
