@@ -32,8 +32,8 @@
                                 />
                                 
                                 <x-settings.link 
-                                    :active="request()->RouteIs('boards.billing-portal')"
-                                    href="{{ route('boards.billing-portal') }}" label="Billing Portal" 
+                                    :active="request()->RouteIs('boards.billing')"
+                                    href="{{ route('boards.billing') }}" label="Billing Portal" 
                                     wire:navigate.hover
                                 />
 

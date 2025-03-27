@@ -21,6 +21,7 @@ class BillingPortalController extends Controller
 
             return new RedirectResponse(URL::route('product.index'));
         }
+        
         $response = Cashier::api(
             method: 'POST',
             uri: "customers/{$customerId}/portal-sessions"
