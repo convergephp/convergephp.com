@@ -1,4 +1,4 @@
-<section class="mx-auto mb-10 max-w-7xl px-6 lg:px-8">
+<section class="mx-auto max-w-7xl px-2">
     {{-- ANIMATED LINE --}}
     {{-- <x-animated-line-svg height="68"
                          direction="ltr"
@@ -26,18 +26,19 @@
 
     {{-- SECTION CONTENT --}}
 
-    <div data-aos="fade-up"
-         data-aos-duration="1000"
-         data-aos-anchor-placement="top-bottom"
+    <div data-aos-anchor-placement="top-bottom"
          class="relative mx-auto max-w-4xl pt-[1rem] text-center md:pt-[3rem] lg:pt-[6rem]">
 
-        <h1
+        <h1 data-aos="zoom-in"
+            data-aos-duration="200"
             class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-widest text-transparent md:text-5xl/[1.07]">
             Streamline Your Documentation Workflow with <span
                   class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
         </h1>
 
-        <p class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
+        <p data-aos="fade-up"
+           data-aos-duration="1000"
+           class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
             Converge is the open-source framework that empowers anyone to build high-quality, dynamic
             <span class="relative mx-1 inline-block px-1">
                 <span class="relative z-10 text-white">documentation from Markdown</span>
@@ -45,46 +46,35 @@
             </span>. Developer-friendly. Intuitive. And designed for teams who care about clarity
         </p>
 
-        <div class="mt-10 flex flex-col items-center justify-center gap-y-8">
-            <div style="opacity: 1; transform: none;">
-                <button class="hover:shadow-glow hover:text-base-content/80 text-base-content group relative rounded-full p-px text-sm/6 duration-300"
-                        type="button"
-                        aria-haspopup="dialog"
-                        aria-expanded="false"
-                        aria-controls="radix-:Rjlj9ukq:"
-                        data-state="closed">
-                    <span class="absolute inset-0 overflow-hidden rounded-full">
-                        <span
-                              class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-                        </span>
-                    </span>
-                    <div
-                         class="bg-secondary ring-base-100/10 text-primary-content relative z-10 rounded-full px-4 py-1.5 ring-1">
-                        Get started
-                    </div>
-                    <span
-                          class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-cyan-400/0 via-cyan-400/90 to-cyan-400/0 transition-opacity duration-500 group-hover:opacity-40">
-                    </span>
-                </button>
+        <div data-aos="fade-up"
+             data-aos-duration="1000"
+             class="w-xs mx-auto mt-10 flex flex-col items-center justify-center gap-y-8">
+            <a href="/docs"
+               class="btn btn-block text-primary-content from-primary to-primary/50 bg-gradient-to-b">
+                Get started
+            </a>
+        </div>
+    </div>
+
+    <div data-aos="zoom-in"
+         data-aos-duration="500"
+         class="mockup-browser bg-base-200 !mx-0 mt-10 w-full border border-gray-400/20">
+        <div class="mockup-browser-toolbar h-full">
+            <div class="input">https://convergephp.com/docs/5.x</div>
+        </div>
+        <div
+             class="flex justify-center border-t border-gray-400/20 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)]">
+            <div class="rounded-box relative w-full overflow-hidden"
+                 style="max-height: 700px;">
+                <img alt="Converge docs screenshot"
+                     loading="lazy"
+                     decoding="async"
+                     data-nimg="1"
+                     class="h-auto w-full object-contain"
+                     style="color: transparent;"
+                     src="{{ asset('exemple-2.png') }}">
             </div>
         </div>
     </div>
-
-    <div
-         class="border-base-300 bg-base-100 min relative mt-20 overflow-hidden rounded-[24px] border p-2 lg:rounded-[32px] lg:p-4">
-        <div class="bg-base-300/50 border-base-300 rounded-[24px] border">
-            <img data-aos="zoom-in"
-                 alt="Ecme homepage"
-                 loading="lazy"
-                 width="1920"
-                 height="1040"
-                 decoding="async"
-                 data-nimg="1"
-                 class="rounded-2xl lg:rounded-[24px]"
-                 style="color: transparent;"
-                 src="{{ asset('exemple-4.png') }}">
-        </div>
-    </div>
-
     </div>
 </section>

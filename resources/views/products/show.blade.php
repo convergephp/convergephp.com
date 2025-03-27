@@ -1,7 +1,7 @@
 <x-layout>
     <div class="relative z-20 py-10">
         <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
-            <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-tight">
+            <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
                 {{ $product->name }}
             </h2>
             <p class="text-base-content mb-5 font-light sm:text-xl">
@@ -11,11 +11,11 @@
 
         {{-- Tabs: Display components --}}
         <div class="mx-auto max-w-7xl px-4">
-            <div class="flex flex-col gap-12 md:flex-row"
+            <div class="flex flex-col"
                  x-data="{ activeTab: 'inputs' }">
 
                 {{-- Aside --}}
-                <div class="hidden min-w-[250px] md:block">
+                {{-- <div class="hidden min-w-[250px] md:block">
                     <div class="flex flex-col gap-2">
                         <button class="btn btn-accent btn-sm"
                                 :class="activeTab === 'inputs' ? 'btn-primary' : ''"
@@ -29,19 +29,18 @@
                             Buttons
                         </button>
                     </div>
-                </div>
+                </div> --}}
 
-                {{-- Mobile Tab Selector --}}
-                <div class="mb-4 w-full overflow-x-auto md:hidden">
-                    <div class="border-base-300 flex border-b">
-                        <button class="px-4 py-2 text-sm font-medium"
-                                :class="activeTab === 'inputs' ? 'border-b-2 border-primary text-primary' :
+                <div class="mb-4 w-full overflow-x-auto">
+                    <div class="border-base-300 flex gap-2 border-b">
+                        <button class="btn btn-ghost btn-sm mb-1"
+                                :class="activeTab === 'inputs' ? 'bg-primary/5 border border-gray-400/20' :
                                     'text-base-content hover:text-primary'"
                                 x-on:click="activeTab = 'inputs'">
                             Inputs
                         </button>
-                        <button class="px-4 py-2 text-sm font-medium"
-                                :class="activeTab === 'buttons' ? 'border-b-2 border-primary text-primary' :
+                        <button class="btn btn-ghost btn-sm mb-1"
+                                :class="activeTab === 'buttons' ? 'bg-primary/5 border border-gray-400/20' :
                                     'text-base-content hover:text-primary'"
                                 x-on:click="activeTab = 'buttons'">
                             Buttons
