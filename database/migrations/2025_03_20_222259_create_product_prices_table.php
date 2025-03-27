@@ -19,7 +19,7 @@ return new class extends Migration
                 ->restrictOnDelete();
             $table->string('name');
             $table->mediumText('description');
-            $table->foreignId('caractersituqea');
+            $table->foreignId('product_price_privilege_id')->nullable();
             $table->json('features')->nullable();
             $table->string('paddle_price_id');
             $table->integer('amount');

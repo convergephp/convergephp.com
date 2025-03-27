@@ -28,7 +28,7 @@ return new class extends Migration
                 ->restrictOnDelete();
 
             $table->foreignId('product_price_id')
-                ->constrained()
+                ->constrained('product_prices','id')
                 ->restrictOnUpdate()
                 ->restrictOnDelete();
 

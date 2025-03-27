@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('product_price_privileges', function (Blueprint $table) {
             $table->id();
-            $table->integer('prod_activation_limit');
-            $table->integer('local_activation_limit');
+            $table->integer('prod_activation_limit')->default(0);
+            $table->integer('local_activation_limit')->default(0);
             $table->timestamps();
         });
     }

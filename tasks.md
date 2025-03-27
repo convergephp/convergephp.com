@@ -17,3 +17,7 @@
 # Ayoub's tasks
 ## *
 
+
+# ROLES
+    - med:  founder & lead developer 
+    - ayoub: co-creator & lead UI designer 

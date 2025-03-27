@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Product;
 use App\Models\ProductPrice;
+use App\Models\ProductPricePrivilege;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -26,6 +27,19 @@ class DatabaseSeeder extends Seeder
             'email' => 'ayoub@convergephp.com',
         ]);
 
+
+        ProductPricePrivilege::create([
+            'id' => 1,
+            'prod_activation_limit' => 5,
+            'local_activation_limit' => 15,
+        ]);
+
+        ProductPricePrivilege::create([
+            'id' => 2,
+            'prod_activation_limit' => 10,
+            'local_activation_limit' => 30,
+        ]);
+
         Product::create([
             'id' => 1,
             'name' => 'blade components',
@@ -33,7 +47,7 @@ class DatabaseSeeder extends Seeder
             'slug' => 'components',
             'description' => 'take you documentation to the next level with +20 pre-built blade components designd exclusivly for documentation and blogging plaforms',
         ]);
-        
+
         Product::create([
             'id' => 2,
             'name' => 'layouts and themes',
@@ -45,7 +59,7 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 1,
             'product_id' => 1,
-            'name'=>'starter pack',
+            'name' => 'starter pack',
             'paddle_price_id' => 'pri_01jptqhwz2f7b34edy7574dahb', // 29$
             'description' => 'Perfect for solo developers',
             'amount' => 29,
@@ -59,7 +73,7 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 2,
             'product_id' => 1,
-            'name'=>'agency',
+            'name' => 'agency',
             'paddle_price_id' => 'pri_01jptqkj6r55xba71ff7mm0vwz', // 99$
             'description' => 'Ideal for teams and multiple client projects',
             'amount' => 99,
@@ -75,7 +89,7 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 3,
             'product_id' => 2,
-            'name'=>'starter pack',
+            'name' => 'starter pack',
             'description' => 'Perfect for solo developers',
             'paddle_price_id' => 'pri_01jpw52t5m31was20nv508vby9', // 19$
             'amount' => 19,
@@ -89,7 +103,7 @@ class DatabaseSeeder extends Seeder
         ProductPrice::create([
             'id' => 4,
             'product_id' => 2,
-            'name'=>'agency',
+            'name' => 'agency',
             'paddle_price_id' => 'pri_01jpw5476s8j0mhxsy1ve4a1hy', // 45$
             'amount' => 45,
             'description' => 'Ideal for teams and multiple client projects',
