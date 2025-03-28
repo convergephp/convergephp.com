@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\BillingPortalController;
+use App\Livewire\Home\Index;
 use Illuminate\Http\Request;
 use App\Livewire\Board;
 use App\Livewire\Settings\Profile;
@@ -18,6 +19,8 @@ Route::get('/buy', function (Request $request) {
 
             ->returnTo(route('dashboard'));
     }
+
+
     return view('buy', ['checkout' => $checkout]);
 })->name('checkout');
 
