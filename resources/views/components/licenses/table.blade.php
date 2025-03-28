@@ -20,7 +20,7 @@
     </thead>
     <tbody>
         @foreach ($licenses as $license)
-            <tr class="border-b bg-base-300 border-base-100"> 
+            <tr class="border-b bg-base-300 border-base-100">
                 <td class="px-6 py-4">{{ $license->product->name }}</td>
                 <td class="px-6 py-4">{{ $license->price->name }}</td>
                 <td class="px-6 py-4">{{ $license->price->amount }}</td>
@@ -28,7 +28,7 @@
                     x-data="{ copied: false }"
                     x-on:click="navigator.clipboard.writeText('{{ $license->key }}').then(() => { copied = true; setTimeout(() => copied = false, 2000); })"
                     aria-label="Click to copy">
-                    
+
                     <span>{{ substr($license->key, 0, 4) }} **** {{ substr($license->key, -4) }}</span>
 
                     <!-- TOOLTIP -->
