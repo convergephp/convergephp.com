@@ -107,7 +107,7 @@
                     <div x-on:click.stop
                          x-trap.noscroll.inert="isOpen"
                          @class([
-                             'relative max-w-2xl mx-auto border  overflow-y-auto rounded-xl bg-base-100 border-gray-400/20 text-base-content px-10',
+                             'relative max-w-2xl mx-auto border  overflow-y-auto rounded-xl bg-base-100 border-gray-400/20 text-base-content sm:px-2 md:px-4 lg:px-10',
                              'pb-4' => blank($footer),
                              'pb-2' => filled($footer),
                              'pt-4' => blank($header),

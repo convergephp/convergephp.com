@@ -2,7 +2,7 @@
      data-aos="fade-up"
      data-aos-duration="1000">
 
-    <div class="bg-base-300 mx-auto w-full max-w-7xl space-y-2 overflow-hidden p-2">
+    <div class="mx-auto w-full max-w-7xl space-y-2 overflow-hidden p-2">
 
         {{-- TITLES --}}
         <div class="bg-base-100 w-full overflow-hidden rounded-lg">

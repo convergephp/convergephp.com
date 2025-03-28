@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="relative z-20 py-10">
+    <div class="z-20 px-2 py-10">
         <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
             <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
                 {{ $product->name }}
@@ -9,108 +9,75 @@
             </p>
         </div>
 
-        {{-- Tabs: Display components --}}
-        <div class="mx-auto max-w-7xl px-4">
+        {{-- Tabs: Display thumbnails --}}
+        <div class="mx-auto max-w-7xl">
             <div class="flex flex-col"
-                 x-data="{ activeTab: 'inputs' }">
-
-                {{-- Aside --}}
-                {{-- <div class="hidden min-w-[250px] md:block">
-                    <div class="flex flex-col gap-2">
-                        <button class="btn btn-accent btn-sm"
-                                :class="activeTab === 'inputs' ? 'btn-primary' : ''"
-                                x-on:click="activeTab = 'inputs'">
-                            Inputs
-                        </button>
-
-                        <button class="btn btn-accent btn-sm"
-                                :class="activeTab === 'buttons' ? 'btn-primary' : ''"
-                                x-on:click="activeTab = 'buttons'">
-                            Buttons
-                        </button>
-                    </div>
-                </div> --}}
-
-                <div class="mb-4 w-full overflow-x-auto">
-                    <div class="border-base-300 flex gap-2 border-b">
-                        <button class="btn btn-ghost btn-sm mb-1"
-                                :class="activeTab === 'inputs' ? 'bg-primary/5 border border-gray-400/20' :
-                                    'text-base-content hover:text-primary'"
-                                x-on:click="activeTab = 'inputs'">
-                            Inputs
-                        </button>
-                        <button class="btn btn-ghost btn-sm mb-1"
-                                :class="activeTab === 'buttons' ? 'bg-primary/5 border border-gray-400/20' :
-                                    'text-base-content hover:text-primary'"
-                                x-on:click="activeTab = 'buttons'">
-                            Buttons
-                        </button>
+                 x-data="{ activeTab: '{{ $product->thumbnails->first()->name ?? 'default' }}' }">
+                <div class="scrollbar-hidden mb-4 w-full overflow-x-auto">
+                    <div class="flex gap-2">
+                        @foreach ($product->thumbnails as $thumbnail)
+                            <button class="btn btn-ghost btn-sm lg:btn-md mb-1"
+                                    :class="activeTab === '{{ $thumbnail->name }}' ? 'bg-primary/5 border border-gray-400/20' :
+                                        'text-base-content hover:bg-primary/5  hover:border hover:border-gray-400/20'"
+                                    x-on:click="activeTab = '{{ $thumbnail->name }}'">
+                                {{ $thumbnail->name }}
+                            </button>
+                        @endforeach
                     </div>
                 </div>
 
                 {{-- Tabs Content --}}
                 <div class="w-full">
-                    {{-- Inputs Tab --}}
-                    <div class="grid grid-cols-1 gap-4"
-                         x-show="activeTab === 'inputs'"
-                         x-transition:enter="transition ease-out duration-300"
-                         x-transition:enter-start="opacity-0 transform translate-y-4"
-                         x-transition:enter-end="opacity-100 transform translate-y-0">
-                        <a class="border-base-300 bg-base-100 h-max rounded-2xl border p-4 transition-all duration-300 hover:shadow-md"
-                           href="#">
-                            <div class="overflow-hidden rounded-xl">
-                                <img class="w-full rounded-xl"
-                                     src="{{ asset('exemple-2.png') }}"
-                                     alt="Input Components"
-                                     loading="lazy">
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="text-base-content text-lg font-bold">Text Inputs</h3>
-                                <p class="text-base-content mt-2 text-sm font-light">Modern form input elements with
-                                    validation states</p>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach ($product->thumbnails as $thumbnail)
+                        <div class="rounded-box border-base-300 group grid grid-cols-1 gap-4 border bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:8px_8px] bg-fixed [--pattern-fg:var(--color-base-300)]"
+                             x-show="activeTab === '{{ $thumbnail->name }}'"
+                             x-transition:enter="transition ease-out duration-300"
+                             x-transition:enter-start="opacity-0 transform translate-y-4"
+                             x-transition:enter-end="opacity-100 transform translate-y-0">
+                            <a class="border-base-300 bg-base-100 h-max rounded-2xl border p-4 transition-all duration-300 hover:shadow-md"
+                               href="#{{ $thumbnail->name }}">
 
-                    {{-- Buttons Tab --}}
-                    <div class="grid grid-cols-1 gap-4"
-                         x-show="activeTab === 'buttons'"
-                         x-transition:enter="transition ease-out duration-300"
-                         x-transition:enter-start="opacity-0 transform translate-y-4"
-                         x-transition:enter-end="opacity-100 transform translate-y-0">
-                        <a class="border-base-300 bg-base-100 h-max rounded-2xl border p-4 transition-all duration-300 hover:shadow-md"
-                           href="#">
-                            <div class="overflow-hidden rounded-xl">
-                                <img class="w-full rounded-xl"
-                                     src="{{ asset('exemple-2.png') }}"
-                                     alt="Input Components"
-                                     loading="lazy">
-                            </div>
-                            <div class="mt-4">
-                                <h3 class="text-base-content text-lg font-bold">Text Inputs</h3>
-                                <p class="text-base-content mt-2 text-sm font-light">Modern form input elements with
-                                    validation states</p>
-                            </div>
-                        </a>
-                    </div>
+                                <div
+                                     class="flex h-[500px] w-full items-center justify-center overflow-hidden rounded-xl">
+                                    @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
+                                        {{-- <img class="h-full w-full transform object-cover"
+                                             src="{{ $thumbnail->getMedia('thumbnails')->first()->getUrl() }}"
+                                             alt="{{ $thumbnail->name }}"
+                                             loading="lazy"> --}}
+                                        <x-image loading="lazy"
+                                                 :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"></x-image>
+                                    @else
+                                        <div class="flex h-full w-full items-center justify-center rounded-xl">
+                                            <p class="text-base-content">No image available</p>
+                                        </div>
+                                    @endif
+                                </div>
 
+                                <div class="mt-4">
+                                    <h3 class="text-base-content text-lg font-bold">{{ $thumbnail->title }}</h3>
+                                    <p class="text-base-content mt-2 text-sm font-light">{!! Str::markdown($thumbnail->description) !!}
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
-
     @auth
-        @if($licenses->isNotEmpty())
+        @if ($licenses->isNotEmpty())
             <div class="mx-auto max-w-6xl px-4 py-8 lg:px-6 lg:py-20">
-                <h2 class="font-bold text-2xl text-center text-primary">Licenses associated with this product:</h2>
-                <h4 class="text-md text-center">use the key above during installation process, please this secret key don't share it with any one </h4>
-                <div class="relative overflow-x-auto mt-8">
-                    <x-licenses.table :licenses="$licenses"/>
+                <h2 class="text-primary text-center text-2xl font-bold">Licenses associated with this product:</h2>
+                <h4 class="text-md text-center">use the key above during installation process, please this secret key don't
+                    share it with any one </h4>
+                <div class="relative mt-8 overflow-x-auto">
+                    <x-licenses.table :licenses="$licenses" />
                 </div>
             </div>
         @endif
     @endauth
-    @if(!Auth::check() || $licenses->isEmpty())
+    @if (!Auth::check() || $licenses->isEmpty())
         <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-20">
             {{-- Title --}}
             <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
@@ -122,11 +89,10 @@
                 </p>
             </div>
 
-            <div
-                x-data="{
-                    init (){
-                        const selectedPlan = sessionStorage.getItem('selectedPlan');
-                        this.$nextTick(() => { 
+            <div x-data="{
+                init() {
+                    const selectedPlan = sessionStorage.getItem('selectedPlan');
+                    this.$nextTick(() => {
                         if (selectedPlan) {
                             setTimeout(() => {
                                 const button = document.querySelector(`#${selectedPlan}`);
@@ -135,15 +101,14 @@
                                 }
                                 sessionStorage.removeItem('selectedPlan');
                             }, 300);
-                            }
-                        });
-                    }
-                }"
-                class="flex flex-wrap justify-center gap-4"
-                >
-                    @foreach ($product->prices as $price)
-                        <x-pricing-card :price="$price" />
-                    @endforeach
+                        }
+                    });
+                }
+            }"
+                 class="flex flex-wrap justify-center gap-4">
+                @foreach ($product->prices as $price)
+                    <x-pricing-card :price="$price" />
+                @endforeach
             </div>
         </div>
     @endif

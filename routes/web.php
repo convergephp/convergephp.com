@@ -1,6 +1,6 @@
 <?php
-
 use App\Http\Controllers\BillingPortalController;
+use App\Livewire\Home\Index;
 use Illuminate\Http\Request;
 use App\Livewire\Board;
 use App\Livewire\Settings\Profile;
@@ -9,9 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Laravel\Paddle\Transaction;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', Index::class)->name('home');
 
 Route::get('/buy', function (Request $request) {
 

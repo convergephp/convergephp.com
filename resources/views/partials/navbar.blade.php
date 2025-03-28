@@ -6,7 +6,8 @@
                  aria-label="Global">
                 {{-- LOGO --}}
                 <div class="flex">
-                    <a href="/">
+                    <a href="/"
+                       wire:navigate.hover>
                         <x-app-logo-2 class="h-[1.1rem] !stroke-cyan-900 md:h-[1.4rem] lg:h-[1.6rem]"></x-app-logo-2>
                     </a>
                 </div>
@@ -76,6 +77,7 @@
                     @endif
                     @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
+                           wire:navigate.hover
                            class="btn md:btn-sm btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-2 no-underline md:px-4">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -137,7 +139,7 @@
                  x-transition:leave="transition ease-in duration-150"
                  x-transition:leave-start="opacity-100 transform translate-y-0"
                  x-transition:leave-end="opacity-0 transform -translate-y-2"
-                 class="bg-base-100 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
+                 class="bg-base-200 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}

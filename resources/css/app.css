@@ -12,19 +12,21 @@
 @plugin "daisyui/theme" {
     name: "black";
     default: true;
-    --color-primary: #00E6F5;
+    --color-primary: #00BCFF;
     --color-base-200: black;
+    --color-base-300: #060703;
+    --color-base-100: #090A08;
     --color-secondary: teal;
     --color-accent: oklch(0.586 0.253 17.585);
     --radius-selector: 1rem;
-    --radius-field: 0.25rem;
+    --radius-field: 3rem;
      --radius-box: 0.5rem;
   }
 
   @plugin "daisyui/theme" {
     name: "light";
     default: true;
-    --color-primary: #00E6F5;
+    --color-primary: #00BCFF;
     --color-accent: oklch(0.586 0.253 17.585);
   }
 
@@ -75,6 +77,20 @@
     ::backdrop,
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
+    }
+
+    .scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* For Firefox */
+    .scrollbar-hidden {
+        scrollbar-width: none;
+    }
+
+    /* For Internet Explorer and Edge */
+    .scrollbar-hidden {
+        -ms-overflow-style: none;
     }
 }
 

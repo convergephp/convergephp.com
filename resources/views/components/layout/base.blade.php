@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-      data-theme="black">
+      data-theme="dark">
 
     <head>
         <meta charset="utf-8">
@@ -22,7 +22,7 @@
         @paddleJS
     </head>
 
-    <body class="bg-base-200 text-base-content !font-sans antialiased">
+    <body class="bg-base-200 scrollbar-hidden text-base-content min-h-screen !font-sans antialiased">
 
         {{ $slot }}
 

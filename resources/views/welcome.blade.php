@@ -9,5 +9,6 @@
     @include('partials.features')
 
     {{-- PATTERN SEPARATOR --}}
-    <x-pattern-separator title="Team Section -comming soon-" />
+    <x-pattern-separator title="Sponsors" />
+
 </x-layout>

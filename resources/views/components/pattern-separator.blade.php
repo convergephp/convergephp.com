@@ -6,5 +6,6 @@
     <p data-aos="fade-right"
        data-aos-duration="200"
        class="text-primary absolute left-0 top-2 origin-bottom-right px-2 text-left font-mono text-sm font-semibold uppercase tracking-widest max-2xl:mb-4 max-2xl:px-2 sm:text-xs">
-        {{ $title }}</p>
+        {{ $title }}
+    </p>
 </div>

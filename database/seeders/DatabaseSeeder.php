@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
 
+        // $this->call(ThumbnailSeeder::class);
+
         User::factory()->create([
             'name' => 'med',
             'email' => 'med@convergephp.com',

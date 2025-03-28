@@ -23,7 +23,17 @@ class Product extends Model
         return $this->hasMany(ProductPrice::class);
     }
 
-    public function licenses(){
+    /**
+     * Get all of thumbnails for the product
+     *
+     * @return HasMany
+     */
+    public function thumbnails(): HasMany
+    {
+        return $this->hasMany(Thumbnail::class)->chaperone();
+    }
+    public function licenses()
+    {
         return $this->hasMany(License::class);
     }
 }

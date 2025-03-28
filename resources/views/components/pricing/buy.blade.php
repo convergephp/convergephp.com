@@ -8,7 +8,7 @@
 @endphp
 
 @if (($checkout = $price->checkout) instanceof Laravel\Paddle\Checkout)
-    <div class="btn btn-accent mt-auto">
+    <div class="btn btn-primary mt-auto">
         <x-paddle-button id="{{ $id }}"
                          class="px-8 py-4"
                          :checkout="$checkout">
