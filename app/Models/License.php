@@ -11,6 +11,7 @@ class License extends Model
     /** @use HasFactory<\Database\Factories\LicenseFactory> */
     use HasFactory;
 
+    protected $guarded = ['id'];
     /**
      * Get the user that owns the License
      *
@@ -19,6 +20,21 @@ class License extends Model
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);
+    }
+
+    public function price(): BelongsTo
+    {
+        return $this->belongsTo(ProductPrice::class, 'product_price_id');
+    }
+
+    public function maximumProductionActivationCount()
+    {
+        return $this->price?->privilege?->prod_activation_limit ?? 0;
+    }
+
+    public function maximumLocalActivationCount()
+    {
+        return $this->price?->privilege?->local_activation_limit ?? 0;
     }
 
     public function user(): BelongsTo

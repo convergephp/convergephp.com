@@ -43,6 +43,7 @@ class Register extends Component
 
         Auth::login($user);
 
+
         $redirectUrl = Session::pull(Constants::AFTER_LOGIN_REDIRECT_URL) ?? route('products.index');
 
         $this->redirectIntended(default: $redirectUrl);

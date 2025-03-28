@@ -65,40 +65,51 @@
             </div>
         </div>
     </div>
+    @auth
+        @if ($licenses->isNotEmpty())
+            <div class="mx-auto max-w-6xl px-4 py-8 lg:px-6 lg:py-20">
+                <h2 class="text-primary text-center text-2xl font-bold">Licenses associated with this product:</h2>
+                <h4 class="text-md text-center">use the key above during installation process, please this secret key don't
+                    share it with any one </h4>
+                <div class="relative mt-8 overflow-x-auto">
+                    <x-licenses.table :licenses="$licenses" />
+                </div>
+            </div>
+        @endif
+    @endauth
+    @if (!Auth::check() || $licenses->isEmpty())
+        <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-20">
+            {{-- Title --}}
+            <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
+                <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-tight">
+                    Flexible packages for Every Developer
+                </h2>
+                <p class="text-base-content mb-5 font-light sm:text-xl">
+                    Choose the perfect package for your project needs, from solo development to enterprise solutions
+                </p>
+            </div>
 
-    {{-- Pricing --}}
-    <div class="mx-auto max-w-7xl overflow-x-hidden px-2 py-8 lg:py-20">
-        {{-- Title --}}
-        <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
-            <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
-                Flexible packages for Every Developer
-            </h2>
-            <p class="text-base-content mb-5 font-light sm:text-xl">
-                Choose the perfect package for your project needs, from solo development to enterprise solutions
-            </p>
+            <div x-data="{
+                init() {
+                    const selectedPlan = sessionStorage.getItem('selectedPlan');
+                    this.$nextTick(() => {
+                        if (selectedPlan) {
+                            setTimeout(() => {
+                                const button = document.querySelector(`#${selectedPlan}`);
+                                if (button) {
+                                    button.click();
+                                }
+                                sessionStorage.removeItem('selectedPlan');
+                            }, 300);
+                        }
+                    });
+                }
+            }"
+                 class="flex flex-wrap justify-center gap-4">
+                @foreach ($product->prices as $price)
+                    <x-pricing-card :price="$price" />
+                @endforeach
+            </div>
         </div>
-
-        <div x-data="{
-            init() {
-                const selectedPlan = sessionStorage.getItem('selectedPlan');
-        
-                this.$nextTick(() => {
-                    if (selectedPlan) {
-                        setTimeout(() => {
-                            const button = document.querySelector(`#${selectedPlan}`);
-                            if (button) {
-                                button.click();
-                            }
-                            sessionStorage.removeItem('selectedPlan');
-                        }, 300);
-                    }
-                });
-            }
-        }"
-             class="flex flex-wrap justify-center gap-4">
-            @foreach ($product->prices as $price)
-                <x-pricing-card :price="$price" />
-            @endforeach
-        </div>
-    </div>
+    @endif
 </x-layout>

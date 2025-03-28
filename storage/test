@@ -1,0 +1,165 @@
+{
+    "id": "txn_01jq6x302v7p2wrj1n3614b3ma",
+    "items": [
+        {
+            "price": {
+                "id": "pri_01jpw52t5m31was20nv508vby9",
+                "name": "layouts",
+                "type": "standard",
+                "status": "active",
+                "quantity": {
+                    "maximum": 1,
+                    "minimum": 1
+                },
+                "tax_mode": "account_setting",
+                "created_at": "2025-03-21T10:48:17.844077Z",
+                "product_id": "pro_01jpw505awn7pjgq18k3aeagtv",
+                "unit_price": {
+                    "amount": "1900",
+                    "currency_code": "USD"
+                },
+                "updated_at": "2025-03-21T10:48:17.844077Z",
+                "custom_data": null,
+                "description": "converge layouts toolkit",
+                "trial_period": null,
+                "billing_cycle": null,
+                "unit_price_overrides": []
+            },
+            "price_id": "pri_01jpw52t5m31was20nv508vby9",
+            "quantity": 1,
+            "proration": null
+        }
+    ],
+    "origin": "web",
+    "status": "completed",
+    "details": {
+        "totals": {
+            "fee": "145",
+            "tax": "0",
+            "total": "1900",
+            "credit": "0",
+            "balance": "0",
+            "discount": "0",
+            "earnings": "1755",
+            "subtotal": "1900",
+            "grand_total": "1900",
+            "currency_code": "USD",
+            "credit_to_balance": "0"
+        },
+        "line_items": [
+            {
+                "id": "txnitm_01jq6x3534fth95mxg5varynze",
+                "totals": {
+                    "tax": "0",
+                    "total": "1900",
+                    "discount": "0",
+                    "subtotal": "1900"
+                },
+                "item_id": null,
+                "product": {
+                    "id": "pro_01jpw505awn7pjgq18k3aeagtv",
+                    "name": "converge layouts toolkit",
+                    "type": "standard",
+                    "status": "active",
+                    "image_url": null,
+                    "created_at": "2025-03-21T10:46:50.972Z",
+                    "updated_at": "2025-03-21T10:46:50.972Z",
+                    "custom_data": null,
+                    "description": null,
+                    "tax_category": "standard"
+                },
+                "price_id": "pri_01jpw52t5m31was20nv508vby9",
+                "quantity": 1,
+                "tax_rate": "0",
+                "unit_totals": {
+                    "tax": "0",
+                    "total": "1900",
+                    "discount": "0",
+                    "subtotal": "1900"
+                },
+                "is_tax_exempt": true,
+                "revised_tax_exempted": false
+            }
+        ],
+        "payout_totals": {
+            "fee": "145",
+            "tax": "0",
+            "total": "1900",
+            "credit": "0",
+            "balance": "0",
+            "discount": "0",
+            "earnings": "1755",
+            "fee_rate": "0.05",
+            "subtotal": "1900",
+            "grand_total": "1900",
+            "currency_code": "USD",
+            "exchange_rate": "1",
+            "credit_to_balance": "0"
+        },
+        "tax_rates_used": [
+            {
+                "totals": {
+                    "tax": "0",
+                    "total": "1900",
+                    "discount": "0",
+                    "subtotal": "1900"
+                },
+                "tax_rate": "0"
+            }
+        ],
+        "adjusted_totals": {
+            "fee": "145",
+            "tax": "0",
+            "total": "1900",
+            "earnings": "1755",
+            "subtotal": "1900",
+            "grand_total": "1900",
+            "currency_code": "USD"
+        }
+    },
+    "checkout": {
+        "url": "https://fluxtor.dev/?_ptxn=txn_01jq6x302v7p2wrj1n3614b3ma"
+    },
+    "payments": [
+        {
+            "amount": "1900",
+            "status": "captured",
+            "created_at": "2025-03-25T15:00:29.656206Z",
+            "error_code": null,
+            "captured_at": "2025-03-25T15:00:32.57048Z",
+            "method_details": {
+                "card": {
+                    "type": "visa",
+                    "last4": "4242",
+                    "expiry_year": 2029,
+                    "expiry_month": 12,
+                    "cardholder_name": "med"
+                },
+                "type": "card"
+            },
+            "payment_method_id": "paymtd_01jq6x3fa4r9kgp9vvx2gphmw2",
+            "payment_attempt_id": "a457b6c8-6b0a-41e3-b6dc-fc94e39cd642",
+            "stored_payment_method_id": "d17c56be-08f0-44a7-b8f4-fdd559e1bff8"
+        }
+    ],
+    "billed_at": "2025-03-25T15:00:33.148915Z",
+    "address_id": "add_01jq6x34tdsw9r633bxt402ffw",
+    "created_at": "2025-03-25T15:00:14.139678Z",
+    "invoice_id": "inv_01jq6x3k3604xtpewab7dbr4ec",
+    "revised_at": null,
+    "updated_at": "2025-03-25T15:00:35.655798295Z",
+    "business_id": null,
+    "custom_data": {
+        "product_id": 2,
+        "product_price_id": 3
+    },
+    "customer_id": "ctm_01jptscxa33ttqabzw2z2xgg9e",
+    "discount_id": null,
+    "receipt_data": null,
+    "currency_code": "USD",
+    "billing_period": null,
+    "invoice_number": "10238-10038",
+    "billing_details": null,
+    "collection_mode": "automatic",
+    "subscription_id": null
+}
