@@ -1,14 +1,5 @@
 <?php
-
-<<<<<<< HEAD
-use App\Http\Controllers\ProductController;
-use App\Livewire\Home\Index;
-use App\Livewire\Settings\Appearance;
-use App\Livewire\Settings\Password;
-use App\Livewire\Settings\Profile;
-=======
 use App\Http\Controllers\BillingPortalController;
->>>>>>> 46977adc5bd0d1eee7de37f5b3b7ef7a7865053b
 use Illuminate\Http\Request;
 use App\Livewire\Board;
 use App\Livewire\Settings\Profile;
@@ -27,8 +18,6 @@ Route::get('/buy', function (Request $request) {
 
             ->returnTo(route('dashboard'));
     }
-
-
     return view('buy', ['checkout' => $checkout]);
 })->name('checkout');
 
