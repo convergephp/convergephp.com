@@ -21,7 +21,8 @@
         {{-- Body --}}
         <div
              class="relative mx-auto mt-8 grid w-full gap-6 rounded-xl pb-10 transition-colors duration-300 md:grid-cols-12">
-            <!-- Mobile navigation header (visible uniquement sur mobile) -->
+
+            {{-- MOBIL NAVIGATION --}}
             <div class="block w-full overflow-x-auto py-2 md:hidden">
                 <div class="no-scrolle scrollbar-hidden flex space-x-2 overflow-x-auto pb-2 dark:border-gray-700">
                     <a href="{{ route('boards.licenses') }}"
@@ -65,7 +66,7 @@
                 </div>
             </div>
 
-            <!-- Navigation latérale standard (visible uniquement sur tablette/desktop) -->
+            <!-- DESCTOP SIDBARE NAVIGATION -->
             <div class="hidden w-full md:col-span-3 md:block">
                 <aside class="menu w-full p-0 md:sticky">
                     <ul class="list flex w-full flex-col gap-y-6 p-0">
@@ -117,8 +118,7 @@
             </div>
 
             <!-- Main content - Full width on mobile, 8 cols on md+ -->
-            <div
-                 class="bg-base-100 w-full overflow-x-hidden rounded-lg p-4 py-0 text-gray-700 md:col-span-9 dark:text-white">
+            <div class="bg-base-100 w-full rounded-lg p-4 py-0 text-gray-700 md:col-span-9 dark:text-white">
                 {{ $slot }}
             </div>
         </div>
