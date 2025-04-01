@@ -23,7 +23,8 @@
         {{-- Github Profil --}}
         @if ($githubProfilLink)
             <li>
-                <a href="{{ $githubProfilLink }}"
+                <a target="_blank"
+                   href="{{ $githubProfilLink }}"
                    class="btn btn-square bg-base-100 group">
                     <svg class="fill-base-content group-hover:fill-primary h-6 w-6 transition-colors duration-200"
                          xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +43,8 @@
         {{-- Linkedin profil --}}
         @if ($linkedinProfilLink)
             <li>
-                <a href="{{ $linkedinProfilLink }}"
+                <a target="_blank"
+                   href="{{ $linkedinProfilLink }}"
                    class="btn btn-square bg-base-100 group">
 
                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +62,8 @@
         {{-- Sponsor button --}}
         @if ($sponsorPageLink)
             <li>
-                <a href="{{ $sponsorPageLink }}"
+                <a target="_blank"
+                   href="{{ $sponsorPageLink }}"
                    title="Sponsor me"
                    class="btn btn-square bg-base-100 group">
                     <svg xmlns="http://www.w3.org/2000/svg"
