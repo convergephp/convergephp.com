@@ -12,6 +12,4 @@
     <x-pattern-separator title="Our team" />
 
     <x-partials.team />
-
-    <x-partials.footer />
 </div>
