@@ -14,10 +14,6 @@
 # Notes:
 - set progress color based on the primary color.
 
-# Ayoub's tasks
-## *
-
-
 # ROLES
     - med:  founder & lead developer 
     - ayoub: co-creator & lead UI designer 
@@ -26,3 +22,7 @@
     - after register it does not activate the payment modal 
     - handle swap licenses (paddle portal does not handle it)
     - refine licenses migrations for expires .....
+    - clear the session after closing the login modal 
+
+
+exerice comme 7 8, spiral,  refine demonstration   

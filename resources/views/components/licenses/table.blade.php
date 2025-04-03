@@ -1,18 +1,5 @@
 @props(['licenses'])
-@php
-    $licenses = [
-        (object) [
-            'product' => (object) ['name' => 'Pro Suite'],
-            'price' => (object) ['name' => 'Monthly', 'amount' => '29.99€'],
-            'key' => 'ABC1DEF2GHI3JKL4',
-        ],
-        (object) [
-            'product' => (object) ['name' => 'Developer Edition'],
-            'price' => (object) ['name' => 'Annual', 'amount' => '499.99€'],
-            'key' => 'MNO5PQR6STU7VWX8',
-        ],
-    ];
-@endphp
+
 
 <div class="w-full overflow-auto rounded-lg">
     {{-- Desktop view --}}
