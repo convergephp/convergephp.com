@@ -19,7 +19,7 @@
     --color-secondary: teal;
     --color-accent: oklch(0.586 0.253 17.585);
     --radius-selector: 1rem;
-    --radius-field: 3rem;
+    --radius-field: 3px;
      --radius-box: 0.5rem;
   }
 

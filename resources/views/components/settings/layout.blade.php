@@ -79,19 +79,24 @@
                                 <x-settings.link href="{{ route('boards.licenses') }}"
                                                  :active="request()->RouteIs('boards.licenses')"
                                                  label="Licenses"
+                                                 icon="iconsax-bul-key-square"
                                                  wire:navigate.hover />
 
                                 <x-settings.link href="{{ route('boards.transactions') }}"
                                                  label="Transactions"
                                                  :active="request()->RouteIs('boards.transactions')"
+                                                 icon="iconsax-bul-transaction-minus"
                                                  wire:navigate.hover />
 
                                 <x-settings.link :active="request()->RouteIs('boards.activations')"
                                                  href="{{ route('boards.activations') }}"
                                                  label="Activations"
+                                                 icon="iconsax-bul-folder-minus"
                                                  wire:navigate.hover />
+
                                 <x-settings.link :active="request()->RouteIs('boards.billing')"
                                                  href="{{ route('boards.billing') }}"
+                                                 icon="iconsax-bul-dollar-circle"
                                                  label="Billing Portal"
                                                  wire:navigate.hover />
                             </div>
@@ -106,10 +111,12 @@
                                 <x-settings.link href="{{ route('settings.profile') }}"
                                                  :active="request()->RouteIs('settings.profile')"
                                                  label="Profile Account"
+                                                 icon="iconsax-bul-profile-circle"
                                                  wire:navigate.hover />
                                 <x-settings.link href="{{ route('settings.password') }}"
                                                  :active="request()->RouteIs('settings.password')"
                                                  label="Password"
+                                                 icon="iconsax-bul-password-check"
                                                  wire:navigate.hover />
                             </div>
                         </div>

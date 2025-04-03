@@ -29,36 +29,53 @@
                 {{-- Tabs Content --}}
                 <div class="w-full">
                     @foreach ($product->thumbnails as $thumbnail)
-                        <div class="rounded-box border-base-300 group grid grid-cols-1 gap-4 border bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:8px_8px] bg-fixed [--pattern-fg:var(--color-base-300)]"
-                             x-show="activeTab === '{{ $thumbnail->name }}'"
+                        <div x-show="activeTab === '{{ $thumbnail->name }}'"
                              x-transition:enter="transition ease-out duration-300"
                              x-transition:enter-start="opacity-0 transform translate-y-4"
-                             x-transition:enter-end="opacity-100 transform translate-y-0">
-                            <a class="border-base-300 bg-base-100 h-max rounded-2xl border p-4 transition-all duration-300 hover:shadow-md"
-                               href="#{{ $thumbnail->name }}">
+                             x-transition:enter-end="opacity-100 transform translate-y-0"
+                             class="bg-base-100 rounded-box mb-4 p-2 md:p-4">
+                            <div class="bg-base-300 overflow-hidden rounded-xl shadow-sm">
+                                <div class="flex h-full flex-col md:flex-row">
+                                    <!-- Image Section - Plus grande et prédominante -->
+                                    <div class="relative h-64 w-full overflow-hidden md:h-[500px] md:w-2/3">
+                                        @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
+                                            <x-image loading="lazy"
+                                                     class="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
+                                                     :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
+                                                     :alt="$thumbnail->title">
+                                            </x-image>
+                                        @else
+                                            <div class="bg-base-200 flex h-full w-full items-center justify-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     class="text-base-content/30 h-16 w-16"
+                                                     fill="none"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                          stroke-width="1"
+                                                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                                </svg>
+                                            </div>
+                                        @endif
+                                    </div>
 
-                                <div
-                                     class="flex h-[500px] w-full items-center justify-center overflow-hidden rounded-xl">
-                                    @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                        {{-- <img class="h-full w-full transform object-cover"
-                                             src="{{ $thumbnail->getMedia('thumbnails')->first()->getUrl() }}"
-                                             alt="{{ $thumbnail->name }}"
-                                             loading="lazy"> --}}
-                                        <x-image loading="lazy"
-                                                 :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"></x-image>
-                                    @else
-                                        <div class="flex h-full w-full items-center justify-center rounded-xl">
-                                            <p class="text-base-content">No image available</p>
+                                    {{-- Title and description --}}
+                                    <div class="flex w-full flex-col p-6 md:w-1/3">
+                                        <div class="mb-4">
+                                            <h2 class="text-2xl font-bold leading-tight">
+                                                {{ $thumbnail->title }}
+                                            </h2>
+                                            <div class="bg-primary my-3 h-1 w-16"></div>
                                         </div>
-                                    @endif
-                                </div>
 
-                                <div class="mt-4">
-                                    <h3 class="text-base-content text-lg font-bold">{{ $thumbnail->title }}</h3>
-                                    <p class="text-base-content mt-2 text-sm font-light">{!! Str::markdown($thumbnail->description) !!}
-                                    </p>
+                                        <div
+                                             class="content prose prose-sm max-h-60 flex-grow overflow-auto md:max-h-72">
+                                            {!! Str::markdown($thumbnail->description) !!}
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -77,6 +94,7 @@
             </div>
         @endif
     @endauth
+
     @if (!Auth::check() || $licenses->isEmpty())
         <div class="mx-auto max-w-7xl px-4 py-8 lg:px-6 lg:py-20">
             {{-- Title --}}
