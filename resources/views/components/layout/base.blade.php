@@ -26,6 +26,9 @@
 
         {{ $slot }}
 
+        {{-- FOOTER --}}
+        <x-partials.footer />
+
         @livewireScriptConfig
     </body>
 
