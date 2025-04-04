@@ -23,10 +23,10 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 
-
-        // dd($product->licenses,$hasLicenses);
+        // VOCLIC WAS HERE...
 
         Session::put(Constants::AFTER_LOGIN_REDIRECT_URL, url()->current());
+        
         $licenses = $product->licenses->where('user_id', Auth::id());
 
 

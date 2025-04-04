@@ -16,7 +16,7 @@
 <div x-data="{
     isOpen: false,
     startY: 0,
-    closeEventCallback: {{ Js::from($closeEventCallback) }},
+    closeEventCallback: null,
     currentY: 0,
     moving: false,
     init() {
@@ -29,6 +29,7 @@
     close() {
         this.isOpen = false;
         this.resetPosition();
+        sessionStorage.removeItem('selectedPlan');
     },
     open() {
         this.isOpen = true;
