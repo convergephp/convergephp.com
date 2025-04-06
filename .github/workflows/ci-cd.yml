@@ -1,8 +1,6 @@
 name: CI/CD
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 jobs:
   build:
     runs-on: "ubuntu-22.04"
@@ -55,7 +53,7 @@ jobs:
 
   deploy-main:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/production'
     runs-on: "ubuntu-22.04"
     steps:
       - name: Download deployment artifacts
@@ -65,9 +63,10 @@ jobs:
 
       - name: Deploy
         env:
-          base_directory: "~/project"
-          ssh_user: "user"
-          ssh_host: "127.0.0.1"
+          # when sshing to the server using converge user we will be on the /home/converge wich is ~/
+          base_directory: "~/www"
+          ssh_user: "converge"
+          ssh_host: 89.117.36.52
           ssh_port: 22
           private_ssh_key: "${{ secrets.PRIVATE_SSH_KEY }}"
           ssh_known_hosts: "${{ secrets.SSH_KNOWN_HOSTS }}"
