@@ -1,8 +1,6 @@
 # Mohamed's Tasks
 ## Handle Payment for products
 
-- display products dynamically and associate thier prices to paddle.[DONE]
-- handle guest options with the correct redirects option.[DONE].
 - handle webhooks to check wich product the authenticated user has been bought.[DONE].
 - build the billing portal [DONE].
 - handle licensing keys [DONE].

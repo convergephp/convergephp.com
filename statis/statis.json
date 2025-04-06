@@ -1,0 +1,16 @@
+{
+    "name": "converge/satis.spatie.be",
+    "homepage": "https://convergephp.com/packages-repositories",
+    "output-dir": "public",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/CharrafiMed/global-search-modal"
+        }
+    ],
+    "archive": {
+        "directory": "dist",
+        "skip-dev": false
+    },
+    "require-all": true
+}
