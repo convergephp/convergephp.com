@@ -70,7 +70,7 @@ jobs:
           ssh_user: "converge"
           ssh_host: 89.117.36.52
           ssh_port: 22
-          private_ssh_key: "${{ secrets.PRIVATE_SSH_KEY }}"
+          private_ssh_key: "${{ secrets.SSH_PRIVATE_KEY  }}"
           ssh_known_hosts: "${{ secrets.SSH_KNOWN_HOSTS }}"
           php_executable: "php"
         run: tar -xf artifacts.tar.gz .github/deployment/prepare.sh -O | bash -se -- "$base_directory" "$ssh_user" "$ssh_host" "$ssh_port" "$private_ssh_key" "$ssh_known_hosts" "$php_executable"
