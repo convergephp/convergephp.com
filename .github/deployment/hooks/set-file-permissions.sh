@@ -45,7 +45,9 @@ if [[ -z "$(command -v "setfacl")" ]]; then
     exit 1
 fi
 
-http_user_group=$(id -Gn "$http_user")
+# http_user_group=$(id -Gn "$http_user")
+http_user_group="converge"
+
 
 if [[ $(wc -w <<< "$http_user_group") != "1" ]]; then
     echo -e "::error::Can not set file permissions. The \"$http_user\" user belongs to multiple groups, we can't decide which group we should use. You must manually set the \"\$http_user_group\" variable in the \"set-file-permissions\" hook. User \"$http_user\" belongs to these groups: $http_user_group"
