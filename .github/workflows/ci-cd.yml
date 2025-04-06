@@ -2,7 +2,7 @@ name: CI/CD
 on:
   push:
     branches:
-      - main
+      - production
 jobs:
   build:
     runs-on: "ubuntu-22.04"
@@ -55,7 +55,7 @@ jobs:
 
   deploy-main:
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/production'
     runs-on: "ubuntu-22.04"
     steps:
       - name: Download deployment artifacts
