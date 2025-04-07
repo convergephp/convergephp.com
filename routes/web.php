@@ -1,6 +1,5 @@
 <?php
 use App\Http\Controllers\BillingPortalController;
-use App\Livewire\Home\Index;
 use Illuminate\Http\Request;
 use App\Livewire\Board;
 use App\Livewire\Settings\Profile;
@@ -9,7 +8,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use Laravel\Paddle\Transaction;
 
-Route::get('/', Index::class)->name('home');
+Route::get('/', \App\Livewire\Home\Index::class)->name('home');
+
+Route::get('/roadmap', \App\Livewire\Roadmap\Index::class)->name('roadmap');
 
 Route::get('/buy', function (Request $request) {
 
@@ -70,4 +71,4 @@ Route::get('/download-invoice/{transaction}', function (Request $request, Transa
     return $transaction->redirectToInvoicePdf();
 })->name('download-invoice');
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
