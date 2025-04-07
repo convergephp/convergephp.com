@@ -30,10 +30,9 @@
            data-aos-duration="1000"
            class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
             Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            <span class="relative mx-1 inline-block px-1">
-                <span class="relative z-10 text-white">documentation from Markdown</span>
-                <span class="bg-accent/90 -rotate-0.5 absolute inset-0 -skew-y-3 transform"></span>
-            </span>. Developer-friendly. Intuitive. And designed for teams who care about clarity
+            <span class="vc-text-6"><strong href="#">documentation from
+                    Markdown</strong>.</span> Developer-friendly. Intuitive. And designed for teams who care about
+            clarity
         </p>
 
         <div data-aos="fade-up"

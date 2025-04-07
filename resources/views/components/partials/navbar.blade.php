@@ -1,5 +1,6 @@
 <header class="border-base-300 bg-base-200 fixed inset-x-0 top-0 z-30 border-b"
         x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
+
     <div class="relative flex justify-center">
         <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl rounded-full px-3">
             <nav class="flex min-h-[5rem] items-center justify-between"
@@ -38,10 +39,14 @@
                             </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
+
+                    <x-navbar.link href="{{ route('roadmap') }}"
+                                   :active="request()->routeIs('roadmap')"
+                                   wire:navigate.hover>Roadmap</x-navbar.link>
                 </div>
 
+                {{-- THEME SWITCHER --}}
                 <div class="flex items-center gap-2">
-                    {{-- THEME SWITCHER --}}
                     <x-theme-switcher class="md:order-5" />
 
                     {{-- Actions buttons --}}
@@ -50,31 +55,31 @@
                               action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
-                                    class="btn md:btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:px-2">
+                                    class="btn btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:px-2">
                                 <span class="hidden md:block">{{ __('Logout') }}</span>
-                                <x-iconsax-bul-logout class="w-5" />
+                                <x-iconsax-bul-logout class="w-5 md:hidden" />
                             </button>
                         </form>
                         <a href="{{ route('boards.licenses') }}"
                            wire:navigate.hover
-                           class="btn md:btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:max-w-fit md:px-2">
+                           class="btn btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:max-w-fit md:px-2">
                             <span class="hidden md:block">Board</span>
-                            <x-iconsax-bul-setting-2 class="w-5" />
+                            <x-iconsax-bul-setting-2 class="w-5 md:hidden" />
                         </a>
                     @endif
                     @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
-                           class="btn md:btn-sm btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-2 no-underline md:px-4">
+                           class="btn btn-sm btn-square md:btn-link md:btn-block bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-4">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
-                            <x-iconsax-bul-login-1 class="w-5" />
+                            <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
                     @endif
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
                         <button x-on:click="mobileMenuOpen = !mobileMenuOpen"
-                                class="btn btn-square bg-base-300 rounded-sm"
+                                class="btn btn-square btn-sm bg-base-300 rounded-sm"
                                 aria-expanded="false"
                                 x-bind:aria-expanded="mobileMenuOpen.toString()">
                             <span class="sr-only">Ouvrir le menu principal</span>
@@ -121,6 +126,7 @@
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
                     <a href="/in-person"
+                       wire:navigate.hover
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Documentation
                     </a>
@@ -162,6 +168,11 @@
                                 <div class="text-base-content/70 mt-1 text-sm">Create a powerfull layouts</div>
                             </a>
                         </div>
+                        <a href="{{ route('roadmap') }}"
+                           wire:navigate.hover
+                           class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
+                            Roadmap
+                        </a>
                     </div>
 
                     {{-- Solutions Dropdown --}}

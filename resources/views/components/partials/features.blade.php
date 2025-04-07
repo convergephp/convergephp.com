@@ -2,7 +2,7 @@
      data-aos="fade-up"
      data-aos-duration="1000">
 
-    <div class="mx-auto w-full max-w-7xl space-y-2 overflow-hidden p-2">
+    <div class="mx-auto w-full max-w-7xl space-y-2 overflow-hidden">
 
         {{-- TITLES --}}
         <div class="bg-base-100 w-full overflow-hidden rounded-lg">
@@ -29,10 +29,10 @@
                  data-aos-duration="1000"
                  class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
                 <div
-                     class="group-hover:border-accent/10 group-hover:bg-accent/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
-                              class="text-base-content group-hover:text-accent text-xl/10 font-medium tracking-widest md:text-2xl/10">Customizable
+                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Customizable
                             Themes
                         </span>
                         <p class="text-base-content/50 max-w-xl text-sm/7">Effortlessly switch
@@ -46,7 +46,7 @@
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform hover:scale-105"
+                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
                                  src="{{ asset('exemple-4.png') }}"
                                  alt="">
                         </div>
@@ -59,10 +59,10 @@
                  data-aos-duration="1000"
                  class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
                 <div
-                     class="group-hover:border-accent/10 group-hover:bg-accent/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
-                              class="text-base-content group-hover:text-accent text-xl/10 font-medium tracking-widest md:text-2xl/10">Comprehensive
+                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Comprehensive
                             Documentation</span>
                         <p class="text-base-content/50 max-w-xl text-sm/7">Detailed step-by-step guides to help you get
                             started and master converge. </p>
@@ -75,7 +75,7 @@
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform hover:scale-105"
+                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
                                  src="{{ asset('exemple-4.png') }}"
                                  alt="">
                         </div>
@@ -88,10 +88,10 @@
                  data-aos-duration="1000"
                  class="bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline md:col-span-12">
                 <div
-                     class="group-hover:border-accent/10 group-hover:bg-accent/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
-                              class="text-base-content group-hover:text-accent text-xl/10 font-medium tracking-widest md:text-2xl/10">Multiple
+                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Multiple
                             Layouts</span>
                         <p class="text-base-content/50 max-w-xl text-sm/7"> Choose from various layout options to match
                             your
@@ -104,7 +104,7 @@
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform hover:scale-105"
+                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
                                  src="{{ asset('exemple-4.png') }}"
                                  alt="">
                         </div>
@@ -117,10 +117,10 @@
                  data-aos-duration="1000"
                  class="md:col-span-18 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
                 <div
-                     class="group-hover:border-accent/10 group-hover:bg-accent/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
-                              class="text-base-content group-hover:text-accent text-xl/10 font-medium tracking-widest md:text-2xl/10">
+                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">
                             Handcrafted
                             Blade Components </span>
                         <p class="text-base-content/50 max-w-xl text-sm/7">A collection of custom-made, highly flexible
@@ -133,7 +133,7 @@
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform hover:scale-105"
+                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
                                  src="{{ asset('exemple-4.png') }}"
                                  alt="">
                         </div>
