@@ -20,5 +20,5 @@
         </svg>
     @endif
 
-    <span class="text-base-content/30">{{ $label }}</span>
+    <span class="text-base-content/50">{{ $label }}</span>
 </li>
