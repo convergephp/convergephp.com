@@ -21,7 +21,7 @@
 
         <h1 data-aos="zoom-in"
             data-aos-duration="200"
-            class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-widest text-transparent md:text-5xl/[1.07]">
+            class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text py-3 text-4xl/[1.07] font-bold text-transparent md:text-5xl/[1.07]">
             Streamline Your Documentation Workflow with <span
                   class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
         </h1>
@@ -40,7 +40,7 @@
              data-aos-duration="1000"
              class="w-xs mx-auto mt-10 flex flex-col items-center justify-center gap-y-8">
             <a href="/docs"
-               class="btn btn-block text-primary-content from-primary to-primary/50 bg-gradient-to-b">
+               class="btn btn-block text-primary-content bg-primary">
                 Get started
             </a>
         </div>

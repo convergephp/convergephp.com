@@ -41,6 +41,7 @@
                     </x-navbar.dropdown-menu>
 
                     <x-navbar.link href="{{ route('roadmap') }}"
+                                   :active="request()->routeIs('roadmap')"
                                    wire:navigate.hover>Roadmap</x-navbar.link>
                 </div>
 
@@ -167,10 +168,9 @@
                                 <div class="text-base-content/70 mt-1 text-sm">Create a powerfull layouts</div>
                             </a>
                         </div>
-
                         <a href="{{ route('roadmap') }}"
                            wire:navigate.hover
-                           class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
+                           class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                             Roadmap
                         </a>
                     </div>

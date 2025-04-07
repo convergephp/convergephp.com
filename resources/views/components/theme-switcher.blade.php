@@ -1,7 +1,7 @@
 <div {{ $attributes }}
      x-data="{
          themes: ['light', 'black'],
-         currentThemeIndex: localStorage.getItem('theme-index') ? parseInt(localStorage.getItem('theme-index')) : 0,
+         currentThemeIndex: localStorage.getItem('theme-index') ? parseInt(localStorage.getItem('theme-index')) : 1,
      
          init() {
              this.setTheme(this.currentThemeIndex);

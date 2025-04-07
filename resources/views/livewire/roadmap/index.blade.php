@@ -3,7 +3,7 @@
         ['label' => 'Organize content into independent modules', 'status' => 'done'],
         ['label' => 'Dynamic File-to-Section Mapping', 'status' => 'done'],
         ['label' => 'Custom Sorting', 'status' => 'done'],
-        ['label' => 'Fully customizable sidebar', 'status' => 'progress'],
+        ['label' => 'Fully customizable sidebar', 'status' => 'done'],
         ['label' => 'Lazy-load sub-items for better performance', 'status' => 'done'],
         ['label' => 'Seamless search capabilities', 'status' => 'done'],
         ['label' => 'Render Hooks', 'status' => 'done'],
@@ -28,7 +28,6 @@
             Discover what we're planning for Converge
         </p>
     </div>
-
     <ul
         class="timeline not-prose timeline-compact timeline-snap-icon timeline-vertical bg-base-200 rounded-box mx-auto mb-20 w-full md:max-w-3xl lg:py-8">
         <x-roadmap.card :items="$converge"
