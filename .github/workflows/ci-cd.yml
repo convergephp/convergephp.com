@@ -65,7 +65,6 @@ jobs:
 
       - name: Deploy
         env:
-          # when sshing to the server using converge user we will be on the /home/converge wich is ~/
           base_directory: "~/www"
           ssh_user: "converge"
           ssh_host: 89.117.36.52
