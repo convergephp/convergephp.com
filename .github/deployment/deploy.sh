@@ -178,7 +178,8 @@ run_hook "after-activation.sh" "$base_directory" "$artifacts_path"
 
 # Keep only the 3 newest release directories.
 for old_release_directory in $(ls "$releases_directory" | sort --numeric-sort --reverse | tail -n+4) ; do
-    echo "Deleting old release directory \"$releases_directory/$old_release_directory\"."
+    # echo "Deleting old release directory \"$releases_directory/$old_release_directory\"."
+    echo "Deleting old release directory 
 
     rm -rf "${releases_directory:?}/$old_release_directory"
 done
