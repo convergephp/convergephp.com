@@ -34,6 +34,7 @@ on_exit() {
     exit "$script_status_code"
 }
 # This "trap" command will call the "on_exit" function when we exit this script.
+
 trap on_exit INT EXIT TERM
 
 cat << PHP > "$opcache_reset_script_file_path_1"
