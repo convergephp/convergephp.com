@@ -17,7 +17,6 @@
                 </div>
             </div>
         </div>
-
         <div
              class="mx-auto flex w-full flex-col justify-around gap-8 space-y-6 overflow-x-hidden py-8 sm:flex-row sm:space-y-0 md:max-w-3xl">
             <x-team-card fullName="Ayoub El Hajji"

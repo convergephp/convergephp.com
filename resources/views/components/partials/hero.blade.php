@@ -1,70 +1,20 @@
 <?php
-$code = <<<'CODE'
-<?php
-
-namespace App\Providers\Converge;
-
-use App\Config\CustomThemes;
-use Fluxtor\Converge\Clusters\Cluster;
-use Fluxtor\Converge\Clusters\ClusterLink;
-use Fluxtor\Converge\Clusters\Clusters;
-use Fluxtor\Converge\Enums\HighlighterName;
-use Fluxtor\Converge\Enums\IconPosition;
-use Fluxtor\Converge\Enums\Interceptor;
-use Fluxtor\Converge\Enums\Layout;
-use Fluxtor\Converge\Enums\Spotlight;
-use Fluxtor\Converge\FontProviders\BunnyFontProvider;
-use Fluxtor\Converge\FontProviders\GoogleFontProvider;
-use Fluxtor\Converge\MenuItems\MenuItem;
-use Fluxtor\Converge\MenuItems\MenuItemGroup;
-use Fluxtor\Converge\MenuItems\MenuItems;
-use Fluxtor\Converge\Module;
-use Fluxtor\Converge\Providers\ModuleProvider;
-use Fluxtor\Converge\Sidebar\SidebarItem;
-use Fluxtor\Converge\Support\SidebarItemsStyles;
-use Fluxtor\Converge\Support\Themes;
-use Fluxtor\Converge\TableOfContent\TableOfContent;
-use Fluxtor\Converge\Theme\Theme;
-use Fluxtor\Converge\Versions\Version;
-use Fluxtor\Converge\Versions\VersionLink;
-use Fluxtor\Converge\Versions\Versions;
-use Illuminate\Support\Facades\Blade;
-use Illuminate\Support\HtmlString;
-use Illuminate\View\View;
-use NunoMaduro\Collision\Provider;
-
-class FilamentDocsModuleProvider extends ModuleProvider
-{
-    /**
-     * Register New Module Service Provider.
-     */
-    public function module(Module $module): Module
-    {
-        return $module
-            ->id('filament-docs')
-            ->routePath('filament/docs')
-            ->in(base_path('docs'))
-            ->tableOfContent(fn (TableOfContent $toc): TableOfContent => $toc->minLevel(1)->maxLevel(2))
-            ->darkModeBrandLogo(asset('storage/images/logo.svg'))
-            ->brandLogo('Converge')
-            ->depth(fn () => 3)
-            ->brandLogoHeight('2rem')
-            ->theme(function (Theme $theme) {
-                return $theme->layout(Layout::Yub)
-                    ->collapsedGroupes()
-                    ->spotlight(Spotlight::Strock)
-                    ->theme(lightModeTheme: Themes::LIGHT, darkModeTheme: CustomThemes::USER_THEME)
-                    ->font('Rubik', provider: GoogleFontProvider::class)
-                    ->highlighterTheme(darkmodeHighlighter: HighlighterName::Github_dark_default, lightmodeHighlighter: HighlighterName::Github_light)
-                    ->favicon(asset('storage/images/favicon.svg'))
-                    ->sidebarItemStyle(SidebarItemsStyles::STYLE1);
-            })
-            ->versionAs('Version 5.x')
-            ->quietedVersionUrl('v5.x')
-            ->defineMenuItems(fn (MenuItems $menu) => $this->defineMenuItems($menu))
-            ->defineVersions(fn (Versions $versions) => $this->defineVersions($versions));
-    }
-CODE;
+$filesArray = [
+    "Getting started.md" => '',
+    "test-2.md" => "",
+    'navlist' => [
+        'features.md' => '',
+        'footer.md' => '',
+    ],
+    'partials' => [
+        'features.md' => '',
+        'footer.md' => '',
+        'hero.md' => '',
+        'navbar.md' => '',
+        'sponsors.md' => '',
+        'team.md' => ''
+    ]
+];
 ?>
 
 <section class="mx-auto max-w-7xl px-2">
@@ -86,7 +36,7 @@ CODE;
     {{-- SECTION CONTENT --}}
 
     <div data-aos-anchor-placement="top-bottom"
-         class="relative mx-auto max-w-4xl pt-[1rem] text-center md:pt-[3rem] lg:pt-[6rem]">
+         class="relative mx-auto max-w-4xl pt-[1rem] text-center pt-[2rem] ">
 
         <h1 data-aos="zoom-in"
             data-aos-duration="200"
@@ -158,7 +108,7 @@ CODE;
                  class="bg-base-200 absolute p-4 right-0 top-0 z-20 h-full overflow-auto text-white transition-all duration-200 ease-out"
                  style="width: 0%;">
                 <div class="h-full w-full">
-                    <livewire:code-block :code="$code" language="php"></livewire:code-block>
+                    <x-filesystem :items="$filesArray" />
                 </div>
             </div>
         </div>
