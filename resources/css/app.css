@@ -18,7 +18,7 @@
     --color-base-300: #060703;
     --color-base-100: #090A08;
     --color-secondary: teal;
-    --color-accent: oklch(0.586 0.253 17.585);
+    --color-accent: #5CB338;
     --radius-selector: 1rem;
     --radius-field: 3px;
      --radius-box: 0.5rem;
@@ -28,7 +28,10 @@
     name: "light";
     default: true;
     --color-primary: #00BCFF;
-    --color-accent: oklch(0.586 0.253 17.585);
+    --color-accent: #5CB338;
+    --radius-selector: 1rem;
+    --radius-field: 3px;
+    --radius-box: 0.5rem;
   }
 
   @utility input {

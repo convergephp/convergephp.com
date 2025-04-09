@@ -1,6 +1,6 @@
 <?php
 $filesArray = [
-    "Getting started.md" => '',
+    "Getting started.md" => 'tets',
     "test-2.md" => "",
     'navlist' => [
         'features.md' => '',

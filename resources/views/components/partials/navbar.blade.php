@@ -1,5 +1,5 @@
 <x-banner />
-<header class="border-base-300 bg-base-200 sticky inset-x-0 top-0 z-30 border-b"
+<header class="border-base-300 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
         x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
     <div class="relative flex justify-center">
         <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl rounded-full px-3">
@@ -16,8 +16,11 @@
                 {{-- NAVBAR ITEMS - DESKTOP --}}
                 <div
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 grow items-center justify-start px-4 text-sm font-medium transition md:flex">
-                    <x-navbar.link href="/in-person">Documentation</x-navbar.link>
-                    <x-navbar.dropdown-menu label="ToolKit">
+                    <x-navbar.link wire:navigate.hover
+                                   :active="request()->routeIs('solutions.documentation')"
+                                   :href="route('solutions.documentation')">Documentation</x-navbar.link>
+                    <x-navbar.dropdown-menu class="hidden"
+                                            label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
                             <x-navbar.card-link :url="route('products.show', ['product' => 'components'])"
                                                 title="Blade Components"
@@ -32,9 +35,15 @@
                     <x-navbar.dropdown-menu label="Solutions">
                         <div class="grid grid-cols-2 gap-4">
                             <x-navbar.card-link title="Documentation"
+                                                :active="request()->routeIs('solutions.documentation')"
+                                                :url="route('solutions.documentation')"
+                                                wire:navigate.hover
                                                 description="Visite our beautiful blade components">
                             </x-navbar.card-link>
                             <x-navbar.card-link title="Blogging"
+                                                :active="request()->routeIs('solutions.documentation')"
+                                                :url="route('solutions.blogging')"
+                                                wire:navigate.hover
                                                 description="Create a powerfull blog just in minutes">
                             </x-navbar.card-link>
                         </div>
@@ -125,14 +134,14 @@
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
-                    <a href="/in-person"
+                    <a :href="route('solutions.documentation')"
                        wire:navigate.hover
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Documentation
                     </a>
 
                     {{-- ToolKit Dropdown --}}
-                    <div class="border-base-200 border-b">
+                    <div class="border-base-200 hidden border-b">
                         <button x-on:click="toolkitOpen = !toolkitOpen; solutionsOpen = false"
                                 class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium focus:outline-none">
                             <span>ToolKit</span>
