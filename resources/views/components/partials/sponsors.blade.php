@@ -198,7 +198,7 @@
             </a>
         </div>
         <div class="flex justify-center">
-            <a href="https://github.com/sponsors/Ayoubhj866"
+            <a href="https://github.com/convergephp/converge?sponsor=1"
                target="_blank"
                class="btn btn-accent text-base-content">
                 Sponsor This Project, Your logo here?
