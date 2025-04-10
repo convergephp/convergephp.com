@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.10.1",
         "livewire/flux": "^2.0",
         "saade/blade-iconsax": "^1.2",
+        "scrivo/highlight.php": "^9.18",
         "spatie/laravel-medialibrary": "^11.12"
     },
     "require-dev": {

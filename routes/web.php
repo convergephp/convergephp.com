@@ -12,6 +12,10 @@ Route::get('/', \App\Livewire\Home\Index::class)->name('home');
 
 Route::get('/roadmap', \App\Livewire\Roadmap\Index::class)->name('roadmap');
 
+Route::get('/solutions/blogging', \App\Livewire\Solutions\Blogging::class)->name('solutions.blogging');
+
+Route::get('/solutions/documentation', \App\Livewire\Solutions\Documentation::class)->name('solutions.documentation');
+
 Route::get('/buy', function (Request $request) {
 
     $checkout = null;
