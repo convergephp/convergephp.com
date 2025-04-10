@@ -38,7 +38,7 @@
                                                 :active="request()->routeIs('solutions.documentation')"
                                                 :url="route('solutions.documentation')"
                                                 wire:navigate.hover
-                                                description="Visite our beautiful blade components">
+                                                description="starts documentating your software right away ">
                             </x-navbar.card-link>
                             <x-navbar.card-link title="Blogging"
                                                 :active="request()->routeIs('solutions.documentation')"
