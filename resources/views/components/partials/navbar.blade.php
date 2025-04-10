@@ -2,20 +2,18 @@
 <header class="border-base-300 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
         x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
     <div class="relative flex justify-center">
-        <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl rounded-full px-3">
+        <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl px-3">
             <nav class="flex min-h-[5rem] items-center justify-between"
                  aria-label="Global">
                 {{-- LOGO --}}
-                <div class="flex">
-                    <a href="/"
-                       wire:navigate.hover>
-                        <x-app-logo-2 class="h-[1.4rem] !stroke-cyan-900 md:h-[1.6rem]"></x-app-logo-2>
-                    </a>
-                </div>
+                <a href="/"
+                   wire:navigate.hover>
+                    <x-app-logo-2 class="h-[1.4rem] !stroke-cyan-900 md:h-[1.6rem]"></x-app-logo-2>
+                </a>
 
                 {{-- NAVBAR ITEMS - DESKTOP --}}
                 <div
-                     class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 grow items-center justify-start px-4 text-sm font-medium transition md:flex">
+                     class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
                     <x-navbar.link wire:navigate.hover
                                    :active="request()->routeIs('solutions.documentation')"
                                    :href="route('solutions.documentation')">Documentation</x-navbar.link>
@@ -55,7 +53,7 @@
                 </div>
 
                 {{-- THEME SWITCHER --}}
-                <div class="flex items-center gap-2">
+                <div class="flex h-full min-h-[5rem] grow items-center justify-end gap-2">
                     <x-theme-switcher class="md:order-5" />
 
                     {{-- Actions buttons --}}
@@ -64,14 +62,14 @@
                               action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
-                                    class="btn btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:px-2">
+                                    class="btn btn-sm btn-square bg-base-300 rounded-sm border border-gray-400/20 md:px-8">
                                 <span class="hidden md:block">{{ __('Logout') }}</span>
                                 <x-iconsax-bul-logout class="w-5 md:hidden" />
                             </button>
                         </form>
                         <a href="{{ route('boards.licenses') }}"
                            wire:navigate.hover
-                           class="btn btn-sm btn-square md:btn-block bg-base-300 rounded-sm border border-gray-400/20 md:max-w-fit md:px-2">
+                           class="btn btn-sm btn-square bg-base-300 rounded-sm border border-gray-400/20 md:max-w-fit md:px-8">
                             <span class="hidden md:block">Board</span>
                             <x-iconsax-bul-setting-2 class="w-5 md:hidden" />
                         </a>
@@ -79,7 +77,7 @@
                     @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
-                           class="btn btn-sm btn-square md:btn-link md:btn-block bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-4">
+                           class="btn btn-sm btn-square md:btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-8">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
