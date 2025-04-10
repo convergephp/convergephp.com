@@ -12,18 +12,6 @@ Route::get('/', \App\Livewire\Home\Index::class)->name('home');
 
 Route::get('/roadmap', \App\Livewire\Roadmap\Index::class)->name('roadmap');
 
-Route::get('/buy', function (Request $request) {
-
-    $checkout = null;
-    if (auth()->check()) {
-        $checkout = $request->user()->checkout('pri_01jptqkj6r55xba71ff7mm0vwz')
-
-            ->returnTo(route('dashboard'));
-    }
-
-
-    return view('buy', ['checkout' => $checkout]);
-})->name('checkout');
 
 Route::get('pricing', function () {
     return view('pages.pricing');
