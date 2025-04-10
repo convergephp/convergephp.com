@@ -8,7 +8,7 @@
             <a href="#docs"
                class="link link-hover">Docs</a>
         </nav>
-        <nav>
+        <nav class="hidden">
             <h6 class="footer-title">ToolKit</h6>
             <a href="/toolkits/components"
                class="link link-hover">Blade components</a>
@@ -17,8 +17,12 @@
         </nav>
         <nav>
             <h6 class="footer-title">Solutions</h6>
-            <a class="link link-hover">Documentation</a>
-            <a class="link link-hover">Blogging</a>
+            <a href="{{ route('solutions.documentation') }}"
+               wire:navigate.hover
+               class="link link-hover">Documentation</a>
+            <a href="{{ route('solutions.blogging') }}"
+               wire:navigate.hover
+               class="link link-hover">Blogging</a>
         </nav>
     </footer>
 
