@@ -70,7 +70,8 @@ if [[ "$filesystems_config_permission_1" != "775" ]] || [[ "$filesystems_config_
     exit 1
 fi
 
-echo "Making newly deployed code writeable for both \"$deployment_user\" and \"$http_user\"."
+# echo "Making newly deployed code writeable for both \"$deployment_user\" and \"$http_user\"."
+echo "Making newly deployed code writeable for both user and nginx/fpm user."
 
 # We only set file permissions for the "storage" directory if it doesn't contain any files yet. If
 # it already contains files, and the current file permissions are incorrect, then we can't change
