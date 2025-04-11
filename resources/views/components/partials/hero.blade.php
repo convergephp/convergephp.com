@@ -1,19 +1,26 @@
 <?php
 $filesArray = [
-    "Getting started.md" => 'tets',
-    "test-2.md" => "",
-    'navlist' => [
-        'features.md' => '',
-        'footer.md' => '',
-    ],
-    'partials' => [
-        'features.md' => '',
-        'footer.md' => '',
-        'hero.md' => '',
-        'navbar.md' => '',
-        'sponsors.md' => '',
-        'team.md' => ''
-    ]
+    "01-getting-started.md" => '',
+    "02-grid.md" => "",
+    "03-fields.md" => "",
+    "04-tabs.md" => "",
+    "05-widzard.md" => "",
+    "06-section.md" => "",
+    "07-split.md" => "",
+    "08-custom.md" => "",
+    "09-placeholder.md" => "",
+    // 'navlist' => [
+    //     'features.md' => '',
+    //     'footer.md' => '',
+    // ],
+    // 'partials' => [
+    //     'features.md' => '',
+    //     'footer.md' => '',
+    //     'hero.md' => '',
+    //     'navbar.md' => '',
+    //     'sponsors.md' => '',
+    //     'team.md' => ''
+    // ]
 ];
 ?>
 
@@ -49,7 +56,7 @@ $filesArray = [
            data-aos-duration="1000"
            class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
             Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            <span class="vc-text-6"><strong href="#">documentation from
+            <span class=""><strong href="#">documentation from
                     Markdown</strong>.</span> Developer-friendly. Intuitive. And designed for teams who care about
             clarity
         </p>
@@ -68,7 +75,7 @@ $filesArray = [
          data-aos-duration="500"
          class="mockup-browser bg-base-200 relative !mx-0 mx-auto mt-10 w-full max-w-7xl overflow-hidden border border-gray-400/20">
         <div class="mockup-browser-toolbar h-full">
-            <div class="input">https://convergephp.com/docs/5.x</div>
+            <div class="input">https://convergephp.com/docs/4.x</div>
         </div>
 
         <div
@@ -77,7 +84,7 @@ $filesArray = [
             <div id="image-container"
                  class="w-full">
                 <div class="rounded-box w-full overflow-hidden"
-                     style="max-height: 700px;">
+                     style="max-height: 500px;">
                     <img alt="Converge docs screenshot"
                          loading="lazy"
                          decoding="async"
@@ -105,7 +112,7 @@ $filesArray = [
             </div>
 
             <div id="code-panel"
-                 class="bg-base-200 absolute p-4 right-0 top-0 z-20 h-full overflow-auto text-white transition-all duration-200 ease-out"
+                 class="bg-base-200 absolute p-4 right-0 top-0 z-20 h-full overflow-auto text-white"
                  style="width: 0%;">
                 <div class="h-full w-full">
                     <x-filesystem :items="$filesArray" />

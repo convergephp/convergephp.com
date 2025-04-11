@@ -2,7 +2,7 @@
          class="mx-auto w-full max-w-7xl space-y-24 px-5 py-10 pt-10">
     <div class="mx-auto grid w-full gap-y-12">
         <div class="text-dolphin col-span-full flex flex-wrap justify-around gap-x-10 gap-y-12">
-            <a class="grid grid-cols-2 place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none min-[850px]:col-span-2"
+            {{-- <a class="grid grid-cols-2 place-items-center transition duration-300 will-change-transform hover:scale-110 motion-reduce:transition-none motion-reduce:hover:transform-none min-[850px]:col-span-2"
                href="https://fluxtor.dev/"
                target="_blank"
                title="Fluxtor">
@@ -195,13 +195,13 @@
                         </filter>
                     </defs>
                 </svg> <span class="font-bold">Fluxtor</span>
-            </a>
+            </a> --}}
         </div>
         <div class="flex justify-center">
-            <a href="https://github.com/sponsors/Ayoubhj866"
+            <a href="https://github.com/convergephp/converge?sponsor=1"
                target="_blank"
-               class="btn btn-accent text-base-content">
-                Sponsor This Project, Your logo here?
+               class="btn bg-primary text-base-content">
+               Your logo here? Sponsor This Project
                 <span class="hover:scale-105">💖</span>
             </a>
         </div>
