@@ -53,7 +53,7 @@ jobs:
           path: ~/artifacts.tar.gz
           retention-days: 1
 
-  deploy-main:
+  deploy-production:
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/production'
     runs-on: "ubuntu-22.04"
