@@ -1,16 +1,17 @@
 @php
-    $converge = [
-        ['label' => 'Organize content into independent modules', 'status' => 'done'],
-        ['label' => 'Dynamic File-to-Section Mapping', 'status' => 'done'],
-        ['label' => 'Custom Sorting', 'status' => 'done'],
+    $convergeV1x = [
+        ['label' => 'Organize documentation into fully separate modules', 'status' => 'done'],
+        ['label' => 'Documentation mirrors filesystem structure', 'status' => 'done'],
+        ['label' => 'Effortless versioning system for your software', 'status' => 'done'],
+        ['label' => 'Separate each version into clusters for better content organization', 'status' => 'done'],
+        ['label' => 'Support for multiple themes', 'status' => 'done'],
+        ['label' => 'Support for multiple layouts', 'status' => 'done'],
+        ['label' => 'Built-in search engine written in raw PHP ', 'status' => 'done'],
         ['label' => 'Fully customizable sidebar', 'status' => 'done'],
-        ['label' => 'Lazy-load sub-items for better performance', 'status' => 'done'],
-        ['label' => 'Seamless search capabilities', 'status' => 'done'],
-        ['label' => 'Render Hooks', 'status' => 'done'],
-        ['label' => 'Theming Support', 'status' => 'done'],
-        ['label' => 'Manual Cache Control', 'status' => 'done'],
-        ['label' => 'Multi Layouts Support', 'status' => 'done'],
-        ['label' => 'Blade Components Support within markdown', 'status' => 'done'],
+        ['label' => 'Dynamic Table of Contents (ToC) generation', 'status' => 'done'],
+        ['label' => 'Use Blade components directly within Markdown', 'status' => 'wip'],
+        ['label' => 'View interceptors for customizing rendering', 'status' => 'wip'],
+        ['label' => 'adding sidebar items dynamically with sorting mechanism', 'status' => 'wip'],
     ];
 
     $webEditor = [
@@ -30,9 +31,9 @@
     </div>
     <ul
         class="timeline not-prose timeline-compact timeline-snap-icon timeline-vertical bg-base-200 rounded-box mx-auto mb-20 w-full md:max-w-3xl lg:py-8">
-        <x-roadmap.card :items="$converge"
+        <x-roadmap.card :items="$convergeV1x"
                         color="primary"
-                        title="Converge v1.0.0"></x-roadmap.card>
+                        title="Converge v1.x.x"></x-roadmap.card>
 
         <x-roadmap.card :items="$webEditor"
                         title="Web editor"></x-roadmap.card>
