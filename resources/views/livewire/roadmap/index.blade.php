@@ -58,7 +58,7 @@
 <div class="mx-auto md:max-w-3xl px-3 py-6 md:px-4 md:py-10">
     <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
         <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
-            Converge Roadmap
+            Converge Project Roadmap
         </h2>
         <p class="text-base-content mb-5 font-light sm:text-xl">
             Discover what we're planning for Converge
@@ -75,8 +75,7 @@
     
     <x-roadmap.card 
                 title="Converge v2.x" 
-                :items="$convergeV2x" 
-                >
+                :items="$convergeV2x">
     </x-roadmap.card>
     
     <h3 class="font-bold text-primary"># Products & Plugins</h3>
