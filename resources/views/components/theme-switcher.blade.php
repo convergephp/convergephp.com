@@ -31,11 +31,11 @@
      class="relative ml-2 inline-flex items-center">
     <button type="button"
             x-on:click="toggleTheme()"
-            :aria-label="isDark ? 'Light mode' : 'Dark mode'"
+            x-bind:aria-label="isDark ? 'Light mode' : 'Dark mode'"
             class="btn btn-square btn-sm bg-base-300 btn-ghost border border-gray-400/20 px-2"
-            :class="isDark ? 'text-gray-200' : 'text-yellow-500'"
+            x-bind:class="isDark ? 'text-gray-200' : 'text-gray-500'"
             role="switch"
-            :aria-checked="isDark">
+            x-bind:aria-checked="isDark">
         <svg x-show="!isDark"
              class="h-5 w-5"
              fill="currentColor"

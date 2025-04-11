@@ -144,7 +144,7 @@
                         <button x-on:click="toolkitOpen = !toolkitOpen; solutionsOpen = false"
                                 class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium focus:outline-none">
                             <span>ToolKit</span>
-                            <svg :class="toolkitOpen ? 'transform rotate-180' : ''"
+                            <svg x-bind:class="toolkitOpen ? 'transform rotate-180' : ''"
                                  class="h-5 w-5 transition-transform duration-200"
                                  xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 20 20"
@@ -188,7 +188,7 @@
                         <button x-on:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
                                 class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between px-4 py-3 text-base font-medium focus:outline-none">
                             <span>Solutions</span>
-                            <svg :class="solutionsOpen ? 'transform rotate-180' : ''"
+                            <svg x-bind:class="solutionsOpen ? 'transform rotate-180' : ''"
                                  class="h-5 w-5 transition-transform duration-200"
                                  xmlns="http://www.w3.org/2000/svg"
                                  viewBox="0 0 20 20"
