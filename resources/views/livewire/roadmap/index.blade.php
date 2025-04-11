@@ -6,21 +6,56 @@
         ['label' => 'Separate each version into clusters for better content organization', 'status' => 'done'],
         ['label' => 'Support for multiple themes', 'status' => 'done'],
         ['label' => 'Support for multiple layouts', 'status' => 'done'],
-        ['label' => 'Built-in search engine written in raw PHP ', 'status' => 'done'],
+        ['label' => 'Built-in search engine written in raw PHP', 'status' => 'done'],
         ['label' => 'Fully customizable sidebar', 'status' => 'done'],
         ['label' => 'Dynamic Table of Contents (ToC) generation', 'status' => 'done'],
         ['label' => 'Use Blade components directly within Markdown', 'status' => 'wip'],
         ['label' => 'View interceptors for customizing rendering', 'status' => 'wip'],
-        ['label' => 'adding sidebar items dynamically with sorting mechanism', 'status' => 'wip'],
+        ['label' => 'Add sidebar items dynamically with a sorting mechanism', 'status' => 'coming'],
+        ['label' => 'Built-in SEO features for better ranking', 'status' => 'coming'],
+    ];
+
+    $bloggingV1x = [
+        ['label' => 'Organize blogging content into fully separate modules', 'status' => 'coming'],
+        ['label' => 'Support for Markdown (flat files) and database for content storage', 'status' => 'coming'],
+        ['label' => 'Support for multiple themes', 'status' => 'coming'],
+        ['label' => 'Support for multiple layouts', 'status' => 'coming'],
+        ['label' => 'Built-in search engine written in raw PHP (for flat-file storage)', 'status' => 'coming'],
+        ['label' => 'Dynamic Table of Contents (ToC) generation', 'status' => 'coming'],
+        ['label' => 'Use Blade components directly within Markdown', 'status' => 'coming'],
+        ['label' => 'Built-in SEO features for better ranking', 'status' => 'coming'],
+        ['label' => 'Additional community-requested features', 'status' => 'coming'],
+    ];
+
+
+    $convergeV2x = [
+        ['label' => 'Single Page Application (SPA) mode', 'status' => 'coming'],
+        ['label' => 'RBAC support for protecting private sections with roles (for paid learning platforms)', 'status' => 'coming'],
+        ['label' => 'Lazy-load sub-items for better performance', 'status' => 'coming'],
+        ['label' => 'API Reference integration', 'status' => 'coming'],
+        ['label' => 'Feedback and Ratings system', 'status' => 'coming'],
+        ['label' => 'i18n and RTL (Right-to-Left) language support', 'status' => 'coming'],
+        ['label' => 'Additional community-requested features', 'status' => 'coming'],
     ];
 
     $webEditor = [
-        ['label' => 'Interactif web editor', 'status' => 'comming'],
-        ['label' => 'Recursive files systems', 'status' => 'comming'],
+        ['label' => 'Interactive web editor', 'status' => 'coming'],
+        ['label' => 'Uses our Blade components under the hood', 'status' => 'coming'],
+    ];
+
+    $searchEnginesIntegrations = [
+        ['label' => 'Algolia integration', 'status' => 'coming'],
+        ['label' => 'Meilisearch integration', 'status' => 'coming'],
+        ['label' => 'Typesense integration', 'status' => 'coming'],
+    ];
+
+    $themesAndLayouts = [
+        ['label' => '30+ reusable Blade components', 'status' => 'coming'],
+        ['label' => 'Pre-built layout templates', 'status' => 'coming'],
     ];
 @endphp
 
-<div class="mx-auto max-w-7xl px-3 py-6 md:px-4 md:py-10">
+<div class="mx-auto md:max-w-3xl px-3 py-6 md:px-4 md:py-10">
     <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
         <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
             Converge Roadmap
@@ -29,13 +64,43 @@
             Discover what we're planning for Converge
         </p>
     </div>
-    <ul
-        class="timeline not-prose timeline-compact timeline-snap-icon timeline-vertical bg-base-200 rounded-box mx-auto mb-20 w-full md:max-w-3xl lg:py-8">
-        <x-roadmap.card :items="$convergeV1x"
-                        color="primary"
-                        title="Converge v1.x.x"></x-roadmap.card>
 
-        <x-roadmap.card :items="$webEditor"
-                        title="Web editor"></x-roadmap.card>
-    </ul>
+    <h3 class="font-bold text-primary"># The Documentation Framework</h3>
+
+    <x-roadmap.card 
+                title="Converge v1.x" 
+                :items="$convergeV1x" 
+                color="primary">
+    </x-roadmap.card>
+    
+    <x-roadmap.card 
+                title="Converge v2.x" 
+                :items="$convergeV2x" 
+                >
+    </x-roadmap.card>
+    
+    <h3 class="font-bold text-primary"># Products & Plugins</h3>
+
+    <x-roadmap.card 
+                title="Web editor" 
+                :items="$webEditor">
+    </x-roadmap.card>
+
+    <x-roadmap.card 
+                title="search engine integrations" 
+                :items="$searchEnginesIntegrations">
+    </x-roadmap.card>
+  
+    <x-roadmap.card 
+                title="themes and layouts" 
+                :items="$themesAndLayouts">
+    </x-roadmap.card>
+
+    <h3 class="font-bold text-primary"># The Blogging Framework</h3>
+
+    <x-roadmap.card 
+                title="Converge blogging v1.x" 
+                :items="$bloggingV1x">
+    </x-roadmap.card>
+
 </div>
