@@ -74,14 +74,15 @@
                             <x-iconsax-bul-setting-2 class="w-5 md:hidden" />
                         </a>
                     @endif
-                    @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
+                    {{-- disable auth system temporary --}}
+                    {{-- @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
                            class="btn btn-sm btn-square md:btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-8">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
-                    @endif
+                    @endif --}}
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
