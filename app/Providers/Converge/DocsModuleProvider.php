@@ -2,6 +2,9 @@
 
 namespace App\Providers\Converge;
 
+use Fluxtor\Converge\Clusters\Cluster;
+use Fluxtor\Converge\Clusters\ClusterLink;
+use Fluxtor\Converge\Clusters\Clusters;
 use Fluxtor\Converge\Enums\Layout;
 use Fluxtor\Converge\Enums\Spotlight;
 use Fluxtor\Converge\Module;
@@ -20,10 +23,27 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
+            ->latestVersionLabel('v1.0.0-alpha.5')
+            ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
             ->in(base_path('docs'));
     }
 
+
+    private function defineClusters(Clusters $clusters)
+    {
+        $clusters->add(
+            fn(Cluster $cluster) => $cluster
+                ->label('Documentation')
+        )->default();
+
+        $clusters->addLink(
+            fn(ClusterLink $cluster) => $cluster
+                ->label('Blog')
+                ->sort(2)
+                ->url('https://docs.cachethq.io/v3.x')
+        );
+    }
     private function theme(Theme $theme)
     {
         return $theme
@@ -35,4 +55,3 @@ class DocsModuleProvider extends ModuleProvider
             ->spotlight(Spotlight::Strock);
     }
 }
-
