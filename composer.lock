@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "375793f4b47c3dbd78d35b4a5e177efe",
+    "content-hash": "06a4bedb7489ed29c41e34aedf96f714",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -1497,6 +1497,69 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2025-02-19T08:42:37+00:00"
+        },
+        {
+            "name": "fluxtor/converge",
+            "version": "v1.0.0-alpha.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/convergephp/converge.git",
+                "reference": "9837a37f3cc6e57ea2cb722826bfa60b5a0877ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/9837a37f3cc6e57ea2cb722826bfa60b5a0877ac",
+                "reference": "9837a37f3cc6e57ea2cb722826bfa60b5a0877ac",
+                "shasum": ""
+            },
+            "require": {
+                "tempest/highlight": "^2.11"
+            },
+            "require-dev": {
+                "larastan/larastan": "3.0",
+                "laravel/pint": "dev-main",
+                "orchestra/testbench": "9.x-dev",
+                "pestphp/pest": "3.x-dev",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Fluxtor\\Converge\\Providers\\ConvergeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Fluxtor\\Converge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "charrafi mohamed",
+                    "email": "charrafimohamed27@gmail.com"
+                }
+            ],
+            "description": "static site generator for web artisans",
+            "support": {
+                "issues": "https://github.com/convergephp/converge/issues",
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-alpha.6"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/charrafimed",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-14T15:45:10+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -8216,6 +8279,64 @@
             "time": "2025-01-17T11:39:41+00:00"
         },
         {
+            "name": "tempest/highlight",
+            "version": "2.11.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tempestphp/highlight.git",
+                "reference": "5a239a92ad6bd3e506ca86a0de3e99ac9dbcb0dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tempestphp/highlight/zipball/5a239a92ad6bd3e506ca86a0de3e99ac9dbcb0dd",
+                "reference": "5a239a92ad6bd3e506ca86a0de3e99ac9dbcb0dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.3"
+            },
+            "require-dev": {
+                "assertchris/ellison": "^1.0.2",
+                "friendsofphp/php-cs-fixer": "^3.21",
+                "league/commonmark": "^2.4",
+                "phpstan/phpstan": "^1.10.0",
+                "phpunit/phpunit": "^10.0",
+                "symfony/var-dumper": "^6.4|^7.0"
+            },
+            "suggest": {
+                "assertchris/ellison": "Allows you to analyse sentence complexity",
+                "league/commonmark": "Adds markdown support"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Tempest\\Highlight\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Roose",
+                    "email": "brendt@stitcher.io"
+                }
+            ],
+            "description": "Fast, extensible, server-side code highlighting",
+            "support": {
+                "issues": "https://github.com/tempestphp/highlight/issues",
+                "source": "https://github.com/tempestphp/highlight/tree/2.11.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/brendt",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-19T05:38:35+00:00"
+        },
+        {
             "name": "tijsverkoyen/css-to-inline-styles",
             "version": "v2.3.0",
             "source": {
@@ -11659,13 +11780,15 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "alpha",
+    "stability-flags": {
+        "fluxtor/converge": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

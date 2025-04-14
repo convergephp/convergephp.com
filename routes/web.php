@@ -19,6 +19,7 @@ Route::get('/solutions/documentation', \App\Livewire\Solutions\Documentation::cl
 
 
 
+
 Route::get('pricing', function () {
     return view('pages.pricing');
 })->name('pricing');

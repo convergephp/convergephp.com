@@ -17,7 +17,7 @@
         </nav>
         <nav>
             <h6 class="footer-title">Solutions</h6>
-            <a href="{{ route('solutions.documentation') }}"
+            <a href="/docs"
                wire:navigate.hover
                class="link link-hover">Documentation</a>
             <a href="{{ route('solutions.blogging') }}"

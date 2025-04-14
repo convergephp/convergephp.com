@@ -15,8 +15,8 @@
                 <div
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
                     <x-navbar.link wire:navigate.hover
-                                   :active="request()->routeIs('solutions.documentation')"
-                                   :href="route('solutions.documentation')">Documentation</x-navbar.link>
+                                   :active="request()->routeIs('converge-docs')"
+                                   :href="route('converge-docs')">Documentation</x-navbar.link>
                     <x-navbar.dropdown-menu class="hidden"
                                             label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
@@ -39,7 +39,7 @@
                                                 description="starts documentating your software right away ">
                             </x-navbar.card-link>
                             <x-navbar.card-link title="Blogging"
-                                                :active="request()->routeIs('solutions.documentation')"
+                                                :active="request()->routeIs('solutions.bloggin')"
                                                 :url="route('solutions.blogging')"
                                                 wire:navigate.hover
                                                 description="Create a powerfull blog just in minutes">
@@ -133,7 +133,7 @@
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
-                    <a :href="route('solutions.documentation')"
+                    <a :href="route('converge-docs')"
                        wire:navigate.hover
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Documentation
