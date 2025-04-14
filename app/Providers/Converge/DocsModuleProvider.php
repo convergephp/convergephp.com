@@ -5,6 +5,7 @@ namespace App\Providers\Converge;
 use Fluxtor\Converge\Clusters\Cluster;
 use Fluxtor\Converge\Clusters\ClusterLink;
 use Fluxtor\Converge\Clusters\Clusters;
+use Fluxtor\Converge\Enums\HighlighterName;
 use Fluxtor\Converge\Enums\Layout;
 use Fluxtor\Converge\Enums\Spotlight;
 use Fluxtor\Converge\Module;
@@ -44,11 +45,12 @@ class DocsModuleProvider extends ModuleProvider
                 ->url('https://docs.cachethq.io/v3.x')
         );
     }
+
     private function theme(Theme $theme)
     {
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::STYLE4)
-            // ->highlighterTheme(HighlighterName::Vesper)
+            ->highlighterTheme(HighlighterName::Vesper)
             ->layout(Layout::Default)
             ->collapsedGroupes(false)
             ->font('inter')

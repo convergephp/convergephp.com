@@ -1500,16 +1500,16 @@
         },
         {
             "name": "fluxtor/converge",
-            "version": "v1.0.0-alpha.5",
+            "version": "v1.0.0-alpha.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/convergephp/converge.git",
-                "reference": "0cdb2a970b65b7eef0af8188eccc61f98313eeee"
+                "reference": "9837a37f3cc6e57ea2cb722826bfa60b5a0877ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/0cdb2a970b65b7eef0af8188eccc61f98313eeee",
-                "reference": "0cdb2a970b65b7eef0af8188eccc61f98313eeee",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/9837a37f3cc6e57ea2cb722826bfa60b5a0877ac",
+                "reference": "9837a37f3cc6e57ea2cb722826bfa60b5a0877ac",
                 "shasum": ""
             },
             "require": {
@@ -1551,7 +1551,7 @@
             "description": "static site generator for web artisans",
             "support": {
                 "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-alpha.5"
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-alpha.6"
             },
             "funding": [
                 {
@@ -1559,7 +1559,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-13T14:43:56+00:00"
+            "time": "2025-04-14T15:45:10+00:00"
         },
         {
             "name": "fruitcake/php-cors",
