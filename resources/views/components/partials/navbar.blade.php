@@ -1,5 +1,5 @@
 <x-banner />
-<header class="border-base-300 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
+<header class="border-base-300/30 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
         x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
     <div class="relative flex justify-center">
         <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl px-3">

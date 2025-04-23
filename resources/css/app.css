@@ -14,10 +14,9 @@
     name: "black";
     default: true;
     --color-primary: #00BCFF;
-    --color-base-200: #0F131E;
-    --color-base-300: #202731;
-    --color-base-100: #141A23;
-
+    --color-base-100: #0E111B;
+    --color-base-200: #050714;
+    --color-base-300: #161928;
 
     --color-secondary: teal;
     --color-accent: #5CB338;
@@ -30,6 +29,10 @@
     name: "light";
     default: true;
     --color-primary: #00BCFF;
+    --color-base-100: oklch(98% 0.003 247.858);
+    --color-base-200: oklch(96% 0.007 247.896);
+    --color-base-300: oklch(92% 0.013 255.508);
+    --color-base-content : oklch(21% 0.006 285.885);
     --color-accent: #5CB338;
     --radius-selector: 1rem;
     --radius-field: 3px;
@@ -48,7 +51,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --font-sans: 'Raleway', sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Poppins', 'Raleway', sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
     --color-zinc-50: #fafafa;
     --color-zinc-100: #f5f5f5;

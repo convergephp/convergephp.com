@@ -2,10 +2,10 @@
      data-aos="fade-up"
      data-aos-duration="1000">
 
-    <div class="mx-auto w-full max-w-7xl space-y-2 overflow-hidden">
+    <div class="bg-base-200 mx-auto w-full max-w-7xl space-y-2 overflow-hidden">
 
         {{-- TITLES --}}
-        <div class="bg-base-100 border-base-300 w-full overflow-hidden rounded-lg border">
+        <div class="bg-base-200 border-base-300 w-full overflow-hidden rounded-lg border">
             <div data-aos="fade-up"
                  data-aos-duration="1000"
                  class="grid max-w-xl items-start justify-between gap-5 px-2 py-8">
@@ -24,12 +24,13 @@
 
         {{-- CARDS --}}
         <div class="grid-cols-30 grid w-full grid-flow-dense gap-2">
+
             {{-- THEMES --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-100 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
+                 class="md:col-span-15 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
                               class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Customizable
@@ -40,9 +41,8 @@
                             modes or create your customtheme. </p>
                     </div>
                 </div>
-                <div class="flex-1"></div>
                 <div
-                     class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
+                     class="h-112 after:inset-ring after:inset-ring-base-300 relative h-full overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
@@ -57,9 +57,9 @@
             {{-- DOCS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
+                 class="md:col-span-15 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
                               class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Comprehensive
@@ -68,10 +68,8 @@
                             started and master converge. </p>
                     </div>
                 </div>
-
-                <div class="flex-1"></div>
                 <div
-                     class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
+                     class="after:inset-ring after:inset-ring-base-300 relative h-full flex-1 overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
@@ -86,9 +84,9 @@
             {{-- LAYOUTS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2 md:col-span-12">
+                 class="bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2 md:col-span-12">
                 <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
                               class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Multiple
@@ -98,9 +96,8 @@
                             needs. </p>
                     </div>
                 </div>
-                <div class="flex-1"></div>
                 <div
-                     class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
+                     class="after:inset-ring after:inset-ring-base-300 relative h-full flex-1 overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
                     <div class="container relative flex size-full items-center justify-center">
                         <div
                              class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
@@ -115,15 +112,15 @@
             {{-- BLADE COMPONENTS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-18 bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
+                 class="md:col-span-18 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
+                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
                         <span
                               class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">
                             Handcrafted
                             Blade Components </span>
-                        <p class="text-base-content/50 max-w-xl text-sm/7">A collection of custom-made, highly flexible
+                        <p class="text-base-content/50 max-w-2xl text-sm/7">A collection of custom-made, highly flexible
                             blade components that fit any use case. </p>
                     </div>
                 </div>
