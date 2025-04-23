@@ -11,6 +11,7 @@ use Fluxtor\Converge\Enums\Spotlight;
 use Fluxtor\Converge\Module;
 use Fluxtor\Converge\Providers\ModuleProvider;
 use Fluxtor\Converge\Support\SidebarItemsStyles;
+use Fluxtor\Converge\Support\Themes;
 use Fluxtor\Converge\Theme\Theme;
 
 class DocsModuleProvider extends ModuleProvider
@@ -24,10 +25,11 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-alpha.5')
+            ->latestVersionLabel('v1.0.0-alpha.9')
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
-            ->in(base_path('docs'));
+            ->brandLogo('Converge')
+            ->in(base_path('docs/v1/framework'));
     }
 
 
@@ -36,13 +38,15 @@ class DocsModuleProvider extends ModuleProvider
         $clusters->add(
             fn(Cluster $cluster) => $cluster
                 ->label('Documentation')
+                ->icon(fn () => svg('iconsax-bul-book', 'w-5 h-5 '))
         )->default();
 
-        $clusters->addLink(
-            fn(ClusterLink $cluster) => $cluster
-                ->label('Blog')
-                ->sort(2)
-                ->url('https://docs.cachethq.io/v3.x')
+        $clusters->add(
+            fn(Cluster $cluster) => $cluster
+                ->route('components')
+                ->label('Components')
+                ->in(base_path('docs/v1/components'))
+                ->icon(fn () => svg('iconsax-bul-3dcube' , 'h-5 w-5'))
         );
     }
 
@@ -51,6 +55,12 @@ class DocsModuleProvider extends ModuleProvider
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
             ->highlighterTheme(HighlighterName::Vesper)
+            ->theme(Themes::overrideDark([
+                '--color-base-200' => '#000000'
+            ]),
+                Themes::overrideLight([
+                '--color-base-200' => 'white'
+            ]))
             ->layout(Layout::Default)
             ->collapsedGroupes(false)
             ->font('inter')
