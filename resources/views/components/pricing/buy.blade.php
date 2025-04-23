@@ -21,7 +21,7 @@
              class="dark">
         <x-slot:trigger
                 class="mt-auto w-full">
-            <button class="btn btn-block btna-primary"
+            <button class="btn btn-block btn-primary"
                     type="button"
                     x-on:click="sessionStorage.setItem('selectedPlan', @js($id));">
                 Buy

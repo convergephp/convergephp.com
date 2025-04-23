@@ -28,10 +28,10 @@ $filesArray = [
     {{-- BAKGROUND GRID --}}
     <x-grid-svg data-aos="fade-down"
                 data-aos-duration="2000"
-                class="absolute inset-0 -z-0 h-full w-full !text-red-500 [mask-image:linear-gradient(to_top,transparent,white)]"
+                class="absolute inset-0 -z-0 h-full w-full  [mask-image:linear-gradient(to_top,transparent,white)]"
                 gridSize="40"
                 lineColor="gray"
-                lineOpacity="0.2"
+                lineOpacity="0.1"
                 backgroundColor="transparent"
                 :highlightedRow="7"
                 animationDirection="rtl"
@@ -43,18 +43,18 @@ $filesArray = [
     {{-- SECTION CONTENT --}}
 
     <div data-aos-anchor-placement="top-bottom"
-         class="relative mx-auto max-w-4xl pt-[1rem] text-center pt-[2rem] ">
+         class="relative mx-auto max-w-4xl text-center pt-[1rem]">
 
         <h1 data-aos="zoom-in"
-            data-aos-duration="200"
-            class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text py-3 text-4xl/[1.07] font-bold tracking-widest text-transparent md:text-5xl/[1.07]">
+            data-aos-duration="300"
+            class="from-base-content leading-10 bg-gradient-to-br font-black to-gray-500 bg-clip-text py-3 text-3xl/[1.07] font-bold text-transparent md:text-5xl/[1.07]">
             Streamline Your Documentation Workflow with <span
                   class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
         </h1>
 
         <p data-aos="fade-up"
            data-aos-duration="1000"
-           class="text-base-content/80 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-10 md:text-xl">
+           class="text-base-content/60 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-8 md:text-xl">
             Converge is the open-source framework that empowers anyone to build high-quality, dynamic
             <span class=""><strong href="#">documentation from
                     Markdown</strong>.</span> Developer-friendly. Intuitive. And designed for teams who care about
@@ -65,7 +65,7 @@ $filesArray = [
              data-aos-duration="1000"
              class="w-xs mx-auto mt-10 flex flex-col items-center justify-center gap-y-8">
             <a href="/docs"
-               class="btn btn-block text-primary-content from-primary to-primary/50 bg-gradient-to-b">
+               class="btn btn-block text-primary-content rounded-field btn-primary">
                 Get started
             </a>
         </div>
@@ -151,12 +151,10 @@ $filesArray = [
             let startPanelWidth = 0;
             let containerWidth;
 
-            // Position initiale du resizer (complètement à droite)
+            // Initial Position
             resizer.style.right = '0px';
 
-            // Optimisation pour une meilleure fluidité
             function applyStyles(panelWidth) {
-                // Utiliser requestAnimationFrame pour des animations plus fluides
                 window.requestAnimationFrame(() => {
                     const percentage = (panelWidth / containerWidth) * 100;
                     codePanel.style.width = `${percentage}%`;
@@ -164,28 +162,22 @@ $filesArray = [
                 });
             }
 
-            // Fonction pour démarrer le redimensionnement
             function startResize(clientX) {
                 isResizing = true;
                 startX = clientX;
                 containerWidth = mockupContainer.clientWidth;
 
-                // Largeur actuelle du panneau de code
                 startPanelWidth = parseFloat(window.getComputedStyle(codePanel).width) || 0;
 
-                // Ajouter la classe active et arrêter l'animation
                 resizer.classList.replace('bg-blue-500', 'bg-blue-700');
                 resizerHandle.classList.remove('animate-pulse');
 
-                // Améliorer la performance pendant le drag
                 document.body.style.userSelect = 'none';
                 document.body.style.cursor = 'col-resize';
 
-                // Ajout d'une classe overlay pour indiquer le mode resize
                 mockupContainer.classList.add('resizing');
             }
 
-            // Fonction pour arrêter le redimensionnement
             function stopResize() {
                 if (!isResizing) return;
 
@@ -196,7 +188,6 @@ $filesArray = [
                 document.body.style.cursor = '';
                 mockupContainer.classList.remove('resizing');
 
-                // Si le panneau est très petit, le fermer complètement
                 const panelWidth = parseFloat(codePanel.style.width) || 0;
                 if (panelWidth < 5) {
                     codePanel.style.width = '0%';
@@ -204,26 +195,21 @@ $filesArray = [
                     resizerHandle.classList.add('animate-pulse');
                 }
 
-                // Sauvegarder la position dans localStorage si besoin
                 localStorage.setItem('codePanelWidth', codePanel.style.width);
             }
 
-            // Fonction pour gérer le redimensionnement avec throttling pour fluidité
             function doResize(clientX) {
                 if (!isResizing) return;
 
-                // Calculer le mouvement et la nouvelle largeur
                 const movementX = startX - clientX;
                 const newWidth = Math.min(
                     Math.max(startPanelWidth + movementX, 0),
                     containerWidth * 0.8
                 );
 
-                // Appliquer les styles via requestAnimationFrame
                 applyStyles(newWidth);
             }
 
-            // Événements de souris
             resizer.addEventListener('mousedown', function(e) {
                 e.preventDefault();
                 startResize(e.clientX);
@@ -235,7 +221,6 @@ $filesArray = [
                 doResize(e.clientX);
             });
 
-            // Support tactile (optimisé)
             resizer.addEventListener('touchstart', function(e) {
                 e.preventDefault();
                 startResize(e.touches[0].clientX);
@@ -250,26 +235,21 @@ $filesArray = [
                 }
             });
 
-            // Double-clic pour ouvrir/fermer (avec animation améliorée)
             resizer.addEventListener('dblclick', function() {
                 const currentWidth = parseFloat(codePanel.style.width) || 0;
 
-                // Animation plus fluide en ajoutant une classe temporaire
                 codePanel.classList.add('transition-all', 'duration-300', 'ease-in-out');
 
                 if (currentWidth < 10) {
-                    // Ouvrir à 50%
                     codePanel.style.width = '50%';
                     resizer.style.right = '50%';
                     resizerHandle.classList.remove('animate-pulse');
                 } else {
-                    // Fermer
                     codePanel.style.width = '0%';
                     resizer.style.right = '0px';
                     resizerHandle.classList.add('animate-pulse');
                 }
 
-                // Nettoyer la classe après l'animation
                 setTimeout(() => {
                     codePanel.classList.remove('transition-all', 'duration-300', 'ease-in-out');
                 }, 300);
@@ -277,7 +257,6 @@ $filesArray = [
                 localStorage.setItem('codePanelWidth', codePanel.style.width);
             });
 
-            // Restaurer la dernière position si disponible
             const savedWidth = localStorage.getItem('codePanelWidth');
             if (savedWidth && parseFloat(savedWidth) > 0) {
                 codePanel.style.width = savedWidth;

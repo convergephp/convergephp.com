@@ -40,7 +40,7 @@
                         <div class="timer flex flex-col gap-0.5">
                             <div class="">
                                 <h3
-                                    class="countdown-element minutes font-manrope text-center text-2xl font-bold leading-9 text-white">
+                                    class="countdown-element minutes font-manrope text-base-content text-center text-2xl font-bold leading-9">
                                 </h3>
                             </div>
                             <p class="text-base-content/50 w-full text-center text-xs font-normal leading-normal">MINS
@@ -50,7 +50,7 @@
                         <div class="timer flex flex-col gap-0.5">
                             <div class="">
                                 <h3
-                                    class="countdown-element seconds font-manrope text-center text-2xl font-bold leading-9 text-white">
+                                    class="countdown-element seconds font-manrope text-base-content text-center text-2xl font-bold leading-9">
                                 </h3>
                             </div>
                             <p class="text-base-content/50 w-full text-center text-xs font-normal leading-normal">SECS

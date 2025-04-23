@@ -200,8 +200,8 @@
         <div class="flex justify-center">
             <a href="https://github.com/convergephp/converge?sponsor=1"
                target="_blank"
-               class="btn bg-primary text-base-content">
-               Your logo here? Sponsor This Project
+               class="btn bg-primary text-white">
+                Your logo here? Sponsor This Project
                 <span class="hover:scale-105">💖</span>
             </a>
         </div>
