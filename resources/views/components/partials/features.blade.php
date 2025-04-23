@@ -5,7 +5,7 @@
     <div class="mx-auto w-full max-w-7xl space-y-2 overflow-hidden">
 
         {{-- TITLES --}}
-        <div class="bg-base-100 w-full overflow-hidden rounded-lg">
+        <div class="bg-base-100 border-base-300 w-full overflow-hidden rounded-lg border">
             <div data-aos="fade-up"
                  data-aos-duration="1000"
                  class="grid max-w-xl items-start justify-between gap-5 px-2 py-8">
@@ -27,7 +27,7 @@
             {{-- THEMES --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
+                 class="md:col-span-15 bg-base-100 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
                      class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
@@ -57,7 +57,7 @@
             {{-- DOCS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
+                 class="md:col-span-15 bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
                      class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
@@ -86,7 +86,7 @@
             {{-- LAYOUTS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline md:col-span-12">
+                 class="bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2 md:col-span-12">
                 <div
                      class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>
@@ -115,7 +115,7 @@
             {{-- BLADE COMPONENTS CARD --}}
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="md:col-span-18 bg-base-100 outline-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl p-2 outline">
+                 class="md:col-span-18 bg-base-100 border-base-300 group container isolate col-span-full flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
                 <div
                      class="group-hover:border-primary/10 group-hover:bg-primary/2 flex flex-col gap-6 rounded-lg border border-transparent p-6 md:flex-row md:gap-x-8 md:p-8">
                     <div>

@@ -13,13 +13,12 @@
 
         {{-- THEME --}}
         <script>
-            const savedThemeIndex = localStorage.getItem('theme-index');
+            const savedThemeIndex = localStorage.getItem('theme-index') ?? '1';
+
             const themes = ['light', 'black'];
 
             if (savedThemeIndex !== null) {
                 document.documentElement.setAttribute('data-theme', themes[parseInt(savedThemeIndex)]);
-            } else {
-                document.documentElement.setAttribute('data-theme', 1);
             }
         </script>
 

@@ -14,9 +14,11 @@
     name: "black";
     default: true;
     --color-primary: #00BCFF;
-    --color-base-200: black;
-    --color-base-300: #060703;
-    --color-base-100: #090A08;
+    --color-base-200: #0F131E;
+    --color-base-300: #202731;
+    --color-base-100: #141A23;
+
+
     --color-secondary: teal;
     --color-accent: #5CB338;
     --radius-selector: 1rem;

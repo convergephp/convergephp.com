@@ -5,19 +5,19 @@
             <x-app-logo-2 class="h-6" />
         </nav>
         <nav>
-            <a href="#docs"
+            <a href="{{ route('converge-docs') }}"
                class="link link-hover">Docs</a>
         </nav>
         <nav class="hidden">
             <h6 class="footer-title">ToolKit</h6>
-            <a href="/toolkits/components"
+            <a href="{{ route('components') }}"
                class="link link-hover">Blade components</a>
-            <a href="/toolkits/layouts-themes"
+            <a href="{{ route('layouts') }}"
                class="link link-hover">Themes and Layouts</a>
         </nav>
         <nav>
             <h6 class="footer-title">Solutions</h6>
-            <a href="/docs"
+            <a href="{{ route('solutions.documentation') }}"
                wire:navigate.hover
                class="link link-hover">Documentation</a>
             <a href="{{ route('solutions.blogging') }}"

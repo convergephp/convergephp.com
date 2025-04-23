@@ -54,7 +54,7 @@ $filesArray = [
 
         <p data-aos="fade-up"
            data-aos-duration="1000"
-           class="text-base-content/60 text-md relative mx-auto mt-6 max-w-3xl font-medium leading-8 md:text-xl">
+           class="text-base-content/60 text-md px-10  relative mx-auto mt-6 max-w-3xl  leading-8 md:text-xl">
             Converge is the open-source framework that empowers anyone to build high-quality, dynamic
             <span class=""><strong href="#">documentation from
                     Markdown</strong>.</span> Developer-friendly. Intuitive. And designed for teams who care about
@@ -79,7 +79,7 @@ $filesArray = [
         </div>
 
         <div
-             class="relative border-t border-gray-400/20 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-base-300)]">
+             class="relative border-t border-base-300 bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-base-300)]">
 
             <div id="image-container"
                  class="w-full">
