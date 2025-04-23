@@ -49,7 +49,7 @@ class DocsModuleProvider extends ModuleProvider
     private function theme(Theme $theme)
     {
         return $theme
-            ->sidebarItemStyle(SidebarItemsStyles::STYLE4)
+            ->sidebarItemStyle(SidebarItemsStyles::GHOST)
             ->highlighterTheme(HighlighterName::Vesper)
             ->layout(Layout::Default)
             ->collapsedGroupes(false)

@@ -1,5 +1,5 @@
 <x-banner />
-<header class="border-base-300 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
+<header class="border-base-300/30 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
         x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
     <div class="relative flex justify-center">
         <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl px-3">
@@ -133,7 +133,7 @@
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
-                    <a :href="route('converge-docs')"
+                    <a href="{{ route('converge-docs') }}"
                        wire:navigate.hover
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Documentation
@@ -208,13 +208,15 @@
                              x-transition:leave-end="opacity-0"
                              class="bg-base-200 mx-2 mb-2 rounded-md px-4 py-2"
                              style="display: none;">
-                            <a href="#"
+                            <a href="{{ route('solutions.documentation') }}"
+                               wire:navigate.hover
                                class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
                                 <div class="font-semibold">Documentation</div>
                                 <div class="text-base-content/50 mt-1 text-sm">Visite our beautiful blade components
                                 </div>
                             </a>
-                            <a href="#"
+                            <a href="{{ route('solutions.blogging') }}"
+                               wire:navigate.hover
                                class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
                                 <div class="font-semibold">Blogging</div>
                                 <div class="text-base-content/50 mt-1 text-sm">Create a powerfull blog just in minutes
