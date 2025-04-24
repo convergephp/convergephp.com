@@ -38,7 +38,7 @@ class DocsModuleProvider extends ModuleProvider
         $clusters->add(
             fn(Cluster $cluster) => $cluster
                 ->label('Documentation')
-                ->icon(fn () => svg('iconsax-bul-book', 'w-5 h-5 '))
+                ->icon(fn () => svg('iconsax-bul-book', 'w-5 h-5'))
         )->default();
 
         $clusters->add(
@@ -54,9 +54,9 @@ class DocsModuleProvider extends ModuleProvider
     {
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
-            ->highlighterTheme(HighlighterName::Vesper)
+            ->highlighterTheme(HighlighterName::Github_dark_dimmed)
             ->theme(Themes::overrideDark([
-                '--color-base-200' => '#000000'
+                '--color-base-200' => "black"
             ]),
                 Themes::overrideLight([
                 '--color-base-200' => 'white'
