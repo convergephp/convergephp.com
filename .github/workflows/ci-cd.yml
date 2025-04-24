@@ -32,7 +32,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --no-interaction --no-progress --optimize-autoloader --no-dev
+          composer install --no-interaction --no-progress --optimize-autoloader 
           npm ci
           npm run build
       - name: Compress deployment artifacts
