@@ -8,8 +8,6 @@ artifacts_path=$3
 
 "$php_executable" artisan route:cache
 
-"$php_executable" artisan view:cache
-
 "$php_executable" artisan converge:index-search
 
 "$php_executable" artisan migrate --force
