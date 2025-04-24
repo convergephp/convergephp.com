@@ -9,10 +9,9 @@
         ['label' => 'Built-in search engine written in raw PHP', 'status' => 'done'],
         ['label' => 'Fully customizable sidebar', 'status' => 'done'],
         ['label' => 'Dynamic Table of Contents (ToC) generation', 'status' => 'done'],
-        ['label' => 'Use Blade components directly within Markdown', 'status' => 'wip'],
-        ['label' => 'View interceptors for customizing rendering', 'status' => 'wip'],
-        ['label' => 'Add sidebar items dynamically with a sorting mechanism', 'status' => 'coming'],
-        ['label' => 'Built-in SEO features for better ranking', 'status' => 'coming'],
+        ['label' => 'Use Blade components directly within Markdown', 'status' => 'done'],
+        ['label' => 'View interceptors for customizing rendering', 'status' => 'done'],
+        ['label' => 'Built-in SEO features for better ranking', 'status' => 'done'],
     ];
 
     $bloggingV1x = [
@@ -32,6 +31,7 @@
         ['label' => 'Single Page Application (SPA) mode', 'status' => 'coming'],
         ['label' => 'RBAC support for protecting private sections with roles (for paid learning platforms)', 'status' => 'coming'],
         ['label' => 'Lazy-load sub-items for better performance', 'status' => 'coming'],
+        ['label' => 'Add sidebar items dynamically with a sorting mechanism', 'status' => 'coming'],
         ['label' => 'API Reference integration', 'status' => 'coming'],
         ['label' => 'Feedback and Ratings system', 'status' => 'coming'],
         ['label' => 'i18n and RTL (Right-to-Left) language support', 'status' => 'coming'],
