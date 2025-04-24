@@ -14,7 +14,7 @@
                 {{-- NAVBAR ITEMS - DESKTOP --}}
                 <div
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
-                    <x-navbar.link wire:navigate.hover
+                    <x-navbar.link 
                                    :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
                     <x-navbar.dropdown-menu class="hidden"
@@ -134,7 +134,6 @@
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
                     <a href="{{ route('converge-docs') }}"
-                       wire:navigate.hover
                        class="text-base-content hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Documentation
                     </a>
