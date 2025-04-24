@@ -19,8 +19,8 @@
                     </div>
 
                     <div class="flex w-full flex-col items-center justify-center gap-5">
-                        <h6 class="text-primary text-center text-base font-semibold leading-relaxed">
-                            Launched Date: may 1, 2025</h6>
+                        <h5 class="text-primary text-center text-base font-semibold leading-relaxed">
+                            Launched Date: may 1, 2025</h5>
                     </div>
                 </div>
             </div>
