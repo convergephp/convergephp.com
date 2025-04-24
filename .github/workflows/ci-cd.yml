@@ -1,8 +1,10 @@
 name: CI/CD
+
 on:
   push:
     branches:
       - production
+
 jobs:
   build:
     runs-on: "ubuntu-22.04"
@@ -32,19 +34,24 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --no-interaction --no-progress --optimize-autoloader --no-dev
+          composer install --no-interaction --prefer-dist --optimize-autoloader
           npm ci
           npm run build
+
+      - name: Verify Laravel components
+        run: |
+          ls -la vendor/laravel/framework/src/Illuminate/Foundation/resources/exceptions/renderer/components/icons/
+          composer dump-autoload -o
 
       - name: Compress deployment artifacts
         run: |
           tar --create --gzip \
-            --exclude="bootstrap/cache/*" \
-            --exclude="node_modules" \
-            --exclude="public/storage" \
-            --exclude="storage" \
-            --exclude="tests" \
-            --file ~/artifacts.tar.gz * .github/deployment
+          --exclude="bootstrap/cache/*" \
+          --exclude="node_modules" \
+          --exclude="public/storage" \
+          --exclude="storage" \
+          --exclude="tests" \
+          --file ~/artifacts.tar.gz * .github/deployment
 
       - name: Upload deployment artifacts
         uses: actions/upload-artifact@v4
