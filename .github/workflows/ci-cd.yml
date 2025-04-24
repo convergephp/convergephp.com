@@ -32,11 +32,13 @@ jobs:
 
       - name: Install dependencies
         run: |
+          
           composer install --no-interaction --no-progress 
           npm ci
           npm run build
       - name: Compress deployment artifacts
         run: |
+          git submodule update --init --recursive
           tar --create --gzip \
             --exclude="bootstrap/cache/*" \
             --exclude="node_modules" \
