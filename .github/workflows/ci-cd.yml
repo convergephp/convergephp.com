@@ -1,10 +1,8 @@
 name: CI/CD
-
 on:
   push:
     branches:
       - production
-
 jobs:
   build:
     runs-on: "ubuntu-22.04"
@@ -34,58 +32,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --no-interaction --prefer-dist --optimize-autoloader
+          composer install --no-interaction --no-progress --optimize-autoloader --no-dev
           npm ci
           npm run build
-
-      - name: Create custom hook
-        run: |
-          mkdir -p .github/deployment/hooks
-          
-          # Créer un hook before-activation.sh qui va créer le composant manquant
-          cat > .github/deployment/hooks/before-activation.sh << 'EOF'
-#!/bin/bash
-set -e
-
-php_executable=$1
-base_directory=$2
-artifacts_path=$3
-
-create_missing_component() {
-  local component_dir="vendor/laravel/framework/src/Illuminate/Foundation/resources/exceptions/renderer/components/icons"
-  
-  echo "Creating the missing Laravel component..."
-  mkdir -p "${component_dir}"
-  
-  cat > "${component_dir}/sun.blade.php" << 'COMPONENT'
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 flex-none"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
-COMPONENT
-  
-  echo "Component created successfully."
-}
-
-cd "$PWD"
-create_missing_component
-$php_executable artisan config:cache
-$php_executable artisan route:cache
-$php_executable artisan view:cache
-
-if [[ -d "storage/app/public" ]]; then
-    $php_executable artisan storage:link
-fi
-EOF
-          chmod +x .github/deployment/hooks/before-activation.sh
-
       - name: Compress deployment artifacts
         run: |
           tar --create --gzip \
-          --exclude="bootstrap/cache/*" \
-          --exclude="node_modules" \
-          --exclude="public/storage" \
-          --exclude="storage" \
-          --exclude="tests" \
-          --file ~/artifacts.tar.gz * .github/deployment
-
+            --exclude="bootstrap/cache/*" \
+            --exclude="node_modules" \
+            --exclude="public/storage" \
+            --exclude="storage" \
+            --exclude="tests" \
+            --file ~/artifacts.tar.gz * .github/deployment
       - name: Upload deployment artifacts
         uses: actions/upload-artifact@v4
         with:
