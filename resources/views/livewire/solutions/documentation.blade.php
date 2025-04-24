@@ -20,7 +20,7 @@
 
                     <div class="flex w-full flex-col items-center justify-center gap-5">
                         <h6 class="text-primary text-center text-base font-semibold leading-relaxed">
-                            Launched Date: April 20, 2025</h6>
+                            Launched Date: may 1, 2025</h6>
                     </div>
                 </div>
             </div>
