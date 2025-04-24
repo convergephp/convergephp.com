@@ -122,6 +122,11 @@ EOF
             fi
           done
 
+      - name: Verify Laravel components
+        run: |
+          ls -la vendor/laravel/framework/src/Illuminate/Foundation/resources/exceptions/renderer/components/icons/
+          composer dump-autoload -o
+
       - name: Compress deployment artifacts
         run: |
           tar --create --gzip \
