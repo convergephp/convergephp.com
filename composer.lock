@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "06a4bedb7489ed29c41e34aedf96f714",
+    "content-hash": "1f25f35b8a5503ae3a4b7ed6c83a07b4",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -431,6 +431,54 @@
                 }
             ],
             "time": "2024-09-19T14:15:21+00:00"
+        },
+        {
+            "name": "converge/converge-components",
+            "version": "v1.0.0-alpha.5",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:convergephp/blade-components.git",
+                "reference": "1b511bc0b1ddf4605c93e9334ba0dd7e4e865a09"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.convergephp.com/dist/converge/converge-components/converge-converge-components-1b511bc0b1ddf4605c93e9334ba0dd7e4e865a09-zip-3f9f71.zip",
+                "reference": "1b511bc0b1ddf4605c93e9334ba0dd7e4e865a09",
+                "shasum": "f277a152d9edf55b2778d6b20994ab9afa9cea45"
+            },
+            "require": {
+                "illuminate/support": "*",
+                "php": "^8.1",
+                "wendelladriel/laravel-validated-dto": "^4.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Converge\\ConvergeComponents\\ConvergeComponentsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Converge\\ConvergeComponents\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ayoub EL HAJJI",
+                    "email": "ayoubelhajji866@gmail.com"
+                }
+            ],
+            "description": "a collection of laravel blade components for building a modern documentations interfaces",
+            "support": {
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-alpha.5",
+                "issues": "https://github.com/convergephp/blade-components/issues"
+            },
+            "time": "2025-04-22T01:02:05+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
@@ -8607,6 +8655,81 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wendelladriel/laravel-validated-dto",
+            "version": "v4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WendellAdriel/laravel-validated-dto.git",
+                "reference": "d086aa4750ab3780e4fb16616aecde78af1205cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WendellAdriel/laravel-validated-dto/zipball/d086aa4750ab3780e4fb16616aecde78af1205cf",
+                "reference": "d086aa4750ab3780e4fb16616aecde78af1205cf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^11.0|^12.0",
+                "illuminate/database": "^11.0|^12.0",
+                "illuminate/http": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/validation": "^11.0|^12.0",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.21",
+                "orchestra/testbench": "^9.0|^10.0",
+                "pestphp/pest": "^2.0|^3.0",
+                "pestphp/pest-plugin-faker": "^2.0|^3.0",
+                "spatie/typescript-transformer": "^2.4"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "WendellAdriel\\ValidatedDTO\\Providers\\ValidatedDTOServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WendellAdriel\\ValidatedDTO\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wendell Adriel",
+                    "email": "wendelladriel.ti@gmail.com"
+                }
+            ],
+            "description": "Data Transfer Objects with validation for Laravel applications",
+            "keywords": [
+                "Data Transfer Object",
+                "dto",
+                "laravel",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/WendellAdriel/laravel-validated-dto/issues",
+                "source": "https://github.com/WendellAdriel/laravel-validated-dto"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/wendelladriel",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/WendellAdriel",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-03-04T13:31:46+00:00"
         }
     ],
     "packages-dev": [
@@ -11791,5 +11914,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

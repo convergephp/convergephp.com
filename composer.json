@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "converge/converge-components": "^1.0@alpha",
         "filament/filament": "3.3",
         "fluxtor/converge": "^1.0@alpha",
         "laravel/cashier-paddle": "^2.5",
@@ -74,7 +75,11 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
-    },
+    },  
     "minimum-stability": "alpha",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [{
+        "type": "composer",
+        "url": "https://packagist.convergephp.com"
+    }]
 }
