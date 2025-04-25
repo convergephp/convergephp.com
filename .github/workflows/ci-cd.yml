@@ -44,6 +44,7 @@ jobs:
             --exclude="node_modules" \
             --exclude="public/storage" \
             --exclude="storage" \
+            --exclude="docs" \
             --exclude="tests" \
             --file ~/artifacts.tar.gz * .github/deployment
       - name: Upload deployment artifacts
