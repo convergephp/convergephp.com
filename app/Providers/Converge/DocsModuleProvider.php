@@ -29,7 +29,7 @@ class DocsModuleProvider extends ModuleProvider
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
             ->brandLogo('Converge')
-            ->in(base_path('docs/v1/framework'));
+            ->in(realpath(base_path('docs/v1/framework')));
     }
 
 
@@ -45,7 +45,7 @@ class DocsModuleProvider extends ModuleProvider
             fn(Cluster $cluster) => $cluster
                 ->route('components')
                 ->label('Components')
-                ->in(base_path('docs/v1/components'))
+                ->in(realpath(base_path('docs/v1/components')))
                 ->icon(fn () => svg('iconsax-bul-3dcube' , 'h-5 w-5'))
         );
     }
