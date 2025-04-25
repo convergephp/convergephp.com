@@ -143,6 +143,10 @@ echo "Creating a symlink to the .env file."
 
 ln -nsfr "$real_env_file_path" "$new_release_directory/.env"
 
+echo "Creating a symlink to the docs folder."
+
+ln -nsfr "$base_directory/docs" "$new_release_directory/docs"
+
 echo "Extracting deployment artifacts."
 
 cd "$new_release_directory" || exit 1
