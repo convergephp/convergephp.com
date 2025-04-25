@@ -54,7 +54,7 @@ class DocsModuleProvider extends ModuleProvider
     {
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
-            ->highlighterTheme(HighlighterName::Github_dark_dimmed)
+            ->highlighterTheme(HighlighterName::Ayu_dark)
             ->theme(Themes::overrideDark([
                 '--color-base-200' => "black"
             ]),
