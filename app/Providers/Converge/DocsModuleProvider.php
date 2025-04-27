@@ -25,7 +25,7 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-alpha.10')
+            ->latestVersionLabel('v1.0.0-alpha.11')
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
             ->brandLogo('Converge')
@@ -54,12 +54,16 @@ class DocsModuleProvider extends ModuleProvider
     {
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
-            ->highlighterTheme(HighlighterName::Ayu_dark)
+            ->highlighterTheme(HighlighterName::Aurora_x)
             ->theme(Themes::overrideDark([
-                '--color-base-200' => "black"
+                '--color-base-200' => "black",
+                '--text-base' => '.9rem',
+                '--text-sm' => '.89rem',
             ]),
                 Themes::overrideLight([
-                '--color-base-200' => 'white'
+                '--color-base-200' => 'white',
+                '--text-base' => '1rem',
+                '--text-sm' => '1rem',
             ]))
             ->layout(Layout::Default)
             ->collapsedGroupes(false)
