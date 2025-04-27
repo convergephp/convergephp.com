@@ -25,7 +25,7 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-alpha.11')
+            ->latestVersionLabel('v1.0.0-alpha.12')
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
             ->brandLogo('Converge')
