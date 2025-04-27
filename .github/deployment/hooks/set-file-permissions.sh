@@ -1,7 +1,3 @@
-# This hook makes sure that your application won't get any file permission errors.
-#
-# To learn more, visit: https://sjorso.com/laravel-file-permissions
-
 php_executable=$1
 new_release_directory=$2
 
