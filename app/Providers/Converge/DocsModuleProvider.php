@@ -57,13 +57,13 @@ class DocsModuleProvider extends ModuleProvider
             ->highlighterTheme(HighlighterName::Aurora_x)
             ->theme(Themes::overrideDark([
                 '--color-base-200' => "black",
-                '--text-base' => '.9rem',
-                '--text-sm' => '.89rem',
+                '--text-base' => '.94rem',
+                '--text-sm' => '.9rem',
             ]),
                 Themes::overrideLight([
                 '--color-base-200' => 'white',
-                '--text-base' => '1rem',
-                '--text-sm' => '1rem',
+                '--text-base' => '.94rem',
+                '--text-sm' => '.9rem',
             ]))
             ->layout(Layout::Default)
             ->collapsedGroupes(false)
