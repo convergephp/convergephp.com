@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "converge/converge-components": "^1.0@alpha",
+        "davidhsianturi/blade-bootstrap-icons": "^2.0",
         "filament/filament": "3.3",
         "fluxtor/converge": "^1.0@alpha",
         "laravel/cashier-paddle": "^2.5",
