@@ -2,20 +2,20 @@
 
 namespace App\Providers\Converge;
 
-use Fluxtor\Converge\Module;
-use Fluxtor\Converge\Theme\Theme;
-use Fluxtor\Converge\Enums\Layout;
-use Fluxtor\Converge\Support\Themes;
-use Fluxtor\Converge\Enums\Spotlight;
-use Fluxtor\Converge\Clusters\Cluster;
-use Fluxtor\Converge\Clusters\Clusters;
-use Fluxtor\Converge\Enums\IconPosition;
-use Fluxtor\Converge\MenuItems\MenuItem;
-use Fluxtor\Converge\MenuItems\MenuItems;
-use Fluxtor\Converge\Clusters\ClusterLink;
-use Fluxtor\Converge\Enums\HighlighterName;
-use Fluxtor\Converge\Providers\ModuleProvider;
-use Fluxtor\Converge\Support\SidebarItemsStyles;
+use Converge\Module;
+use Converge\Theme\Theme;
+use Converge\Enums\Layout;
+use Converge\Support\Themes;
+use Converge\Enums\Spotlight;
+use Converge\Clusters\Cluster;
+use Converge\Clusters\Clusters;
+use Converge\Enums\IconPosition;
+use Converge\MenuItems\MenuItem;
+use Converge\MenuItems\MenuItems;
+use Converge\Clusters\ClusterLink;
+use Converge\Enums\HighlighterName;
+use Converge\Providers\ModuleProvider;
+use Converge\Support\SidebarItemsStyles;
 
 class DocsModuleProvider extends ModuleProvider
 {
