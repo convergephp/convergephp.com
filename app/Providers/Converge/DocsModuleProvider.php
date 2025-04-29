@@ -12,7 +12,6 @@ use Converge\Clusters\Clusters;
 use Converge\Enums\IconPosition;
 use Converge\MenuItems\MenuItem;
 use Converge\MenuItems\MenuItems;
-use Converge\Clusters\ClusterLink;
 use Converge\Enums\HighlighterName;
 use Converge\Providers\ModuleProvider;
 use Converge\Support\SidebarItemsStyles;
@@ -28,7 +27,7 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-beta.1')
+            ->latestVersionLabel('v1.0.0-beta.2')
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->theme(fn(Theme $theme) => $this->theme($theme))
             ->defineMenuItems(function (MenuItems $menuItems) {
