@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc71988e44481014c525330f9623e049",
+    "content-hash": "448dc1913059415ef6f15a5049be95dd",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -433,18 +433,18 @@
             "time": "2024-09-19T14:15:21+00:00"
         },
         {
-            "name": "converge/converge-components",
-            "version": "v1.0.0-alpha.6",
+            "name": "convergephp/blade-components",
+            "version": "v1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "5204a2b708df887835d4d98161118913bc3e6ccd"
+                "reference": "358ddb89a9594e22b43238bef34fa349250e047b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/converge/converge-components/converge-converge-components-5204a2b708df887835d4d98161118913bc3e6ccd-zip-8411cd.zip",
-                "reference": "5204a2b708df887835d4d98161118913bc3e6ccd",
-                "shasum": "bea09e2e049c0a9de44a527e41c218db64d458fb"
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-358ddb89a9594e22b43238bef34fa349250e047b-zip-7b8fa2.zip",
+                "reference": "358ddb89a9594e22b43238bef34fa349250e047b",
+                "shasum": "107141a7a85e1622d54ed46758a06188a8e5c985"
             },
             "require": {
                 "illuminate/support": "*",
@@ -455,13 +455,13 @@
             "extra": {
                 "laravel": {
                     "providers": [
-                        "Converge\\ConvergeComponents\\ConvergeComponentsServiceProvider"
+                        "Converge\\BladeComponents\\ConvergeComponentsServiceProvider"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Converge\\ConvergeComponents\\": "src/"
+                    "Converge\\BladeComponents\\": "src/"
                 }
             },
             "license": [
@@ -475,10 +475,73 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-alpha.6",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.2",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-04-27T14:49:24+00:00"
+            "time": "2025-04-29T15:17:10+00:00"
+        },
+        {
+            "name": "convergephp/converge",
+            "version": "v1.0.0-beta.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/convergephp/converge.git",
+                "reference": "9f17e541bed937aca5c997154e78f0981d177d7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/9f17e541bed937aca5c997154e78f0981d177d7d",
+                "reference": "9f17e541bed937aca5c997154e78f0981d177d7d",
+                "shasum": ""
+            },
+            "require": {
+                "tempest/highlight": "^2.11"
+            },
+            "require-dev": {
+                "larastan/larastan": "3.0",
+                "laravel/pint": "dev-main",
+                "orchestra/testbench": "9.x-dev",
+                "pestphp/pest": "3.x-dev",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Converge\\Providers\\ConvergeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Converge\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "charrafi mohamed",
+                    "email": "charrafimohamed27@gmail.com"
+                }
+            ],
+            "description": "static site generator for web artisans",
+            "support": {
+                "issues": "https://github.com/convergephp/converge/issues",
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.2"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/charrafimed",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-04-29T14:23:49+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
@@ -1606,69 +1669,6 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2025-02-19T08:42:37+00:00"
-        },
-        {
-            "name": "fluxtor/converge",
-            "version": "v1.0.0-beta.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/convergephp/converge.git",
-                "reference": "4688f96ffb090d7b2db2fa9aa00126b7e7af00f3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/4688f96ffb090d7b2db2fa9aa00126b7e7af00f3",
-                "reference": "4688f96ffb090d7b2db2fa9aa00126b7e7af00f3",
-                "shasum": ""
-            },
-            "require": {
-                "tempest/highlight": "^2.11"
-            },
-            "require-dev": {
-                "larastan/larastan": "3.0",
-                "laravel/pint": "dev-main",
-                "orchestra/testbench": "9.x-dev",
-                "pestphp/pest": "3.x-dev",
-                "phpstan/phpstan": "^2.1"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Fluxtor\\Converge\\Providers\\ConvergeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Fluxtor\\Converge\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "charrafi mohamed",
-                    "email": "charrafimohamed27@gmail.com"
-                }
-            ],
-            "description": "static site generator for web artisans",
-            "support": {
-                "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.1"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/charrafimed",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-29T10:26:09+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -9485,16 +9485,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.13.0",
+            "version": "1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "024473a478be9df5fdaca2c793f2232fe788e414"
+                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/024473a478be9df5fdaca2c793f2232fe788e414",
-                "reference": "024473a478be9df5fdaca2c793f2232fe788e414",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/1720ddd719e16cf0db4eb1c6eca108031636d46c",
+                "reference": "1720ddd719e16cf0db4eb1c6eca108031636d46c",
                 "shasum": ""
             },
             "require": {
@@ -9533,7 +9533,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.0"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.13.1"
             },
             "funding": [
                 {
@@ -9541,7 +9541,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-02-12T12:17:51+00:00"
+            "time": "2025-04-29T12:36:36+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -11967,8 +11967,8 @@
     "aliases": [],
     "minimum-stability": "alpha",
     "stability-flags": {
-        "converge/converge-components": 15,
-        "fluxtor/converge": 15
+        "convergephp/converge": 10,
+        "convergephp/blade-components": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

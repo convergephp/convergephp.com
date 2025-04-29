@@ -7,10 +7,10 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "converge/converge-components": "^1.0@alpha",
+        "convergephp/converge": "^1.0@beta",
+        "convergephp/blade-components": "^1.0@beta",
         "davidhsianturi/blade-bootstrap-icons": "^2.0",
         "filament/filament": "3.3",
-        "fluxtor/converge": "^1.0@alpha",
         "laravel/cashier-paddle": "^2.5",
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
