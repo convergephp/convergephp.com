@@ -434,17 +434,17 @@
         },
         {
             "name": "convergephp/blade-components",
-            "version": "v1.0.0-beta.2",
+            "version": "v1.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "358ddb89a9594e22b43238bef34fa349250e047b"
+                "reference": "047dab55bef75227a0c260b0a67e609eee0441fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-358ddb89a9594e22b43238bef34fa349250e047b-zip-7b8fa2.zip",
-                "reference": "358ddb89a9594e22b43238bef34fa349250e047b",
-                "shasum": "107141a7a85e1622d54ed46758a06188a8e5c985"
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-047dab55bef75227a0c260b0a67e609eee0441fd-zip-09270f.zip",
+                "reference": "047dab55bef75227a0c260b0a67e609eee0441fd",
+                "shasum": "1047f991c5e38d9bf6740303f6a94e0d108b629a"
             },
             "require": {
                 "illuminate/support": "*",
@@ -475,23 +475,23 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.2",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.3",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-04-29T15:17:10+00:00"
+            "time": "2025-05-01T18:58:30+00:00"
         },
         {
             "name": "convergephp/converge",
-            "version": "v1.0.0-beta.2",
+            "version": "v1.0.0-beta.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/convergephp/converge.git",
-                "reference": "9f17e541bed937aca5c997154e78f0981d177d7d"
+                "reference": "fedbd508e3e2b8116250219b8d47d8821364936d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/9f17e541bed937aca5c997154e78f0981d177d7d",
-                "reference": "9f17e541bed937aca5c997154e78f0981d177d7d",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/fedbd508e3e2b8116250219b8d47d8821364936d",
+                "reference": "fedbd508e3e2b8116250219b8d47d8821364936d",
                 "shasum": ""
             },
             "require": {
@@ -533,15 +533,19 @@
             "description": "static site generator for web artisans",
             "support": {
                 "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.2"
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.3"
             },
             "funding": [
+                {
+                    "url": "https://github.com/Ayoubhj866",
+                    "type": "github"
+                },
                 {
                     "url": "https://github.com/charrafimed",
                     "type": "github"
                 }
             ],
-            "time": "2025-04-29T14:23:49+00:00"
+            "time": "2025-05-01T18:51:39+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
@@ -2361,16 +2365,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v12.11.0",
+            "version": "v12.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "050b2dfeaf6fff9e08e84b355822636492fb45f4"
+                "reference": "8f6cd73696068c28f30f5964556ec9d14e5d90d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/050b2dfeaf6fff9e08e84b355822636492fb45f4",
-                "reference": "050b2dfeaf6fff9e08e84b355822636492fb45f4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8f6cd73696068c28f30f5964556ec9d14e5d90d7",
+                "reference": "8f6cd73696068c28f30f5964556ec9d14e5d90d7",
                 "shasum": ""
             },
             "require": {
@@ -2572,7 +2576,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2025-04-29T20:18:16+00:00"
+            "time": "2025-05-01T16:13:12+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -8503,16 +8507,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.6.1",
+            "version": "v5.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2"
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/a59a13791077fe3d44f90e7133eb68e7d22eaff2",
-                "reference": "a59a13791077fe3d44f90e7133eb68e7d22eaff2",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
+                "reference": "24ac4c74f91ee2c193fa1aaa5c249cb0822809af",
                 "shasum": ""
             },
             "require": {
@@ -8571,7 +8575,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.1"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.2"
             },
             "funding": [
                 {
@@ -8583,7 +8587,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-20T21:52:34+00:00"
+            "time": "2025-04-30T23:37:27+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -9084,16 +9088,16 @@
         },
         {
             "name": "hamcrest/hamcrest-php",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hamcrest/hamcrest-php.git",
-                "reference": "99ec86beb7da3604d57cd3ca3699d2853f53018d"
+                "reference": "f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/99ec86beb7da3604d57cd3ca3699d2853f53018d",
-                "reference": "99ec86beb7da3604d57cd3ca3699d2853f53018d",
+                "url": "https://api.github.com/repos/hamcrest/hamcrest-php/zipball/f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487",
+                "reference": "f8b1c0173b22fa6ec77a81fe63e5b01eba7e6487",
                 "shasum": ""
             },
             "require": {
@@ -9129,9 +9133,9 @@
             ],
             "support": {
                 "issues": "https://github.com/hamcrest/hamcrest-php/issues",
-                "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.1.0"
+                "source": "https://github.com/hamcrest/hamcrest-php/tree/v2.1.1"
             },
-            "time": "2025-04-29T18:09:42+00:00"
+            "time": "2025-04-30T06:54:44+00:00"
         },
         {
             "name": "jean85/pretty-package-versions",
