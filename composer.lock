@@ -434,17 +434,17 @@
         },
         {
             "name": "convergephp/blade-components",
-            "version": "v1.0.0-beta.3",
+            "version": "v1.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "047dab55bef75227a0c260b0a67e609eee0441fd"
+                "reference": "ebe98b65625da7f699326665d2a391c01059cb79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-047dab55bef75227a0c260b0a67e609eee0441fd-zip-09270f.zip",
-                "reference": "047dab55bef75227a0c260b0a67e609eee0441fd",
-                "shasum": "1047f991c5e38d9bf6740303f6a94e0d108b629a"
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-ebe98b65625da7f699326665d2a391c01059cb79-zip-b8cf9b.zip",
+                "reference": "ebe98b65625da7f699326665d2a391c01059cb79",
+                "shasum": "fdd47fd29a4f3c37de7f2c48f65dfa5d5a447f3d"
             },
             "require": {
                 "illuminate/support": "*",
@@ -475,10 +475,10 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.3",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.4",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-05-01T18:58:30+00:00"
+            "time": "2025-05-01T22:00:04+00:00"
         },
         {
             "name": "convergephp/converge",
@@ -3408,16 +3408,16 @@
         },
         {
             "name": "livewire/flux",
-            "version": "v2.1.5",
+            "version": "v2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/flux.git",
-                "reference": "e24f05be20fa1a0ca027a11c2eea763cc539c82e"
+                "reference": "142429b12718f87dbd1763c4cb2966b532bc8942"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/flux/zipball/e24f05be20fa1a0ca027a11c2eea763cc539c82e",
-                "reference": "e24f05be20fa1a0ca027a11c2eea763cc539c82e",
+                "url": "https://api.github.com/repos/livewire/flux/zipball/142429b12718f87dbd1763c4cb2966b532bc8942",
+                "reference": "142429b12718f87dbd1763c4cb2966b532bc8942",
                 "shasum": ""
             },
             "require": {
@@ -3465,9 +3465,9 @@
             ],
             "support": {
                 "issues": "https://github.com/livewire/flux/issues",
-                "source": "https://github.com/livewire/flux/tree/v2.1.5"
+                "source": "https://github.com/livewire/flux/tree/v2.1.6"
             },
-            "time": "2025-04-24T22:52:25+00:00"
+            "time": "2025-05-01T20:27:37+00:00"
         },
         {
             "name": "livewire/livewire",
@@ -3885,16 +3885,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.9.0",
+            "version": "3.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d"
+                "reference": "ced71f79398ece168e24f7f7710462f462310d4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/6d16a8a015166fe54e22c042e0805c5363aef50d",
-                "reference": "6d16a8a015166fe54e22c042e0805c5363aef50d",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ced71f79398ece168e24f7f7710462f462310d4d",
+                "reference": "ced71f79398ece168e24f7f7710462f462310d4d",
                 "shasum": ""
             },
             "require": {
@@ -3987,7 +3987,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-03-27T12:57:33+00:00"
+            "time": "2025-05-01T19:51:51+00:00"
         },
         {
             "name": "nette/schema",
