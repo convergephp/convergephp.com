@@ -1,5 +1,9 @@
 # Privacy Policy
 
+<div style="display: flex;">
+  <strong style="padding-right:4px;">Note: </strong> The Converge Framework is fully open source and free to use under the MIT license. These policies apply only to premium plugins sold through Converge or its official marketplace.
+</div>
+
 This privacy policy has been compiled to better serve those who are concerned with how their 'Personally Identifiable Information' (PII) is being used online. PII, as described in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website.
 
 ## What personal information do we collect from the people that visit our blog, website or app?
@@ -80,7 +84,7 @@ If there are any questions regarding this privacy policy, you may contact us usi
 - Geuliz, Merrakech 
 - Kingdom of Morocco
 - +212 682-582143
-- support@fluxtor.dev  
+- convergephp@gmail.com  
  
 
-_Last Edited on 2025-02-02_
+_Last Edited on 2025-05-02_
