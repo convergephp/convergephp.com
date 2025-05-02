@@ -8,11 +8,11 @@
             <a href="{{ route('converge-docs') }}"
                class="link link-hover">Docs</a>
         </nav>
-        <nav class="hidden">
+        <nav class="">
             <h6 class="footer-title">ToolKit</h6>
-            <a href="{{ route('components') }}"
+            <a href="{{ route('products.show', ['product' => 'components']) }}"
                class="link link-hover">Blade components</a>
-            <a href="{{ route('layouts') }}"
+            <a href="{{ route('products.show', ['product' => 'layouts-themes']) }}"
                class="link link-hover">Themes and Layouts</a>
         </nav>
         <nav>
@@ -23,6 +23,18 @@
             <a href="{{ route('solutions.blogging') }}"
                wire:navigate.hover
                class="link link-hover">Blogging</a>
+        </nav>
+        <nav>
+            <h6 class="footer-title">Policies</h6>
+            <a href="{{ route('privacy') }}"
+               wire:navigate.hover
+               class="link link-hover">Privacy Policy</a>
+            <a href="{{ route('terms') }}"
+               wire:navigate.hover
+               class="link link-hover">Terms of Use</a>
+            <a href="{{ route('refund') }}"
+               wire:navigate.hover
+               class="link link-hover">Refund Policy</a>
         </nav>
     </footer>
 

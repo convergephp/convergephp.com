@@ -4,7 +4,7 @@
 @import '../../vendor/livewire/flux/dist/flux.css';
 @import 'aos/dist/aos.css';
 @import "./prism.css";
-
+@plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
     themes: black --default, light;

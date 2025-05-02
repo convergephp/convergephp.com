@@ -7,8 +7,9 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "convergephp/converge": "^1.0@beta",
+        "archtechx/laravel-seo": "^0.10.3",
         "convergephp/blade-components": "^1.0@beta",
+        "convergephp/converge": "^1.0@beta",
         "davidhsianturi/blade-bootstrap-icons": "^2.0",
         "filament/filament": "3.3",
         "laravel/cashier-paddle": "^2.5",

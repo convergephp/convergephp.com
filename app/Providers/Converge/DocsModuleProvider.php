@@ -8,6 +8,7 @@ use Converge\Enums\Layout;
 use Converge\Support\Themes;
 use Converge\Enums\Spotlight;
 use Converge\Clusters\Cluster;
+use Converge\Clusters\ClusterLink;
 use Converge\Clusters\Clusters;
 use Converge\Enums\IconPosition;
 use Converge\MenuItems\MenuItem;
@@ -28,27 +29,11 @@ class DocsModuleProvider extends ModuleProvider
             ->default()
             ->routePath('docs')
             ->latestVersionLabel('v1.0.0-beta.2')
-            ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
-            ->theme(fn(Theme $theme) => $this->theme($theme))
-            ->defineMenuItems(function (MenuItems $menuItems) {
-                $menuItems->add(
-                    fn(MenuItem $menuItem) =>
-                    $menuItem->url('https://github.com/convergephp/converge')
-                        ->openUrlInNewTab()
-                        ->icon(fn() => svg('bi-github', 'w-5 h-5'))
-                        ->iconPosition(IconPosition::After)
-                        ->label('')
-                );
-
-                $menuItems->add(
-                    fn(MenuItem $menuItem) =>
-                    $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
-                        ->openUrlInNewTab()
-                        ->classes('btn btn-sm btn-outline btn-primary')
-                        ->label('Sponsor')
-                );
-            })
+            ->latestVersionUrl('v1.x')
             ->brandLogo('Converge')
+            ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
+            ->defineMenuItems(fn(MenuItems $menuItems) => $this->defineMenuItems($menuItems))
+            ->theme(fn(Theme $theme) => $this->theme($theme))
             ->in(realpath(base_path('docs/v1/framework')));
     }
 
@@ -58,7 +43,7 @@ class DocsModuleProvider extends ModuleProvider
         $clusters->add(
             fn(Cluster $cluster) => $cluster
                 ->label('Documentation')
-                ->icon(fn () => svg('iconsax-bul-book', 'w-5 h-5'))
+                ->icon(fn() => svg('iconsax-bul-book', 'w-5 h-5'))
         )->default();
 
         $clusters->add(
@@ -66,7 +51,32 @@ class DocsModuleProvider extends ModuleProvider
                 ->route('components')
                 ->label('Components')
                 ->in(realpath(base_path('docs/v1/components')))
-                ->icon(fn () => svg('iconsax-bul-3dcube' , 'h-5 w-5'))
+                ->icon(fn() => svg('iconsax-bul-3dcube', 'h-5 w-5'))
+        );
+
+        $clusters->addLink(
+            fn(ClusterLink $cluster) => $cluster
+                ->url('www.convergephp.com/blog')
+                ->label('Blog')
+        );
+    }
+    private function defineMenuItems(MenuItems $menuItems)
+    {
+        $menuItems->add(
+            fn(MenuItem $menuItem) =>
+            $menuItem->url('https://github.com/convergephp/converge')
+                ->openUrlInNewTab()
+                ->icon(fn() => svg('bi-github', 'w-5 h-5'))
+                ->iconPosition(IconPosition::After)
+                ->label('')
+        );
+
+        $menuItems->add(
+            fn(MenuItem $menuItem) =>
+            $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
+                ->openUrlInNewTab()
+                ->classes('btn btn-sm btn-outline btn-primary')
+                ->label('Sponsor')
         );
     }
 
@@ -75,16 +85,18 @@ class DocsModuleProvider extends ModuleProvider
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
             ->highlighterTheme(HighlighterName::Aurora_x)
-            ->theme(Themes::overrideDark([
-                '--color-base-200' => "black",
-                '--text-base' => '.94rem',
-                '--text-sm' => '.9rem',
-            ]),
+            ->theme(
+                Themes::overrideDark([
+                    '--color-base-200' => "black",
+                    '--text-base' => '.94rem',
+                    '--text-sm' => '.9rem',
+                ]),
                 Themes::overrideLight([
-                '--color-base-200' => 'white',
-                '--text-base' => '.94rem',
-                '--text-sm' => '.9rem',
-            ]))
+                    '--color-base-200' => 'white',
+                    '--text-base' => '.94rem',
+                    '--text-sm' => '.9rem',
+                ])
+            )
             ->layout(Layout::Default)
             ->collapsedGroupes(false)
             ->font('inter')
