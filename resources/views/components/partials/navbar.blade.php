@@ -14,8 +14,7 @@
                 {{-- NAVBAR ITEMS - DESKTOP --}}
                 <div
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
-                    <x-navbar.link 
-                                   :active="request()->routeIs('converge-docs')"
+                    <x-navbar.link :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
                     <x-navbar.dropdown-menu class="hidden"
                                             label="ToolKit">
@@ -175,12 +174,13 @@
                                 <div class="text-base-content/70 mt-1 text-sm">Create a powerfull layouts</div>
                             </a>
                         </div>
-                        <a href="{{ route('roadmap') }}"
-                           wire:navigate.hover
-                           class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
-                            Roadmap
-                        </a>
                     </div>
+                    
+                    <a href="{{ route('roadmap') }}"
+                       wire:navigate.hover
+                       class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
+                        Roadmap
+                    </a>
 
                     {{-- Solutions Dropdown --}}
                     <div>

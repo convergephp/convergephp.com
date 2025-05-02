@@ -77,7 +77,7 @@
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
         }
-    },  
+    },
     "minimum-stability": "alpha",
     "prefer-stable": true,
     "repositories": [{
