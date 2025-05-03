@@ -52,12 +52,6 @@ class DocsModuleProvider extends ModuleProvider
                 ->in(realpath(base_path('docs/v1/components')))
                 ->icon(fn() => svg('iconsax-bul-3dcube', 'h-5 w-5'))
         );
-
-        $clusters->addLink(
-            fn(ClusterLink $cluster) => $cluster
-                ->url('www.convergephp.com/blog')
-                ->label('Blog')
-        );
     }
     private function defineMenuItems(MenuItems $menuItems)
     {
