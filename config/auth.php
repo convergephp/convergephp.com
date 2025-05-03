@@ -40,6 +40,9 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'license'=>[
+            'driver' => 'license-verify',
+        ]
     ],
 
     /*
