@@ -25,10 +25,12 @@ class LicenseServiceProvider extends ServiceProvider
     {
         Auth::viaRequest('license-verify', function (Request $request) {
 
-            $licenseKey=$request->getPassword();
+            $licenseKey = $request->getPassword();
+            $username = $request->getUser();
             info("license key is : $licenseKey");
+            info("email is : $username");
             $license = License::query()
-                ->where('key',$licenseKey)
+                ->where('key', $licenseKey)
                 ->first();
 
             if (! $license) {
