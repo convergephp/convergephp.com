@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\License;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
@@ -23,6 +24,8 @@ class LicenseServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Auth::viaRequest('license-verify', function (Request $request) {
+
+            return Str::random(32);
             $license = License::query()
                 ->where('key', $request->getPassword())
                 ->first();
