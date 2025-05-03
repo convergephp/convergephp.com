@@ -68,8 +68,7 @@ Route::get('/privacy-policy', fn() => view('pages.privacy'))->name('privacy');
 Route::get('/refund-policy', fn() => view('pages.refund'))->name('refund');
 
 Route::post('licenses/verify', function () {
-    info('hits this route.');
-    return response('invalid', 401);
+    return response('response ok', 200);
 })->middleware('license.verification');
 
 require __DIR__ . '/auth.php';
