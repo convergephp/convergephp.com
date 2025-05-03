@@ -69,6 +69,6 @@ Route::get('/refund-policy', fn() => view('pages.refund'))->name('refund');
 
 Route::post('licenses/verify', function () {
     return response('response ok', 200);
-})->middleware('license.verification');
+});
 
 require __DIR__ . '/auth.php';
