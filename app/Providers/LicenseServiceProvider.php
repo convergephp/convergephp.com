@@ -25,7 +25,6 @@ class LicenseServiceProvider extends ServiceProvider
     {
         Auth::viaRequest('license-verify', function (Request $request) {
 
-            return Str::random(32);
             $license = License::query()
                 ->where('key', $request->getPassword())
                 ->first();
