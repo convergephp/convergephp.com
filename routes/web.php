@@ -67,8 +67,6 @@ Route::get('/terms-of-use', fn() => view('pages.terms'))->name('terms');
 Route::get('/privacy-policy', fn() => view('pages.privacy'))->name('privacy');
 Route::get('/refund-policy', fn() => view('pages.refund'))->name('refund');
 
-Route::post('licenses/verify', function () {
-    return  response()->json(['message' => 'License verified']);
-})->middleware('auth:license');
+
 
 require __DIR__ . '/auth.php';
