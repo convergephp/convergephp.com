@@ -6,6 +6,7 @@ use App\Admin\Resources\ProductResource\Pages;
 use App\Admin\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -37,6 +38,7 @@ class ProductResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
+                    TagsInput::make('features'),
             ]);
     }
 

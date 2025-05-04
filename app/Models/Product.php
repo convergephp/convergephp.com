@@ -13,6 +13,13 @@ class Product extends Model
 
     protected $guarded = ['id'];
 
+    public function casts()
+    {
+        return [
+            'features' => 'array',
+        ];
+    }
+
     /**
      * Get all of the prices for the Product
      *

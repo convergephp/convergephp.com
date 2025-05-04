@@ -16,7 +16,7 @@
                     </div>
 
                     {{-- TIMER --}}
-                    <div class="count-down-main flex w-full items-start justify-center gap-2">
+                    {{-- <div class="count-down-main flex w-full items-start justify-center gap-2">
                         <div class="timer flex flex-col gap-0.5">
                             <div class="">
                                 <h3
@@ -60,7 +60,7 @@
                     <div class="flex w-full flex-col items-center justify-center gap-5">
                         <h6 class="text-primary text-center text-base font-semibold leading-relaxed">Launched Date:
                             June 01, 2025</h6>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
 </section>
 
 <!--Javascript-->
-<script>
+{{-- <script>
     // count-down timer
     let dest = new Date("June 01, 2025 23:59:59").getTime();
     let x = setInterval(function() {
@@ -132,4 +132,4 @@
             }
         }
     }, 10);
-</script>
+</script> --}}
