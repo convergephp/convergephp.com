@@ -31,7 +31,7 @@
                     </x-navbar.dropdown-menu>
 
                     <x-navbar.link href="{{ route('products.index') }}"
-                                   :active="request()->routeIs('toolkits')"
+                                   :active="request()->routeIs('products.index')"
                                    wire:navigate.hover>toolkits</x-navbar.link>
 
                     {{-- <x-navbar.dropdown-menu label="Solutions">

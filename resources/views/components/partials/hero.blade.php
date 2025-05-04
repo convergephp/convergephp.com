@@ -49,22 +49,6 @@ $filesArray = [
             Build high-quality, dynamic docs with Markdown — fast, flexible, and open-source.
         </p>
 
-        <!-- <h1 data-aos="zoom-in" data-aos-duration="300" Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            documentation from
-                    Markdown Developer-friendly. Intuitive. And designed for teams who care about
-            class="from-base-content leading-10 bg-gradient-to-br font-black to-gray-500 bg-clip-text py-3 text-4xl/[1.07]  text-transparent md:text-5xl/[1.07]">
-            Streamline Your Documentation Workflow with <span
-                class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
-        </h1> -->
-
-        <!-- <p data-aos="fade-up" data-aos-duration="1000"
-            class="text-base-content/60 text-md px-10  relative mx-auto mt-6 max-w-3xl  leading-8 md:text-xl">
-            Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            documentation from
-                    Markdown Developer-friendly. Intuitive. And designed for teams who care about
-            clarity
-        </p> -->
-
         <div data-aos="fade-up" data-aos-duration="1000"
             class="w-xs mx-auto mt-10 flex flex-col items-center justify-center gap-y-8">
             <a href="/docs" class="relative px-5 py-2 font-medium text-white group">
@@ -90,7 +74,7 @@ $filesArray = [
                 <div class="rounded-box w-full overflow-hidden" style="max-height: 500px;">
                     <img alt="Converge docs screenshot" loading="lazy" decoding="async"
                         class="h-auto w-full object-contain" style="color: transparent;"
-                        src="{{ asset('exemple-2.png') }}">
+                        src="{{ asset('images/exemple-2.png') }}">
                 </div>
             </div>
 
