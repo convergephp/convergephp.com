@@ -16,7 +16,7 @@
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
                     <x-navbar.link :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
-                    <x-navbar.dropdown-menu 
+                    {{-- <x-navbar.dropdown-menu
                                             label="ToolKit">
                         <div class="grid grid-cols-2 gap-4">
                             <x-navbar.card-link :url="route('products.show', ['product' => 'components'])"
@@ -28,7 +28,7 @@
                                                 description="Create a powerfull layouts">
                             </x-navbar.card-link>
                         </div>
-                    </x-navbar.dropdown-menu>
+                    </x-navbar.dropdown-menu> --}}
 
                     <x-navbar.link href="{{ route('products.index') }}"
                                    :active="request()->routeIs('products.index')"

@@ -82,11 +82,11 @@ $filesArray = array_fill_keys([
 
             <div id="code-panel" class="bg-base-200 absolute p-4  right-0 top-0 z-20 h-full overflow-auto text-white"
                 style="width: 0%;">
-                <div class="w-full mb-2 p-4 bg-error rounded-box overflow-auto">
+                <div class="w-full mb-2 p-4 bg-base-100 rounded-box overflow-auto">
                 This example documentation is generated from the following file structure:
                 </div>
                 <div class="h-full w-full">
-                    <!-- <x-filesystem :items="$filesArray" /> -->
+                    <x-filesystem :items="$filesArray" />
                 </div>
             </div>
         </div>
