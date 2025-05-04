@@ -3,7 +3,7 @@
         <div class="w-full overflow-hidden rounded-lg">
             <div data-aos="fade-up"
                  data-aos-duration="1000"
-                 class="grid max-w-3xl items-start justify-between gap-5 px-2 py-8">
+                 class="grid max-w-5xl items-start justify-between gap-5 px-2 py-8">
                 <div class="text-4xl/[1.07] font-bold tracking-tight md:text-5xl/[1.07]">
                     <span
                           class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text tracking-widest text-transparent">
@@ -40,10 +40,11 @@
                                 <div class="text-start">
                                     <ul
                                         class="text-base-content/80 list-inside list-image-[url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxNCAxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsPSIjMzhiZGY4Ij48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMy42ODUuMTUzYS43NTIuNzUyIDAgMCAxIC4xNDMgMS4wNTJsLTggMTAuNWEuNzUuNzUgMCAwIDEtMS4xMjcuMDc1bC00LjUtNC41YS43NS43NSAwIDAgMSAxLjA2LTEuMDZsMy44OTQgMy44OTMgNy40OC05LjgxN2EuNzUuNzUgMCAwIDEgMS4wNS0uMTQzWiIgLz48L3N2Zz4=)]">
-                                        <li class="mb-2">Code Blocks</li>
-                                        <li class="mb-2">Frames</li>
-                                        <li class="mb-2">Accordions</li>
-                                        <li class="mb-2">Alerts</li>
+                                        @foreach ($product->features ?? [] as $feature)
+                                            <li>
+                                                {{ $feature }}
+                                            </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>

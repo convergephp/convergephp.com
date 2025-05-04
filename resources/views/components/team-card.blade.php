@@ -10,7 +10,11 @@
 <div {{ $attributes->merge(['class' => 'text-base-content text-center']) }}>
     <img class="mx-auto mb-4 h-36 w-36 rounded-full"
          src="{{ $imageSrc }}"
-         alt="{{ $imageSrc }}">
+         alt="Photo de profil"
+         loading="lazy"
+         decoding="async"
+         width="144"
+         height="144" />
 
     <h3 class="text-base-content mb-1 text-2xl font-bold tracking-tight">
         <span>{{ $fullName ?? '' }}</span>

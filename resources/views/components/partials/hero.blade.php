@@ -1,27 +1,19 @@
 <?php
-$filesArray = [
-    "01-getting-started.md" => '',
-    "02-grid.md" => "",
-    "03-fields.md" => "",
-    "04-tabs.md" => "",
-    "05-widzard.md" => "",
-    "06-section.md" => "",
-    "07-split.md" => "",
-    "08-custom.md" => "",
-    "09-placeholder.md" => "",
-    // 'navlist' => [
-    //     'features.md' => '',
-    //     'footer.md' => '',
-    // ],
-    // 'partials' => [
-    //     'features.md' => '',
-    //     'footer.md' => '',
-    //     'hero.md' => '',
-    //     'navbar.md' => '',
-    //     'sponsors.md' => '',
-    //     'team.md' => ''
-    // ]
-];
+$filesArray = array_fill_keys([
+    "01-getting-started.md",
+    "02-grid.md",
+    "03-flexbox.md",
+    "04-spacing.md",
+    "05-typography.md",
+    "06-backgrounds.md",
+    "07-borders.md",
+    "08-effects.md",
+    "09-transitions.md",
+    "10-transforms.md",
+    "11-interactivity.md",
+    "12-accessibility.md"
+], '');
+
 ?>
 
 <section class="mx-auto max-w-7xl px-2 pt-[3rem] md:pt-[5rem]">
@@ -29,8 +21,8 @@ $filesArray = [
     <x-grid-svg data-aos="fade-down" data-aos-duration="2000" class="absolute inset-0 -z-0 h-full w-full
            [mask-image:linear-gradient(to_top,transparent_10%,white_90%),linear-gradient(to_bottom,transparent_10%,white_99%)]
            [mask-composite:intersect] [-webkit-mask-composite:destination-in]
-           [mask-composite:intersect] [-webkit-mask-composite:destination-in]" gridSize="40" lineColor="gray"
-        lineOpacity="0.3" backgroundColor="transparent" :highlightedRow="7" animationDirection="rtl"
+           [mask-composite:intersect] [-webkit-mask-composite:destination-in]" gridSize="30" lineColor="gray"
+        lineOpacity="0.1" backgroundColor="transparent" :highlightedRow="7" animationDirection="rtl"
         animationDuration="6" highlightColorStart="red" highlightColorEnd="blue" strokeWidth="1" />
 
     {{-- SECTION CONTENT --}}
@@ -48,22 +40,6 @@ $filesArray = [
         <p data-aos="fade-up" data-aos-duration="1000"  class="max-w-(--breakpoint-md) px-2 text-lg/7 mt-10 mx-auto font-medium text-base-content/60 max-sm:px-4">
             Build high-quality, dynamic docs with Markdown — fast, flexible, and open-source.
         </p>
-
-        <!-- <h1 data-aos="zoom-in" data-aos-duration="300" Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            documentation from
-                    Markdown Developer-friendly. Intuitive. And designed for teams who care about
-            class="from-base-content leading-10 bg-gradient-to-br font-black to-gray-500 bg-clip-text py-3 text-4xl/[1.07]  text-transparent md:text-5xl/[1.07]">
-            Streamline Your Documentation Workflow with <span
-                class="from-base-primary/50 to-primary bg-gradient-to-br bg-clip-text">Converge</span>
-        </h1> -->
-
-        <!-- <p data-aos="fade-up" data-aos-duration="1000"
-            class="text-base-content/60 text-md px-10  relative mx-auto mt-6 max-w-3xl  leading-8 md:text-xl">
-            Converge is the open-source framework that empowers anyone to build high-quality, dynamic
-            documentation from
-                    Markdown Developer-friendly. Intuitive. And designed for teams who care about
-            clarity
-        </p> -->
 
         <div data-aos="fade-up" data-aos-duration="1000"
             class="w-xs mx-auto mt-10 flex flex-col items-center justify-center gap-y-8">
@@ -90,7 +66,7 @@ $filesArray = [
                 <div class="rounded-box w-full overflow-hidden" style="max-height: 500px;">
                     <img alt="Converge docs screenshot" loading="lazy" decoding="async"
                         class="h-auto w-full object-contain" style="color: transparent;"
-                        src="{{ asset('exemple-2.png') }}">
+                        src="{{ asset('images/exemple-2.png') }}">
                 </div>
             </div>
 
@@ -104,10 +80,13 @@ $filesArray = [
                 </button>
             </div>
 
-            <div id="code-panel" class="bg-base-200 absolute p-4 right-0 top-0 z-20 h-full overflow-auto text-white"
+            <div id="code-panel" class="bg-base-200 absolute p-4  right-0 top-0 z-20 h-full overflow-auto text-white"
                 style="width: 0%;">
+                <div class="w-full mb-2 p-4 bg-error rounded-box overflow-auto">
+                This example documentation is generated from the following file structure:
+                </div>
                 <div class="h-full w-full">
-                    <x-filesystem :items="$filesArray" />
+                    <!-- <x-filesystem :items="$filesArray" /> -->
                 </div>
             </div>
         </div>
@@ -130,132 +109,5 @@ $filesArray = [
             animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
     </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const resizer = document.getElementById('resizer');
-            const codePanel = document.getElementById('code-panel');
-            const resizerHandle = document.getElementById('resizer-handle');
-            const mockupContainer = resizer.closest('.mockup-browser');
-
-            let isResizing = false;
-            let startX;
-            let startPanelWidth = 0;
-            let containerWidth;
-
-            // Initial Position
-            resizer.style.right = '0px';
-
-            function applyStyles(panelWidth) {
-                window.requestAnimationFrame(() => {
-                    const percentage = (panelWidth / containerWidth) * 100;
-                    codePanel.style.width = `${percentage}%`;
-                    resizer.style.right = `${percentage}%`;
-                });
-            }
-
-            function startResize(clientX) {
-                isResizing = true;
-                startX = clientX;
-                containerWidth = mockupContainer.clientWidth;
-
-                startPanelWidth = parseFloat(window.getComputedStyle(codePanel).width) || 0;
-
-                resizer.classList.replace('bg-blue-500', 'bg-blue-700');
-                resizerHandle.classList.remove('animate-pulse');
-
-                document.body.style.userSelect = 'none';
-                document.body.style.cursor = 'col-resize';
-
-                mockupContainer.classList.add('resizing');
-            }
-
-            function stopResize() {
-                if (!isResizing) return;
-
-                isResizing = false;
-                resizer.classList.replace('bg-blue-700', 'bg-blue-500');
-
-                document.body.style.userSelect = '';
-                document.body.style.cursor = '';
-                mockupContainer.classList.remove('resizing');
-
-                const panelWidth = parseFloat(codePanel.style.width) || 0;
-                if (panelWidth < 5) {
-                    codePanel.style.width = '0%';
-                    resizer.style.right = '0px';
-                    resizerHandle.classList.add('animate-pulse');
-                }
-
-                localStorage.setItem('codePanelWidth', codePanel.style.width);
-            }
-
-            function doResize(clientX) {
-                if (!isResizing) return;
-
-                const movementX = startX - clientX;
-                const newWidth = Math.min(
-                    Math.max(startPanelWidth + movementX, 0),
-                    containerWidth * 0.8
-                );
-
-                applyStyles(newWidth);
-            }
-
-            resizer.addEventListener('mousedown', function (e) {
-                e.preventDefault();
-                startResize(e.clientX);
-            });
-
-            document.addEventListener('mouseup', stopResize);
-
-            document.addEventListener('mousemove', function (e) {
-                doResize(e.clientX);
-            });
-
-            resizer.addEventListener('touchstart', function (e) {
-                e.preventDefault();
-                startResize(e.touches[0].clientX);
-            });
-
-            document.addEventListener('touchend', stopResize);
-
-            document.addEventListener('touchmove', function (e) {
-                if (isResizing) {
-                    e.preventDefault();
-                    doResize(e.touches[0].clientX);
-                }
-            });
-
-            resizer.addEventListener('dblclick', function () {
-                const currentWidth = parseFloat(codePanel.style.width) || 0;
-
-                codePanel.classList.add('transition-all', 'duration-300', 'ease-in-out');
-
-                if (currentWidth < 10) {
-                    codePanel.style.width = '50%';
-                    resizer.style.right = '50%';
-                    resizerHandle.classList.remove('animate-pulse');
-                } else {
-                    codePanel.style.width = '0%';
-                    resizer.style.right = '0px';
-                    resizerHandle.classList.add('animate-pulse');
-                }
-
-                setTimeout(() => {
-                    codePanel.classList.remove('transition-all', 'duration-300', 'ease-in-out');
-                }, 300);
-
-                localStorage.setItem('codePanelWidth', codePanel.style.width);
-            });
-
-            const savedWidth = localStorage.getItem('codePanelWidth');
-            if (savedWidth && parseFloat(savedWidth) > 0) {
-                codePanel.style.width = savedWidth;
-                resizer.style.right = savedWidth;
-                resizerHandle.classList.remove('animate-pulse');
-            }
-        });
-    </script>
 
 </section>

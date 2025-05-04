@@ -21,7 +21,7 @@
              class="mx-auto flex w-full flex-col justify-around gap-8 space-y-6 overflow-x-hidden py-8 sm:flex-row sm:space-y-0 md:max-w-3xl">
             <x-team-card fullName="Ayoub El Hajji"
                          imageAlt="Ayoub El Hajji avatar"
-                         imageSrc="https://media.licdn.com/dms/image/v2/D4E03AQHhvol7Fv2l6w/profile-displayphoto-shrink_800_800/B4EZTNTiY5HMAg-/0/1738611239712?e=1749081600&v=beta&t=-LE6VKmr854ogbirbvxQpgnH0Km_T661pwUU28E4__g"
+                         imageSrc="{{ asset('images/ayoub.jpeg') }}"
                          githubProfilLink="https://github.com/Ayoubhj866"
                          sponsorPageLink="https://github.com/sponsors/Ayoubhj866"
                          linkedinProfilLink="https://www.linkedin.com/in/ayoub-el-hajji-b9a1901b5/"
@@ -30,7 +30,7 @@
 
             <x-team-card fullName="Mohamed Charrafi"
                          imageAlt="Mohamed CHARRAFI avatar"
-                         imageSrc="https://media.licdn.com/dms/image/v2/D4D03AQGmBjy3gNJA1Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1726574296387?e=1749081600&v=beta&t=3umSrjiMqmd48QZRKrFUF_NYF2whMd3Tu-KEyH2fHlI"
+                         imageSrc="{{ asset('images/mohammed.jpeg') }}"
                          githubProfilLink="https://github.com/CharrafiMed"
                          sponsorPageLink="https://github.com/sponsors/CharrafiMed"
                          linkedinProfilLink="https://www.linkedin.com/in/mohamed-charrafi/"

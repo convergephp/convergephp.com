@@ -29,7 +29,12 @@
                             </x-navbar.card-link>
                         </div>
                     </x-navbar.dropdown-menu>
-                    <x-navbar.dropdown-menu label="Solutions">
+
+                    <x-navbar.link href="{{ route('products.index') }}"
+                                   :active="request()->routeIs('products.index')"
+                                   wire:navigate.hover>toolkits</x-navbar.link>
+
+                    {{-- <x-navbar.dropdown-menu label="Solutions">
                         <div class="grid grid-cols-2 gap-4">
                             <x-navbar.card-link title="Documentation"
                                                 :active="request()->routeIs('solutions.documentation')"
@@ -44,7 +49,7 @@
                                                 description="Create a powerfull blog just in minutes">
                             </x-navbar.card-link>
                         </div>
-                    </x-navbar.dropdown-menu>
+                    </x-navbar.dropdown-menu> --}}
 
                     <x-navbar.link href="{{ route('roadmap') }}"
                                    :active="request()->routeIs('roadmap')"
@@ -74,14 +79,14 @@
                         </a>
                     @endif
                     {{-- disable auth system temporary --}}
-                    {{-- @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
+                    @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
                            class="btn btn-sm btn-square md:btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-8">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
-                    @endif --}}
+                    @endif
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
@@ -137,45 +142,12 @@
                         Documentation
                     </a>
 
-                    {{-- ToolKit Dropdown --}}
-                    <div class="border-base-200 hidden border-b">
-                        <button x-on:click="toolkitOpen = !toolkitOpen; solutionsOpen = false"
-                                class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between rounded-md px-4 py-3 text-base font-medium focus:outline-none">
-                            <span>ToolKit</span>
-                            <svg x-bind:class="toolkitOpen ? 'transform rotate-180' : ''"
-                                 class="h-5 w-5 transition-transform duration-200"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 20 20"
-                                 fill="currentColor">
-                                <path fill-rule="evenodd"
-                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                      clip-rule="evenodd" />
-                            </svg>
-                        </button>
+                    <a href="{{ route('products.index') }}"
+                       wire:navigate.hover
+                       class="{{ request()->routeIs('products.index') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
+                        toolkits
+                    </a>
 
-                        <div x-show="toolkitOpen"
-                             x-transition:enter="transition ease-out duration-200"
-                             x-transition:enter-start="opacity-0"
-                             x-transition:enter-end="opacity-100"
-                             x-transition:leave="transition ease-in duration-150"
-                             x-transition:leave-start="opacity-100"
-                             x-transition:leave-end="opacity-0"
-                             class="bg-base-200 mx-2 mb-2 rounded-md px-4 py-2"
-                             style="display: none;">
-                            <a href="{{ route('products.show', ['product' => 'components']) }}"
-                               class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
-                                <div class="font-semibold">Blade Components</div>
-                                <div class="text-base-content/70 mt-1 text-sm">Visite our beautiful blade components
-                                </div>
-                            </a>
-                            <a href="{{ route('products.show', ['product' => 'layouts-themes']) }}"
-                               class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
-                                <div class="font-semibold">Layouts</div>
-                                <div class="text-base-content/70 mt-1 text-sm">Create a powerfull layouts</div>
-                            </a>
-                        </div>
-                    </div>
-                    
                     <a href="{{ route('roadmap') }}"
                        wire:navigate.hover
                        class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
@@ -183,7 +155,7 @@
                     </a>
 
                     {{-- Solutions Dropdown --}}
-                    <div>
+                    {{-- <div>
                         <button x-on:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
                                 class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between px-4 py-3 text-base font-medium focus:outline-none">
                             <span>Solutions</span>
@@ -222,7 +194,7 @@
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

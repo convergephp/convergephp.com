@@ -1,10 +1,8 @@
 <div class="relative px-2"
      data-aos="fade-up"
      data-aos-duration="1000">
-
     <div class="bg-base-200 mx-auto w-full max-w-7xl space-y-2 overflow-hidden">
-
-        {{-- TITLES --}}
+        {{-- HEADER --}}
         <div class="bg-base-200 border-base-300 w-full overflow-hidden rounded-lg border">
             <div data-aos="fade-up"
                  data-aos-duration="1000"
@@ -22,122 +20,29 @@
             </div>
         </div>
 
-        {{-- CARDS --}}
+        {{-- FEATURE CARDS GRID --}}
         <div class="grid-cols-30 grid w-full grid-flow-dense gap-2">
-
             {{-- THEMES --}}
-            <div data-aos="fade-up"
-                 data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
-                <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
-                    <div>
-                        <span
-                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Customizable
-                            Themes
-                        </span>
-                        <p class="text-base-content/50 max-w-xl text-sm/7">Effortlessly switch
-                            between light and dark
-                            modes or create your customtheme. </p>
-                    </div>
-                </div>
-                <div
-                     class="h-112 after:inset-ring after:inset-ring-base-300 relative h-full overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-                    <div class="container relative flex size-full items-center justify-center">
-                        <div
-                             class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
-                                 src="{{ asset('exemple-4.png') }}"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <x-feature-card title="Customizable Themes"
+                            description="Effortlessly switch between light and dark modes or create your custom theme."
+                            image="images/exemple-4.png" />
 
             {{-- DOCS CARD --}}
-            <div data-aos="fade-up"
-                 data-aos-duration="1000"
-                 class="md:col-span-15 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
-                <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
-                    <div>
-                        <span
-                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Comprehensive
-                            Documentation</span>
-                        <p class="text-base-content/50 max-w-xl text-sm/7">Detailed step-by-step guides to help you get
-                            started and master converge. </p>
-                    </div>
-                </div>
-                <div
-                     class="after:inset-ring after:inset-ring-base-300 relative h-full flex-1 overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-                    <div class="container relative flex size-full items-center justify-center">
-                        <div
-                             class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
-                                 src="{{ asset('exemple-4.png') }}"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <x-feature-card title="Comprehensive Documentation"
+                            description="Detailed step-by-step guides to help you get started and master converge."
+                            image="images/exemple-4.png" />
 
             {{-- LAYOUTS CARD --}}
-            <div data-aos="fade-up"
-                 data-aos-duration="1000"
-                 class="bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2 md:col-span-12">
-                <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
-                    <div>
-                        <span
-                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">Multiple
-                            Layouts</span>
-                        <p class="text-base-content/50 max-w-xl text-sm/7"> Choose from various layout options to match
-                            your
-                            needs. </p>
-                    </div>
-                </div>
-                <div
-                     class="after:inset-ring after:inset-ring-base-300 relative h-full flex-1 overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-                    <div class="container relative flex size-full items-center justify-center">
-                        <div
-                             class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
-                                 src="{{ asset('exemple-4.png') }}"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <x-feature-card title="Multiple Layouts"
+                            description="Choose from various layout options to match your needs."
+                            image="images/exemple-4.png"
+                            columnSpan="col-span-full md:col-span-12" />
 
             {{-- BLADE COMPONENTS CARD --}}
-            <div data-aos="fade-up"
-                 data-aos-duration="1000"
-                 class="md:col-span-18 bg-base-200 border-base-300 group container isolate col-span-full mx-auto flex flex-col gap-2 overflow-hidden rounded-2xl border p-2">
-                <div
-                     class="group-hover:border-primary/10 group-hover:bg-primary/2 border-base-300 flex flex-col gap-6 rounded-lg border p-6 md:flex-row md:gap-x-8 md:p-8">
-                    <div>
-                        <span
-                              class="text-base-content group-hover:text-primary text-xl/10 font-medium tracking-widest md:text-2xl/10">
-                            Handcrafted
-                            Blade Components </span>
-                        <p class="text-base-content/50 max-w-2xl text-sm/7">A collection of custom-made, highly flexible
-                            blade components that fit any use case. </p>
-                    </div>
-                </div>
-                <div class="flex-1"></div>
-                <div
-                     class="h-112 after:inset-ring after:inset-ring-base-300 relative overflow-hidden rounded-lg bg-gray-950/[2.5%] bg-[image:radial-gradient(var(--pattern-fg)_1px,_transparent_0)] bg-[size:10px_10px] bg-fixed p-4 [--pattern-fg:var(--color-base-300)] after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-                    <div class="container relative flex size-full items-center justify-center">
-                        <div
-                             class="no-scrollbar gap-(--gap) z-10 -my-1 flex h-full w-full snap-x snap-mandatory overflow-hidden rounded-lg py-1">
-                            <img class="h-full w-full transform transition duration-200 hover:scale-105"
-                                 src="{{ asset('exemple-4.png') }}"
-                                 alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <x-feature-card title="Handcrafted Blade Components"
+                            description="A collection of custom-made, highly flexible blade components that fit any use case."
+                            image="images/exemple-4.png"
+                            columnSpan="col-span-full md:col-span-18" />
         </div>
     </div>
 </div>

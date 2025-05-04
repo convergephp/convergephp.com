@@ -5,7 +5,7 @@
         <header class="w-full overflow-hidden rounded-lg text-center">
             <div data-aos="fade-up"
                  data-aos-duration="500"
-                 class="mx-auto grid max-w-2xl items-start justify-center gap-5">
+                 class="mx-auto grid max-w-5xl items-start justify-center gap-5">
                 <div class="text-3xl/[1.07] font-bold tracking-tight md:text-4xl/[1.07]">
                     <span
                           class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text tracking-widest text-transparent">
