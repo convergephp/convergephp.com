@@ -27,8 +27,10 @@ class LicenseServiceProvider extends ServiceProvider
 
             $licenseKey = $request->getPassword();
             $username = $request->getUser();
+            
             info("license key is : $licenseKey");
             info("email is : $username");
+
             $license = License::query()
                 ->where('key', $licenseKey)
                 ->first();
