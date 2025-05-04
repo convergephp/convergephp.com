@@ -57,6 +57,10 @@
 
         @vite(['resources/css/app.css'])
 
+        @if (request()->routeIs('home'))
+            <script src="{{ asset('js/resizer.js') }}"></script>
+        @endif
+
         <!-- Paddle JS with defer attribute -->
         @paddleJS()
     </head>
