@@ -8,10 +8,8 @@
 
     toggleZoom() {
         if (!this.zoomed) {
-            // Stocker la position de scroll actuelle
             this.scrollPosition = window.scrollY;
 
-            // Méthode améliorée pour empêcher le scroll et éviter le décalage
             const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
             document.body.style.overflow = 'hidden';
             document.body.style.position = 'fixed';
@@ -21,14 +19,12 @@
 
             this.zoomed = true;
         } else {
-            // Restaurer les styles du body
             document.body.style.overflow = '';
             document.body.style.position = '';
             document.body.style.top = '';
             document.body.style.width = '';
             document.body.style.paddingRight = '';
 
-            // Revenir à la position de scroll précédente
             window.scrollTo(0, this.scrollPosition);
 
             this.zoomed = false;
@@ -48,13 +44,14 @@
          class="fixed inset-0 z-[9999] bg-black/50 backdrop-blur-sm"
          x-on:click="toggleZoom"></div>
 
-    {{-- Image originale --}}
+    {{-- Original image --}}
     <img x-on:click="toggleZoom"
-         class="h-full w-full cursor-zoom-in object-cover"
+         class="h-full w-full"
          src="{{ $image }}"
-         alt="{{ $alt }}" />
+         alt="{{ $alt }}"
+         style="object-position: center;" />
 
-    {{-- Image zoomée --}}
+    {{-- Zoomed image --}}
     <div x-show="zoomed"
          x-on:keydown.escape.window="toggleZoom()"
          x-transition:enter="transition ease-out duration-300"

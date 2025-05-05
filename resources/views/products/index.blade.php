@@ -50,7 +50,7 @@
                             </div>
                         </div>
                         <div>
-                            <img src="{{ asset('exemple-4.png') }}"
+                            <img src="{{ asset('images/exemple-4.png') }}"
                                  alt="Learn Statamic with Jack thumbnail"
                                  class="absolute right-0 top-0 hidden h-full translate-x-1/2 transition duration-200 group-hover:scale-105 md:inline-block">
                         </div>

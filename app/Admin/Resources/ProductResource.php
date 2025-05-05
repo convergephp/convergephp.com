@@ -2,6 +2,7 @@
 
 namespace App\Admin\Resources;
 
+use App\Admin\Resources\ProductManagerResource\RelationManagers\ThumbnailsRelationManager;
 use App\Admin\Resources\ProductResource\Pages;
 use App\Admin\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
@@ -77,7 +78,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ThumbnailsRelationManager::class,
         ];
     }
 
