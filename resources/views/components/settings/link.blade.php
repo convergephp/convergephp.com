@@ -7,7 +7,7 @@
 
 <a {{ $attributes->whereStartsWith('wire:navigate') }}
    @class([
-       'bg-transparent py-3 border-l border-transparent px-2  bg-transparent text-start flex items-center gap-2  ',
+       'bg-transparent py-3 border-l border-transparent px-2 hover:text-primary  bg-transparent text-start flex items-center gap-2  ',
        'text-primary' => $active,
    ])
    href="{{ $href }}">

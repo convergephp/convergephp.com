@@ -118,6 +118,11 @@
                                                  label="Password"
                                                  icon="iconsax-bul-password-check"
                                                  wire:navigate.hover />
+
+                                <x-settings.link href="{{ route('filament.admin.pages.dashboard') }}"
+                                                 :active="request()->RouteIs('filament.admin.pages.dashboard')"
+                                                 label="Admin"
+                                                 icon="iconsax-bul-user-octagon" />
                             </div>
                         </div>
                     </ul>

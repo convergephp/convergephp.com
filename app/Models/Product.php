@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Spatie\MediaLibrary\HasMedia;
+use Spatie\MediaLibrary\InteractsWithMedia;
 
-class Product extends Model
+class Product extends Model implements HasMedia
 {
     /** @use HasFactory<\Database\Factories\ProductFactory> */
     use HasFactory;
+    use InteractsWithMedia;
 
     protected $guarded = ['id'];
 
@@ -42,5 +45,14 @@ class Product extends Model
     public function licenses()
     {
         return $this->hasMany(License::class);
+    }
+
+        /**
+     * Define media collections for the thumbnail
+     */
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('product-image')
+            ->useDisk('public');
     }
 }
