@@ -5,7 +5,7 @@
                 {{ $product->name }}
             </h2>
             <p class="text-base-content mb-5 font-light sm:text-xl">
-                {{ $product->description }}
+                {!! str($product->description)->markdown()->sanitizeHtml() !!}
             </p>
         </div>
 
@@ -34,16 +34,15 @@
                              x-transition:enter-start="opacity-0 transform translate-y-4"
                              x-transition:enter-end="opacity-100 transform translate-y-0"
                              class="bg-base-100 rounded-box mb-4 p-2 md:p-4">
-                            <div class="bg-base-300 overflow-hidden rounded-xl shadow-sm">
+                            <div class="overflow-hidden rounded-xl shadow-sm">
                                 <div class="flex h-full flex-col md:flex-row">
                                     <!-- Image Section - Plus grande et prédominante -->
                                     <div class="relative h-64 w-full overflow-hidden md:h-[500px] md:w-2/3">
                                         @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                            <x-image loading="lazy"
-                                                     class="h-full w-full object-cover object-center transition-transform duration-300 hover:scale-105"
-                                                     :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
-                                                     :alt="$thumbnail->title">
-                                            </x-image>
+                                            <x-image :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
+                                                     :alt="$thumbnail->title"
+                                                     loading="lazy"
+                                                     fit="contain" />
                                         @else
                                             <div class="bg-base-200 flex h-full w-full items-center justify-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg"

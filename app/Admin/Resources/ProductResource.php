@@ -2,10 +2,12 @@
 
 namespace App\Admin\Resources;
 
+use App\Admin\Resources\ProductManagerResource\RelationManagers\ThumbnailsRelationManager;
 use App\Admin\Resources\ProductResource\Pages;
 use App\Admin\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -39,6 +41,9 @@ class ProductResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                     TagsInput::make('features'),
+
+                SpatieMediaLibraryFileUpload::make('image')
+                    ->collection('product-image'),
             ]);
     }
 
@@ -77,7 +82,7 @@ class ProductResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            ThumbnailsRelationManager::class,
         ];
     }
 
