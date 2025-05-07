@@ -76,6 +76,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function isAdmin() : bool
     {
-        return $this->isAdmin ;
+        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->isAdmin ;
     }
 }
