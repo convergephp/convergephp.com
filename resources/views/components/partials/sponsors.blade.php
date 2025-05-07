@@ -197,11 +197,12 @@
                 </svg> <span class="font-bold">Fluxtor</span>
             </a> --}}
         </div>
+
         <div class="flex justify-center">
-            <a href="https://github.com/convergephp/converge?sponsor=1"
+            <a href="/docs"
                target="_blank"
-               class="btn bg-primary text-white">
-                Your logo here? Sponsor This Project
+               class="border-secondary/30 bg-secondary/10 hover:bg-secondary/20 text-secondary group inline-flex items-center justify-center gap-2 rounded-md border px-6 py-3 font-medium transition-all">
+                <span>Your logo here? Sponsor This Project</span>
                 <span class="hover:scale-105">💖</span>
             </a>
         </div>

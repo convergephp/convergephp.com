@@ -1,5 +1,4 @@
-<!-- Professional Features Section with minimal animations -->
-<div class="relative w-full overflow-hidden py-24">
+<div class="relative w-full overflow-hidden py-10 md:py-14 lg:py-24">
     <!-- Subtle background animation -->
     <div class="pointer-events-none absolute left-0 top-0 h-full w-full overflow-hidden opacity-10">
         <div class="bg-primary animate-float-subtle absolute right-1/4 top-1/3 h-96 w-96 rounded-full blur-3xl"></div>
@@ -26,61 +25,12 @@
             </p>
         </div>
 
-        <!-- Featured solution - Hero feature -->
-        <div class="bg-base-200 mb-20 overflow-hidden rounded-2xl shadow-md"
-             data-aos="fade-up"
-             data-aos-duration="800">
-
-            <div class="bg-base-100 grid grid-cols-1 gap-0 lg:grid-cols-2">
-                <!-- Text content -->
-                <div class="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
-                    <div class="mb-6">
-                        <div class="bg-primary/10 mb-6 flex h-16 w-16 items-center justify-center rounded-xl">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="text-primary h-8 w-8"
-                                 fill="none"
-                                 viewBox="0 0 24 24"
-                                 stroke="currentColor">
-                                <path stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                      stroke-width="2"
-                                      d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                        </div>
-                        <h3 class="mb-4 text-3xl font-bold">Blade Components</h3>
-                        <p class="text-base-content/70 mb-8 text-lg">
-                            A collection of handcrafted blade components designed for maximum flexibility.
-                            Each component is optimized for performance and maintainability while
-                            providing a beautiful user experience.
-                        </p>
-                        <button class="btn btn-primary gap-2">
-                            Explore Components
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-5 w-5"
-                                 viewBox="0 0 20 20"
-                                 fill="currentColor">
-                                <path fill-rule="evenodd"
-                                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                      clip-rule="evenodd" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Image showcase -->
-                <div class="h-full">
-                    <div class="flex h-full items-center justify-center p-8">
-                        <div class="relative aspect-video w-full max-w-lg overflow-hidden rounded-xl shadow-lg">
-                            <img src="{{ asset('images/exemple-2.png') }}"
-                                 alt="Blade Components"
-                                 class="h-full w-full object-cover" />
-                            <div class="from-primary/20 absolute inset-0 bg-gradient-to-tr to-transparent opacity-60">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <x-feature-card.image url="https://convergephp.com/docs/components/getting-started/installation"
+                              title="Blade components"
+                              description="A collection of handcrafted blade components designed for maximum flexibility. Each component is optimized for performance and maintainability while providing a beautiful user experience."
+                              buttonText="Explore Components"
+                              imagePath="images/exemple-4.png"
+                              imageAlt="Blade Components" />
 
         {{-- ****************** Core features grid ********************** --}}
         <div class="mb-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -164,7 +114,6 @@
                         solution the perfect choice for your projects.</p>
                 </div>
 
-                {{-- nnn --}}
                 <div class="mb-20 space-y-8">
                     {{-- Feature row 1 --}}
                     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2"
@@ -254,7 +203,7 @@
         </section>
 
         <!-- CTA Section -->
-        <div class="bg-base-100 rounded-2xl p-12 text-center"
+        <div class="bg-base-100 rounded-2xl py-12 text-center"
              data-aos="fade-up"
              data-aos-duration="1000">
             <h3 class="mb-6 text-3xl font-bold">Ready to Transform Your Documentation?</h3>
@@ -264,7 +213,19 @@
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="/docs"
-                   class="btn btn-outline btn-primary btn-lg">View Documentation</a>
+                   target="_blank"
+                   class="border-primary/30 bg-primary/10 hover:bg-primary/20 text-primary group inline-flex items-center justify-center rounded-md border px-6 py-3 font-medium transition-all">
+                    <svg class="mr-2 h-5 w-5"
+                         viewBox="0 0 24 24"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                    </svg>
+                    <span>View Documentation</span>
+                </a>
             </div>
         </div>
     </div>
@@ -276,7 +237,7 @@
         0%,
         100% {
             transform: translateY(0) translateX(0);
-            opacity: 0.5;
+            opacity: 0.1;
         }
 
         50% {
@@ -286,6 +247,6 @@
     }
 
     .animate-float-subtle {
-        animation: float-subtle 15s ease-in-out infinite;
+        animation: float-subtle 4s ease-in-out infinite;
     }
 </style>
