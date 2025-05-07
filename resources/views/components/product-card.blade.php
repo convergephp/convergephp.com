@@ -2,7 +2,7 @@
 @props(['product', 'featured' => true, 'highlight' => false, 'showFeatures' => true, 'maxFeatures' => 5])
 
 <div
-     class="{{ $highlight ? 'border-1 border-base-300' : 'border border-base-300 shadow-md' }} group relative my-8 h-[500px] overflow-hidden rounded-2xl transition-all duration-300">
+     class="{{ $highlight ? 'border-1 border-base-300' : 'border border-base-300 shadow-md' }} group relative my-8 min-h-[500px] overflow-hidden rounded-2xl transition-all duration-300">
 
     {{-- Background pattern --}}
     <div

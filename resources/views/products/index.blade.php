@@ -1,14 +1,14 @@
 <x-layout>
-    <div class="mx-auto max-w-7xl px-2 py-14">
+    <div class="mx-auto max-w-7xl px-2 py-2 md:py-6">
         {{-- HEADER SECTION --}}
         <section class="mb-12">
             <div class="w-full overflow-hidden">
                 <div data-aos="fade-up"
                      data-aos-duration="1000"
-                     class="grid max-w-5xl items-start justify-between gap-5 px-2 py-12">
+                     class="flex max-w-5xl flex-col items-center justify-between gap-5 px-2 py-12 md:items-start">
                     <div class="text-3xl/[1.07] font-bold tracking-tight md:text-4xl/[1.07]">
                         <span
-                              class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text tracking-widest text-transparent">
+                              class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text text-center leading-snug text-transparent">
                             Converge Toolkits <br> Elevate Your Documentation Design
                         </span>
                     </div>
