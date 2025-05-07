@@ -1,5 +1,5 @@
 <x-layout.index>
-    <div class="mx-auto max-w-7xl px-3 pt-6">
+    <div class="mx-auto max-w-7xl px-3 py-6 md:py-20">
 
         {{-- Header --}}
         <header class="w-full overflow-hidden rounded-lg text-center">
@@ -119,10 +119,12 @@
                                                  icon="iconsax-bul-password-check"
                                                  wire:navigate.hover />
 
-                                <x-settings.link href="{{ route('filament.admin.pages.dashboard') }}"
-                                                 :active="request()->RouteIs('filament.admin.pages.dashboard')"
-                                                 label="Admin"
-                                                 icon="iconsax-bul-user-octagon" />
+                                @if (Auth::check() && Auth::user()->isAdmin())
+                                    <x-settings.link href="{{ route('filament.admin.pages.dashboard') }}"
+                                                     :active="request()->RouteIs('filament.admin.pages.dashboard')"
+                                                     label="Admin"
+                                                     icon="iconsax-bul-user-octagon" />
+                                @endif
                             </div>
                         </div>
                     </ul>

@@ -1,10 +1,9 @@
 @props(['licenses'])
 
-
-<div class="w-full overflow-auto rounded-lg">
+<div class="mt-8 w-full overflow-auto">
     {{-- Desktop view --}}
     <table class="text-base-content border-base-300 hidden w-full rounded-lg text-left text-sm md:table rtl:text-right">
-        <thead class="bg-base-300 text-base-content text-xs uppercase">
+        <thead class="bg-base-200 text-base-content text-xs uppercase">
             <tr>
                 <th scope="col"
                     class="px-6 py-3">

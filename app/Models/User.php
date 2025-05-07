@@ -49,12 +49,13 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'isAdmin' => 'bool',
         ];
     }
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']);
+        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->isAdmin() ;
     }
 
 
@@ -71,5 +72,10 @@ class User extends Authenticatable implements FilamentUser
             ->explode(' ')
             ->map(fn(string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
+    }
+
+    public function isAdmin() : bool
+    {
+        return $this->isAdmin ;
     }
 }

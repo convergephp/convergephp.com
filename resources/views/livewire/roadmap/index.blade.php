@@ -26,10 +26,12 @@
         ['label' => 'Additional community-requested features', 'status' => 'coming'],
     ];
 
-
     $convergeV2x = [
         ['label' => 'Single Page Application (SPA) mode', 'status' => 'coming'],
-        ['label' => 'RBAC support for protecting private sections with roles (for paid learning platforms)', 'status' => 'coming'],
+        [
+            'label' => 'RBAC support for protecting private sections with roles (for paid learning platforms)',
+            'status' => 'coming',
+        ],
         ['label' => 'Lazy-load sub-items for better performance', 'status' => 'coming'],
         ['label' => 'Add sidebar items dynamically with a sorting mechanism', 'status' => 'coming'],
         ['label' => 'API Reference integration', 'status' => 'coming'],
@@ -55,7 +57,7 @@
     ];
 @endphp
 
-<div class="mx-auto md:max-w-3xl px-3 py-6 md:px-4 md:py-10">
+<div class="mx-auto px-3 py-6 md:max-w-3xl md:px-4 md:py-16">
     <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-12">
         <h2 class="text-base-content mb-4 text-4xl font-extrabold tracking-widest">
             Converge Project Roadmap
@@ -65,41 +67,35 @@
         </p>
     </div>
 
-    <h3 class="font-bold text-primary"># The Documentation Framework</h3>
+    <h3 class="text-primary font-bold"># The Documentation Framework</h3>
 
-    <x-roadmap.card 
-                title="Converge v1.x" 
-                :items="$convergeV1x" 
-                color="primary">
-    </x-roadmap.card>
-    
-    <x-roadmap.card 
-                title="Converge v2.x" 
-                :items="$convergeV2x">
-    </x-roadmap.card>
-    
-    <h3 class="font-bold text-primary"># Products & Plugins</h3>
-
-    <x-roadmap.card 
-                title="Web editor" 
-                :items="$webEditor">
+    <x-roadmap.card title="Converge v1.x"
+                    :items="$convergeV1x"
+                    color="primary">
     </x-roadmap.card>
 
-    <x-roadmap.card 
-                title="search engine integrations" 
-                :items="$searchEnginesIntegrations">
-    </x-roadmap.card>
-  
-    <x-roadmap.card 
-                title="themes and layouts" 
-                :items="$themesAndLayouts">
+    <x-roadmap.card title="Converge v2.x"
+                    :items="$convergeV2x">
     </x-roadmap.card>
 
-    <h3 class="font-bold text-primary"># The Blogging Framework</h3>
+    <h3 class="text-primary font-bold"># Products & Plugins</h3>
 
-    <x-roadmap.card 
-                title="Converge blogging v1.x" 
-                :items="$bloggingV1x">
+    <x-roadmap.card title="Web editor"
+                    :items="$webEditor">
+    </x-roadmap.card>
+
+    <x-roadmap.card title="search engine integrations"
+                    :items="$searchEnginesIntegrations">
+    </x-roadmap.card>
+
+    <x-roadmap.card title="themes and layouts"
+                    :items="$themesAndLayouts">
+    </x-roadmap.card>
+
+    <h3 class="text-primary font-bold"># The Blogging Framework</h3>
+
+    <x-roadmap.card title="Converge blogging v1.x"
+                    :items="$bloggingV1x">
     </x-roadmap.card>
 
 </div>

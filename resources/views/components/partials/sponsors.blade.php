@@ -199,7 +199,7 @@
         </div>
 
         <div class="flex justify-center">
-            <a href="/docs"
+            <a href="https://github.com/convergephp/converge?sponsor=1"
                target="_blank"
                class="border-secondary/30 bg-secondary/10 hover:bg-secondary/20 text-secondary group inline-flex items-center justify-center gap-2 rounded-md border px-6 py-3 font-medium transition-all">
                 <span>Your logo here? Sponsor This Project</span>

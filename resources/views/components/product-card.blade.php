@@ -2,7 +2,7 @@
 @props(['product', 'featured' => true, 'highlight' => false, 'showFeatures' => true, 'maxFeatures' => 5])
 
 <div
-     class="{{ $highlight ? 'border-1 border-base-300' : 'border border-base-300 shadow-md' }} group relative my-8 overflow-hidden rounded-2xl transition-all duration-300">
+     class="{{ $highlight ? 'border-1 border-base-300' : 'border border-base-300 shadow-md' }} group relative my-8 h-[500px] overflow-hidden rounded-2xl transition-all duration-300">
 
     {{-- Background pattern --}}
     <div
@@ -17,7 +17,7 @@
         </div>
     @endif
 
-    <div class="flex flex-col lg:min-h-[380px] lg:flex-row">
+    <div class="flex flex-col lg:min-h-[500px] lg:flex-row">
         {{-- IMAGE SECTION --}}
         <div class="bg-base-200 {{ $featured ? 'h-80 lg:h-auto' : 'h-64 lg:h-auto' }} relative overflow-hidden lg:w-2/5">
             @if ($product->getMedia('product-image')->isNotEmpty())

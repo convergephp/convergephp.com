@@ -7,7 +7,7 @@
 </x-slot:sub-title>
 
 <div>
-    <div class="mt-8 rounded-lg p-6 shadow">
+    <div class="bg-base-200 mt-8 rounded-lg p-6 shadow">
         <h4 class="text-base-content mb-4 text-xl font-semibold">Manage Your Billing</h4>
         <p class="text-base-content/50 mb-6">
             You're about to be redirected to the Paddle customer portal session, where you can manage your payment's
