@@ -26,6 +26,7 @@ class User extends Authenticatable implements FilamentUser
         'name',
         'email',
         'password',
+        'is_admin'
     ];
 
 
@@ -55,7 +56,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->isAdmin() ;
+        return $this->isAdmin() ;
     }
 
 
@@ -76,6 +77,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function isAdmin() : bool
     {
-        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->isAdmin ;
+        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->is_admin ;
     }
 }

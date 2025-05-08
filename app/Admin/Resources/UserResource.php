@@ -10,6 +10,7 @@ use Filament\Forms\Components\Radio;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -18,7 +19,7 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'iconsax-bul-people';
 
     public static function form(Form $form): Form
     {
@@ -36,10 +37,12 @@ class UserResource extends Resource
                     ->password()
                     ->required()
                     ->maxLength(255),
-                Radio::make('isAdmin')
-                ->label('Is Admin?')
-                ->default(false)
+
+                Radio::make('is_admin')
+                ->label('Is Admin ?')
+                ->inline()
                 ->boolean()
+                ->columnSpanFull()
             ]);
     }
 
@@ -62,6 +65,9 @@ class UserResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+                IconColumn::make('is_admin')
+                    ->label('Admin')
+                    ->boolean()
             ])
             ->filters([
                 //
