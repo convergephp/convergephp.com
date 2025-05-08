@@ -50,7 +50,7 @@ class User extends Authenticatable implements FilamentUser
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'isAdmin' => 'bool',
+            'is_admin' => 'bool',
         ];
     }
 
@@ -77,6 +77,6 @@ class User extends Authenticatable implements FilamentUser
 
     public function isAdmin() : bool
     {
-        return in_array($this->email, ['med@convergephp.com', 'ayoub@convergephp.com']) || $this->is_admin ;
+        return $this->is_admin ;
     }
 }
