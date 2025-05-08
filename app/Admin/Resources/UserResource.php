@@ -38,7 +38,7 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
 
-                Radio::make('is_admin')
+                Radio::make('isAdmin')
                 ->label('Is Admin ?')
                 ->inline()
                 ->boolean()
@@ -65,7 +65,7 @@ class UserResource extends Resource
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                IconColumn::make('is_admin')
+                IconColumn::make('isAdmin')
                     ->label('Admin')
                     ->boolean()
             ])
