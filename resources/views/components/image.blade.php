@@ -130,18 +130,18 @@
          x-transition:leave-start="opacity-100"
          x-transition:leave-end="opacity-0"
          class="fixed inset-0 z-40 bg-black/80 backdrop-blur-sm"
-         x-on:click="toggleZoom"
+         x-on:click="toggleZoom--"
          style="display: none;"
          aria-hidden="true"></div>
 
     <!-- Image container -->
     <div
          class="bg-base-100/50 border-base-300 overflow-hidden border shadow-sm transition-all duration-200 hover:shadow-md">
-        <div class="relative flex h-full w-full flex-col justify-start overflow-hidden">
-            <img x-on:click="toggleZoom"
+        <div class="relative flex min-h-full w-full flex-col justify-start overflow-hidden">
+            <img x-on:click="toggleZoom--"
                  :src="currentSrc"
                  :alt="imgAlt"
-                 class="h-full w-full flex-grow cursor-zoom-in object-cover transition-transform duration-200" />
+                 class="h-full flex-grow cursor-zoom-in object-cover transition-transform duration-200" />
         </div>
     </div>
 

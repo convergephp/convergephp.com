@@ -1,4 +1,4 @@
-<section class="mx-auto max-w-7xl px-2">
+<section class="mx-auto max-w-7xl px-2 py-4 md:py-10">
     <div class="mx-auto w-full py-8 text-center lg:py-16">
 
         {{-- TITLE --}}

@@ -10,7 +10,7 @@
         </div>
 
         {{-- Tabs: Display thumbnails --}}
-        <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-5xl">
             <div class="flex flex-col"
                  x-data="{ activeTab: '{{ $product->thumbnails->first()->name ?? 'default' }}' }">
                 <div class="scrollbar-hidden mb-4 w-full overflow-x-auto">

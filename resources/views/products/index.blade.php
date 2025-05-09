@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="mx-auto max-w-7xl px-2 py-2 md:py-6">
+    <div class="mx-auto max-w-5xl px-2 py-2 md:py-6">
         {{-- HEADER SECTION --}}
         <section class="mb-12">
             <div class="w-full overflow-hidden">

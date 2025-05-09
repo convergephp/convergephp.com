@@ -4,7 +4,7 @@
         <div class="bg-primary animate-float-subtle absolute right-1/4 top-1/3 h-96 w-96 rounded-full blur-3xl"></div>
     </div>
 
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="container mx-auto max-w-5xl px-4 sm:px-6">
         <!-- Section Titles -->
         {{-- ****************** Section Titles ********************** --}}
         <div class="mb-20 text-center"
@@ -33,7 +33,7 @@
                               imageAlt="Blade Components" />
 
         {{-- ****************** Core features grid ********************** --}}
-        <div class="mb-20 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+        <div class="mb-20 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
             {{-- Feature 1 - Customizable Themes --}}
             <x-feature-card title="Customizable Themes"
                             description="Transform your application's appearance with powerful theming options that adapt to your brand identity with minimal effort."
@@ -114,9 +114,9 @@
                         solution the perfect choice for your projects.</p>
                 </div>
 
-                <div class="mb-20 space-y-8">
+                <div class="mb-20 space-y-4">
                     {{-- Feature row 1 --}}
-                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+                    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2"
                          data-aos="fade-up"
                          data-aos-duration="800">
 
@@ -158,7 +158,7 @@
                     </div>
 
                     {{-- Feature row 2 --}}
-                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2"
+                    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2"
                          data-aos="fade-up"
                          data-aos-duration="800"
                          data-aos-delay="100">

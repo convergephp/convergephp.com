@@ -1,9 +1,16 @@
-<x-banner />
-<header class="border-base-300/30 bg-base-200 sticky inset-x-0 top-0 z-50 border-b"
-        x-data="{ mobileMenuOpen: false, toolkitOpen: false, solutionsOpen: false }">
+{{-- <x-banner class="sticky top-0 flex w-full bg-red-500" /> --}}
+<header class="sticky inset-x-0 top-0 z-50 transition-all duration-300"
+        x-data="{
+            mobileMenuOpen: false,
+            toolkitOpen: false,
+            solutionsOpen: false,
+            scrolled: false
+        }">
     <div class="relative flex justify-center">
-        <div class="supports-backdrop-blur:bg-black/10 relative w-full max-w-7xl px-3">
-            <nav class="flex min-h-[5rem] items-center justify-between"
+        <div x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 })"
+             :class="{ 'bg-transparent': !scrolled, 'backdrop-blur-md bg-base-100/70 my-2 rounded-3xl shadow-md': scrolled }"
+             class="relative mx-2 w-full max-w-7xl px-3 md:mx-0">
+            <nav class="flex items-center justify-between md:min-h-[5rem]"
                  aria-label="Global">
                 {{-- LOGO --}}
                 <a href="/"
@@ -16,40 +23,10 @@
                      class="text-base-content hover:text-base-content/80 hidden min-h-[5rem] flex-1 items-center justify-start px-4 text-sm font-medium transition md:flex">
                     <x-navbar.link :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
-                    {{-- <x-navbar.dropdown-menu
-                                            label="ToolKit">
-                        <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link :url="route('products.show', ['product' => 'components'])"
-                                                title="Blade Components"
-                                                description="Visite our beautiful blade components">
-                            </x-navbar.card-link>
-                            <x-navbar.card-link :url="route('products.show', ['product' => 'layouts-themes'])"
-                                                title="Layouts"
-                                                description="Create a powerfull layouts">
-                            </x-navbar.card-link>
-                        </div>
-                    </x-navbar.dropdown-menu> --}}
 
                     <x-navbar.link href="{{ route('products.index') }}"
                                    :active="request()->routeIs('products.index')"
-                                   wire:navigate.hover>toolkits</x-navbar.link>
-
-                    {{-- <x-navbar.dropdown-menu label="Solutions">
-                        <div class="grid grid-cols-2 gap-4">
-                            <x-navbar.card-link title="Documentation"
-                                                :active="request()->routeIs('solutions.documentation')"
-                                                :url="route('solutions.documentation')"
-                                                wire:navigate.hover
-                                                description="starts documentating your software right away ">
-                            </x-navbar.card-link>
-                            <x-navbar.card-link title="Blogging"
-                                                :active="request()->routeIs('solutions.bloggin')"
-                                                :url="route('solutions.blogging')"
-                                                wire:navigate.hover
-                                                description="Create a powerfull blog just in minutes">
-                            </x-navbar.card-link>
-                        </div>
-                    </x-navbar.dropdown-menu> --}}
+                                   wire:navigate.hover>Toolkits</x-navbar.link>
 
                     <x-navbar.link href="{{ route('roadmap') }}"
                                    :active="request()->routeIs('roadmap')"
@@ -66,14 +43,14 @@
                               action="{{ route('logout') }}">
                             @csrf
                             <button type="submit"
-                                    class="btn btn-sm btn-square bg-base-300 rounded-sm border border-gray-400/20 md:px-8">
+                                    class="btn btn-sm btn-square bg-base-300/80 rounded-sm border border-gray-400/20 md:px-8">
                                 <span class="hidden md:block">{{ __('Logout') }}</span>
                                 <x-iconsax-bul-logout class="w-5 md:hidden" />
                             </button>
                         </form>
                         <a href="{{ route('boards.licenses') }}"
                            wire:navigate.hover
-                           class="btn btn-sm btn-square bg-base-300 rounded-sm border border-gray-400/20 md:max-w-fit md:px-8">
+                           class="btn btn-sm btn-square bg-base-300/80 rounded-sm border border-gray-400/20 md:max-w-fit md:px-8">
                             <span class="hidden md:block">Board</span>
                             <x-iconsax-bul-setting-2 class="w-5 md:hidden" />
                         </a>
@@ -82,7 +59,7 @@
                     @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
-                           class="btn btn-sm btn-square md:btn-link bg-base-300 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-8">
+                           class="btn btn-sm btn-square md:btn-link bg-base-300/80 btn-ghost rounded-sm border border-gray-400/20 px-0 no-underline md:!px-8">
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
@@ -91,10 +68,10 @@
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
                         <button x-on:click="mobileMenuOpen = !mobileMenuOpen"
-                                class="btn btn-square btn-sm bg-base-300 rounded-sm"
+                                class="btn btn-square btn-sm bg-base-300/80 rounded-sm"
                                 aria-expanded="false"
                                 x-bind:aria-expanded="mobileMenuOpen.toString()">
-                            <span class="sr-only">Ouvrir le menu principal</span>
+                            <span class="sr-only">Open main menu</span>
                             {{-- Icon when menu is closed --}}
                             <svg x-show="!mobileMenuOpen"
                                  stroke="currentColor"
@@ -133,7 +110,7 @@
                  x-transition:leave="transition ease-in duration-150"
                  x-transition:leave-start="opacity-100 transform translate-y-0"
                  x-transition:leave-end="opacity-0 transform -translate-y-2"
-                 class="bg-base-200 absolute left-0 right-0 top-full mt-0 h-screen shadow-lg md:hidden"
+                 class="bg-base-200 absolute left-0 right-0 top-full mt-2 h-screen rounded-3xl shadow-lg md:hidden"
                  style="display: none;">
                 <div class="space-y-1 pb-3 pt-2">
                     {{-- Documentation Link --}}
@@ -145,7 +122,7 @@
                     <a href="{{ route('products.index') }}"
                        wire:navigate.hover
                        class="{{ request()->routeIs('products.index') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
-                        toolkits
+                        Toolkits
                     </a>
 
                     <a href="{{ route('roadmap') }}"
@@ -153,48 +130,6 @@
                        class="{{ request()->routeIs('roadmap') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Roadmap
                     </a>
-
-                    {{-- Solutions Dropdown --}}
-                    {{-- <div>
-                        <button x-on:click="solutionsOpen = !solutionsOpen; toolkitOpen = false"
-                                class="text-base-content hover:text-base-content/80 hover:bg-base-200 flex w-full items-center justify-between px-4 py-3 text-base font-medium focus:outline-none">
-                            <span>Solutions</span>
-                            <svg x-bind:class="solutionsOpen ? 'transform rotate-180' : ''"
-                                 class="h-5 w-5 transition-transform duration-200"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 viewBox="0 0 20 20"
-                                 fill="currentColor">
-                                <path fill-rule="evenodd"
-                                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                      clip-rule="evenodd" />
-                            </svg>
-                        </button>
-
-                        <div x-show="solutionsOpen"
-                             x-transition:enter="transition ease-out duration-200"
-                             x-transition:enter-start="opacity-0"
-                             x-transition:enter-end="opacity-100"
-                             x-transition:leave="transition ease-in duration-150"
-                             x-transition:leave-start="opacity-100"
-                             x-transition:leave-end="opacity-0"
-                             class="bg-base-200 mx-2 mb-2 rounded-md px-4 py-2"
-                             style="display: none;">
-                            <a href="{{ route('solutions.documentation') }}"
-                               wire:navigate.hover
-                               class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
-                                <div class="font-semibold">Documentation</div>
-                                <div class="text-base-content/50 mt-1 text-sm">Visite our beautiful blade components
-                                </div>
-                            </a>
-                            <a href="{{ route('solutions.blogging') }}"
-                               wire:navigate.hover
-                               class="text-base-content hover:text-base-content/80 hover:bg-base-300 block rounded-md px-3 py-3 text-base font-medium">
-                                <div class="font-semibold">Blogging</div>
-                                <div class="text-base-content/50 mt-1 text-sm">Create a powerfull blog just in minutes
-                                </div>
-                            </a>
-                        </div>
-                    </div> --}}
                 </div>
             </div>
         </div>
