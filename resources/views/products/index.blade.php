@@ -1,24 +1,59 @@
 <x-layout>
     <div class="mx-auto max-w-5xl px-2 py-2 md:py-6">
-        {{-- HEADER SECTION --}}
-        <section class="mb-12">
-            <div class="w-full overflow-hidden">
+
+        <div class="relative mx-auto max-w-5xl py-4 md:py-10">
+            <!-- Creative title layout with gradient text -->
+            <div class="mb-10 flex flex-col items-center text-center">
+                <div data-aos="zoom-in"
+                     data-aos-easing="ease"
+                     class="mb-3 inline-block -rotate-1 transform">
+                    <span
+                          class="border-primary/50 from-primary to-success rounded-full border bg-transparent bg-gradient-to-r bg-clip-text px-3 py-1 text-sm font-bold uppercase tracking-wider text-transparent">Documentation
+                        Reimagined</span>
+                </div>
+
+                <h1 data-aos="fade-up"
+                    data-aos-delay="400"
+                    data-aos-easing="ease"
+                    class="relative z-10 mb-2 text-4xl font-extrabold tracking-tight md:text-6xl">
+                    <span
+                          class="from-primary leading-20 to-success inline-block transform bg-gradient-to-r bg-clip-text text-transparent transition-transform duration-300 hover:scale-105">
+                        Converge Toolkits
+                    </span>
+                </h1>
+
                 <div data-aos="fade-up"
-                     data-aos-duration="1000"
-                     class="flex max-w-5xl flex-col items-center justify-between gap-5 px-2 py-12 md:items-start">
-                    <div class="text-3xl/[1.07] font-bold tracking-tight md:text-4xl/[1.07]">
-                        <span
-                              class="from-base-content bg-gradient-to-br to-gray-500 bg-clip-text text-center leading-snug text-transparent">
-                            Converge Toolkits <br> Elevate Your Documentation Design
-                        </span>
-                    </div>
-                    <div class="text-base-content/50 text-lg tracking-wide">
-                        Enhance your Laravel documentation with premium components, layouts, and themes—crafted for
-                        developers who want a beautifully designed experience.
-                    </div>
+                     data-aos-delay="400"
+                     data-aos-easing="ease"
+                     class="mt-2 flex items-center justify-center">
+                    <div class="bg-base-content/60 h-px w-12 opacity-50"></div>
+                    <p class="text-base-content/60 mx-4 text-lg font-medium md:text-xl">Elevate Your Documentation
+                        Design
+                    </p>
+                    <div class="bg-base-content/60 h-px w-12 opacity-50"></div>
                 </div>
             </div>
-        </section>
+
+            <!-- Subtitle with animated highlight -->
+            <p data-aos="fade-up"
+               data-aos-delay="400"
+               data-aos-easing="ease"
+               class="text-base-content/60 relative mx-auto max-w-2xl text-center text-lg">
+                Enhance your Laravel documentation with
+                <span class="relative inline-block px-1">
+                    <span class="relative z-10">premium components</span>
+                    <span
+                          class="bg-primary/50 absolute bottom-0 left-0 h-3 w-full skew-x-12 transform opacity-30"></span>
+                </span>,
+                layouts, and themes—crafted for developers who want a
+                <span class="relative inline-block px-1">
+                    <span class="relative z-10">beautifully designed</span>
+                    <span
+                          class="bg-primary/50 absolute bottom-0 left-0 h-3 w-full -skew-x-12 transform opacity-30"></span>
+                </span>
+                experience.
+            </p>
+        </div>
 
         {{-- Product Cards --}}
         @foreach ($products as $index => $product)

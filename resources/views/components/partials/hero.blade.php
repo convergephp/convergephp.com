@@ -84,11 +84,9 @@
             <!-- CTA Buttons -->
             <div class="mb-16 flex justify-center gap-4">
                 <a href="/docs"
-                   class="bg-primary/50 hover:bg-primary-focus group relative inline-flex items-center justify-center overflow-hidden rounded-md px-8 py-3 font-medium transition-all">
-                    <span
-                          class="ease bg-base-200 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
-                    <span class="text-base-content relative font-medium">Get Started</span>
-                    <svg class="text-base-content ml-2 h-5 w-5"
+                   class="border-primary text-base-content hover:bg-primary/10 group inline-flex items-center rounded-lg border bg-transparent px-6 py-3 font-medium transition-colors duration-300">
+                    Get Started
+                    <svg class="text-base-content ml-2 h-5 w-5 transform duration-300 group-hover:translate-x-2"
                          viewBox="0 0 24 24"
                          fill="none">
                         <path d="M13 7l5 5m0 0l-5 5m5-5H6"
@@ -98,6 +96,13 @@
                               stroke-linejoin="round" />
                     </svg>
                 </a>
+
+                {{-- <a href="/docs"
+                   class="bg-primary/50 hover:bg-primary-focus group relative inline-flex items-center justify-center overflow-hidden rounded-md px-8 py-3 font-medium transition-all">
+                    <span
+                          class="ease bg-base-200 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
+                    <span class="text-base-content relative font-medium">Get Started</span>
+                </a> --}}
             </div>
         </div>
 
