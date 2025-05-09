@@ -39,7 +39,7 @@
                                     <!-- Image Section - Plus grande et prédominante -->
                                     <div class="relative h-64 w-full overflow-hidden md:h-[500px] md:w-2/3">
                                         @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                            <x-image :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
+                                            <x-image :src="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
                                                      :alt="$thumbnail->title"
                                                      loading="lazy"
                                                      fit="contain" />
