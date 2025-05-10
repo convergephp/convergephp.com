@@ -1,4 +1,3 @@
-{{-- <x-banner class="sticky top-0 flex w-full bg-red-500" /> --}}
 <header class="sticky inset-x-0 top-0 z-50 transition-all duration-300"
         x-data="{
             mobileMenuOpen: false,
@@ -6,6 +5,9 @@
             solutionsOpen: false,
             scrolled: false
         }">
+    <div x-show="!scrolled">
+        <x-banner class="bg-base-100 sticky top-0 flex w-full" />
+    </div>
     <div class="relative flex justify-center">
         <div x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 })"
              :class="{ 'bg-transparent': !scrolled, 'backdrop-blur-md bg-base-100/70 my-2 rounded-3xl shadow-md': scrolled }"

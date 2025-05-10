@@ -1,9 +1,11 @@
 <div x-data="{ open: true }"
      x-show="open"
-     {{ $attributes }}
+     {{ $attributes->merge([
+         'class' => 'border-base-300/10 bg-base-100 sticky start-0 top-0 z-50 flex w-full
+                        justify-between border-b p-2',
+     ]) }}
      id="bottom-top"
-     tabindex="-1"
-     class="border-base-300/10 bg-base-100 sticky start-0 top-0 z-50 flex w-full justify-between border-b p-4">
+     tabindex="-1">
     <div class="mx-auto flex items-center">
         <p class="text-base-content flex items-center gap-4 text-sm font-normal">
             <span class="bg-base-100">

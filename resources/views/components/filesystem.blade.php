@@ -21,7 +21,7 @@
     function renderItems($items, $level = 0, $icons = [])
     {
         // Base container class with level-specific styling
-        $baseClass = 'pl-0' . ($level > 0 ? ' border-primary/20 !border-l' : '') . ' ml-8 space-y-1 pl-2';
+        $baseClass = 'pl-0' . ($level > 0 ? ' border-primary/20 !border-l' : '') . ' ml-0 md:ml-8 space-y-1 pl-2';
         $html = "<ul class=\"{$baseClass}\">";
 
         foreach ($items as $key => $item) {

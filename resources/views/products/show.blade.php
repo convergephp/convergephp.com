@@ -16,8 +16,9 @@
                 <div class="scrollbar-hidden mb-4 w-full overflow-x-auto">
                     <div class="flex gap-2">
                         @foreach ($product->thumbnails as $thumbnail)
-                            <button class="btn btn-ghost btn-sm lg:btn-md mb-1"
-                                    :class="activeTab === '{{ $thumbnail->name }}' ? 'bg-primary/5 border border-gray-400/20' :
+                            <button class="btn btn-sm lg:btn-md bg-primary/5 mb-1 border border-gray-400/20"
+                                    :class="activeTab === '{{ $thumbnail->name }}' ?
+                                        'bg-primary/10 text-primary border border-primary' :
                                         'text-base-content hover:bg-primary/5  hover:border hover:border-gray-400/20'"
                                     x-on:click="activeTab = '{{ $thumbnail->name }}'">
                                 {{ $thumbnail->name }}

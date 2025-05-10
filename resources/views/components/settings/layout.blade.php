@@ -63,6 +63,14 @@
                            '!text-primary border-primary' => request()->RouteIs('settings.password'),
                        ])
                        wire:navigate.hover>Password</a>
+                    @if (Auth::check() && Auth::user()->isAdmin())
+                        <a href="{{ route('filament.admin.pages.dashboard') }}"
+                           @class([
+                               'btn btn-ghost btn-sm border-b border-base-100',
+                               '!text-primary border-primary' => request()->RouteIs(
+                                   'filament.admin.pages.dashboard'),
+                           ])>Admin</a>
+                    @endif
                 </div>
             </div>
 
