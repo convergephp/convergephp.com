@@ -492,17 +492,17 @@
         },
         {
             "name": "convergephp/blade-components",
-            "version": "v1.0.0-beta.4",
+            "version": "v1.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "ebe98b65625da7f699326665d2a391c01059cb79"
+                "reference": "da10fb60495bbe9edd6103d4ab9c379b60e7457d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-ebe98b65625da7f699326665d2a391c01059cb79-zip-b8cf9b.zip",
-                "reference": "ebe98b65625da7f699326665d2a391c01059cb79",
-                "shasum": "fdd47fd29a4f3c37de7f2c48f65dfa5d5a447f3d"
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-da10fb60495bbe9edd6103d4ab9c379b60e7457d-zip-c79346.zip",
+                "reference": "da10fb60495bbe9edd6103d4ab9c379b60e7457d",
+                "shasum": "c8c15d1f3fb2870c799bac98f53c1f69251c0de6"
             },
             "require": {
                 "illuminate/support": "*",
@@ -533,23 +533,23 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.4",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.6",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-05-01T22:00:04+00:00"
+            "time": "2025-05-12T17:17:35+00:00"
         },
         {
             "name": "convergephp/converge",
-            "version": "v1.0.0-beta.3",
+            "version": "v1.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/convergephp/converge.git",
-                "reference": "fedbd508e3e2b8116250219b8d47d8821364936d"
+                "reference": "97ce47100e28b1818788b93d9681ecb5a8638bf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/fedbd508e3e2b8116250219b8d47d8821364936d",
-                "reference": "fedbd508e3e2b8116250219b8d47d8821364936d",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/97ce47100e28b1818788b93d9681ecb5a8638bf4",
+                "reference": "97ce47100e28b1818788b93d9681ecb5a8638bf4",
                 "shasum": ""
             },
             "require": {
@@ -591,7 +591,7 @@
             "description": "static site generator for web artisans",
             "support": {
                 "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.3"
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.4"
             },
             "funding": [
                 {
@@ -603,7 +603,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-01T18:51:39+00:00"
+            "time": "2025-05-12T17:03:17+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
