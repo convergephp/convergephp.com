@@ -492,17 +492,17 @@
         },
         {
             "name": "convergephp/blade-components",
-            "version": "v1.0.0-beta.6",
+            "version": "v1.0.0-beta.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "da10fb60495bbe9edd6103d4ab9c379b60e7457d"
+                "reference": "78edc0353c43daea27a5d6dccf6960a491846933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-da10fb60495bbe9edd6103d4ab9c379b60e7457d-zip-c79346.zip",
-                "reference": "da10fb60495bbe9edd6103d4ab9c379b60e7457d",
-                "shasum": "c8c15d1f3fb2870c799bac98f53c1f69251c0de6"
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-78edc0353c43daea27a5d6dccf6960a491846933-zip-39358f.zip",
+                "reference": "78edc0353c43daea27a5d6dccf6960a491846933",
+                "shasum": "5d212f40fb6a51abd9e1146bef6eb21a7cb14915"
             },
             "require": {
                 "illuminate/support": "*",
@@ -533,10 +533,10 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.6",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.7",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-05-12T17:17:35+00:00"
+            "time": "2025-05-12T17:48:05+00:00"
         },
         {
             "name": "convergephp/converge",
