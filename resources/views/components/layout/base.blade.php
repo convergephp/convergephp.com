@@ -9,7 +9,27 @@
         <meta name="description"
               content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}">
 
-        <!-- SEO and Social Media Meta Tags -->
+        <!-- SEO Meta Tags -->
+        <meta name="robots"
+              content="index, follow">
+        <meta name="keywords"
+              content="{{ $keywords ?? 'laravel, documentation, framework, converge, developer tools' }}">
+        <meta name="author"
+              content="{{ $author ?? 'Converge Team' }}">
+        <meta name="copyright"
+              content="{{ $copyright ?? date('Y') . ' Converge' }}">
+        <meta name="language"
+              content="{{ str_replace('_', '-', app()->getLocale()) }}">
+        <meta name="revisit-after"
+              content="7 days">
+        <meta name="generator"
+              content="Laravel">
+
+        <!-- Canonical URL to prevent duplicate content -->
+        <link rel="canonical"
+              href="{{ url()->current() }}">
+
+        <!-- Open Graph / Facebook Meta Tags -->
         <meta property="og:title"
               content="{{ $title ?? 'Converge' }}">
         <meta property="og:description"
@@ -19,24 +39,48 @@
         <meta property="og:url"
               content="{{ url()->current() }}">
         <meta property="og:image"
-              content="{{ asset('exemple-2.png') }}">
-        <meta name="twitter:card"
-              content="{{ asset('exemple-2.png') }}">
+              content="{{ asset('images/converge.webp') }}">
+        <meta property="og:image:alt"
+              content="Converge - Laravel Documentation Framework">
+        <meta property="og:site_name"
+              content="Converge">
+        <meta property="og:locale"
+              content="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-        <title>{{ $title ?? 'Converge' }}</title>
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card"
+              content="summary_large_image">
+        <meta name="twitter:title"
+              content="{{ $title ?? 'Converge' }}">
+        <meta name="twitter:description"
+              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}">
+        <meta name="twitter:image"
+              content="{{ asset('images/converge.webp') }}">
+        <meta name="twitter:image:alt"
+              content="Converge - Laravel Documentation Framework">
+
+        <!-- Mobile Meta Tags -->
+        <meta name="apple-mobile-web-app-capable"
+              content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style"
+              content="black">
+        <meta name="format-detection"
+              content="telephone=no">
+
+        <title>{{ $title ?? 'Converge' }} - Laravel Documentation Framework</title>
 
         <!-- Favicon -->
         <link rel="icon"
               type="image/png"
               sizes="32x32"
-              href="{{ asset('storage/images/favicon.png') }}">
+              href="{{ asset('images/favicon.png') }}">
         <link rel="icon"
               type="image/png"
               sizes="16x16"
-              href="{{ asset('storage/images/favicon.png') }}">
+              href="{{ asset('images/favicon.png') }}">
         <link rel="apple-touch-icon"
               sizes="180x180"
-              href="{{ asset('storage/images/favicon.png') }}">
+              href="{{ asset('images/favicon.png') }}">
 
         <!-- Theme handling with reduced FOUC -->
         <script>
@@ -57,9 +101,16 @@
 
         @vite(['resources/css/app.css'])
 
-        @if (request()->routeIs('home'))
-            <script src="{{ asset('js/resizer.js') }}"></script>
-        @endif
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Converge",
+            "description": "{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}",
+            "url": "{{ url('/') }}",
+            "image": "{{ asset('images/converge.webp') }}"
+        }
+        </script>
 
         <!-- Paddle JS with defer attribute -->
         @paddleJS()
