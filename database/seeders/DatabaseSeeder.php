@@ -32,19 +32,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'ayoub@convergephp.com',
         ]);
 
-
-        ProductPricePrivilege::create([
-            'id' => 1,
-            'prod_activation_limit' => 5,
-            'local_activation_limit' => 15,
-        ]);
-
-        ProductPricePrivilege::create([
-            'id' => 2,
-            'prod_activation_limit' => 10,
-            'local_activation_limit' => 30,
-        ]);
-
         Product::create([
             'id' => 1,
             'name' => 'blade components',
