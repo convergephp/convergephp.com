@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c627fe3ea6c46fd8a81a3f502749db70",
+    "content-hash": "4227e9ba385668f89759c19f60b091d4",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -492,17 +492,17 @@
         },
         {
             "name": "convergephp/blade-components",
-            "version": "v1.0.0-beta.4",
+            "version": "v1.0.0-beta.7",
             "source": {
                 "type": "git",
                 "url": "git@github.com:convergephp/blade-components.git",
-                "reference": "ebe98b65625da7f699326665d2a391c01059cb79"
+                "reference": "78edc0353c43daea27a5d6dccf6960a491846933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-ebe98b65625da7f699326665d2a391c01059cb79-zip-b8cf9b.zip",
-                "reference": "ebe98b65625da7f699326665d2a391c01059cb79",
-                "shasum": "fdd47fd29a4f3c37de7f2c48f65dfa5d5a447f3d"
+                "url": "http://satis.test/dist/convergephp/blade-components/convergephp-blade-components-78edc0353c43daea27a5d6dccf6960a491846933-zip-39358f.zip",
+                "reference": "78edc0353c43daea27a5d6dccf6960a491846933",
+                "shasum": "6cb91418500fae202ee2e12e11f56c6ed1c547e6"
             },
             "require": {
                 "illuminate/support": "*",
@@ -533,10 +533,10 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.4",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.7",
                 "issues": "https://github.com/convergephp/blade-components/issues"
             },
-            "time": "2025-05-01T22:00:04+00:00"
+            "time": "2025-05-12T17:48:05+00:00"
         },
         {
             "name": "convergephp/converge",
@@ -12139,6 +12139,6 @@
     "platform": {
         "php": "^8.2"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
