@@ -28,10 +28,12 @@ class LicensesAuthController extends Controller
         // find the product that this linceses belongs blade components
         $hasAccess = License::query()
             ->whereNotExpired()
-            ->whereHas('activations',function(Builder $query))
+            ->whereHas('activations', function (Builder $query) use ($license) {
+                return $query->count() > ($license->quatity) * $license->price()->activation_count;
+            })
             ->whereHas('')
             ->contains(
-                fn (License $license) => $license->assignment->purchasable->includesPackageAccess($package)
+                fn(License $license) => $license->assignment->purchasable->includesPackageAccess($package)
             );
 
         abort_unless($hasAccess, 401);
