@@ -26,13 +26,6 @@ class LicenseServiceProvider extends ServiceProvider
         Auth::viaRequest('license-verify', function (Request $request) {
 
             $licenseKey = $request->getPassword();
-            $username = $request->getUser();
-            $headers = json_encode($request->getTrustedHeaderSet());
-            
-            info("license key is : $licenseKey");
-            info("email is : $username");
-            info("headers : $headers");
-            info("end line");
 
             $license = License::query()
                 ->where('key', $licenseKey)
