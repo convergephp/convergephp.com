@@ -16,32 +16,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+ 
+        
 
         // $this->call(ThumbnailSeeder::class);
 
         User::factory()->create([
             'name' => 'med',
             'email' => 'med@convergephp.com',
-            'isAdmin'=>true
+            'isAdmin'
         ]);
 
         User::factory()->create([
             'name' => 'ayoub',
             'email' => 'ayoub@convergephp.com',
-            'isAdmin'=>true
-        ]);
-
-
-        ProductPricePrivilege::create([
-            'id' => 1,
-            'prod_activation_limit' => 5,
-            'local_activation_limit' => 15,
-        ]);
-
-        ProductPricePrivilege::create([
-            'id' => 2,
-            'prod_activation_limit' => 10,
-            'local_activation_limit' => 30,
         ]);
 
         Product::create([

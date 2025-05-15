@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -27,18 +28,27 @@ class License extends Model
         return $this->belongsTo(ProductPrice::class, 'product_price_id');
     }
 
-    public function maximumProductionActivationCount()
+    public function hasAdminKeyAccess()
     {
-        return $this->price?->privilege?->prod_activation_limit ?? 0;
-    }
-
-    public function maximumLocalActivationCount()
-    {
-        return $this->price?->privilege?->local_activation_limit ?? 0;
+        return $this->key === config('internal.admin_access_key');
     }
 
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+        public function scopeWhereExpired(Builder $query): void
+    {
+        $query->where('expires_at', '<', now());
+    }
+
+    public function scopeWhereNotExpired(Builder $query): void
+    {
+        $query->where(function (Builder $query): void {
+            $query
+                ->whereNull('expires_at')
+                ->orWhere('expires_at', '>', now());
+        });
+    }
+
 }
