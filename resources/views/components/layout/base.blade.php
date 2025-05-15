@@ -113,23 +113,24 @@
         </script>
 
         {{-- google analytics --}}
-        @if (config('services.google.analytics_id'))
+        @production        
+            @if (config('services.google.analytics_id'))
             <script async
-                    src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
+                        src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
+                        <script>
+                  window.dataLayer = window.dataLayer || [];
 
-                function gtag() {
-                    dataLayer.push(arguments);
-                }
-                gtag('js', new Date());
-                gtag('config', '{{ config('services.google.analytics_id') }}');
-            </script>
-        @endif
-
-        <!-- Paddle JS with defer attribute -->
-        @paddleJS()
-    </head>
+                  function gtag() {
+                        dataLayer.push(arguments);
+                  }
+                  gtag('js', new Date());
+                  gtag('config', '{{ config('services.google.analytics_id') }}');
+                  </script>
+            @endif
+      @endproduction
+      
+      @paddleJS([])
+      </head>
 
     <body class="bg-base-200 text-base-content min-h-screen !font-sans antialiased">
 
