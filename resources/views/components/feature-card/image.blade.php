@@ -67,10 +67,10 @@
                     <div class="group relative inline-flex">
                         <a target="_blank"
                            href="{{ $url }}"
-                           class="bg-base-100 border-base-300 hover:bg-base-300 rounded-box relative flex items-center gap-3 border px-6 py-3 font-medium text-white shadow-sm transition-all duration-300">
+                           class="bg-base-100 border-base-300 hover:bg-base-300 rounded-box text-base-content relative flex items-center gap-3 border px-6 py-3 font-medium shadow-sm transition-all duration-300">
                             {{ $buttonText }}
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                 class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+                                 class="text-base-content h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
                                  viewBox="0 0 20 20"
                                  fill="currentColor">
                                 <path fill-rule="evenodd"

@@ -19,7 +19,7 @@
         ],
     ];
 @endphp
-<div class="bg-base-200 min-h-screen overflow-hidden"
+<div class="bg-base-200 mx-auto min-h-screen max-w-5xl overflow-hidden"
      x-data="{
          showFileStructure: false,
          animating: false,
@@ -41,17 +41,23 @@
              data-aos-duration="300"
              class="mx-auto max-w-5xl text-center">
             <div class="mb-8 flex justify-center">
-                <div class="bg-primary/10 inline-flex items-center rounded-full px-4 py-2">
-                    <svg class="text-primary mr-2 h-5 w-5"
-                         viewBox="0 0 24 24"
-                         fill="none"
-                         stroke="currentColor"
-                         stroke-width="2">
-                        <path d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                              stroke-linecap="round"
-                              stroke-linejoin="round" />
-                    </svg>
-                    <span class="text-primary font-medium">Documentation Framework</span>
+                <div
+                     class="animate-border text-base-contet flex w-full max-w-sm items-center justify-center rounded-2xl border border-transparent text-white [background:linear-gradient(80deg,var(--color-primary),var(--color-base-100)_0%)_padding-box,conic-gradient(from_var(--border-angle),var(--color-base-300)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box]">
+                    <div class="p-5">
+                        <div class="flex items-center">
+                            <svg class="text-base-content mr-4 h-6 w-6"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 viewBox="0 0 256 256"
+                                 fill="currentColor">
+                                <path d="M232,80V200H160a32,32,0,0,0-32,32,32,32,0,0,0-32-32H24V80H96a32,32,0,0,1,32,32,32,32,0,0,1,32-32Z"
+                                      opacity="0.2"></path>
+                                <path
+                                      d="M232,72H160a40,40,0,0,0-32,16A40,40,0,0,0,96,72H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V80A8,8,0,0,0,232,72ZM96,192H32V88H96a24,24,0,0,1,24,24v88A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V112a24,24,0,0,1,24-24h64ZM89.6,43.19a48,48,0,0,1,76.8,0,8,8,0,0,1-12.79,9.62,32,32,0,0,0-51.22,0A8,8,0,1,1,89.6,43.19Z">
+                                </path>
+                            </svg>
+                            <span class="text-base-content font-medium">Documentation Framework</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -78,11 +84,9 @@
             <!-- CTA Buttons -->
             <div class="mb-16 flex justify-center gap-4">
                 <a href="/docs"
-                   class="bg-primary/50 hover:bg-primary-focus group relative inline-flex items-center justify-center overflow-hidden rounded-md px-8 py-3 font-medium transition-all">
-                    <span
-                          class="ease bg-base-200 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
-                    <span class="text-base-content relative font-medium">Get Started</span>
-                    <svg class="text-base-content ml-2 h-5 w-5"
+                   class="border-primary text-base-content hover:bg-primary/10 group inline-flex items-center rounded-lg border bg-transparent px-6 py-3 font-medium transition-colors duration-300">
+                    Get Started
+                    <svg class="text-base-content ml-2 h-5 w-5 transform duration-300 group-hover:translate-x-2"
                          viewBox="0 0 24 24"
                          fill="none">
                         <path d="M13 7l5 5m0 0l-5 5m5-5H6"
@@ -92,13 +96,20 @@
                               stroke-linejoin="round" />
                     </svg>
                 </a>
+
+                {{-- <a href="/docs"
+                   class="bg-primary/50 hover:bg-primary-focus group relative inline-flex items-center justify-center overflow-hidden rounded-md px-8 py-3 font-medium transition-all">
+                    <span
+                          class="ease bg-base-200 absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform opacity-10 transition-all duration-1000 group-hover:-translate-x-40"></span>
+                    <span class="text-base-content relative font-medium">Get Started</span>
+                </a> --}}
             </div>
         </div>
 
         <!-- Interactive Documentation Preview -->
         <div data-aos="fade-up"
              data-aos-duration="1000"
-             class="mx-auto max-w-6xl">
+             class="mx-auto max-w-5xl">
             <!-- Browser mockup -->
             <div
                  class="border-base-300 bg-base-100 overflow-hidden rounded-xl border bg-opacity-95 shadow-sm backdrop-blur-sm">
@@ -120,7 +131,7 @@
                                       stroke-linecap="round"
                                       stroke-linejoin="round" />
                             </svg>
-                            https://convergephp.com/docs/4.x
+                            https://convergephp.com/docs/1.x
                         </div>
                     </div>
                     <div class="flex items-center space-x-2">
@@ -141,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="bg-base-100 h-[250px] overflow-hidden p-4 md:h-[500px] lg:h-[700px]">
+                <div class="bg-base-100 h-[237px] overflow-hidden p-4 md:h-[430px] lg:h-[575px]">
                     <!-- Split view container with preserved space -->
                     <div class="border-base-300/50 flex h-full overflow-hidden rounded-lg border">
                         <!-- Docs preview with smooth transition -->
@@ -149,17 +160,16 @@
                              :class="showFileStructure ? 'w-0 opacity-0' : 'flex-1 opacity-100'"
                              :style="animating ? 'pointer-events: none;' : ''"
                              x-ref="docsPreview">
-                            <div class="h-full overflow-auto">
-                                <!-- Here we would normally have the actual documentation preview -->
+                            <div class="bg-base-100 h-full overflow-hidden">
                                 <div class="flex max-h-full w-full items-center justify-center overflow-hidden">
                                     <x-image srcPublicLight="images/hero-light.webp"
-                                             srcPublic="images/hero.webp"></x-image>
+                                             srcPublic="images/hero-dark.webp"></x-image>
                                 </div>
                             </div>
                         </div>
 
                         <!-- File structure visualization with smooth transition -->
-                        <div class="bg-base-200 overflow-hidden transition-all duration-500 ease-in-out"
+                        <div class="bg-base-200 overflow-hidden"
                              :class="showFileStructure ? 'flex-1 opacity-100' : 'w-0 opacity-0'"
                              :style="animating ? 'pointer-events: none;' : ''">
                             <div class="h-full overflow-auto p-6">

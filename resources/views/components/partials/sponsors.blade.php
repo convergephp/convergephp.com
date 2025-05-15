@@ -198,13 +198,74 @@
             </a> --}}
         </div>
 
-        <div class="flex justify-center">
+        {{-- <div class="flex justify-center">
             <a href="https://github.com/convergephp/converge?sponsor=1"
                target="_blank"
                class="border-secondary/30 bg-secondary/10 hover:bg-secondary/20 text-secondary group inline-flex items-center justify-center gap-2 rounded-md border px-6 py-3 font-medium transition-all">
                 <span>Your logo here? Sponsor This Project</span>
                 <span class="hover:scale-105">💖</span>
             </a>
+        </div> --}}
+
+        <!-- Sponsor CTA Card -->
+        <div class="mx-auto w-full max-w-3xl">
+            <!-- Card with gradient border -->
+            <div
+                 class="from-base-100 bg-radial-[at_25%_25%] via-primary/50 to-base-100 group relative rounded-xl p-0.5 shadow-lg transition-all duration-300 hover:shadow-xl">
+                <!-- Inner card content -->
+                <div class="bg-base-100 rounded-lg p-8">
+                    <div class="flex flex-col items-center gap-6 md:flex-row">
+                        <div class="relative h-24 w-24 flex-shrink-0 md:h-32 md:w-32">
+                            <!-- Decorative circles -->
+                            <div
+                                 class="absolute inset-0 rounded-full bg-gradient-to-br from-pink-200 to-purple-200 opacity-20 transition-opacity group-hover:opacity-30 dark:from-pink-900 dark:to-purple-900">
+                            </div>
+
+                            <!-- Heart with pulse -->
+                            <div class="pulse-slow absolute inset-0 flex items-center justify-center">
+                                <div class="animate-float text-5xl md:text-6xl">💖</div>
+                            </div>
+
+                            <!-- Decorative dots pattern -->
+                            <div class="absolute inset-0 overflow-hidden rounded-full opacity-30">
+                                <div
+                                     class="absolute -right-4 -top-4 h-16 w-16 rounded-full bg-indigo-400 dark:bg-indigo-600">
+                                </div>
+                                <div
+                                     class="absolute -bottom-2 -left-2 h-10 w-10 rounded-full bg-pink-400 dark:bg-pink-600">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right side - Content -->
+                        <div class="flex-1 text-center md:text-left">
+                            <h3
+                                class="mb-2 bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-lg font-semibold text-transparent md:text-xl">
+                                Support us by becoming a sponsor
+                            </h3>
+
+                            <p class="text-base-content/60 mb-6 max-w-md">Support this project and showcase
+                                your brand to developers worldwide who use Converge Toolkits.</p>
+
+                            <!-- CTA Button -->
+                            <a href="https://github.com/convergephp/converge?sponsor=1"
+                               target="_blank"
+                               class="group/btn inline-flex transform items-center justify-center gap-3 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-3 font-medium text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:from-pink-600 hover:to-purple-700 hover:shadow-lg">
+                                <span>Sponsor This Project</span>
+                                <span class="transition-transform duration-300 group-hover/btn:scale-125">💖</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial/social proof element (optional) -->
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Joined by <span class="font-medium text-gray-700 dark:text-gray-300">artisans</span> supporting
+                    our open-source journey
+                </p>
+            </div>
         </div>
     </div>
 </section>

@@ -10,14 +10,15 @@
         </div>
 
         {{-- Tabs: Display thumbnails --}}
-        <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-5xl">
             <div class="flex flex-col"
                  x-data="{ activeTab: '{{ $product->thumbnails->first()->name ?? 'default' }}' }">
                 <div class="scrollbar-hidden mb-4 w-full overflow-x-auto">
                     <div class="flex gap-2">
                         @foreach ($product->thumbnails as $thumbnail)
-                            <button class="btn btn-ghost btn-sm lg:btn-md mb-1"
-                                    :class="activeTab === '{{ $thumbnail->name }}' ? 'bg-primary/5 border border-gray-400/20' :
+                            <button class="btn btn-sm lg:btn-md bg-primary/5 mb-1 border border-gray-400/20"
+                                    :class="activeTab === '{{ $thumbnail->name }}' ?
+                                        'bg-primary/10 text-primary border border-primary' :
                                         'text-base-content hover:bg-primary/5  hover:border hover:border-gray-400/20'"
                                     x-on:click="activeTab = '{{ $thumbnail->name }}'">
                                 {{ $thumbnail->name }}
@@ -39,7 +40,7 @@
                                     <!-- Image Section - Plus grande et prédominante -->
                                     <div class="relative h-64 w-full overflow-hidden md:h-[500px] md:w-2/3">
                                         @if ($thumbnail->getMedia('thumbnails')->isNotEmpty())
-                                            <x-image :image="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
+                                            <x-image :src="$thumbnail->getMedia('thumbnails')->first()->getUrl()"
                                                      :alt="$thumbnail->title"
                                                      loading="lazy"
                                                      fit="contain" />

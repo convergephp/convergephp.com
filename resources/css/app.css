@@ -68,6 +68,15 @@
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
+
+    /* --animate-border: border border 4s linear infinite;
+    @keyframes border {
+          0% ,
+          100% {
+            --animate-border: 360deg;
+          }
+    } */
+
 }
 
 @layer theme {
@@ -76,6 +85,13 @@
         --color-accent-content: var(--color-white);
         --color-accent-foreground: var(--color-neutral-800);
     }
+}
+
+
+@property --border-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: '<angle>';
 }
 
 @layer base {
@@ -109,6 +125,36 @@
         -ms-overflow-style: none;
     }
 }
+
+.animate-border {
+    --border-angle: 0turn;
+    animation: border-rotate 3s linear infinite;
+}
+
+@keyframes border-rotate {
+    from {
+        --border-angle: 0turn;
+    }
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: float 2s ease-in-out infinite;
+
+}
+
+@keyframes float {
+   0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+}
+
 
 [data-flux-field] {
     @apply grid gap-2;

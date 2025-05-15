@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "archtechx/laravel-seo": "^0.10.3",
+        "bezhansalleh/filament-google-analytics": "^2.1",
         "convergephp/blade-components": "^1.0@beta",
         "convergephp/converge": "^1.0@beta",
         "davidhsianturi/blade-bootstrap-icons": "^2.0",

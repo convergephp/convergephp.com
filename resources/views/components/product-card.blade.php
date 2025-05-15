@@ -19,7 +19,8 @@
 
     <div class="flex flex-col lg:min-h-[500px] lg:flex-row">
         {{-- IMAGE SECTION --}}
-        <div class="bg-base-200 {{ $featured ? 'h-80 lg:h-auto' : 'h-64 lg:h-auto' }} relative overflow-hidden lg:w-2/5">
+        <div
+             class="bg-base-200 {{ $featured ? 'h-80 lg:h-auto' : 'h-64 lg:h-auto' }} relative overflow-hidden lg:w-[45%]">
             @if ($product->getMedia('product-image')->isNotEmpty())
                 <img src="{{ $product->getFirstMediaUrl('product-image') }}"
                      alt="{{ $product->name }}"
