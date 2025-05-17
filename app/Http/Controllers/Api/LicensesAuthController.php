@@ -45,7 +45,7 @@ class LicensesAuthController extends Controller
     {
         $originalUrl = $request->header('X-Original-URI', '');
 
-        preg_match('#/dist/(?<package>spatie/[^/]*)/#', $originalUrl, $matches);
+        preg_match('#/dist/(?<package>convergephp/[^/]*)/#', $originalUrl, $matches);
 
         if (! key_exists('package', $matches)) {
             abort(401, 'Missing X-Original-URI header');
