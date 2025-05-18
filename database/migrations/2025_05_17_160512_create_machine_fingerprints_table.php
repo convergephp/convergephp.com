@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('machine_fingerprints', function (Blueprint $table) {
             $table->id();
-            $table->string('uname')->unique();
+            $table->string('uname');
+            $table->string('os_name');
+            $table->string('host_name');
+            $table->string('release_name');
+            $table->string('version_info');
+            $table->string('machine_type');
             $table->timestamps();
         });
     }
