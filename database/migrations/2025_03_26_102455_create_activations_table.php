@@ -17,9 +17,9 @@ return new class extends Migration
             $table->foreignId('license_id')->constrained()->cascadeOnDelete();
             $table->json('signed_activation')->nullable(); // Signed verification data
             $table->string('current_version')->nullable();
-            $table->string('arch')->nullable(); // System architecture (x86, x64, ARM)
-            $table->string('platform')->nullable(); //  (Windows, Mac, Linux)
-            $table->string('os_version')->nullable(); // OS version info
+            $table->string('arch')->nullable(); 
+            $table->string('platform')->nullable(); 
+            $table->string('os_version')->nullable();
             $table->timestamps();
         });
     }

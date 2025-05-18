@@ -29,7 +29,7 @@ class LicensesAuthController extends Controller
         $hasAccess = License::query()
             ->whereNotExpired()
             ->whereHas('activations', function (Builder $query) use ($license) {
-                return $query->count() > ($license->quatity) * $license->price()->activation_count;
+                return $query->count() > ($license->quatity) * $license->price()->count();
             })
             ->whereHas('')
             ->contains(
@@ -45,7 +45,7 @@ class LicensesAuthController extends Controller
     {
         $originalUrl = $request->header('X-Original-URI', '');
 
-        preg_match('#/dist/(?<package>spatie/[^/]*)/#', $originalUrl, $matches);
+        preg_match('#/dist/(?<package>convergephp/[^/]*)/#', $originalUrl, $matches);
 
         if (! key_exists('package', $matches)) {
             abort(401, 'Missing X-Original-URI header');
