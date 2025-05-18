@@ -29,7 +29,7 @@ class LicensesAuthController extends Controller
         $hasAccess = License::query()
             ->whereNotExpired()
             ->whereHas('activations', function (Builder $query) use ($license) {
-                return $query->count() > ($license->quatity) * $license->price()->activation_count;
+                return $query->count() > ($license->quatity) * $license->price()->count();
             })
             ->whereHas('')
             ->contains(

@@ -14,8 +14,8 @@ class MachineFingerprint extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function product(): BelongsTo
+    public function activation(): BelongsTo
     {
-        return $this->belongsTo(Action::class);
+        return $this->belongsTo(Activation::class);
     }
 }
