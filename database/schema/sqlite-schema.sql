@@ -161,7 +161,8 @@ CREATE TABLE IF NOT EXISTS "products"(
   "description" text not null,
   "created_at" datetime,
   "updated_at" datetime,
-  "features" text
+  "features" text,
+  "private_key" text
 );
 CREATE UNIQUE INDEX "products_slug_unique" on "products"("slug");
 CREATE TABLE IF NOT EXISTS "product_prices"(
@@ -237,9 +238,6 @@ CREATE TABLE IF NOT EXISTS "activations"(
   "license_id" integer not null,
   "signed_activation" text,
   "current_version" varchar,
-  "arch" varchar,
-  "platform" varchar,
-  "os_version" varchar,
   "created_at" datetime,
   "updated_at" datetime,
   foreign key("license_id") references "licenses"("id") on delete cascade
@@ -285,3 +283,5 @@ INSERT INTO migrations VALUES(17,'2025_05_07_191739_add_is_admin_to_users',1);
 INSERT INTO migrations VALUES(19,'2025_05_13_204929_add_expires_at_to_licenses_table',2);
 INSERT INTO migrations VALUES(21,'2025_05_13_205838_drop_product_price_privileges_table',3);
 INSERT INTO migrations VALUES(23,'2025_05_14_181516_remove_product_price_privilege_id_from_product_prices_table',4);
+INSERT INTO migrations VALUES(24,'2025_05_17_112637_drop_columns_from_activations_table',5);
+INSERT INTO migrations VALUES(25,'2025_05_17_113356_add_private_key_to_products_table',6);

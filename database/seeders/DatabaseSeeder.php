@@ -24,12 +24,14 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'med',
             'email' => 'med@convergephp.com',
-            'isAdmin'
+            'isAdmin'=> true
         ]);
-
+        
         User::factory()->create([
             'name' => 'ayoub',
             'email' => 'ayoub@convergephp.com',
+            'isAdmin'=> true
+
         ]);
 
         Product::create([
