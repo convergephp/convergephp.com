@@ -25,47 +25,66 @@
         <meta name="generator"
               content="Laravel">
 
-        <!-- Canonical URL to prevent duplicate content -->
-        <link rel="canonical"
-              href="{{ url()->current() }}">
+        <!-- Primary Meta Tags -->
+        <title>{{ $title ?? 'Converge - Laravel Documentation Framework ' }} - Laravel Documentation Framework</title>
+        <meta name="title"
+              content="Converge - Laravel Documentation Framework" />
+        <meta name="description"
+              content="Advanced documentation management framework for Laravel artisans" />
+        <meta name="keywords"
+              content="laravel, documentation, framework, converge, developer tools" />
+        <meta name="author"
+              content="Mohamed CHARRAFI & Ayoub EL HAJJI" />
+        <meta name="robots"
+              content="index, follow" />
+        <meta name="language"
+              content="{{ str_replace('_', '-', app()->getLocale()) }}" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1" />
 
-        <!-- Open Graph / Facebook Meta Tags -->
-        <meta property="og:title"
-              content="{{ $title ?? 'Converge' }}">
-        <meta property="og:description"
-              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}">
+        <!-- Open Graph / Facebook -->
         <meta property="og:type"
-              content="website">
+              content="website" />
         <meta property="og:url"
-              content="{{ url()->current() }}">
+              content="{{ url()->current() }}" />
+        <meta property="og:title"
+              content="Converge - Laravel Documentation Framework" />
+        <meta property="og:description"
+              content="Advanced documentation management framework for Laravel artisans" />
         <meta property="og:image"
-              content="{{ asset('images/converge.webp') }}">
-        <meta property="og:image:alt"
-              content="Converge - Laravel Documentation Framework">
+              content="{{ url(asset('images/converge.png')) }}" />
+        <meta property="og:image:width"
+              content="1200" />
+        <meta property="og:image:height"
+              content="630" />
         <meta property="og:site_name"
-              content="Converge">
+              content="Converge" />
         <meta property="og:locale"
-              content="{{ str_replace('_', '-', app()->getLocale()) }}">
+              content="{{ str_replace('_', '-', app()->getLocale()) }}" />
 
-        <!-- Twitter Card Meta Tags -->
-        <meta name="twitter:card"
-              content="summary_large_image">
-        <meta name="twitter:title"
-              content="{{ $title ?? 'Converge' }}">
-        <meta name="twitter:description"
-              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}">
-        <meta name="twitter:image"
-              content="{{ asset('images/converge.webp') }}">
-        <meta name="twitter:image:alt"
-              content="Converge - Laravel Documentation Framework">
+        <!-- Twitter -->
+        <meta property="twitter:card"
+              content="summary_large_image" />
+        <meta property="twitter:url"
+              content="{{ url()->current() }}" />
+        <meta property="twitter:title"
+              content="Converge - Laravel Documentation Framework" />
+        <meta property="twitter:description"
+              content="Advanced documentation management framework for Laravel artisans" />
+        <meta property="twitter:image"
+              content="{{ url(asset('images/converge.png')) }}" />
 
         <!-- Mobile Meta Tags -->
         <meta name="apple-mobile-web-app-capable"
-              content="yes">
+              content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style"
-              content="black">
+              content="black" />
         <meta name="format-detection"
-              content="telephone=no">
+              content="telephone=no" />
+
+        <!-- Canonical URL to prevent duplicate content -->
+        <link rel="canonical"
+              href="{{ url()->current() }}" />
 
         <title>{{ $title ?? 'Converge' }} - Laravel Documentation Framework</title>
 
@@ -108,29 +127,29 @@
             "name": "Converge",
             "description": "{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}",
             "url": "{{ url('/') }}",
-            "image": "{{ asset('images/converge.webp') }}"
+            "image": "{{ asset('images/converge.png') }}"
         }
         </script>
 
         {{-- google analytics --}}
-        @production        
+        @production
             @if (config('services.google.analytics_id'))
-            <script async
+                <script async
                         src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
-                        <script>
-                  window.dataLayer = window.dataLayer || [];
+                <script>
+                    window.dataLayer = window.dataLayer || [];
 
-                  function gtag() {
+                    function gtag() {
                         dataLayer.push(arguments);
-                  }
-                  gtag('js', new Date());
-                  gtag('config', '{{ config('services.google.analytics_id') }}');
-                  </script>
+                    }
+                    gtag('js', new Date());
+                    gtag('config', '{{ config('services.google.analytics_id') }}');
+                </script>
             @endif
-      @endproduction
-      
-      @paddleJS([])
-      </head>
+        @endproduction
+
+        @paddleJS([])
+    </head>
 
     <body class="bg-base-200 text-base-content min-h-screen !font-sans antialiased">
 
