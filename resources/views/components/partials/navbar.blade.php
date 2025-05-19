@@ -26,9 +26,9 @@
                     <x-navbar.link :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
 
-                    <x-navbar.link href="{{ route('products.index') }}"
+                    {{-- <x-navbar.link href="{{ route('products.index') }}"
                                    :active="request()->routeIs('products.index')"
-                                   wire:navigate.hover>Toolkits</x-navbar.link>
+                                   wire:navigate.hover>Toolkits</x-navbar.link> --}}
 
                     <x-navbar.link href="{{ route('roadmap') }}"
                                    :active="request()->routeIs('roadmap')"
@@ -121,11 +121,11 @@
                         Documentation
                     </a>
 
-                    <a href="{{ route('products.index') }}"
+                    {{-- <a href="{{ route('products.index') }}"
                        wire:navigate.hover
                        class="{{ request()->routeIs('products.index') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Toolkits
-                    </a>
+                    </a> --}}
 
                     <a href="{{ route('roadmap') }}"
                        wire:navigate.hover

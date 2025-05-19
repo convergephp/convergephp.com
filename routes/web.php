@@ -25,13 +25,13 @@ Route::get('pricing', function () {
     return view('pages.pricing');
 })->name('pricing');
 
-Route::redirect('/toolkit', '/toolkits');
+// Route::redirect('/toolkit', '/toolkits');
 
-// PRODUCTS
-Route::prefix('toolkits')->group(function () {
-    Route::get('/', ProductController::class)->name('products.index');
-    Route::get('/{product:slug}', [ProductController::class, 'show'])->name('products.show');
-});
+// // PRODUCTS
+// Route::prefix('toolkits')->group(function () {
+//     Route::get('/', ProductController::class)->name('products.index');
+//     Route::get('/{product:slug}', [ProductController::class, 'show'])->name('products.show');
+// });
 
 
 Route::view('dashboard', 'dashboard')

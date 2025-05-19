@@ -8,13 +8,13 @@
             <a href="{{ route('converge-docs') }}"
                class="link link-hover">Docs</a>
         </nav>
-        <nav class="">
+        {{-- <nav class="">
             <h6 class="footer-title">ToolKit</h6>
             <a href="{{ route('products.show', ['product' => 'components']) }}"
                class="link link-hover">components</a>
             <a href="{{ route('products.show', ['product' => 'layouts-themes']) }}"
                class="link link-hover">Layouts</a>
-        </nav>
+        </nav> --}}
         <nav>
             <h6 class="footer-title">Solutions</h6>
             <a href="{{ route('solutions.documentation') }}"
