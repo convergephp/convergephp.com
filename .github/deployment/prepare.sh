@@ -5,6 +5,7 @@ ssh_port=$4
 private_ssh_key=$5
 ssh_known_hosts=$6
 php_executable=$7
+remote_deploy_script=$8
 
 if [[ -z "$ssh_user" ]]; then
     echo -e "::error::The variable \"\$ssh_user\" is not set."
@@ -83,6 +84,11 @@ if [[ "$private_ssh_key" != "n/a" ]]; then
     echo "$private_ssh_key" | tr -d "\r" | ssh-add -q - 2>/dev/null
 fi
 
+if [[ -z "$remote_deploy_script" ]]; then
+    echo -e "::error::The variable \"\$remote_deploy_script\" is not set."
+    exit 1
+fi
+
 # Generate a unique file name for the deployment artifacts.
 remote_artifacts_path="/tmp/deployment-artifacts-$(head -c 512 /dev/urandom | tr -dc 0-9a-f | head -c 8)"
 
@@ -93,3 +99,6 @@ scp -P "$ssh_port" "artifacts.tar.gz" "$ssh_user@[$ssh_host]:$remote_artifacts_p
 echo "Running the deployment script on the remote server."
 
 ssh "$ssh_user@$ssh_host" -p "$ssh_port" "tar -xf $remote_artifacts_path .github/deployment/deploy.sh -O | bash -seo pipefail -- \"$remote_artifacts_path\" \"$base_directory\" \"$php_executable\""
+
+ssh "$ssh_user@$ssh_host" -p "$ssh_port" \
+    "bash $remote_deploy_script \"$remote_artifacts_path\" \"$base_directory\" \"$php_executable\""
