@@ -40,7 +40,7 @@ class ProductResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                    TagsInput::make('features'),
+                TagsInput::make('features'),
 
                 SpatieMediaLibraryFileUpload::make('image')
                     ->collection('product-image'),
