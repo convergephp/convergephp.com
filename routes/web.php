@@ -27,6 +27,7 @@ Route::get('pricing', function () {
 
 // Route::redirect('/toolkit', '/toolkits');
 
+
 // // PRODUCTS
 // Route::prefix('toolkits')->group(function () {
 //     Route::get('/', ProductController::class)->name('products.index');
