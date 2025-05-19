@@ -65,12 +65,12 @@ jobs:
 
       - name: Deploy
         env:
-          base_directory: "~/www"
-          ssh_user: "converge"
+          base_directory: "${{ secrets.BASE_DIRECTORY }}"
+          ssh_user: "${{ secrets.SSH_USER }}"
           ssh_host: 89.117.36.52
           ssh_port: 22
           private_ssh_key: "${{ secrets.SSH_PRIVATE_KEY }}"
           ssh_known_hosts: "${{ secrets.SSH_KNOWN_HOSTS }}"
           php_executable: "php"
-          remote_deploy_script: "/home/converge/deploy-scripts/deploy.sh"
+          remote_deploy_script: "${{ secrets.REMOTE_DEPLOY_SCRIPT}}"
         run: tar -xf artifacts.tar.gz .github/deployment/prepare.sh -O | bash -se -- "$base_directory" "$ssh_user" "$ssh_host" "$ssh_port" "$private_ssh_key" "$ssh_known_hosts" "$php_executable" "$remote_deploy_script"
