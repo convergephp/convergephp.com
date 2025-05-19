@@ -78,6 +78,7 @@ class DocsModuleProvider extends ModuleProvider
         return $theme
             ->sidebarItemStyle(SidebarItemsStyles::GHOST)
             ->highlighterTheme(HighlighterName::Github_dark_default)
+            ->favicon(asset('images/favicon.png'))
             ->theme(
                 Themes::overrideDark([
                     '--color-base-200' => "black",
