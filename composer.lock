@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bb79fd2ce9f1498f152e1eda2fffb80",
+    "content-hash": "5fc91394964dbff2d92d4e20c3e37005",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -581,9 +581,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis.test/dist/convergephp/blade-components/convergephp-blade-components-78edc0353c43daea27a5d6dccf6960a491846933-zip-39358f.zip",
+                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-78edc0353c43daea27a5d6dccf6960a491846933-zip-39358f.zip",
                 "reference": "78edc0353c43daea27a5d6dccf6960a491846933",
-                "shasum": "6cb91418500fae202ee2e12e11f56c6ed1c547e6"
+                "shasum": "5d212f40fb6a51abd9e1146bef6eb21a7cb14915"
             },
             "require": {
                 "illuminate/support": "*",

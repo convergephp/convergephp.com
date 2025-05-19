@@ -3,7 +3,10 @@
     "name": "laravel/livewire-starter-kit",
     "type": "project",
     "description": "The official Laravel starter kit for Livewire.",
-    "keywords": ["laravel", "framework"],
+    "keywords": [
+        "laravel",
+        "framework"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.2",
@@ -77,7 +80,6 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
-        "secure-http": false,
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
@@ -85,8 +87,10 @@
     },
     "minimum-stability": "alpha",
     "prefer-stable": true,
-    "repositories": [{
-        "type": "composer",
-        "url": "http://satis.test"
-    }]
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.convergephp.com"
+        }
+    ]
 }

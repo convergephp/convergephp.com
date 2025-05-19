@@ -35,7 +35,7 @@ class ProductPriceResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('features'),
+                Forms\Components\TagsInput::make('features'),
                 Forms\Components\TextInput::make('paddle_price_id')
                     ->required()
                     ->maxLength(255),
@@ -52,8 +52,9 @@ class ProductPriceResource extends Resource
                 Tables\Columns\TextColumn::make('product.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('name')
+                    ->searchable()
+                    ->badge(),
                 Tables\Columns\TextColumn::make('paddle_price_id')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('amount')

@@ -30,10 +30,11 @@ class ThumbnailsRelationManager extends RelationManager
                     ->maxLength(255),
 
                 MarkdownEditor::make('description')
-                        ->columnSpanFull(),
+                    ->required()
+                    ->columnSpanFull(),
 
                 SpatieMediaLibraryFileUpload::make('image')
-                        ->collection('thumbnails'),
+                    ->collection('thumbnails'),
             ]);
     }
 
