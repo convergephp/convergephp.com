@@ -20,6 +20,8 @@ class Product extends Model implements HasMedia
     {
         return [
             'features' => 'array',
+            'is_launched' => 'boolean',
+            'launched_at' => 'datetime',
         ];
     }
 

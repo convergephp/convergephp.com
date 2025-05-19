@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->boolean('is_launched')->default(false);
-            $table->timestamp('expires_at')->nullable();
+            $table->timestamp('launched_at')->nullable();
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     {
         Schema::table('products', function (Blueprint $table) {
             $table->dropColumn('is_launched');
-            $table->dropColumn('expires_at');
+            $table->dropColumn('launched_at');
         });
     }
 };

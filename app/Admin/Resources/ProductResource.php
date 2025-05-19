@@ -7,11 +7,16 @@ use App\Admin\Resources\ProductResource\Pages;
 use App\Admin\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 use Filament\Forms\Components\TagsInput;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
+use Filament\Forms\Set;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -41,6 +46,17 @@ class ProductResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 TagsInput::make('features'),
+                Toggle::make('is_launched')
+                    ->label('launch')
+                    ->onColor('success')
+                    ->live(onBlur: true)
+                    ->afterStateUpdated(function (Set $set, string $state) {
+                        $set('launched_at', $state ? now() : null);
+                    }),
+                DateTimePicker::make('launched_at')
+                    ->label('Launched At')
+                    ->live(onBlur: true)
+                    ->disabled(),
 
                 SpatieMediaLibraryFileUpload::make('image')
                     ->collection('product-image'),
