@@ -26,15 +26,15 @@
               content="Laravel">
 
         <!-- Primary Meta Tags -->
-        <title>{{ $title ?? 'Converge' }} - Laravel Documentation Framework</title>
+        <title>{{ $title ?? 'Converge - Laravel Documentation Framework ' }} - Laravel Documentation Framework</title>
         <meta name="title"
-              content="{{ $title ?? 'Converge' }} - Laravel Documentation Framework" />
+              content="Converge - Laravel Documentation Framework" />
         <meta name="description"
-              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}" />
+              content="Advanced documentation management framework for Laravel artisans" />
         <meta name="keywords"
-              content="{{ $keywords ?? 'laravel, documentation, framework, converge, developer tools' }}" />
+              content="laravel, documentation, framework, converge, developer tools" />
         <meta name="author"
-              content="{{ $author ?? 'Converge Team' }}" />
+              content="Mohamed CHARRAFI & Ayoub EL HAJJI" />
         <meta name="robots"
               content="index, follow" />
         <meta name="language"
@@ -48,9 +48,9 @@
         <meta property="og:url"
               content="{{ url()->current() }}" />
         <meta property="og:title"
-              content="{{ $title ?? 'Converge' }} - Laravel Documentation Framework" />
+              content="Converge - Laravel Documentation Framework" />
         <meta property="og:description"
-              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}" />
+              content="Advanced documentation management framework for Laravel artisans" />
         <meta property="og:image"
               content="{{ url(asset('images/converge.png')) }}" />
         <meta property="og:image:width"
@@ -68,9 +68,9 @@
         <meta property="twitter:url"
               content="{{ url()->current() }}" />
         <meta property="twitter:title"
-              content="{{ $title ?? 'Converge' }} - Laravel Documentation Framework" />
+              content="Converge - Laravel Documentation Framework" />
         <meta property="twitter:description"
-              content="{{ $description ?? 'Advanced documentation management framework for Laravel artisans' }}" />
+              content="Advanced documentation management framework for Laravel artisans" />
         <meta property="twitter:image"
               content="{{ url(asset('images/converge.png')) }}" />
 
