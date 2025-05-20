@@ -23,7 +23,7 @@ class ProductObserver
      */
     public function updated(Product $product): void
     {
-        if ($product->isDirty('launched_at')) {
+        if ($product->isDirty('is_launched')) {
 
             if ($product->is_launched) {
                 $product->launched_at = Carbon::now();
