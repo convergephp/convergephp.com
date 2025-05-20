@@ -13,7 +13,7 @@ class ProductController extends Controller
 {
     public function __invoke()
     {
-        $producs = Product::all();
+        $producs = Product::launched()->get();
 
         return view('products.index', [
             'products' => $producs,
@@ -26,7 +26,7 @@ class ProductController extends Controller
         // VOCLIC WAS HERE...
 
         Session::put(Constants::AFTER_LOGIN_REDIRECT_URL, url()->current());
-        
+
         $licenses = $product->licenses->where('user_id', Auth::id());
 
 
