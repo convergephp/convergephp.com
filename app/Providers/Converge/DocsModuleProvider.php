@@ -32,6 +32,7 @@ class DocsModuleProvider extends ModuleProvider
             ->latestVersionLabel('v1.0.0-beta.3')
             ->brandLogo('Converge')
             ->intercept(Interceptor::AFTER_TOC_CARBON_ADS, fn () => view('components.carbon-ads'))
+            ->intercept(Interceptor::FIXED_CARBON_ADS, fn () => view('components.carbon-ads'))
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->defineMenuItems(fn(MenuItems $menuItems) => $this->defineMenuItems($menuItems))
             ->theme(fn(Theme $theme) => $this->theme($theme))
