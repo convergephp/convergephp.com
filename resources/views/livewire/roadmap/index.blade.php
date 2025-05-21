@@ -52,8 +52,8 @@
     ];
 
     $themesAndLayouts = [
-        ['label' => '30+ reusable Blade components', 'status' => 'coming'],
-        ['label' => 'Pre-built layout templates', 'status' => 'coming'],
+        ['label' => '15+ reusable Blade components', 'status' => 'done'],
+        ['label' => 'Pre-built layout templates', 'status' => 'wip'],
     ];
 @endphp
 
@@ -80,16 +80,16 @@
 
     <h3 class="text-primary font-bold"># Products & Plugins</h3>
 
+    <x-roadmap.card title="themes and layouts"
+                    :items="$themesAndLayouts">
+    </x-roadmap.card>
+
     <x-roadmap.card title="Web editor"
                     :items="$webEditor">
     </x-roadmap.card>
 
     <x-roadmap.card title="search engine integrations"
                     :items="$searchEnginesIntegrations">
-    </x-roadmap.card>
-
-    <x-roadmap.card title="themes and layouts"
-                    :items="$themesAndLayouts">
     </x-roadmap.card>
 
     <h3 class="text-primary font-bold"># The Blogging Framework</h3>
