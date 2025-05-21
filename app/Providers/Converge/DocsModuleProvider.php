@@ -2,6 +2,7 @@
 
 namespace App\Providers\Converge;
 
+use Converge\Enums\Interceptor;
 use Converge\Module;
 use Converge\Theme\Theme;
 use Converge\Enums\Layout;
@@ -30,6 +31,7 @@ class DocsModuleProvider extends ModuleProvider
             ->routePath('docs')
             ->latestVersionLabel('v1.0.0-beta.3')
             ->brandLogo('Converge')
+            ->intercept(Interceptor::AFTER_TOC_CARBON_ADS, fn () => view('components.carbon-ads'))
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->defineMenuItems(fn(MenuItems $menuItems) => $this->defineMenuItems($menuItems))
             ->theme(fn(Theme $theme) => $this->theme($theme))
