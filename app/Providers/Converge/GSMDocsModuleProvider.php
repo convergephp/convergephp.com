@@ -27,6 +27,7 @@ class GSMDocsModuleProvider extends ModuleProvider
             ->in(realpath(base_path('plugins/gsm-docs')))
             ->brandLogo("Global Search Modal")
             ->theme(function (Theme $theme) {
+                
                 return $theme
                     ->sidebarItemStyle(SidebarItemsStyles::ECHO)
                     ->layout(Layout::Aurum)
