@@ -7,7 +7,7 @@
 
     {{-- <x-pattern-separator title="Sponsors" /> --}}
 
-    <x-partials.sponsors />
+    {{-- <x-partials.sponsors /> --}}
 
     {{-- <x-pattern-separator title="Our team" /> --}}
 

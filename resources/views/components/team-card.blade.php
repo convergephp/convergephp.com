@@ -65,7 +65,7 @@
         @endif
         {{-- Sponsor button --}}
         @if ($sponsorPageLink)
-            <li>
+            {{-- <li>
                 <a target="_blank"
                    href="{{ $sponsorPageLink }}"
                    title="Sponsor me"
@@ -82,7 +82,7 @@
                     </svg>
 
                 </a>
-            </li>
+            </li> --}}
         @endif
     </ul>
 </div>
