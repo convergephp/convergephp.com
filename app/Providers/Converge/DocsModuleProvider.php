@@ -29,10 +29,9 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-beta.3')
+            ->latestVersionLabel('v1.0.0-beta.6')
             ->brandLogo('Converge')
             // ->intercept(Interceptor::AFTER_TOC_CARBON_ADS, fn () => view('components.carbon-ads'))
-            ->intercept(Interceptor::FIXED_CARBON_ADS, fn () => view('components.carbon-ads'))
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->defineMenuItems(fn(MenuItems $menuItems) => $this->defineMenuItems($menuItems))
             ->theme(fn(Theme $theme) => $this->theme($theme))
@@ -67,13 +66,13 @@ class DocsModuleProvider extends ModuleProvider
                 ->label('')
         );
 
-        $menuItems->add(
-            fn(MenuItem $menuItem) =>
-            $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
-                ->openUrlInNewTab()
-                ->classes('btn btn-sm btn-outline btn-primary')
-                ->label('Sponsor')
-        );
+        // $menuItems->add(
+        //     fn(MenuItem $menuItem) =>
+        //     $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
+        //         ->openUrlInNewTab()
+        //         ->classes('btn btn-sm btn-outline btn-primary')
+        //         ->label('Sponsor')
+        // );
     }
 
     private function theme(Theme $theme)

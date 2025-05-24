@@ -1,3 +1,6 @@
 [submodule "docs"]
 	path = docs
 	url = git@github.com:convergephp/documentations.git
+[submodule "plugins/gsm-docs"]
+	path = plugins/gsm-docs
+	url = git@github.com:CharrafiMed/gsm-docs.git
