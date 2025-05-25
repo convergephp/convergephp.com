@@ -12,18 +12,8 @@
             <h6 class="footer-title">ToolKit</h6>
             <a href="{{ route('products.show', ['product' => 'components']) }}"
                class="link link-hover">components</a>
-            <a href="{{ route('products.show', ['product' => 'layouts-themes']) }}"
-               class="link link-hover">Layouts</a>
         </nav>
-        <nav>
-            <h6 class="footer-title">Solutions</h6>
-            <a href="{{ route('solutions.documentation') }}"
-               wire:navigate.hover
-               class="link link-hover">Documentation</a>
-            <a href="{{ route('solutions.blogging') }}"
-               wire:navigate.hover
-               class="link link-hover">Blogging</a>
-        </nav>
+
         <nav>
             <h6 class="footer-title">Policies</h6>
             <a href="{{ route('privacy') }}"

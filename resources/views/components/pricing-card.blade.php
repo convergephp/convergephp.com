@@ -6,9 +6,10 @@
         <h3 class="text-base-content mb-4 text-2xl font-semibold">{{ $price->title }}</h3>
         <p class="text-base-content font-light sm:text-lg">{{ $price->description }}</p>
 
+        <span class="rounded-xl bg-primary/20 text-primary text-sm px-2 py-1 block">free for now</span>
         <div class="my-8 flex items-baseline justify-center">
             <span class="mr-2 text-5xl font-extrabold">${{ $price->amount }}</span>
-            <span class="text-base-content">/lifetime</span>
+            <span class="text-base-content">/year</span>
         </div>
     </div>
 
