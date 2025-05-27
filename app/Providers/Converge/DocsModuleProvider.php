@@ -2,21 +2,18 @@
 
 namespace App\Providers\Converge;
 
-use Converge\Enums\Interceptor;
 use Converge\Module;
 use Converge\Theme\Theme;
 use Converge\Enums\Layout;
 use Converge\Support\Themes;
 use Converge\Enums\Spotlight;
 use Converge\Clusters\Cluster;
-use Converge\Clusters\ClusterLink;
 use Converge\Clusters\Clusters;
 use Converge\Enums\IconPosition;
 use Converge\MenuItems\MenuItem;
 use Converge\MenuItems\MenuItems;
 use Converge\Enums\HighlighterName;
 use Converge\Providers\ModuleProvider;
-use Converge\Support\Metadata;
 use Converge\Support\SidebarItemsStyles;
 
 class DocsModuleProvider extends ModuleProvider
