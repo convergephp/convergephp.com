@@ -16,6 +16,7 @@ use Converge\MenuItems\MenuItem;
 use Converge\MenuItems\MenuItems;
 use Converge\Enums\HighlighterName;
 use Converge\Providers\ModuleProvider;
+use Converge\Support\Metadata;
 use Converge\Support\SidebarItemsStyles;
 
 class DocsModuleProvider extends ModuleProvider
@@ -29,7 +30,7 @@ class DocsModuleProvider extends ModuleProvider
             ->id('converge-docs')
             ->default()
             ->routePath('docs')
-            ->latestVersionLabel('v1.0.0-beta.9')
+            ->latestVersionLabel('v1.0.0-beta.10')
             ->brandLogo('Converge')
             ->defineClusters(fn(Clusters $clusters) => $this->defineClusters($clusters))
             ->defineMenuItems(fn(MenuItems $menuItems) => $this->defineMenuItems($menuItems))
