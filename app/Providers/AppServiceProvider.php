@@ -30,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         Event::listen(ProductPurchased::class, GrantProductAccess::class);
 
         app(ViewInterceptor::class)
-            ->registerViewInterceptor(Interceptor::FIXED_CARBON_ADS,  fn() => view('components.carbon-ads'));
+            ->registerViewInterceptor(Interceptor::FIXED_CARBON_ADS,  fn() => view('components.carbon-ads'))
+            ->registerViewInterceptor(Interceptor::HEAD_END, fn() => view('components.analytics.gtags'));
     }
 }

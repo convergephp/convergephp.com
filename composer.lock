@@ -621,16 +621,16 @@
         },
         {
             "name": "convergephp/converge",
-            "version": "v1.0.0-beta.8",
+            "version": "v1.0.0-beta.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/convergephp/converge.git",
-                "reference": "2f757d9dcce43976f2981bf9323f08cbce9c9816"
+                "reference": "3fe3d2c5eccebbbc584b91ebe1a664f108708159"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/2f757d9dcce43976f2981bf9323f08cbce9c9816",
-                "reference": "2f757d9dcce43976f2981bf9323f08cbce9c9816",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/3fe3d2c5eccebbbc584b91ebe1a664f108708159",
+                "reference": "3fe3d2c5eccebbbc584b91ebe1a664f108708159",
                 "shasum": ""
             },
             "require": {
@@ -672,7 +672,7 @@
             "description": "static site generator for web artisans",
             "support": {
                 "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.8"
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.9"
             },
             "funding": [
                 {
@@ -684,7 +684,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-25T19:44:56+00:00"
+            "time": "2025-05-27T16:13:15+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
