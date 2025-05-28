@@ -63,13 +63,13 @@ class DocsModuleProvider extends ModuleProvider
                 ->label('')
         );
 
-        // $menuItems->add(
-        //     fn(MenuItem $menuItem) =>
-        //     $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
-        //         ->openUrlInNewTab()
-        //         ->classes('btn btn-sm btn-outline btn-primary')
-        //         ->label('Sponsor')
-        // );
+        $menuItems->add(
+            fn(MenuItem $menuItem) =>
+            $menuItem->url('https://github.com/convergephp/converge?sponsor=1')
+                ->openUrlInNewTab()
+                ->classes('btn btn-sm btn-outline btn-primary')
+                ->label('Sponsor')
+        );
     }
 
     private function theme(Theme $theme)

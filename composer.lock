@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fc91394964dbff2d92d4e20c3e37005",
+    "content-hash": "9e909703803dac66cfa278038fb22ea6",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -576,14 +576,14 @@
             "version": "v1.0.0-beta.7",
             "source": {
                 "type": "git",
-                "url": "git@github.com:convergephp/blade-components.git",
+                "url": "https://github.com/convergephp/blade-components.git",
                 "reference": "78edc0353c43daea27a5d6dccf6960a491846933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.convergephp.com/dist/convergephp/blade-components/convergephp-blade-components-78edc0353c43daea27a5d6dccf6960a491846933-zip-39358f.zip",
+                "url": "https://api.github.com/repos/convergephp/blade-components/zipball/78edc0353c43daea27a5d6dccf6960a491846933",
                 "reference": "78edc0353c43daea27a5d6dccf6960a491846933",
-                "shasum": "5d212f40fb6a51abd9e1146bef6eb21a7cb14915"
+                "shasum": ""
             },
             "require": {
                 "illuminate/support": "*",
@@ -603,6 +603,7 @@
                     "Converge\\BladeComponents\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -614,8 +615,8 @@
             ],
             "description": "a collection of laravel blade components for building a modern documentations interfaces",
             "support": {
-                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.7",
-                "issues": "https://github.com/convergephp/blade-components/issues"
+                "issues": "https://github.com/convergephp/blade-components/issues",
+                "source": "https://github.com/convergephp/blade-components/tree/v1.0.0-beta.7"
             },
             "time": "2025-05-12T17:48:05+00:00"
         },

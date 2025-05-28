@@ -86,11 +86,5 @@
         }
     },
     "minimum-stability": "alpha",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packagist.convergephp.com"
-        }
-    ]
+    "prefer-stable": true
 }
