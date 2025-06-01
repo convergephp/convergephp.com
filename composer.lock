@@ -622,16 +622,16 @@
         },
         {
             "name": "convergephp/converge",
-            "version": "v1.0.0-beta.11",
+            "version": "v1.0.0-beta.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/convergephp/converge.git",
-                "reference": "a549a5479d65015722282d3e7d01aa2d7f67b1c1"
+                "reference": "aadddae0aa881654de6ecd67949af42427200b13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/convergephp/converge/zipball/a549a5479d65015722282d3e7d01aa2d7f67b1c1",
-                "reference": "a549a5479d65015722282d3e7d01aa2d7f67b1c1",
+                "url": "https://api.github.com/repos/convergephp/converge/zipball/aadddae0aa881654de6ecd67949af42427200b13",
+                "reference": "aadddae0aa881654de6ecd67949af42427200b13",
                 "shasum": ""
             },
             "require": {
@@ -640,7 +640,7 @@
             "require-dev": {
                 "larastan/larastan": "3.0",
                 "laravel/pint": "dev-main",
-                "orchestra/testbench": "9.x-dev",
+                "orchestra/testbench": "^9.13",
                 "pestphp/pest": "3.x-dev",
                 "phpstan/phpstan": "^2.1"
             },
@@ -673,7 +673,7 @@
             "description": "static site generator for web artisans",
             "support": {
                 "issues": "https://github.com/convergephp/converge/issues",
-                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.11"
+                "source": "https://github.com/convergephp/converge/tree/v1.0.0-beta.12"
             },
             "funding": [
                 {
@@ -685,7 +685,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-29T23:18:22+00:00"
+            "time": "2025-06-01T10:19:24+00:00"
         },
         {
             "name": "danharrin/date-format-converter",
