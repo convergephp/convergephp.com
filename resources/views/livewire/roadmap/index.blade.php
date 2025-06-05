@@ -26,19 +26,20 @@
         ['label' => 'Additional community-requested features', 'status' => 'coming'],
     ];
 
-    $convergeV2x = [
-        ['label' => 'Single Page Application (SPA) mode', 'status' => 'coming'],
-        [
-            'label' => 'RBAC support for protecting private sections with roles (for paid learning platforms)',
-            'status' => 'coming',
-        ],
-        ['label' => 'Lazy-load sub-items for better performance', 'status' => 'coming'],
-        ['label' => 'Add sidebar items dynamically with a sorting mechanism', 'status' => 'coming'],
-        ['label' => 'API Reference integration', 'status' => 'coming'],
-        ['label' => 'Feedback and Ratings system', 'status' => 'coming'],
-        ['label' => 'i18n and RTL (Right-to-Left) language support', 'status' => 'coming'],
-        ['label' => 'Additional community-requested features', 'status' => 'coming'],
-    ];
+$convergeV2x = [
+    ['label' => 'Single Page Application (SPA) mode for faster navigation', 'status' => 'coming'],
+    ['label' => 'Secure, minimal Blade engine sandbox compatible with native Blade components', 'status' => 'coming'],
+    ['label' => 'Role-Based Access Control (RBAC) for protecting private content (ideal for paid platforms)', 'status' => 'coming'],
+    ['label' => 'Lazy loading of sub-items to improve performance', 'status' => 'coming'],
+    ['label' => 'Dynamic sidebar with sortable items', 'status' => 'coming'],
+    ['label' => 'API Reference integration for streamlined developer docs', 'status' => 'coming'],
+    ['label' => 'User feedback and rating system', 'status' => 'coming'],
+    ['label' => 'Internationalization (i18n) and right-to-left (RTL) language support', 'status' => 'coming'],
+    ['label' => 'Additional features requested by the community', 'status' => 'coming'],
+    ['label' => 'Complete configuration control from both service providers and modules for ultimate flexibility', 'status' => 'coming'],
+['label' => 'Flexible JSON configuration support for module-independent setups', 'status' => 'coming'],
+];
+
 
     $webEditor = [
         ['label' => 'Interactive web editor', 'status' => 'coming'],
