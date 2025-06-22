@@ -29,7 +29,6 @@ class GSMDocsModuleProvider extends ModuleProvider
             ->theme(function (Theme $theme) {
                 return $theme
                     ->sidebarItemStyle(SidebarItemsStyles::ECHO)
-                    ->layout(Layout::Aurum)
                     ->theme(
                         Themes::overrideDark([
                             '--color-base-200' => "black",
