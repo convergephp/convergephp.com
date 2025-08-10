@@ -5,9 +5,9 @@
             solutionsOpen: false,
             scrolled: false
         }">
-    <div x-show="!scrolled">
+    {{-- <div x-show="!scrolled">
         <x-banner class="bg-base-100 sticky top-0 flex w-full" />
-    </div>
+    </div> --}}
     <div class="relative flex justify-center">
         <div x-init="window.addEventListener('scroll', () => { scrolled = window.scrollY > 10 })"
              :class="{ 'bg-transparent': !scrolled, 'backdrop-blur-md bg-base-100/70 my-2 rounded-3xl shadow-md': scrolled }"
@@ -26,9 +26,9 @@
                     <x-navbar.link :active="request()->routeIs('converge-docs')"
                                    :href="route('converge-docs')">Documentation</x-navbar.link>
 
-                    <x-navbar.link href="{{ route('products.index') }}"
-                                   :active="request()->routeIs('products.index')"
-                                   wire:navigate.hover>Toolkits</x-navbar.link>
+                    {{-- <x-navbar.link href="{{ route('products.index') }}"
+                                   : active="request()->routeIs('products.index')"
+                                   wire:navigate.hover>Toolkits</x-navbar.link> --}}
 
                     <x-navbar.link href="{{ route('roadmap') }}"
                                    :active="request()->routeIs('roadmap')"
@@ -40,7 +40,7 @@
                     <x-theme-switcher class="md:order-5" />
 
                     {{-- Actions buttons --}}
-                    @if (Auth::check())
+                    {{-- @if (Auth::check())
                         <form method="POST"
                               action="{{ route('logout') }}">
                             @csrf
@@ -57,7 +57,6 @@
                             <x-iconsax-bul-setting-2 class="w-5 md:hidden" />
                         </a>
                     @endif
-                    {{-- disable auth system temporary --}}
                     @if (!Auth::check() && !Request()->routeIs('login') && !Request()->routeIs('register'))
                         <a href="{{ route('login') }}"
                            wire:navigate.hover
@@ -65,7 +64,7 @@
                             <span class="hidden md:inline">{{ __('Login') }}</span>
                             <x-iconsax-bul-login-1 class="w-5 md:hidden" />
                         </a>
-                    @endif
+                    @endif --}}
 
                     {{-- MOBILE MENU TOGGLE BUTTON --}}
                     <div class="flex items-center md:hidden">
@@ -121,11 +120,11 @@
                         Documentation
                     </a>
 
-                    <a href="{{ route('products.index') }}"
+                    {{-- <a href="{{ route('products.index') }}"
                        wire:navigate.hover
                        class="{{ request()->routeIs('products.index') ? '!text-primary' : 'text-base-content' }} hover:text-base-content/80 hover:bg-base-200 border-base-200 block rounded-md border-b px-4 py-3 text-base font-medium">
                         Toolkits
-                    </a>
+                    </a> --}}
 
                     <a href="{{ route('roadmap') }}"
                        wire:navigate.hover
