@@ -27,6 +27,7 @@
     ];
 
     $convergeV2x = [
+        ['label' => 'Internationalization (i18n) and right-to-left (RTL) language support', 'status' => 'wip'],
         ['label' => 'Single Page Application (SPA) mode for faster navigation', 'status' => 'coming'],
         ['label' => 'Secure, minimal Blade engine sandbox compatible with native Blade components', 'status' => 'coming'],
         ['label' => 'Role-Based Access Control (RBAC) for protecting private content (ideal for paid platforms)', 'status' => 'coming'],
@@ -34,7 +35,6 @@
         ['label' => 'Dynamic sidebar with sortable items', 'status' => 'coming'],
         ['label' => 'API Reference integration for streamlined developer docs', 'status' => 'coming'],
         ['label' => 'User feedback and rating system', 'status' => 'coming'],
-        ['label' => 'Internationalization (i18n) and right-to-left (RTL) language support', 'status' => 'coming'],
         ['label' => 'Additional features requested by the community', 'status' => 'coming'],
         ['label' => 'Complete configuration control from both service providers and modules for ultimate flexibility', 'status' => 'coming'],
         ['label' => 'Flexible JSON configuration support for module-independent setups', 'status' => 'coming'],
@@ -42,7 +42,7 @@
 
 
     $webEditor = [
-        ['label' => 'Interactive web editor', 'status' => 'coming'],
+        ['label' => 'Interactive web editor', 'status' => 'wip'],
         ['label' => 'Uses our Blade components under the hood', 'status' => 'coming'],
     ];
 
@@ -54,7 +54,7 @@
 
     $themesAndLayouts = [
         ['label' => '15+ reusable Blade components', 'status' => 'done'],
-        ['label' => 'Pre-built layout templates', 'status' => 'wip'],
+        ['label' => 'Pre-built layout templates', 'status' => 'done'],
     ];
 @endphp
 
@@ -75,7 +75,7 @@
                     color="primary">
     </x-roadmap.card>
 
-    <x-roadmap.card title="Converge v2.x"
+    <x-roadmap.card title="Next Versions"
                     :items="$convergeV2x">
     </x-roadmap.card>
 

@@ -22,6 +22,6 @@
 
     <span class="text-base-content/80 text-sm">{{ $label }}</span>
     @if (str($status)->is('wip'))
-        <span class="bg-primary/20 text-primary rounded px-2">work in progress</span>
+        <span class="bg-primary/20 text-primary rounded px-2">wip</span>
     @endif
 </li>
