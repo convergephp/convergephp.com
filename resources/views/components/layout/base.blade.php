@@ -138,6 +138,9 @@
     </head>
 
     <body class="bg-base-200 text-base-content min-h-screen !font-sans antialiased">
+      <div class="relative">
+            <x-fluxtor-banner/>
+      </div>
 
         {{ $slot }}
 

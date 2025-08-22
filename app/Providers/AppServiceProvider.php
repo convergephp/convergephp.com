@@ -31,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
 
         app(ViewInterceptor::class)
             ->registerViewInterceptor(Interceptor::FIXED_CARBON_ADS,  fn() => view('components.carbon-ads'))
-            ->registerViewInterceptor(Interceptor::HEAD_END, fn() => view('components.analytics.gtags'));
+            ->registerViewInterceptor(Interceptor::HEAD_END, fn() => view('components.analytics.gtags'))
+            ->registerViewInterceptor(Interceptor::BODY_START, fn() => view('components.fluxtor-banner'));
     }
 }
